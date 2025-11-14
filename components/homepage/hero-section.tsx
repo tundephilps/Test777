@@ -7,7 +7,7 @@ import Visa from "../../public/Visa.png";
 
 const Hero = () => {
   return (
-    <>
+    <div>
       <div className="relative   lg:flex hidden items-center">
         <Image src={HeroPhoto} alt="" className=" w-full" />
 
@@ -45,8 +45,17 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <Image src={HeroMobile} alt="" className="lg:hidden block w-full" />
-    </>
+      <div className="w-full max-w-full lg:hidden">
+        <div className="relative w-full overflow-hidden">
+          <Image
+            src={HeroMobile}
+            alt=""
+            className="w-full h-auto"
+            sizes="100vw"
+          />
+        </div>
+      </div>
+    </div>
   );
 };
 

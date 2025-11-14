@@ -33,17 +33,17 @@ const PaymentMethod = () => {
         <Image src={Mask3} className="w-full  " alt="" />
 
         <div className="p-6 gap-8  space-y-6 absolute">
-          <Image src={Give} className="mx-auto items h-34 w-34" alt="" />
+          <Image src={Give} className="mx-auto items h-28 w-34" alt="" />
           {/* Text */}
-          <h2 className="text-3xl text-white font-semibold mb-2 text-center">
+          <h2 className="text-xl text-white font-semibold mb-2 text-center">
             Preferred Payment Methods
           </h2>
-          <p className="text-xl text-[#58656e] mb-5 text-center">
+          <p className="text-[12px] text-[#58656e] mb-5 text-center">
             Enjoy fast and secure payments with multiple options. Choose crypto,
             cards, or bank transfers — whatever suits you best.
           </p>
 
-          <Image src={Visa2} className="mx-auto w-full" alt="" />
+          <Image src={Visa2} className="mx-auto  h-20 w-3/4" alt="" />
         </div>
       </div>
     </div>

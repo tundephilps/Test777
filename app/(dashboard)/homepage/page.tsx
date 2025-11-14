@@ -14,7 +14,7 @@ import PayMobile from "../../../public/PayMobile.png";
 
 const page = () => {
   return (
-    <div className="w-full">
+    <div className="overflow-hidden">
       <Hero />
 
       <CasinoNavigation />
