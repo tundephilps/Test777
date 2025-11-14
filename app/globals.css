@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+@theme {
+  --font-family-bebas: var(--font-bebas), sans-serif;
+}
+@utility font-bebas {
+  font-family: var(--font-bebas);
+}
+
+@theme {
+  --font-family-bounded: var(--font-bounded), sans-serif;
+}
+@utility font-bounded {
+  font-family: var(--font-bounded);
+}
+
 /* In globals.css */
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge */

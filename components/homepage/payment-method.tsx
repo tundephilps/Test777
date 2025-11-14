@@ -1,7 +1,13 @@
 import Image from "next/image";
 import React from "react";
+
+import Mask3 from "../../public/Mask3.png";
+
 import Mask from "../../public/Mask.png";
+import PayMobile from "../../public/PayMobile.png";
 import Visa from "../../public/Visa.png";
+
+import Visa2 from "../../public/Visa2.png";
 
 import Give from "../../public/Give.png";
 
@@ -22,6 +28,23 @@ const PaymentMethod = () => {
         <Image src={Mask} className="w-full" alt="" />
 
         <Image src={Visa} className="absolute right-4 top" alt="" />
+      </div>
+      <div className="relative lg:hidden flex justify-center items-center">
+        <Image src={Mask3} className="w-full  " alt="" />
+
+        <div className="p-6 gap-8  space-y-6 absolute">
+          <Image src={Give} className="mx-auto items h-34 w-34" alt="" />
+          {/* Text */}
+          <h2 className="text-3xl text-white font-semibold mb-2 text-center">
+            Preferred Payment Methods
+          </h2>
+          <p className="text-xl text-[#58656e] mb-5 text-center">
+            Enjoy fast and secure payments with multiple options. Choose crypto,
+            cards, or bank transfers — whatever suits you best.
+          </p>
+
+          <Image src={Visa2} className="mx-auto w-full" alt="" />
+        </div>
       </div>
     </div>
   );

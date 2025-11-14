@@ -1,6 +1,4 @@
-// components/Sidebar.tsx
 "use client";
-
 import {
   FaHome,
   FaDice,
@@ -9,6 +7,8 @@ import {
   FaCoins,
   FaHeadset,
   FaChevronDown,
+  FaChevronLeft,
+  FaChevronRight,
 } from "react-icons/fa";
 import { RiLiveLine, RiTrophyLine } from "react-icons/ri";
 import Link from "next/link";
@@ -16,11 +16,13 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import SideAds from "../../public/SideAds.png";
 import { useState } from "react";
+import { useSidebar } from "./SidebarContext";
 
 export default function Sidebar() {
-  const [pathname, setPathname] = useState("/");
+  const pathname = usePathname();
   const [selectedLanguage, setSelectedLanguage] = useState("English");
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
+  const { isCollapsed, setIsCollapsed } = useSidebar();
 
   const languages = [
     { code: "en", name: "English", flag: "🇬🇧" },
@@ -33,7 +35,7 @@ export default function Sidebar() {
   const links = [
     { href: "/", label: "Home", icon: <FaHome /> },
     { href: "/casino", label: "Casino", icon: <FaDice /> },
-    { href: "/live-casino", label: "Live Casino", icon: <RiLiveLine /> },
+    { href: "/livecasino", label: "Live Casino", icon: <RiLiveLine /> },
     { href: "/jackpot", label: "Jackpot", icon: <FaGift /> },
     { href: "/tournaments", label: "Tournaments", icon: <RiTrophyLine /> },
     { href: "/promotions", label: "Promotions", icon: <FaGift /> },
@@ -46,20 +48,38 @@ export default function Sidebar() {
     languages.find((lang) => lang.name === selectedLanguage) || languages[0];
 
   return (
-    <div className="w-full min-h-full bg-[#081a26] rounded-md  text-white flex flex-col p-4 space-y-4">
-      {/* Jackpot Card */}
-      <div>
-        <div className="relative">
-          <Image
-            src={SideAds}
-            alt="Jackpot Banner"
-            className="w-full rounded-lg"
-          />
-        </div>
-      </div>
+    <div
+      className={`min-h-full bg-[#081a26] rounded-md text-white flex flex-col p-4 space-y-4 transition-all duration-300 ${
+        isCollapsed ? "w-20" : "w-64"
+      }`}
+    >
+      {/* Toggle Button */}
+      <button
+        onClick={() => setIsCollapsed(!isCollapsed)}
+        className="self-end p-2 rounded-lg bg-[#0a1f2d] hover:bg-[#0d2535] transition-all"
+        title={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+      >
+        {isCollapsed ? (
+          <FaChevronRight className="text-gray-400" />
+        ) : (
+          <FaChevronLeft className="text-gray-400" />
+        )}
+      </button>
 
-      {/* Navigation Links */}
-      <nav className="flex flex-col space-y-2">
+      {/* Rest of your sidebar code remains the same... */}
+      {!isCollapsed && (
+        <div>
+          <div className="relative">
+            <Image
+              src={SideAds}
+              alt="Jackpot Banner"
+              className="w-full rounded-lg"
+            />
+          </div>
+        </div>
+      )}
+
+      <nav className="flex flex-col space-y-2 flex-1">
         {links.map((link) => (
           <SidebarLink
             key={link.href}
@@ -67,42 +87,59 @@ export default function Sidebar() {
             icon={link.icon}
             label={link.label}
             active={pathname === link.href}
+            isCollapsed={isCollapsed}
           />
         ))}
       </nav>
 
-      {/* Bottom Section - Live Support & Language */}
-      <div className="mt-auto pt-4  space-y-3">
-        {/* Live Support */}
-        <button className="flex items-center space-x-3 px-4 py-3 rounded-lg bg-[#0a1f2d] hover:bg-[#0d2535] transition-all w-full text-left">
+      <div className="mt-auto pt-4 space-y-3">
+        <button
+          className={`flex items-center px-4 py-3 rounded-lg bg-[#0a1f2d] hover:bg-[#0d2535] transition-all w-full ${
+            isCollapsed ? "justify-center" : "space-x-3 text-left"
+          }`}
+          title={isCollapsed ? "Live support" : ""}
+        >
           <FaHeadset className="text-green-400 text-lg" />
-          <span className="text-sm font-medium text-[#58656e]">
-            Live support
-          </span>
+          {!isCollapsed && (
+            <span className="text-sm font-medium text-[#58656e]">
+              Live support
+            </span>
+          )}
         </button>
 
-        {/* Language Selector */}
         <div className="relative">
           <button
             onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
-            className="flex items-center justify-between px-4 py-3 rounded-lg bg-[#0a1f2d] hover:bg-[#0d2535] transition-all w-full"
+            className={`flex items-center px-4 py-3 rounded-lg bg-[#0a1f2d] hover:bg-[#0d2535] transition-all w-full ${
+              isCollapsed ? "justify-center" : "justify-between"
+            }`}
+            title={isCollapsed ? currentLanguage.name : ""}
           >
-            <div className="flex items-center space-x-3">
+            <div
+              className={`flex items-center ${isCollapsed ? "" : "space-x-3"}`}
+            >
               <span className="text-2xl">{currentLanguage.flag}</span>
-              <span className="text-sm font-medium text-[#58656e]">
-                {currentLanguage.name}
-              </span>
+              {!isCollapsed && (
+                <span className="text-sm font-medium text-[#58656e]">
+                  {currentLanguage.name}
+                </span>
+              )}
             </div>
-            <FaChevronDown
-              className={`text-gray-400 text-sm transition-transform ${
-                showLanguageDropdown ? "rotate-180" : ""
-              }`}
-            />
+            {!isCollapsed && (
+              <FaChevronDown
+                className={`text-gray-400 text-sm transition-transform ${
+                  showLanguageDropdown ? "rotate-180" : ""
+                }`}
+              />
+            )}
           </button>
 
-          {/* Language Dropdown */}
           {showLanguageDropdown && (
-            <div className="absolute bottom-full left-0 right-0 mb-2 bg-[#0a1f2d] border border-gray-700 rounded-lg overflow-hidden shadow-lg">
+            <div
+              className={`absolute bottom-full mb-2 bg-[#0a1f2d] border border-gray-700 rounded-lg overflow-hidden shadow-lg ${
+                isCollapsed ? "left-full ml-2 w-48" : "left-0 right-0"
+              }`}
+            >
               {languages.map((lang) => (
                 <button
                   key={lang.code}
@@ -136,28 +173,32 @@ type SidebarLinkProps = {
   icon: React.ReactNode;
   label: string;
   active?: boolean;
+  isCollapsed?: boolean;
 };
 
-function SidebarLink({ href, icon, label, active }: SidebarLinkProps) {
+function SidebarLink({
+  href,
+  icon,
+  label,
+  active,
+  isCollapsed,
+}: SidebarLinkProps) {
   return (
     <Link
       href={href}
-      className={`flex items-center space-x-3 px-4 py-3 rounded-lg relative overflow-hidden transition-all duration-300 ${
+      className={`flex items-center px-4 py-3 rounded-lg relative overflow-hidden transition-all duration-300 ${
+        isCollapsed ? "justify-center" : "space-x-3"
+      } ${
         active
-          ? "text-[#ff1b1b] font-semibold"
+          ? "bg-gradient-to-r from-[#860001] via-[#1a1f2f] to-transparent text-white font-semibold"
           : "text-[#58656e] hover:text-white bg-[#0a1f2d]"
       }`}
+      title={isCollapsed ? label : ""}
     >
-      {/* Animated gradient for active state */}
-      <span
-        className={`absolute inset-0 rounded-lg bg-gradient-to-r from-[#860001] via-[#1a1f2f] to-transparent transition-all duration-500 ease-in-out ${
-          active ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-5"
-        }`}
-      />
-
-      {/* Content (icon + label) */}
       <span className="relative z-10 text-lg">{icon}</span>
-      <span className="relative z-10 font-medium text-sm">{label}</span>
+      {!isCollapsed && (
+        <span className="relative z-10 font-medium text-sm">{label}</span>
+      )}
     </Link>
   );
 }
