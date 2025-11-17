@@ -1,12 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import Image from "next/image";
-import { BsGiftFill } from "react-icons/bs";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
-
-import Bonus1 from "../../public/Bonus.png";
-import Bonus2 from "../../public/Bonus2.png";
-import Speaker from "../../public/Speaker.png";
 
 const BonusPromotion = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -31,7 +26,11 @@ const BonusPromotion = () => {
     }
   };
 
-  const images = [Bonus1, Bonus2, Bonus1]; // You can add more
+  const images = [
+    "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Bonus.png",
+    "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Bonus2.png",
+    "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Bonus.png",
+  ];
 
   return (
     <div className="text-white">
@@ -39,7 +38,13 @@ const BonusPromotion = () => {
       <div className="flex items-center justify-between py-4">
         {/* Left Side */}
         <div className="flex items-center gap-2">
-          <Image src={Speaker} alt="speaker" className="w-5 h-5" />
+          <Image
+            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Speaker.png"
+            width={1000}
+            height={300}
+            alt="speaker"
+            className="w-5 h-5"
+          />
           <span className="font-semibold">Bonus & Promotion</span>
         </div>
 
@@ -74,8 +79,10 @@ const BonusPromotion = () => {
           <div key={i} className="flex-shrink-0 ">
             <Image
               src={img}
+              width={1000}
+              height={1000}
               alt={`Promo ${i + 1}`}
-              className="rounded-lg cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/50"
+              className="rounded-lg w-full h-72 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/50"
             />
           </div>
         ))}

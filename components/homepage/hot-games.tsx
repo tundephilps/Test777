@@ -1,17 +1,17 @@
 import Image from "next/image";
-import React from "react";
 import { BsFillSuitSpadeFill, BsGiftFill } from "react-icons/bs";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
-import Game1 from "../../public/Game1.png";
-import Game2 from "../../public/Game2.png";
-import Game3 from "../../public/Game3.png";
-import Game4 from "../../public/Game4.png";
-import Game5 from "../../public/Game5.png";
 import { FaMedal, FaPlay } from "react-icons/fa";
-import { GiGamepad } from "react-icons/gi";
 
 const HotGames = () => {
-  const games = [Game1, Game2, Game3, Game4, Game5];
+  const games = [
+    "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Game1.png",
+    "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Game2.png",
+    "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Game3.png",
+    "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Game4.png",
+    "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Game5.png",
+  ];
+
   return (
     <div className="mt-6">
       {/* Bottom Section - Welcome Bonus */}
@@ -47,8 +47,10 @@ const HotGames = () => {
             {/* Game Image */}
             <Image
               src={game}
+              width={1000}
+              height={300}
               alt={`Game ${index + 1}`}
-              className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+              className="w-full  h-auto transition-transform duration-300 group-hover:scale-105"
             />
 
             {/* Hover Overlay */}

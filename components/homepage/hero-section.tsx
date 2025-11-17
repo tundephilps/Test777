@@ -1,15 +1,16 @@
-"use server";
 import Image from "next/image";
-import React from "react";
-import HeroPhoto from "../../public/Hero.png";
-import HeroMobile from "../../public/HeroMobile.png";
-import Visa from "../../public/Visa.png";
 
 const Hero = () => {
   return (
     <div>
       <div className="relative   lg:flex hidden items-center">
-        <Image src={HeroPhoto} alt="" className=" w-full" />
+        <Image
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Hero.png"
+          width={1000}
+          height={300}
+          alt="Hero"
+          className="w-full "
+        />
 
         <div className="absolute text-white items-center   left-7">
           <div className="flex flex-col flex-start justify-between h-full">
@@ -41,15 +42,27 @@ const Hero = () => {
               <span>Join Now</span>
             </button>
 
-            <Image src={Visa} alt="" className=" mt-8" />
+            <Image
+              src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Visa.png"
+              width={300}
+              height={300}
+              // src={Visa}
+
+              alt=""
+              className="h-16 w- mt-8"
+            />
           </div>
         </div>
       </div>
       <div className="w-full max-w-full lg:hidden">
         <div className="relative w-full overflow-hidden">
           <Image
-            src={HeroMobile}
+            // src={HeroMobile}
+
+            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/HeroMobile.png"
             alt=""
+            width={1000}
+            height={300}
             className="w-full h-auto"
             sizes="100vw"
           />

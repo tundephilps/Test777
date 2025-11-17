@@ -1,24 +1,19 @@
 import Image from "next/image";
-import Comp1 from "../../public/Comp1.png";
-import Comp2 from "../../public/Comp2.png";
-import Comp3 from "../../public/Comp3.png";
-import Comp4 from "../../public/Comp4.png";
-
 const logos = [
   {
-    src: Comp1,
+    src: "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Comp1.png",
     alt: "Online Casinos",
   },
   {
-    src: Comp2,
+    src: "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Comp2.png",
     alt: "Casinolandia",
   },
   {
-    src: Comp3,
+    src: "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Comp3.png",
     alt: "Casinos In Canada",
   },
   {
-    src: Comp4,
+    src: "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Comp4.png",
     alt: "Bonus Casino",
   },
 ];
@@ -34,7 +29,9 @@ export default function Sponsors() {
           <Image
             src={logo.src}
             alt={logo.alt}
-            className="object-contain h-12"
+            height={5000}
+            width={1000}
+            className="object-contain w-auto h-12"
             priority
           />
         </div>

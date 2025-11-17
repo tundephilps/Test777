@@ -5,7 +5,7 @@ import WhyChooseUs from "../../../components/homepage/why-choose";
 import Sponsors from "../../../components/homepage/sponsors";
 import LiveCasinoGames from "../../../components/livecasino/live-casino-games";
 
-const page = () => {
+const LivecasinoPage = () => {
   return (
     <div>
       <Hero />
@@ -17,4 +17,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default LivecasinoPage;

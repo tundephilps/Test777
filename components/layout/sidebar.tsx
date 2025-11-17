@@ -35,8 +35,8 @@ export default function Sidebar() {
   const links = [
     { href: "/", label: "Home", icon: <FaHome /> },
     { href: "/casino", label: "Casino", icon: <FaDice /> },
-    { href: "/#", label: "Live Casino", icon: <RiLiveLine /> },
-    { href: "/#", label: "Jackpot", icon: <FaGift /> },
+    { href: "/livecasino", label: "Live Casino", icon: <RiLiveLine /> },
+    { href: "/jackpot", label: "Jackpot", icon: <FaGift /> },
     { href: "/tournaments", label: "Tournaments", icon: <RiTrophyLine /> },
     { href: "/promotions", label: "Promotions", icon: <FaGift /> },
     { href: "/vip", label: "VIP Club", icon: <FaCrown /> },

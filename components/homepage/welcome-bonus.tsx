@@ -1,11 +1,5 @@
-import React from "react";
-
 import { BsGiftFill } from "react-icons/bs";
-import Depo1 from "../../public/Depo1.png";
-
-import Depo2 from "../../public/Depo2.png";
 import Image from "next/image";
-import { BsFillSuitSpadeFill } from "react-icons/bs";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 const WelcomeBonus = () => {
   return (
@@ -36,14 +30,18 @@ const WelcomeBonus = () => {
       </div>
       <div className="grid lg:grid-cols-2  w-full gap-4">
         <Image
-          src={Depo1}
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Depo1.png"
+          width={2000}
+          height={2000}
           alt=""
-          className="cursor-pointer transition-all w-full duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/50"
+          className="cursor-pointer h-auto w-full transition-all  duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/50"
         />
         <Image
-          src={Depo2}
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Depo2.png"
+          width={2000}
+          height={2000}
           alt=""
-          className="cursor-pointer transition-all w-full duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/50"
+          className="cursor-pointer h-auto w-full transition-all  duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/50"
         />
       </div>
     </div>

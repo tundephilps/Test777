@@ -1,22 +1,16 @@
 import Image from "next/image";
-import React from "react";
-
-import Mask3 from "../../public/Mask3.png";
-
-import Mask from "../../public/Mask.png";
-import PayMobile from "../../public/PayMobile.png";
-import Visa from "../../public/Visa.png";
-
-import Visa2 from "../../public/Visa2.png";
-
-import Give from "../../public/Give.png";
-
 const PaymentMethod = () => {
   return (
     <div className="my-6">
       <div className="relative lg:flex hidden  items-center">
         <div className="absolute inline-flex gap-4 left-4">
-          <Image src={Give} alt="" />
+          <Image
+            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Give.png"
+            width={1000}
+            height={300}
+            className="h-auto w-auto"
+            alt=""
+          />
           <div className="space-y-3">
             <p className="text-xl text-white"> Preferred Payment Methods </p>
             <p className="w-[60%] text-gray-500 text-[10px]">
@@ -25,15 +19,39 @@ const PaymentMethod = () => {
             </p>
           </div>
         </div>
-        <Image src={Mask} className="w-full" alt="" />
+        <Image
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Mask.png"
+          width={3000}
+          height={300}
+          className="h-auto w-full"
+          alt=""
+        />
 
-        <Image src={Visa} className="absolute right-4 top" alt="" />
+        <Image
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Visa.png"
+          width={3000}
+          height={300}
+          className="absolute h-auto w-auto right-4 top"
+          alt=""
+        />
       </div>
       <div className="relative lg:hidden flex justify-center items-center">
-        <Image src={Mask3} className="w-full  " alt="" />
+        <Image
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Mask3.png"
+          width={3000}
+          height={300}
+          className="h-auto w-full"
+          alt=""
+        />
 
         <div className="p-6 gap-8  space-y-6 absolute">
-          <Image src={Give} className="mx-auto items h-28 w-34" alt="" />
+          <Image
+            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Give.png"
+            width={3000}
+            height={300}
+            className="mx-auto items h-28 w-34"
+            alt=""
+          />
           {/* Text */}
           <h2 className="text-xl text-white font-semibold mb-2 text-center">
             Preferred Payment Methods
@@ -43,7 +61,13 @@ const PaymentMethod = () => {
             cards, or bank transfers — whatever suits you best.
           </p>
 
-          <Image src={Visa2} className="mx-auto  h-20 w-3/4" alt="" />
+          <Image
+            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Visa2.png"
+            width={3000}
+            height={300}
+            className="mx-auto  h-20 w-3/4"
+            alt=""
+          />
         </div>
       </div>
     </div>

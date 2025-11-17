@@ -1,7 +1,4 @@
 import Image from "next/image";
-import US1 from "../../public/US1.png";
-import US2 from "../../public/US2.png";
-import US3 from "../../public/US3.png";
 
 export default function WhyChooseUs() {
   return (
@@ -23,7 +20,13 @@ export default function WhyChooseUs() {
             <div className="absolute top-0 left-0 w-full h-[20%] bg-gradient-to-b from-red-600/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
             <div className="flex justify-center mb-6 relative z-10">
-              <Image src={US1} alt="" />
+              <Image
+                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/US1.png"
+                width={1000}
+                height={300}
+                className="h-auto w-auto"
+                alt=""
+              />
             </div>
             <h3 className="text-base font-semibold mb-3 relative z-10">
               Multiple Currencies
@@ -39,7 +42,13 @@ export default function WhyChooseUs() {
             <div className="absolute top-0 left-0 w-full h-[20%] bg-gradient-to-b from-red-600/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
             <div className="flex justify-center mb-6 relative z-10">
-              <Image src={US2} alt="" />
+              <Image
+                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/US2.png"
+                width={1000}
+                height={300}
+                className="h-auto w-auto"
+                alt=""
+              />
             </div>
             <h3 className="text-base font-semibold mb-3 relative z-10">
               Supporting you along the way
@@ -56,7 +65,13 @@ export default function WhyChooseUs() {
             <div className="absolute top-0 left-0 w-full h-[20%]  bg-gradient-to-b from-red-600/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
             <div className="flex justify-center mb-6 relative z-10">
-              <Image src={US3} alt="" />
+              <Image
+                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/US3.png"
+                width={1000}
+                height={300}
+                className="h-auto w-auto"
+                alt=""
+              />
             </div>
             <h3 className="text-base font-semibold mb-3 relative z-10">
               Trusted by all

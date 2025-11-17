@@ -12,7 +12,7 @@ import Sponsors from "../../../components/homepage/sponsors";
 import Image from "next/image";
 import PayMobile from "../../../public/PayMobile.png";
 
-const page = () => {
+const HomePage = () => {
   return (
     <div className="overflow-hidden">
       <Hero />
@@ -33,4 +33,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default HomePage;
