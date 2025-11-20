@@ -9,6 +9,7 @@ import {
   FaChevronDown,
   FaChevronLeft,
   FaChevronRight,
+  FaHeart,
 } from "react-icons/fa";
 import { RiLiveLine, RiTrophyLine } from "react-icons/ri";
 import Link from "next/link";
@@ -17,6 +18,7 @@ import { usePathname } from "next/navigation";
 import SideAds from "../../public/SideAds.png";
 import { useState } from "react";
 import { useSidebar } from "./SidebarContext";
+import { PiSpinnerBallFill } from "react-icons/pi";
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -38,6 +40,9 @@ export default function Sidebar() {
     { href: "/livecasino", label: "Live Casino", icon: <RiLiveLine /> },
     { href: "/jackpot", label: "Jackpot", icon: <FaGift /> },
     { href: "/tournaments", label: "Tournaments", icon: <RiTrophyLine /> },
+    { href: "/wheelbonus", label: "Wheel Bonus", icon: <PiSpinnerBallFill /> },
+
+    { href: "/myfavorite", label: "My Favorite", icon: <FaHeart /> },
     { href: "/promotions", label: "Promotions", icon: <FaGift /> },
     { href: "/vip", label: "VIP Club", icon: <FaCrown /> },
     { href: "/cashback", label: "Cashback", icon: <FaCoins /> },
