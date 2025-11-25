@@ -1,13 +1,4 @@
 import Image from "next/image";
-import React from "react";
-import Mask5 from "../../../public/Mask5.png";
-
-import FirstDeposit from "../../../public/FirstDeposit.png";
-import FirstDeposit2 from "../../../public/FirstDeposit2.png";
-import FirstDeposit3 from "../../../public/FirstDeposit3.png";
-
-import FirstDeposit4 from "../../../public/FirstDeposit4.png";
-import FirstDeposit5 from "../../../public/FirstDeposit5.png";
 
 const PromotionPage = () => {
   return (
@@ -15,7 +6,7 @@ const PromotionPage = () => {
       <div>
         <div className="relative   lg:flex hidden items-center">
           <Image
-            src={Mask5}
+            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Mask5.png"
             width={1000}
             height={300}
             alt="Hero"
@@ -44,13 +35,42 @@ const PromotionPage = () => {
         </div>
         {/* <div className="w-full max-w-full lg:hidden"></div> */}
       </div>
-      <Image alt="" src={FirstDeposit} className="w-full h-auto mt-6" />
+      <Image
+        alt=""
+        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/FirstDeposit.png"
+        width={1000}
+        height={300}
+        className="w-full h-auto mt-6"
+      />
 
-      <Image alt="" src={FirstDeposit2} className="w-full h-auto mt-6" />
-      <Image alt="" src={FirstDeposit3} className="w-full h-auto mt-6" />
-
-      <Image alt="" src={FirstDeposit4} className="w-full h-auto mt-6" />
-      <Image alt="" src={FirstDeposit5} className="w-full h-auto mt-6" />
+      <Image
+        alt=""
+        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/FirstDeposit2.png"
+        width={1000}
+        height={300}
+        className="w-full h-auto mt-6"
+      />
+      <Image
+        alt=""
+        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/FirstDeposit3.png"
+        width={1000}
+        height={300}
+        className="w-full h-auto mt-6"
+      />
+      <Image
+        alt=""
+        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/FirstDeposit4.png"
+        width={1000}
+        height={300}
+        className="w-full h-auto mt-6"
+      />
+      <Image
+        alt=""
+        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/FirstDeposit5.png"
+        width={1000}
+        height={300}
+        className="w-full h-auto mt-6"
+      />
     </div>
   );
 };

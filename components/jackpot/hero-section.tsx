@@ -1,25 +1,18 @@
 "use server";
 import Image from "next/image";
-import React from "react";
-
-import HeroPhoto from "../../public/Mask2.png";
-
-import Mask4 from "../../public/Mask4.png";
-
-import Number from "../../public/Number.png";
-
-import Jackpot from "../../public/Jackpot.png";
-
-import Jackpot2 from "../../public/Jackpot2.png";
-import Visa from "../../public/Visa.png";
-import CountdownTimer from "./Timer";
 import Countdown from "./Countdown";
 
 const Hero = () => {
   return (
     <>
       <div className="relative   lg:flex hidden items-center">
-        <Image src={HeroPhoto} alt="" className=" w-full" />
+        <Image
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Mask2.png"
+          width={1000}
+          height={300}
+          alt=""
+          className=" w-full h-auto"
+        />
 
         <div className="absolute text-white items-center   left-7">
           <div className="">
@@ -50,16 +43,30 @@ const Hero = () => {
           </div>
         </div>
         <div className="absolute right-4">
-          <Image src={Jackpot} alt="" className="w-full" />
           <Image
-            src={Number}
+            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Jackpot.png"
+            width={1000}
+            height={300}
             alt=""
-            className="absolute bottom-[15%] right-[28%]"
+            className="w-full"
+          />
+          <Image
+            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Number.png"
+            width={1000}
+            height={300}
+            alt=""
+            className="absolute bottom-[15%] h-auto w-auto right-[28%]"
           />
         </div>
       </div>
       <div className="relative   flex lg:hidden items-center w-full">
-        <Image src={Mask4} alt="" width={1000} className="" />
+        <Image
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Mask4.png"
+          width={1000}
+          height={300}
+          alt=""
+          className=""
+        />
         <div className="p-6 gap-2  space-y-2 absolute items-center w-full justify-center flex flex-col text-white">
           {/* Text */}
           <div className="mb-1">
@@ -84,10 +91,10 @@ const Hero = () => {
             <span>Bet Now</span>
           </button>
           <Image
-            src={Jackpot2}
+            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Jackpot2.png"
             width={3000}
             height={300}
-            className="mx-auto  h-40 w-4/4"
+            className="mx-auto  h-auto w-auto"
             alt=""
           />
         </div>

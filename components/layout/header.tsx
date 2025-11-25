@@ -1,7 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { FaCoins, FaUserCircle } from "react-icons/fa";
-import { BsFillCreditCardFill } from "react-icons/bs";
 import {
   MdAccountBalanceWallet,
   MdKeyboardArrowDown,
@@ -12,9 +10,12 @@ import Logo from "../../public/Logo.png";
 import Reward from "../../public/Rewards.png";
 import Coin from "../../public/Coin.png";
 import Face from "../../public/Face.png";
+import { DepositModal } from "../modals/deposit-modal";
 
 export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  const [isDepositModalOpen, setIsDepositModalOpen] = useState(false);
 
   return (
     <div className="bg-[#061621] text-white text-sm w-full">
@@ -52,10 +53,18 @@ export default function Header() {
             </div>
 
             {/* Deposit Button */}
-            <button className="flex items-center space-x-1 bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 px-3 py-1.5 rounded-md text-white font-medium transition">
+            <button
+              onClick={() => setIsDepositModalOpen(true)}
+              className="flex items-center space-x-1 bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 px-3 py-1.5 rounded-md text-white font-medium transition"
+            >
               <span>DEPOSIT</span>
             </button>
           </div>
+          {/* Modal */}
+          <DepositModal
+            isOpen={isDepositModalOpen}
+            onClose={() => setIsDepositModalOpen(false)}
+          />
 
           {/* User Profile */}
           <div className="flex items-center space-x-2 cursor-pointer hover:opacity-80">
@@ -119,11 +128,19 @@ export default function Header() {
           </div>
 
           {/* Deposit Button */}
-          <button className="w-full bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 py-3 rounded-md text-white font-medium transition">
+          <button
+            onClick={() => setIsDepositModalOpen(true)}
+            className="w-full bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 py-3 rounded-md text-white font-medium transition"
+          >
             DEPOSIT
           </button>
         </div>
       )}
+      {/* Modal */}
+      <DepositModal
+        isOpen={isDepositModalOpen}
+        onClose={() => setIsDepositModalOpen(false)}
+      />
     </div>
   );
 }

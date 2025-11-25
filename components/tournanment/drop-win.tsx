@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import Drop from "../../public/Drop.png";
 
 const DropWin = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -58,7 +57,9 @@ const DropWin = () => {
         {/* Left Side - Banner Image */}
         <div className="relative rounded-lg overflow-hidden shadow-lg">
           <Image
-            src={Drop}
+            width={1000}
+            height={1000}
+            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Drop.png"
             alt="3 Oaks Turbo Wins"
             className="w-full h-full object-cover"
           />

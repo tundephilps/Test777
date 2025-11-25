@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import { FaPlay } from "react-icons/fa";
 import { GiGamepad } from "react-icons/gi";
