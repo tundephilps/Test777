@@ -35,18 +35,30 @@ export default function Sidebar() {
   ];
 
   const links = [
-    { href: "/", label: "Home", icon: <FaHome /> },
-    { href: "/casino", label: "Casino", icon: <FaDice /> },
-    { href: "/livecasino", label: "Live Casino", icon: <RiLiveLine /> },
-    { href: "/jackpot", label: "Jackpot", icon: <FaGift /> },
-    { href: "/tournaments", label: "Tournaments", icon: <RiTrophyLine /> },
-    { href: "/wheelbonus", label: "Wheel Bonus", icon: <PiSpinnerBallFill /> },
+    { href: "/dashboard", label: "Home", icon: <FaHome /> },
+    { href: "/dashboard/casino", label: "Casino", icon: <FaDice /> },
+    {
+      href: "/dashboard/livecasino",
+      label: "Live Casino",
+      icon: <RiLiveLine />,
+    },
+    { href: "/dashboard/jackpot", label: "Jackpot", icon: <FaGift /> },
+    {
+      href: "/dashboard/tournaments",
+      label: "Tournaments",
+      icon: <RiTrophyLine />,
+    },
+    {
+      href: "/dashboard/wheelbonus",
+      label: "Wheel Bonus",
+      icon: <PiSpinnerBallFill />,
+    },
 
-    { href: "/myfavorite", label: "My Favorite", icon: <FaHeart /> },
-    { href: "/promotions", label: "Promotions", icon: <FaGift /> },
-    { href: "/vip", label: "VIP Club", icon: <FaCrown /> },
-    { href: "/cashback", label: "Cashback", icon: <FaCoins /> },
-    { href: "/contact", label: "Contact", icon: <FaHeadset /> },
+    { href: "/dashboard/myfavorite", label: "My Favorite", icon: <FaHeart /> },
+    { href: "/dashboard/promotions", label: "Promotions", icon: <FaGift /> },
+    { href: "/dashboard/vip", label: "VIP Club", icon: <FaCrown /> },
+    { href: "/dashboard/cashback", label: "Cashback", icon: <FaCoins /> },
+    { href: "/dashboard/contact", label: "Contact", icon: <FaHeadset /> },
   ];
 
   const currentLanguage =

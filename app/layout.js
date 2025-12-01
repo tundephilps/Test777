@@ -46,11 +46,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${bounded.variable} bg-[#061621]`}
       >
-        <SidebarProvider>
-          <Header />
-          <LayoutContent>{children}</LayoutContent>
-          <Footer />
-        </SidebarProvider>
+        {children}
       </body>
     </html>
   );
