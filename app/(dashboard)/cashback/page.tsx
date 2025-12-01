@@ -12,9 +12,9 @@ const CashbackPage = () => {
         <Image
           src={Mask9}
           width={1000}
-          height={300}
+          height={500}
           alt="Hero"
-          className="w-full"
+          className="w-full h-[40vh]"
         />
 
         <div className="absolute text-white items-center   left-7">

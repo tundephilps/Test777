@@ -1,0 +1,22 @@
+import Image from "next/image";
+import React from "react";
+import Error from "../public/Error.png";
+import Link from "next/link";
+
+const NotFound = () => {
+  return (
+    <div className="bg-[#061621] flex items-center justify-center">
+      <Link href="/">
+        <Image
+          src={Error}
+          alt=""
+          width={1000}
+          height={1000}
+          className="h-auto w-auto"
+        />{" "}
+      </Link>
+    </div>
+  );
+};
+
+export default NotFound;

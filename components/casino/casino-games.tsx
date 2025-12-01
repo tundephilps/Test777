@@ -20,6 +20,8 @@ const CasinoGames = () => {
             {/* Game Image */}
             <Image
               src={game}
+              width={1000}
+              height={400}
               alt={`Game ${index + 1}`}
               className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
             />

@@ -11,6 +11,7 @@ import Reward from "../../public/Rewards.png";
 import Coin from "../../public/Coin.png";
 import Face from "../../public/Face.png";
 import { DepositModal } from "../modals/deposit-modal";
+import Link from "next/link";
 
 export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -67,15 +68,17 @@ export default function Header() {
           />
 
           {/* User Profile */}
-          <div className="flex items-center space-x-2 cursor-pointer hover:opacity-80">
-            <Image src={Face} className="w-10 h-10" alt="Profile" />
-            <div className="flex flex-col leading-tight">
-              <span className="text-base font-semibold">Mitchell</span>
-              <span className="text-[10px] bg-[#1e141e] whitespace-nowrap border-[#ea0000] text-[#f80507] w-10 border rounded-sm p-1 text-center">
-                LVL 27
-              </span>
+          <Link href="/dashboard">
+            <div className="flex items-center space-x-2 cursor-pointer hover:opacity-80">
+              <Image src={Face} className="w-10 h-10" alt="Profile" />
+              <div className="flex flex-col leading-tight">
+                <span className="text-base font-semibold">Mitchell</span>
+                <span className="text-[10px] bg-[#1e141e] whitespace-nowrap border-[#ea0000] text-[#f80507] w-10 border rounded-sm p-1 text-center">
+                  LVL 27
+                </span>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* Right Section - Mobile */}
