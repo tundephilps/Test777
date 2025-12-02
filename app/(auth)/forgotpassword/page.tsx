@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Auth from "../../../public/Auth.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import Link from "next/link";
 
 export default function ForgotPasswordPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -51,9 +52,11 @@ export default function ForgotPasswordPage() {
             />
 
             {/* Login Button */}
-            <button className="w-full text-xs cursor-pointer bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 transition text-white py-3 rounded-md font-semibold mt-2 shadow-md">
-              Send
-            </button>
+            <Link href="/otp">
+              <button className="w-full text-xs cursor-pointer bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 transition text-white py-3 rounded-md font-semibold mt-2 shadow-md">
+                Send
+              </button>
+            </Link>
           </div>
         </div>
       </div>

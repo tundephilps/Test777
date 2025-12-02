@@ -9,7 +9,7 @@ import Withdraw from "../../../components/profiledashboard/withdraw";
 import VipCashback from "../../../components/profiledashboard/vipcashback";
 import GameLog from "../../../components/profiledashboard/game-log";
 
-const Dashboard = () => {
+const UserDashboard = () => {
   return (
     <div>
       {/* <DashboardSummary /> */}
@@ -24,4 +24,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default UserDashboard;

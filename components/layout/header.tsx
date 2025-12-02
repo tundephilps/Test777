@@ -12,11 +12,50 @@ import Coin from "../../public/Coin.png";
 import Face from "../../public/Face.png";
 import { DepositModal } from "../modals/deposit-modal";
 import Link from "next/link";
+import { BiMenu } from "react-icons/bi";
+
+import {
+  FaHome,
+  FaDice,
+  FaGift,
+  FaHeart,
+  FaCrown,
+  FaCoins,
+  FaHeadset,
+} from "react-icons/fa";
+import { RiLiveLine, RiTrophyLine } from "react-icons/ri";
+import { PiSpinnerBallFill } from "react-icons/pi";
 
 export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const [isDepositModalOpen, setIsDepositModalOpen] = useState(false);
+
+  const links = [
+    { href: "/dashboard", label: "Home", icon: <FaHome /> },
+    { href: "/dashboard/casino", label: "Casino", icon: <FaDice /> },
+    {
+      href: "/dashboard/livecasino",
+      label: "Live Casino",
+      icon: <RiLiveLine />,
+    },
+    { href: "/dashboard/jackpot", label: "Jackpot", icon: <FaGift /> },
+    {
+      href: "/dashboard/tournaments",
+      label: "Tournaments",
+      icon: <RiTrophyLine />,
+    },
+    {
+      href: "/dashboard/wheelbonus",
+      label: "Wheel Bonus",
+      icon: <PiSpinnerBallFill />,
+    },
+    { href: "/dashboard/myfavorite", label: "My Favorite", icon: <FaHeart /> },
+    { href: "/dashboard/promotions", label: "Promotions", icon: <FaGift /> },
+    { href: "/dashboard/vip", label: "VIP Club", icon: <FaCrown /> },
+    { href: "/dashboard/cashback", label: "Cashback", icon: <FaCoins /> },
+    { href: "/dashboard/contact", label: "Contact", icon: <FaHeadset /> },
+  ];
 
   return (
     <div className="bg-[#061621] text-white text-sm w-full">
@@ -68,7 +107,7 @@ export default function Header() {
           />
 
           {/* User Profile */}
-          <Link href="/dashboard">
+          <Link href="/dashboard/userdashboard">
             <div className="flex items-center space-x-2 cursor-pointer hover:opacity-80">
               <Image src={Face} className="w-10 h-10" alt="Profile" />
               <div className="flex flex-col leading-tight">
@@ -90,12 +129,18 @@ export default function Header() {
           </div>
 
           {/* User Avatar */}
-          <button
+
+          <Link href="/dashboard/userdashboard">
+            <button className="w-9 h-9 flex items-center justify-center">
+              <Image src={Face} className="w-9 h-9" alt="Profile" />
+            </button>
+          </Link>
+          <div
             onClick={() => setShowMobileMenu(!showMobileMenu)}
-            className="w-9 h-9 flex items-center justify-center"
+            className="bg-white/20 rounded-lg p-2"
           >
-            <Image src={Face} className="w-9 h-9" alt="Profile" />
-          </button>
+            <BiMenu className="text-2xl" />
+          </div>
         </div>
       </div>
 
@@ -103,16 +148,18 @@ export default function Header() {
       {showMobileMenu && (
         <div className="md:hidden bg-[#0a1f2e] border-t border-gray-800 px-3 py-4 space-y-3">
           {/* User Info */}
-          <div className="flex items-center space-x-3 pb-3 border-b border-gray-800">
-            <Image src={Face} className="w-12 h-12" alt="Profile" />
-            <div className="flex flex-col">
-              <span className="text-base font-semibold">Mitchell</span>
-              <span className="text-xs bg-[#1e141e] border-[#ea0000] text-[#f80507] w-12 border rounded-sm p-1 text-center mt-1">
-                LVL 27
-              </span>
-            </div>
-          </div>
 
+          <Link href="/dashboard/userdashboard">
+            <div className="flex items-center space-x-3 pb-3 border-b border-gray-800">
+              <Image src={Face} className="w-12 h-12" alt="Profile" />
+              <div className="flex flex-col">
+                <span className="text-base font-semibold">Mitchell</span>
+                <span className="text-xs bg-[#1e141e] border-[#ea0000] text-[#f80507] w-12 border rounded-sm p-1 text-center mt-1">
+                  LVL 27
+                </span>
+              </div>
+            </div>
+          </Link>
           {/* Balance Display */}
           <div className="flex items-center justify-between bg-gradient-to-b from-[#ffffff]/20 to-[#071a26] p-3 rounded-md">
             <div className="flex items-center space-x-2">
@@ -128,6 +175,18 @@ export default function Header() {
           {/* Rewards */}
           <div className="flex items-center justify-center py-2">
             <Image src={Reward} className="h-8 w-auto" alt="Rewards" />
+          </div>
+
+          {/* Navigation Links */}
+          <div className="space-y-1 py-2 border-b border-gray-800 ">
+            {links.map((link) => (
+              <a key={link.href} href={link.href}>
+                <div className="flex items-center space-x-3 px-3 py-2.5 hover:bg-white/5 rounded-md transition-colors cursor-pointer">
+                  <span className="text-lg text-gray-400">{link.icon}</span>
+                  <span className="text-sm">{link.label}</span>
+                </div>
+              </a>
+            ))}
           </div>
 
           {/* Deposit Button */}

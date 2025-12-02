@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Auth from "../../../public/Auth.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import Link from "next/link";
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -69,18 +70,22 @@ export default function LoginPage() {
             </div>
 
             {/* Login Button */}
-            <button className="w-full text-xs cursor-pointer bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 transition text-white py-3 rounded-md font-semibold mt-2 shadow-md">
-              Login
-            </button>
-
+            <Link href="/dashboard">
+              <button className="w-full text-xs cursor-pointer bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 transition text-white py-3 rounded-md font-semibold mt-2 shadow-md">
+                Login
+              </button>
+            </Link>
             {/* Footer Links */}
             <div className="flex justify-between text-sm text-gray-300 mt-4">
-              <a href="#" className="text-red-500 hover:underline">
+              <Link
+                href="/forgotpassword"
+                className="text-red-500 hover:underline"
+              >
                 Forgot password?
-              </a>
-              <a href="#" className="text-red-500 hover:underline">
+              </Link>
+              <Link href="/signup" className="text-red-500 hover:underline">
                 Create an account
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import AuthBg from "../../../public/Auth.png";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import Link from "next/link";
 
 export default function SignupPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -182,9 +183,9 @@ export default function SignupPage() {
               {/* Footer link */}
               <p className="text-center text-gray-300 text-sm mt-4">
                 Already have an account?{" "}
-                <a href="/login" className="text-red-500 underline">
+                <Link href="/login" className="text-red-500 underline">
                   Login
-                </a>
+                </Link>
               </p>
             </form>
           </div>

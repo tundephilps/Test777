@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -37,10 +38,11 @@ const Hero = () => {
                 +400 FS on first 4 deposits
               </p>
             </div>
-
-            <button className="cursor-pointer flex justify-start items-start bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 px-[32px] py-[6px] rounded-md text-white font-medium transition w-fit">
-              <span>Join Now</span>
-            </button>
+            <Link href="/login">
+              <button className="cursor-pointer flex justify-start items-start bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 px-[32px] py-[6px] rounded-md text-white font-medium transition w-fit">
+                <span>Join Now</span>
+              </button>
+            </Link>
 
             <Image
               src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Visa.png"

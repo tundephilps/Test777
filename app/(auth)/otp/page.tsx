@@ -3,6 +3,7 @@
 import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Auth from "../../../public/Auth.png";
+import Link from "next/link";
 
 export default function OtpPage() {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
@@ -81,9 +82,11 @@ export default function OtpPage() {
             </div>
 
             {/* Verify Button */}
-            <button className="w-full cursor-pointer bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 transition text-white py-3 rounded-md font-semibold shadow-md">
-              Verify
-            </button>
+            <Link href="/changepassword">
+              <button className="w-full cursor-pointer bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 transition text-white py-3 rounded-md font-semibold shadow-md">
+                Verify
+              </button>
+            </Link>
 
             {/* Footer Links */}
             <div className="text-center text-gray-300 text-xs mt-4">
@@ -95,12 +98,12 @@ export default function OtpPage() {
               </p>
 
               <div className="flex justify-between mt-3">
-                <a href="#" className="text-red-500 hover:underline">
+                <Link href="/login" className="text-red-500 hover:underline">
                   Use a different email
-                </a>
-                <a href="#" className="text-red-500 hover:underline">
+                </Link>
+                <Link href="/login" className="text-red-500 hover:underline">
                   Back to log in
-                </a>
+                </Link>
               </div>
             </div>
           </div>
