@@ -10,6 +10,8 @@ import HotGames from "../components/homepage/hot-games";
 import WhyChooseUs from "../components/homepage/why-choose";
 import Sponsors from "../components/homepage/sponsors";
 import { redirect } from "next/navigation";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function Home() {
   redirect("/dashboard");

@@ -3,19 +3,19 @@ import Image from "next/image";
 export default function PromotionsPage() {
   const topPromos = [
     {
-      img: "/promo1.png",
+      img: "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Promo1.png",
       title: "Welcome Pack 620% + 400 FS.",
     },
     {
-      img: "/promo2.png",
+      img: "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Promo2.png",
       title: "Daily Cashback up to 30%!",
     },
     {
-      img: "/promo3.png",
+      img: "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Promo3.png",
       title: "Claim Free Spins & Bonus Cash",
     },
     {
-      img: "/promo4.png",
+      img: "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Promo4.png",
       title: "Win a Brand-New Audi A3 2026!",
     },
   ];

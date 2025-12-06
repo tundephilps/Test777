@@ -15,7 +15,7 @@ export default function LayoutContent({
         <Sidebar />
       </div>
       <div
-        className={`flex-1 transition-all duration-300 ${
+        className={`flex-1 overflow-x-hidden transition-all duration-300 ${
           isCollapsed ? "lg:ml-0" : ""
         }`}
       >

@@ -10,11 +10,14 @@ import BonusPromotion from "../../components/homepage/bonus-promotion";
 import HotGames from "../../components/homepage/hot-games";
 import WhyChooseUs from "../../components/homepage/why-choose";
 import Sponsors from "../../components/homepage/sponsors";
+import BigWins from "../../components/homepage/big-win";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="overflow-x-clip">
       <Hero />
+      <BigWins />
+
       <CasinoNavigation />
 
       <WelcomeBonus />

@@ -1,11 +1,10 @@
 "use client";
-
 import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function OtpPage() {
-  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const [otp, setOtp] = useState(["", "", "", "", ""]);
   const inputsRef = useRef<(HTMLInputElement | null)[]>([]);
 
   const handleChange = (value: string, index: number) => {
@@ -46,8 +45,8 @@ export default function OtpPage() {
 
       {/* MAIN CONTENT */}
       <div className="relative z-10 w-full h-full flex justify-end">
-        <div className="w-full md:w-1/2 flex items-center justify-center p-4">
-          <div className="w-full lg:max-w-md bg-black/20 backdrop-blur-xl p-8 rounded-xl border border-white/10 shadow-xl">
+        <div className="w-full md:w-1/2 flex items-center justify-center lg:p-4 p-2">
+          <div className="w-full lg:max-w-md bg-black/20 backdrop-blur-xl  p-2 lg:p-8 rounded-xl border border-white/10 shadow-xl">
             {/* Logo */}
             <div className="flex items-center justify-center mb-6">
               <Image
@@ -65,13 +64,13 @@ export default function OtpPage() {
             </h2>
 
             {/* OTP Boxes */}
-            <div className="flex justify-between gap-3 mb-6">
+            <div className="flex justify-between gap-1 mb-6">
               {otp.map((digit, index) => (
                 <input
                   key={index}
                   maxLength={1}
                   type="text"
-                  className="w-12 h-12 rounded-md bg-white/10 text-white text-center text-xl border border-neutral-700 focus:border-red-500 outline-none"
+                  className="w-12 h-12  rounded-md bg-white/10 text-white text-center text-xl border border-neutral-700 focus:border-red-500 outline-none"
                   value={digit}
                   onChange={(e) => handleChange(e.target.value, index)}
                   onKeyDown={(e) => handleBackspace(e, index)}
