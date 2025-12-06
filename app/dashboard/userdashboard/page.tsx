@@ -8,6 +8,9 @@ import FreeSpins from "../../../components/profiledashboard/free-spins";
 import Withdraw from "../../../components/profiledashboard/withdraw";
 import VipCashback from "../../../components/profiledashboard/vipcashback";
 import GameLog from "../../../components/profiledashboard/game-log";
+import AddFunds from "../../../components/profiledashboard/add-funds";
+import WithdrawFunds from "../../../components/profiledashboard/withdraw-funds";
+import PaymentMethods from "../../../components/profiledashboard/payment-method";
 
 const UserDashboard = () => {
   return (
@@ -19,7 +22,10 @@ const UserDashboard = () => {
       {/* <FreeSpins /> */}
       {/* <Withdraw /> */}
       {/* <VipCashback /> */}
-      <GameLog />
+      {/* <GameLog /> */}
+      {/* <AddFunds /> */}
+      {/* <WithdrawFunds /> */}
+      <PaymentMethods />
     </div>
   );
 };

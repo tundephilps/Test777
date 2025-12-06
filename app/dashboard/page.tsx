@@ -16,6 +16,7 @@ const HomePage = () => {
     <div>
       <Hero />
       <CasinoNavigation />
+
       <WelcomeBonus />
       <NewGames />
       <TopGames />

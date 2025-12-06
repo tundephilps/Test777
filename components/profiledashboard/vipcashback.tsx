@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import VIP from "../../public/VIP.png";
 
 export default function VipCashback() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -292,7 +291,7 @@ export default function VipCashback() {
       </div>
 
       <Image
-        src={VIP}
+        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/VIP.png"
         width={2000}
         height={2000}
         className="h-auto w-full mt-12"

@@ -2,7 +2,6 @@
 
 import React, { useState, useRef } from "react";
 import Image from "next/image";
-import Auth from "../../../public/Auth.png";
 import Link from "next/link";
 
 export default function OtpPage() {
@@ -38,7 +37,7 @@ export default function OtpPage() {
     >
       {/* BACKGROUND IMAGE */}
       <Image
-        src={Auth}
+        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Auth.png"
         alt="background"
         fill
         className="object-cover"
@@ -52,7 +51,7 @@ export default function OtpPage() {
             {/* Logo */}
             <div className="flex items-center justify-center mb-6">
               <Image
-                src="/logo.png"
+                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Logo.png"
                 alt="Canada777"
                 width={200}
                 height={200}
@@ -76,7 +75,9 @@ export default function OtpPage() {
                   value={digit}
                   onChange={(e) => handleChange(e.target.value, index)}
                   onKeyDown={(e) => handleBackspace(e, index)}
-                  ref={(el) => (inputsRef.current[index] = el)}
+                  ref={(el) => {
+                    inputsRef.current[index] = el;
+                  }}
                 />
               ))}
             </div>
@@ -91,7 +92,7 @@ export default function OtpPage() {
             {/* Footer Links */}
             <div className="text-center text-gray-300 text-xs mt-4">
               <p>
-                If you didn’t receive a code{" "}
+                If you didn't receive a code{" "}
                 <a href="#" className="text-red-500 hover:underline">
                   Resend code (60s)
                 </a>

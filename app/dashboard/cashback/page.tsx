@@ -2,7 +2,6 @@ import React from "react";
 import WhyChooseUs from "../../../components/homepage/why-choose";
 import Sponsors from "../../../components/homepage/sponsors";
 import Image from "next/image";
-import Mask9 from "../../../public/Mask9.png";
 import CashbackTable from "../../../components/cashback/cashback-table";
 
 const CashbackPage = () => {
@@ -10,7 +9,7 @@ const CashbackPage = () => {
     <div>
       <div className="relative   lg:flex hidden items-center">
         <Image
-          src={Mask9}
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Mask9.png"
           width={1000}
           height={500}
           alt="Hero"

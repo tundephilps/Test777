@@ -1,7 +1,5 @@
 "use client";
-
 import Image from "next/image";
-import AuthBg from "../../../public/Auth.png";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Link from "next/link";
@@ -13,7 +11,7 @@ export default function SignupPage() {
     <div className="w-full h-screen relative overflow-y-auto lg:py-0 py-12">
       {/* Background */}
       <Image
-        src={AuthBg}
+        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Auth.png"
         alt="background"
         fill
         priority
@@ -27,7 +25,7 @@ export default function SignupPage() {
             {/* Logo */}
             <div className="flex justify-center mb-4">
               <Image
-                src="/logo.png"
+                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Logo.png"
                 alt="Canada777"
                 width={180}
                 height={60}

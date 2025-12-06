@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Auth from "../../../public/Auth.png";
+
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function ChangepasswordPage() {
@@ -17,7 +17,7 @@ export default function ChangepasswordPage() {
     >
       {/* Background */}
       <Image
-        src={Auth}
+        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Auth.png"
         alt="background"
         fill
         className="object-cover"
@@ -31,7 +31,7 @@ export default function ChangepasswordPage() {
             {/* Logo */}
             <div className="flex justify-center mb-6">
               <Image
-                src="/logo.png"
+                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Logo.png"
                 alt="Canada777"
                 width={200}
                 height={200}

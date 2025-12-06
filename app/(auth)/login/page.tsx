@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Auth from "../../../public/Auth.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Link from "next/link";
 
@@ -16,7 +15,7 @@ export default function LoginPage() {
     >
       {/* BACKGROUND IMAGE */}
       <Image
-        src={Auth}
+        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Auth.png"
         alt="background"
         fill
         className="object-cover"
@@ -30,7 +29,7 @@ export default function LoginPage() {
             {/* Logo */}
             <div className="flex items-center gap-2 mb-6">
               <Image
-                src="/logo.png"
+                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Logo.png"
                 alt="Canada777"
                 width={300}
                 height={300}

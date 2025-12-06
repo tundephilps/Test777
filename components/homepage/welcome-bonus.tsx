@@ -3,7 +3,7 @@ import Image from "next/image";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 const WelcomeBonus = () => {
   return (
-    <div>
+    <div className="">
       {/* Bottom Section - Welcome Bonus */}
       <div className="flex items-center justify-between  py-4">
         {/* Left Side - Welcome Bonus */}
