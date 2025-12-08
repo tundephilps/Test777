@@ -1,5 +1,5 @@
 import React from "react";
-import PaymentMethodSelector from "./payment-selector";
+import PaymentMethodSelector from "./add-funds";
 import History from "./history";
 
 const Deposit = () => {

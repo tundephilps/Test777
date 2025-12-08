@@ -1,214 +1,112 @@
 "use client";
-import React, { useState } from "react";
 
-export default function PaymentMethodSelector() {
-  const [promoCode, setPromoCode] = useState("");
-  const [selectedPayment, setSelectedPayment] = useState("");
+import { useState } from "react";
+import { FaCreditCard, FaPlus, FaTrash } from "react-icons/fa";
+import { BsBank2 } from "react-icons/bs";
+import { PiWalletBold } from "react-icons/pi";
+import { SiBitcoinsv } from "react-icons/si";
+import { IoChevronForward } from "react-icons/io5";
 
-  const paymentMethods = [
-    { id: "card", name: "Card", logo: "💳", min: "5 CAD" },
-    { id: "mastercard", name: "Mastercard", logo: "🔴", min: "5 CAD" },
-    { id: "visa", name: "Visa", logo: "💙", min: "5 CAD" },
-    { id: "gpay", name: "G Pay", logo: "G", min: "5 CAD" },
-    { id: "applepay", name: "Apple Pay", logo: "", min: "5 CAD" },
+export default function PaymentSelector() {
+  const [selectedAmount, setSelectedAmount] = useState<number | null>(100);
+  const [customAmount, setCustomAmount] = useState<string>("");
+  const [selectedMethod, setSelectedMethod] = useState("card");
+  const [paymentMethods, setPaymentMethods] = useState([
     {
-      id: "visa-mastercard",
-      name: "Visa & Mastercard",
-      logo: "💳",
-      min: "5 CAD",
-      // featured: true,
+      id: "card",
+      name: "Credit Card",
+      subtitle: "Visa, Mastercard",
+      icon: <FaCreditCard className="text-red-500 text-xl" />,
     },
-    { id: "flexepin", name: "Flexepin", logo: "F", min: "5 CAD" },
-    { id: "bitcoin", name: "Bitcoin", logo: "₿", min: "5 CAD" },
-    { id: "ethereum", name: "Ethereum", logo: "◆", min: "5 CAD" },
-    { id: "litecoin", name: "Litecoin", logo: "Ł", min: "5 CAD" },
-    { id: "tron", name: "Tron", logo: "▲", min: "5 CAD" },
-    { id: "binance", name: "Binance", logo: "B", min: "0 CAD" },
-    { id: "xrp", name: "XRP", logo: "X", min: "" },
-    { id: "usdcoin", name: "USD Coin", logo: "U", min: "0 CAD" },
-    { id: "tether", name: "Tether", logo: "₮", min: "" },
-  ];
+    {
+      id: "ewallet",
+      name: "E-Wallet",
+      subtitle: "Skrill, Neteller",
+      icon: <PiWalletBold className="text-gray-400 text-xl" />,
+    },
+    {
+      id: "crypto",
+      name: "Crypto",
+      subtitle: "BTC, ETH, USDT",
+      icon: <SiBitcoinsv className="text-gray-400 text-xl" />,
+    },
+  ]);
 
-  const handleAddPromo = () => {
-    console.log("Adding promo code:", promoCode);
-  };
+  const amounts = [10, 25, 50, 100, 250, 500];
 
-  const handlePaymentSelect = (id: string) => {
-    setSelectedPayment(id);
+  const handleDelete = (id: string) => {
+    // Remove the payment method
+    setPaymentMethods(paymentMethods.filter((method) => method.id !== id));
+
+    // If the deleted method was selected, select the first remaining method
+    if (selectedMethod === id && paymentMethods.length > 1) {
+      const remainingMethods = paymentMethods.filter(
+        (method) => method.id !== id
+      );
+      setSelectedMethod(remainingMethods[0]?.id || "");
+    }
   };
 
   return (
-    <div className="min-h-screen  flex items-center justify-center">
-      <div className="w-full bg-[#081a26] rounded-2xl border border-red-500/30 p-8 shadow-2xl">
-        {/* Promo Code Section */}
-        <div className="mb-8">
-          <h2 className="text-white text-center mb-4 text-lg">
-            Do you have Promo Code?
-          </h2>
-
-          <div className="flex  mb-2 max-w-lg mx-auto">
-            <input
-              type="text"
-              placeholder="Promo Code (Optional)"
-              value={promoCode}
-              onChange={(e) => setPromoCode(e.target.value)}
-              className="flex-1 bg-slate-800/50 border border-slate-700 rounded-l-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-red-500 transition-colors"
-            />
-            <button
-              onClick={handleAddPromo}
-              className=" bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 cursor-pointer text-white font-semibold px-8 py-3 rounded-r-lg transition-colors"
-            >
-              Add
-            </button>
+    <div className="w-full mx-auto bg-[#081a26] p-6 sm:p-8 rounded-2xl shadow-2xl text-white">
+      {/* Header */}
+      <div className="inline-flex items-center justify-between w-full pb-8">
+        <div className="flex items-center gap-3">
+          <FaCreditCard className="text-red-500 text-2xl" />
+          <div>
+            <h2 className="text-xl font-semibold">Payment Methods</h2>
+            <p className="text-gray-400 text-sm">
+              {paymentMethods.length} saved Methods
+            </p>
           </div>
-
-          <p className="text-slate-400 text-sm text-center">
-            Looking for promo code?{" "}
-            <a
-              href="#"
-              className="text-red-500 hover:text-red-400 transition-colors"
-            >
-              Click here
-            </a>
-          </p>
         </div>
 
-        {/* Payment Methods Section */}
-        <div>
-          <h2 className="text-white text-center mb-6 text-lg">
-            Choose payment method
-          </h2>
-
-          <div className="grid grid-cols-4 gap-4">
-            {paymentMethods.map((method) => (
-              <button
-                key={method.id}
-                onClick={() => handlePaymentSelect(method.id)}
-                className={`relative bg-[#0B2231] backdrop-blur-sm rounded-xl p-4 border-2 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/20 ${
-                  selectedPayment === method.id
-                    ? "border-red-500 shadow-lg shadow-red-500/30"
-                    : "border-slate-700/50"
-                } $"ring-2 ring-red-500/30" : ""}`}
-              >
-                {/* Logo/Icon Area */}
-                <div className="flex items-center justify-center h-12 mb-3">
-                  {method.id === "card" && <div className="text-4xl">💳</div>}
-                  {method.id === "mastercard" && (
-                    <div className="flex gap-1">
-                      <div className="w-8 h-8 bg-red-500 rounded-full opacity-80"></div>
-                      <div className="w-8 h-8 bg-yellow-500 rounded-full opacity-80 -ml-4"></div>
-                    </div>
-                  )}
-                  {method.id === "visa" && (
-                    <div className="text-3xl font-bold text-blue-500">VISA</div>
-                  )}
-                  {method.id === "gpay" && (
-                    <div className="flex items-center gap-1">
-                      <span className="text-blue-500 text-2xl font-bold">
-                        G
-                      </span>
-                      <span className="text-white text-lg">Pay</span>
-                    </div>
-                  )}
-                  {method.id === "applepay" && (
-                    <div className="flex items-center gap-1">
-                      <span className="text-2xl"></span>
-                      <span className="text-white text-sm font-medium">
-                        Pay
-                      </span>
-                    </div>
-                  )}
-                  {method.id === "visa-mastercard" && (
-                    <div className="flex items-center gap-1">
-                      <div className="text-lg font-bold text-blue-500">
-                        VISA
-                      </div>
-                      <div className="flex -space-x-2">
-                        <div className="w-4 h-4 bg-red-500 rounded-full"></div>
-                        <div className="w-4 h-4 bg-yellow-500 rounded-full"></div>
-                      </div>
-                    </div>
-                  )}
-                  {method.id === "flexepin" && (
-                    <div className="text-white">
-                      <span className="text-xl font-bold">flex</span>
-                      <span className="text-xl font-bold text-pink-500">e</span>
-                      <span className="text-xl font-bold">pin</span>
-                    </div>
-                  )}
-                  {method.id === "bitcoin" && (
-                    <div className="text-orange-500 text-3xl font-bold">₿</div>
-                  )}
-                  {method.id === "ethereum" && (
-                    <div className="text-blue-400 text-3xl">◆</div>
-                  )}
-                  {method.id === "litecoin" && (
-                    <div className="text-slate-300 text-3xl font-bold">Ł</div>
-                  )}
-                  {method.id === "tron" && (
-                    <div className="text-red-500 text-2xl">▲</div>
-                  )}
-                  {method.id === "binance" && (
-                    <div className="text-yellow-400 text-2xl font-bold">
-                      <div className="flex items-center">
-                        <span className="bg-yellow-400 text-slate-900 px-2 py-1 rounded">
-                          B
-                        </span>
-                      </div>
-                    </div>
-                  )}
-                  {method.id === "xrp" && (
-                    <div className="text-slate-300 text-3xl font-bold">XRP</div>
-                  )}
-                  {method.id === "usdcoin" && (
-                    <div className="flex items-center justify-center">
-                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
-                        $
-                      </div>
-                    </div>
-                  )}
-                  {method.id === "tether" && (
-                    <div className="flex items-center justify-center">
-                      <div className="w-8 h-8 bg-teal-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                        ₮
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                {/* Method Name */}
-                <div className="text-white text-xs font-medium text-center mb-1">
-                  {method.name}
-                </div>
-
-                {/* Min Amount */}
-                {method.min && (
-                  <div className="text-slate-400 text-xs text-center">
-                    Min: {method.min}
-                  </div>
-                )}
-
-                {/* Selection Indicator */}
-                {selectedPayment === method.id && (
-                  <div className="absolute top-2 right-2 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center">
-                    <svg
-                      className="w-3 h-3 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                )}
-              </button>
-            ))}
-          </div>
+        <div className="inline-flex items-center gap-2 border border-gray-400 py-2 px-6 rounded-md cursor-pointer text-xs hover:bg-white/5 transition">
+          <FaPlus /> Add New
         </div>
       </div>
+
+      <div className="flex flex-col gap-3">
+        {paymentMethods.map((m) => (
+          <div
+            key={m.id}
+            onClick={() => setSelectedMethod(m.id)}
+            className={`w-full flex items-center justify-between p-4 rounded-xl border transition-all cursor-pointer
+              ${
+                selectedMethod === m.id
+                  ? "border-red-600 bg-red-900/20"
+                  : "border-[#132534] bg-[#0c1d2a]"
+              }
+            `}
+          >
+            <div className="flex items-center gap-3">
+              {m.icon}
+              <div className="text-left">
+                <p className="font-medium">{m.name}</p>
+                <p className="text-gray-400 text-sm">{m.subtitle}</p>
+              </div>
+            </div>
+
+            {/* Delete Button */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleDelete(m.id);
+              }}
+              className="p-2 rounded-lg hover:bg-red-600/20 transition-colors group"
+              aria-label="Delete payment method"
+            >
+              <FaTrash className="text-red-500 group-hover:text-red-500 transition-colors" />
+            </button>
+          </div>
+        ))}
+      </div>
+
+      {/* Submit Button */}
+      {/* <button className="w-full mt-8 bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 text-white py-3 text-center rounded-xl font-semibold text-sm flex items-center justify-center gap-2 shadow-lg transition">
+        Deposit ${selectedAmount ?? (customAmount || "0")}
+        <IoChevronForward className="text-lg" />
+      </button> */}
     </div>
   );
 }
