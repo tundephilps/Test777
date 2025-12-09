@@ -16,6 +16,9 @@ import PaymentMethods from "../../../components/profiledashboard/payment-method"
 import TopTabs from "../../../components/profiledashboard/top-tabs";
 import BottomTabs from "../../../components/profiledashboard/bottom-tab";
 import TransactionStatus from "../../../components/profiledashboard/transaction-status";
+import PromotionsList from "../../../components/profiledashboard/promotions-list";
+import ActiveBonuses from "../../../components/profiledashboard/active-bonus";
+import BonusRules from "../../../components/profiledashboard/bonus-rules";
 
 const UserDashboard = () => {
   const [activeTop, setActiveTop] = useState("cashier");
@@ -33,13 +36,13 @@ const UserDashboard = () => {
         return <TransactionStatus />;
 
       case "promotions":
-        return <AddFunds />;
+        return <PromotionsList />;
       case "free-spins":
-        return <Withdraw />;
+        return <FreeSpins />;
       case "active-bonuses":
-        return <AddFunds />;
+        return <ActiveBonuses />;
       case "bonus-rules":
-        return <Withdraw />;
+        return <BonusRules />;
 
       case "overview":
         return <AddFunds />;

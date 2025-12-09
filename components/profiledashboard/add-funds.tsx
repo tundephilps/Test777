@@ -39,14 +39,14 @@ export default function AddFunds() {
 
   return (
     <div className="min-h-screen  flex items-center justify-center">
-      <div className="w-full bg-[#081a26] rounded-2xl  p-8 shadow-2xl">
+      <div className="w-full bg-[#081a26] rounded-2xl  lg:p-8 p-2 shadow-2xl">
         {/* Promo Code Section */}
         <div className="mb-8">
           <h2 className="text-white text-center mb-4 text-lg">
             Do you have Promo Code?
           </h2>
 
-          <div className="flex  mb-2 max-w-lg mx-auto">
+          <div className="flex  mb-2 lg:max-w-lg px-0 mx-auto">
             <input
               type="text"
               placeholder="Promo Code (Optional)"
@@ -56,7 +56,7 @@ export default function AddFunds() {
             />
             <button
               onClick={handleAddPromo}
-              className=" bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 cursor-pointer text-white font-semibold px-8 py-3 rounded-r-lg transition-colors"
+              className=" bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 cursor-pointer text-white font-semibold lg:px-8 px-2 py-3 rounded-r-lg transition-colors"
             >
               Add
             </button>
@@ -79,7 +79,7 @@ export default function AddFunds() {
             Choose payment method
           </h2>
 
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid lg:grid-cols-4 grid-cols-2 lg:gap-4 gap-2">
             {paymentMethods.map((method) => (
               <button
                 key={method.id}

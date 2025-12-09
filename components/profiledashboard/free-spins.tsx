@@ -1,69 +1,141 @@
+import React from "react";
+import { FaDice, FaPlay, FaClock } from "react-icons/fa";
+import { GiTwoCoins } from "react-icons/gi";
+import Spin from "../../public/Spin.png";
 import Image from "next/image";
-import { FaPlay } from "react-icons/fa";
 
-const FreeSpins = () => {
-  const games = [
-    "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Game1.png",
-    "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Game2.png",
-    "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Game3.png",
-    "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Game4.png",
-    "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Game5.png",
+export default function FreeSpins() {
+  const spins = [
+    {
+      id: 1,
+      name: "Lucky Slots",
+      campaign: "$0.20/spin",
+      used: 7,
+      remaining: 11,
+      status: "active",
+      daysLeft: 2,
+    },
+    {
+      id: 2,
+      name: "Mega Fortune",
+      campaign: "$0.20/spin",
+      used: 10,
+      remaining: 11,
+      status: "completed",
+      daysLeft: 2,
+    },
+    {
+      id: 3,
+      name: "Lucky Slots",
+      campaign: "$0.20/spin",
+      used: 7,
+      remaining: 11,
+      status: "active",
+      daysLeft: 2,
+    },
   ];
-  return (
-    <div>
-      {/* Promo Code Section */}
-      <div className="mb-8">
-        <h2 className="text-white text-center mb-4 text-lg">
-          Do you have Promo Code?
-        </h2>
 
-        <div className="flex mb-2 max-w-lg mx-auto">
-          <input
-            type="text"
-            placeholder="Promo Code (Optional)"
-            className="flex-1 bg-slate-800/50 border border-slate-700 rounded-l-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-red-500 transition-colors"
-          />
-          <button className=" bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 cursor-pointer text-white font-semibold px-8 py-3 rounded-r-lg transition-colors">
-            Add
+  const totalSpins = 53;
+  const usedSpins = 17;
+  const remainingSpins = 36;
+
+  return (
+    <div className="min-h-screen bg-[#0a1f2d] mt-6 rounded-md p-6">
+      <div className="mx-auto">
+        {/* Header */}
+        <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10">
+              <Image
+                src={Spin}
+                alt=""
+                width={1000}
+                height={1000}
+                className="text-white text-xl"
+              />
+            </div>
+            <h1 className="text-white text-2xl font-bold">Free Spins</h1>
+          </div>
+          <button className="px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-medium hover:bg-red-700 transition-colors">
+            36 Avaliable
           </button>
         </div>
 
-        <p className="text-slate-400 text-sm text-center">
-          Looking for promo code?{" "}
-          <a
-            href="#"
-            className="text-red-500 hover:text-red-400 transition-colors"
-          >
-            Click here
-          </a>
-        </p>
-      </div>
-
-      <div className="bg-[#081A26] p-4 text-white">
-        <div className="flex flex-col items-center justify-center gap-4">
-          <p>Remaining Free Spin</p>
-          <p>14</p>
-          <p>Choose a Free Spins Games</p>
+        {/* Header Summary */}
+        <div className="bg-[#ffffff]/10 backdrop-blur-3xl rounded-2xl max-w-md mx-auto mb-8 p-6 flex justify-around text-center shadow-lg   ">
+          <div>
+            <p className="text-4xl font-bold text-white">53</p>
+            <p className="text-sm text-gray-400">Total</p>
+          </div>
+          <div>
+            <p className="text-4xl font-bold text-yellow-400">17</p>
+            <p className="text-sm text-gray-400">Used</p>
+          </div>
+          <div>
+            <p className="text-4xl font-bold text-red-700">36</p>
+            <p className="text-sm text-gray-400">Remaining</p>
+          </div>
         </div>
 
-        <div className="grid lg:grid-cols-5 grid-cols-2 gap-2 mt-4">
-          {games.map((game, index) => (
+        {/* Spins List */}
+        <div className="space-y-4">
+          {spins.map((spin, index) => (
             <div
-              key={index}
-              className="relative group overflow-hidden rounded-lg cursor-pointer"
+              key={spin.id}
+              className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-slate-600/50 transition-all"
             >
-              {/* Game Image */}
-              <Image
-                src={game}
-                width={1000}
-                height={300}
-                alt={`Game ${index + 1}`}
-                className="w-full  h-auto transition-transform duration-300 group-hover:scale-105"
-              />
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-4">
+                  <div
+                    className={`w-12 h-12 ${
+                      index === 1 ? "bg-blue-600" : "bg-red-600"
+                    } rounded-lg flex items-center justify-center`}
+                  >
+                    <GiTwoCoins className="text-white text-2xl" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold text-lg">
+                      {spin.name}
+                    </h3>
+                    <p className="text-slate-400 text-sm">{spin.campaign}</p>
+                  </div>
+                </div>
+                {spin.status === "active" ? (
+                  <button className="flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-medium hover:bg-red-700 transition-colors">
+                    <FaPlay className="text-xs" />
+                    Play
+                  </button>
+                ) : (
+                  <span className="px-4 py-2 bg-slate-700 text-slate-400 rounded-lg text-sm font-medium">
+                    Completed
+                  </span>
+                )}
+              </div>
 
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <FaPlay className="text-white text-3xl" />
+              <div className="flex items-center justify-between mb-3">
+                <div className="text-slate-300 text-sm">
+                  Used: <span className="font-semibold">{spin.used}</span>{" "}
+                  Remaining:{" "}
+                  <span className="font-semibold">{spin.remaining}</span>
+                </div>
+                <div className="flex items-center gap-2 text-slate-400 text-xs">
+                  <FaClock className="text-xs" />
+                  <span>{spin.daysLeft} days</span>
+                </div>
+              </div>
+
+              {/* Progress Bar */}
+              <div className="relative w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+                <div
+                  className={`absolute left-0 top-0 h-full ${
+                    index === 1 ? "bg-blue-500" : "bg-red-500"
+                  } rounded-full transition-all`}
+                  style={{
+                    width: `${
+                      (spin.used / (spin.used + spin.remaining)) * 100
+                    }%`,
+                  }}
+                />
               </div>
             </div>
           ))}
@@ -71,6 +143,4 @@ const FreeSpins = () => {
       </div>
     </div>
   );
-};
-
-export default FreeSpins;
+}

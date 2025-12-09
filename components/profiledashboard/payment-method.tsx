@@ -8,13 +8,13 @@ import {
 
 export default function PaymentMethods() {
   return (
-    <div className=" mx-auto bg-[#081a26] text-white p-6 rounded-2xl space-y-6 shadow-lg ">
+    <div className="mx-auto bg-[#081a26] text-white lg:p-6 p-2 rounded-2xl space-y-6 shadow-lg">
       <div className="flex justify-between items-start">
         <div>
           <h2 className="text-xl font-semibold">Payment Methods</h2>
           <p className="text-sm text-gray-400">3 saved methods</p>
         </div>
-        <button className="flex items-center gap-2 bg-[#081f2d] border border-gray-700 hover:border-gray-500 transition px-4 py-2 rounded-xl text-sm font-medium">
+        <button className="flex items-center gap-2 bg-[#081f2d] border border-gray-700 hover:border-gray-500 transition lg:px-4 px-2 py-2 rounded-xl lg:text-sm text-[10px] font-medium">
           <FaPlus size={16} /> Add New
         </button>
       </div>
