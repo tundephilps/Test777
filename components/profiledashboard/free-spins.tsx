@@ -40,7 +40,7 @@ export default function FreeSpins() {
   const remainingSpins = 36;
 
   return (
-    <div className="min-h-screen bg-[#0a1f2d] mt-6 rounded-md p-6">
+    <div className="min-h-screen bg-[#0a1f2d] mt-6 rounded-md lg:p-6 p-2">
       <div className="mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
@@ -62,7 +62,7 @@ export default function FreeSpins() {
         </div>
 
         {/* Header Summary */}
-        <div className="bg-[#ffffff]/10 backdrop-blur-3xl rounded-2xl max-w-md mx-auto mb-8 p-6 flex justify-around text-center shadow-lg   ">
+        <div className="bg-[#ffffff]/10 backdrop-blur-3xl rounded-2xl max-w-md mx-auto mb-8 lg:p-6 p-2 flex justify-around text-center shadow-lg   ">
           <div>
             <p className="text-4xl font-bold text-white">53</p>
             <p className="text-sm text-gray-400">Total</p>
@@ -82,7 +82,7 @@ export default function FreeSpins() {
           {spins.map((spin, index) => (
             <div
               key={spin.id}
-              className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-slate-600/50 transition-all"
+              className="bg-slate-800/50 backdrop-blur-sm rounded-xl lg:p-6 p-2 border border-slate-700/50 hover:border-slate-600/50 transition-all"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-4">

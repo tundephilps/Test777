@@ -6,6 +6,7 @@ import {
   FaDiceFive,
   FaSkullCrossbones,
   FaDiceD6,
+  FaGamepad,
 } from "react-icons/fa";
 import { GiCardAceSpades, GiRollingDices } from "react-icons/gi";
 import { PiSpinnerFill } from "react-icons/pi";
@@ -66,7 +67,7 @@ export default function BonusRules() {
 
         {/* General Requirements Section */}
         <div className="mb-8">
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
+          <div className="bg-[#0B2231] backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
             <div className="flex items-center gap-2 mb-4">
               <FaCircle className="text-red-700 text-xs" />
               <h2 className="text-white text-lg font-semibold">
@@ -97,17 +98,17 @@ export default function BonusRules() {
         {/* Game Contributions Section */}
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-4">
-            <FaCircle className="text-red-500 text-xs" />
+            <FaGamepad className="text-red-700" size={28} />
             <h2 className="text-white text-lg font-semibold">
               Game Contributions
             </h2>
           </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 divide-y divide-slate-700/50">
+          <div className="  divide-slate-700/50">
             {gameContributions.map((game, index) => (
               <div
                 key={index}
-                className="flex items-center justify-between p-5 hover:bg-slate-700/30 transition-colors"
+                className="flex items-center justify-between p-5 bg-[#0B2231] mt-3 rounded-md hover:bg-slate-700/30 transition-colors"
               >
                 <div className="flex items-center gap-3">
                   <div className="text-slate-400 text-xl">{game.icon}</div>

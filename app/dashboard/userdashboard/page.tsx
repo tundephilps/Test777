@@ -19,6 +19,10 @@ import TransactionStatus from "../../../components/profiledashboard/transaction-
 import PromotionsList from "../../../components/profiledashboard/promotions-list";
 import ActiveBonuses from "../../../components/profiledashboard/active-bonus";
 import BonusRules from "../../../components/profiledashboard/bonus-rules";
+import ProfileOverview from "../../../components/profiledashboard/overview";
+import PersonalDetails from "../../../components/profiledashboard/personal-details";
+import Verification from "../../../components/profiledashboard/verification";
+import ResponsibleLimits from "../../../components/profiledashboard/responsible-limit";
 
 const UserDashboard = () => {
   const [activeTop, setActiveTop] = useState("cashier");
@@ -45,13 +49,13 @@ const UserDashboard = () => {
         return <BonusRules />;
 
       case "overview":
-        return <AddFunds />;
+        return <ProfileOverview />;
       case "personal-details":
-        return <Withdraw />;
+        return <PersonalDetails />;
       case "verification":
-        return <AddFunds />;
+        return <Verification />;
       case "responsible-limits":
-        return <Withdraw />;
+        return <ResponsibleLimits />;
       case "preference":
         return <Withdraw />;
 
