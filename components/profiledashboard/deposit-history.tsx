@@ -82,7 +82,7 @@ export default function DepositHistory() {
           <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
             <FaWallet className="text-white text-xl" />
           </div>
-          <h1 className="text-white text-2xl font-bold">Withdrawal History</h1>
+          <h1 className="text-white text-2xl font-bold">Deposit History</h1>
         </div>
 
         {/* Table */}

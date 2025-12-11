@@ -23,6 +23,11 @@ import ProfileOverview from "../../../components/profiledashboard/overview";
 import PersonalDetails from "../../../components/profiledashboard/personal-details";
 import Verification from "../../../components/profiledashboard/verification";
 import ResponsibleLimits from "../../../components/profiledashboard/responsible-limit";
+import Preferences from "../../../components/profiledashboard/prefrences";
+import GameHistory from "../../../components/profiledashboard/game-history";
+import DepositHistory from "../../../components/profiledashboard/deposit-history";
+import WithdrawlHistory from "../../../components/profiledashboard/withdrawal-history";
+import BonusHistory from "../../../components/profiledashboard/bonus-history";
 
 const UserDashboard = () => {
   const [activeTop, setActiveTop] = useState("cashier");
@@ -57,16 +62,16 @@ const UserDashboard = () => {
       case "responsible-limits":
         return <ResponsibleLimits />;
       case "preference":
-        return <Withdraw />;
+        return <Preferences />;
 
       case "game-history":
-        return <AddFunds />;
+        return <GameHistory />;
       case "deposit":
-        return <Withdraw />;
+        return <DepositHistory />;
       case "withdrawal-history":
-        return <AddFunds />;
+        return <WithdrawlHistory />;
       case "bonus-history":
-        return <Withdraw />;
+        return <BonusHistory />;
       case "cashback-log":
         return <Withdraw />;
 

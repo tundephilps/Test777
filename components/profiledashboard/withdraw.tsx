@@ -6,9 +6,6 @@ const Withdraw = () => {
   return (
     <div>
       <BalanceCard />
-      <div className="w-[95vw] lg:w-full overflow-x-auto overscroll-x-auto">
-        <WithdrawlHistory />
-      </div>
     </div>
   );
 };

@@ -1,92 +1,83 @@
+"use client";
 import React, { useState } from "react";
-import { FaWallet, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { BiTrendingUp } from "react-icons/bi";
+import {
+  FaGamepad,
+  FaDice,
+  FaChevronLeft,
+  FaChevronRight,
+  FaRocket,
+} from "react-icons/fa";
+import { GiRollingDices, GiCardAceSpades } from "react-icons/gi";
 
-export default function DepositHistory() {
+export default function GameHistory() {
   const [currentPage, setCurrentPage] = useState(1);
 
-  const depositHistory = [
+  const gameHistory = [
     {
       date: "Dec 1, 2025",
-      method: "Card",
-      status: "in-progress",
+      method: "Slot",
+      icon: <GiCardAceSpades />,
+      status: "win",
       amount: "+$32.55",
     },
     {
       date: "Dec 1, 2025",
-      method: "Wallet",
-      status: "completed",
+      method: "Slot",
+      icon: <GiCardAceSpades />,
+      status: "loss",
       amount: "+$32.55",
     },
     {
       date: "Dec 1, 2025",
-      method: "Crypto",
-      status: "pending",
+      method: "Dice",
+      icon: <FaDice />,
+      status: "win",
       amount: "+$32.55",
     },
     {
       date: "Dec 1, 2025",
-      method: "Wallet",
-      status: "completed",
+      method: "Slot",
+      icon: <GiCardAceSpades />,
+      status: "win",
       amount: "+$32.55",
     },
     {
       date: "Dec 1, 2025",
-      method: "Card",
-      status: "in-progress",
+      method: "Crash",
+      icon: <FaRocket />,
+      status: "loss",
       amount: "+$32.55",
     },
     {
       date: "Dec 1, 2025",
-      method: "Wallet",
-      status: "completed",
+      method: "Slot",
+      icon: <GiCardAceSpades />,
+      status: "win",
       amount: "+$32.55",
     },
     {
       date: "Dec 1, 2025",
-      method: "Wallet",
-      status: "completed",
+      method: "Slot",
+      icon: <GiCardAceSpades />,
+      status: "loss",
       amount: "+$32.55",
     },
   ];
 
-  const getStatusBadge = (status) => {
-    switch (status) {
-      case "completed":
-        return (
-          <span className="inline-flex px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-medium border border-emerald-500/30">
-            Completed
-          </span>
-        );
-      case "in-progress":
-        return (
-          <span className="inline-flex px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs font-medium border border-orange-500/30">
-            In Progress
-          </span>
-        );
-      case "pending":
-        return (
-          <span className="inline-flex px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs font-medium border border-yellow-500/30">
-            Pending
-          </span>
-        );
-      default:
-        return null;
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-[#0a1f2d] mt-6 lg:p-6 p-2">
+    <div className="min-h-screen bg-[#0A1F2D] lg:p-6 p-2 mt-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="flex items-center gap-3 mb-8">
           <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
-            <FaWallet className="text-white text-xl" />
+            <FaGamepad className="text-white text-xl" />
           </div>
-          <h1 className="text-white text-2xl font-bold">Withdrawal History</h1>
+          <h1 className="text-white text-2xl font-bold">Game History</h1>
         </div>
 
         {/* Table */}
-        <div className="bg-[#0b2231] backdrop-blur-sm rounded-xl border border-slate-700/50 overflow-hidden">
+        <div className="bg-[#0B2231] backdrop-blur-sm rounded-xl border border-slate-700/50 overflow-hidden">
           {/* Table Header */}
           <div className="grid grid-cols-4 gap-4 px-6 py-4 border-b border-slate-700/50">
             <div className="text-slate-400 text-sm font-medium">Date</div>
@@ -99,14 +90,27 @@ export default function DepositHistory() {
 
           {/* Table Body */}
           <div className="divide-y divide-slate-700/50">
-            {depositHistory.map((item, index) => (
+            {gameHistory.map((item, index) => (
               <div
                 key={index}
                 className="grid grid-cols-4 gap-4 px-6 py-4 hover:bg-slate-700/30 transition-colors"
               >
                 <div className="text-slate-300 text-sm">{item.date}</div>
-                <div className="text-slate-300 text-sm">{item.method}</div>
-                <div>{getStatusBadge(item.status)}</div>
+                <div className="flex items-center gap-2 text-slate-300 text-sm">
+                  <span className="text-slate-400">{item.icon}</span>
+                  <span>{item.method}</span>
+                </div>
+                <div>
+                  {item.status === "win" ? (
+                    <span className="inline-flex px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-medium border border-emerald-500/30">
+                      Win
+                    </span>
+                  ) : (
+                    <span className="inline-flex px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-xs font-medium border border-red-500/30">
+                      Loss
+                    </span>
+                  )}
+                </div>
                 <div className="text-slate-300 text-sm text-right font-medium">
                   {item.amount}
                 </div>
@@ -132,7 +136,7 @@ export default function DepositHistory() {
           <span className="text-slate-500 px-2">...</span>
 
           <button className="w-8 h-8 flex items-center justify-center rounded bg-slate-800 text-slate-400 hover:bg-slate-700 transition-colors text-sm">
-            9
+            5
           </button>
 
           <button className="w-8 h-8 flex items-center justify-center rounded bg-slate-800 text-slate-400 hover:bg-slate-700 transition-colors text-sm">
