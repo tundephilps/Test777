@@ -20,15 +20,20 @@ export default function PersonalDetails() {
   const selectedCountryData = countries.find((c) => c.name === selectedCountry);
 
   return (
-    <div className=" bg-[#0a1f2d] lg:p-6 p-2 mt-6">
+    <div
+      className=" bg-[#0a1f2d] lg:p-6 p-2 mt-6"
+      style={{ fontFamily: "var(--font-bounded)" }}
+    >
       <div className=" mx-auto">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-8 mt-6">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
               <FaUser className="text-white text-xl" />
             </div>
-            <h1 className="text-white text-2xl font-bold">Personal Details</h1>
+            <h1 className="text-white lg:text-2xl text-base font-bold">
+              Personal Details
+            </h1>
           </div>
           <button className="flex items-center gap-2 px-4 py-2 text-red-500 hover:text-red-400 transition-colors">
             <FaPencilAlt className="text-sm" />
@@ -38,7 +43,7 @@ export default function PersonalDetails() {
 
         {/* Form Fields */}
         <div className="">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid lg:grid-cols-2 gap-6">
             {/* First Name */}
             <div>
               <label className="block text-slate-400 text-sm mb-2">

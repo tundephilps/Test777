@@ -1,18 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import AddFunds from "../../../components/profiledashboard/add-funds";
-import Withdraw from "../../../components/profiledashboard/withdraw";
 import PaymentMethodSelector from "../../../components/profiledashboard/payment-selector";
-
-import DashboardSummary from "../../../components/profiledashboard/dashboard-summary";
-import Profile from "../../../components/profiledashboard/profile";
-import Deposit from "../../../components/profiledashboard/deposit";
-import BonusTable from "../../../components/profiledashboard/bonus";
 import FreeSpins from "../../../components/profiledashboard/free-spins";
-import VipCashback from "../../../components/profiledashboard/vipcashback";
-import GameLog from "../../../components/profiledashboard/game-log";
-import WithdrawFunds from "../../../components/profiledashboard/withdraw-funds";
-import PaymentMethods from "../../../components/profiledashboard/payment-method";
 import TopTabs from "../../../components/profiledashboard/top-tabs";
 import BottomTabs from "../../../components/profiledashboard/bottom-tab";
 import TransactionStatus from "../../../components/profiledashboard/transaction-status";
@@ -28,6 +18,9 @@ import GameHistory from "../../../components/profiledashboard/game-history";
 import DepositHistory from "../../../components/profiledashboard/deposit-history";
 import WithdrawlHistory from "../../../components/profiledashboard/withdrawal-history";
 import BonusHistory from "../../../components/profiledashboard/bonus-history";
+import CashbackLog from "../../../components/profiledashboard/cashback-log";
+import WithdrawDenial from "../../../components/profiledashboard/withdraw-denial";
+import WithdrawalForm from "../../../components/profiledashboard/withdraw-funds";
 
 const UserDashboard = () => {
   const [activeTop, setActiveTop] = useState("cashier");
@@ -38,7 +31,7 @@ const UserDashboard = () => {
       case "add-funds":
         return <AddFunds />;
       case "withdraw":
-        return <Withdraw />;
+        return <WithdrawDenial />;
       case "payment-methods":
         return <PaymentMethodSelector />;
       case "transaction-status":
@@ -73,7 +66,7 @@ const UserDashboard = () => {
       case "bonus-history":
         return <BonusHistory />;
       case "cashback-log":
-        return <Withdraw />;
+        return <CashbackLog />;
 
       default:
         return <div className="text-white mt-6">Coming soon...</div>;

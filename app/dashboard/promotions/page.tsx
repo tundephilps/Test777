@@ -73,7 +73,7 @@ export default function PromotionsPage() {
   ];
 
   return (
-    <div className="w-full text-white p-6 space-y-10">
+    <div className="w-full text-white lg:p-6 p-2 space-y-10">
       <span className="text-[16px]  bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 items-center justify-center cursor-pointer rounded-md flex mt-6 mx-auto text-base font-bold text-[#ffffff] px-8 py-3  text-center">
         Promotions
       </span>

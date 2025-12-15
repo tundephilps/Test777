@@ -2,7 +2,7 @@ import React from "react";
 import WithdrawlHistory from "./withdrawal-history";
 import BalanceCard from "./balance-card";
 
-const Withdraw = () => {
+const WithdrawDenial = () => {
   return (
     <div>
       <BalanceCard />
@@ -10,4 +10,4 @@ const Withdraw = () => {
   );
 };
 
-export default Withdraw;
+export default WithdrawDenial;

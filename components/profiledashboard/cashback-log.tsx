@@ -1,74 +1,53 @@
 import React, { useState } from "react";
-import { FaGift, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaUndo, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-export default function BonusHistory() {
+export default function CashbackLog() {
   const [currentPage, setCurrentPage] = useState(1);
 
-  const bonusHistory = [
-    { name: "Welcome Bonus", status: "active", value: "$150" },
-    { name: "Free Spins Pack", status: "used", value: "20 Spins" },
-    { name: "Free Spins Pack", status: "used", value: "20 Spins" },
-    { name: "Welcome Bonus", status: "active", value: "$150" },
-    { name: "Free Spins Pack", status: "used", value: "20 Spins" },
-    { name: "Welcome Bonus", status: "active", value: "$150" },
-    { name: "Free Spins Pack", status: "used", value: "20 Spins" },
+  const cashbackLog = [
+    { date: "Dec 1, 2025", percent: "39%", amount: "$150" },
+    { date: "Dec 1, 2025", percent: "20%", amount: "$150" },
+    { date: "Dec 1, 2025", percent: "38%", amount: "$150" },
+    { date: "Dec 1, 2025", percent: "38%", amount: "$150" },
+    { date: "Dec 1, 2025", percent: "18%", amount: "$150" },
+    { date: "Dec 1, 2025", percent: "55%", amount: "$150" },
+    { date: "Dec 1, 2025", percent: "20%", amount: "$150" },
+    { date: "Dec 1, 2025", percent: "6%", amount: "$150" },
   ];
 
-  const getStatusBadge = (status) => {
-    switch (status) {
-      case "active":
-        return (
-          <span className="inline-flex px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs font-medium border border-yellow-500/30">
-            Active
-          </span>
-        );
-      case "used":
-        return (
-          <span className="inline-flex px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-medium border border-emerald-500/30">
-            Used
-          </span>
-        );
-      default:
-        return null;
-    }
-  };
-
   return (
-    <div
-      className="min-h-screen mt-6 bg-[#0a1f2d] lg:p-6 p-2"
-      style={{ fontFamily: "var(--font-bounded)" }}
-    >
-      <div className="lg:px-12 px-4 mx-auto">
+    <div className="min-h-screen bg-[#0a1f2d] lg:p-6 p-2 mt-6 rounded-md">
+      <div className=" mx-auto">
         {/* Header */}
         <div className="flex items-center gap-3 mb-8">
           <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
-            <FaGift className="text-white text-xl" />
+            <FaUndo className="text-white text-xl" />
           </div>
-          <h1 className="text-white text-2xl font-bold">Bonus History</h1>
+          <h1 className="text-white text-2xl font-bold">Cashback Log</h1>
         </div>
 
         {/* Table */}
         <div className="bg-[#0B2231] backdrop-blur-sm rounded-xl border border-slate-700/50 overflow-hidden">
           {/* Table Header */}
           <div className="grid grid-cols-3 gap-4 px-6 py-4 border-b border-slate-700/50">
-            <div className="text-slate-400 text-sm font-medium">Bonus Name</div>
-            <div className="text-slate-400 text-sm font-medium">Status</div>
+            <div className="text-slate-400 text-sm font-medium">Date</div>
+            <div className="text-slate-400 text-sm font-medium">Percent</div>
             <div className="text-slate-400 text-sm font-medium text-right">
-              Value
+              Amount
             </div>
           </div>
 
           {/* Table Body */}
           <div className="divide-y divide-slate-700/50">
-            {bonusHistory.map((item, index) => (
+            {cashbackLog.map((item, index) => (
               <div
                 key={index}
                 className="grid grid-cols-3 gap-4 px-6 py-4 hover:bg-slate-700/30 transition-colors"
               >
-                <div className="text-slate-300 text-sm">{item.name}</div>
-                <div>{getStatusBadge(item.status)}</div>
+                <div className="text-slate-300 text-sm">{item.date}</div>
+                <div className="text-slate-300 text-sm">{item.percent}</div>
                 <div className="text-slate-300 text-sm text-right font-medium">
-                  {item.value}
+                  {item.amount}
                 </div>
               </div>
             ))}

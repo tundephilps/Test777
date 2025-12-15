@@ -29,7 +29,10 @@ export default function ActiveBonuses() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0a1f2d] mt-8 rounded-md lg:p-6 p-2">
+    <div
+      className="min-h-screen bg-[#0a1f2d] mt-8 rounded-md lg:p-6 p-2"
+      style={{ fontFamily: "var(--font-bounded)" }}
+    >
       <div className="mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">

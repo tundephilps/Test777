@@ -10,7 +10,7 @@ export default function ProfileOverview() {
     >
       <div className=" mx-auto">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-8 mt-6">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
               <FaUser className="text-white text-xl" />

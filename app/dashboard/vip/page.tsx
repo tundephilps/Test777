@@ -9,6 +9,7 @@ import Cash from "../../../public/Cash.png";
 import Dragon from "../../../public/Dragon.png";
 import ProgressLevel from "../../../components/vip/progress-level";
 import LevelCard from "../../../components/vip/levels";
+import Mask13 from "../../../public/Mask13.png";
 
 const VipPage = () => {
   return (
@@ -43,6 +44,41 @@ const VipPage = () => {
               <p className="text-base opacity-80 font-bounded font-bebas max-w-md">
                 Become a Canada777 VIP and claim daily cashback everyday!
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Hero */}
+      <div className="relative   flex lg:hidden items-center">
+        <Image
+          src={Mask13}
+          width={1000}
+          height={500}
+          alt="Hero"
+          className="w-full h-auto"
+        />
+
+        <div className="absolute top-6 text-white  items-center inset-0 w-full">
+          <div className="flex flex-col text-center h-full">
+            <div className="">
+              <p
+                className="text-[3vh] font-semibold tracking-wider  opacity-90 "
+                style={{ fontFamily: "var(--font-bounded)" }}
+              >
+                Canada777VIP
+              </p>
+              <p
+                className="text-[7vh] font-semibold   opacity-90 max-w-xl"
+                style={{ fontFamily: "var(--font-bounded)" }}
+              >
+                Your Cashback, Everyday
+              </p>
+              <div className="mb-2">
+                <p className="text-xs opacity-80 font-bounded font-bebas text-center mx-auto max-w-sm">
+                  Enjoy effortless cashback rewards on all your favorite games.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -160,6 +196,70 @@ const VipPage = () => {
           />
         </div>
       </div>
+
+      {/* Mobile View */}
+      <div className="w-full lg:hidden flex flex-col mx-auto space-y-6">
+        {/* CARD 1 – VIP POINTS */}
+        <div className="rounded-2xl overflow-hidden bg-[#C94CFF] text-white">
+          <div className="p-5 text-center">
+            <h2 className="text-lg font-semibold mb-1">
+              Exchange your VIP points
+            </h2>
+            <p className="text-sm opacity-90 mb-3">
+              For free spins or bonus cash
+            </p>
+
+            <button className="bg-gradient-to-b from-[#ff3b3b] to-[#8b0000] px-5 py-2 rounded-md text-sm font-medium">
+              Exchange Points
+            </button>
+          </div>
+
+          <div className="relative h-40">
+            <Image src={Dragon} alt="Dragon" fill className="object-contain" />
+          </div>
+        </div>
+
+        {/* CARD 2 – AUDI */}
+        <div className="rounded-2xl overflow-hidden bg-[#4E73FF] text-white">
+          <div className="p-5 text-center">
+            <h2 className="text-lg font-semibold">WIN AN AUDI A3 2026</h2>
+
+            <p className="text-sm font-bold mt-2 mb-2">YOU HAVE 0 TICKETS</p>
+
+            <p className="text-xs opacity-90">1000 VIP Points = 1 Ticket</p>
+
+            <p className="text-xs mt-2 underline opacity-80">T&Cs Apply</p>
+          </div>
+
+          <div className="relative h-36">
+            <Image src={Car} alt="Audi" fill className="object-contain" />
+          </div>
+        </div>
+
+        {/* CARD 3 – CASHBACK */}
+        <div className="rounded-2xl overflow-hidden bg-[#4ED6FF] text-white relative h-96">
+          <div className="p-5 text-center z-10 relative">
+            <h2 className="text-2xl font-semibold mb-1">Daily Cash Back</h2>
+            <p className="text-sm opacity-90 mb-3">Up to 30%</p>
+
+            <button className="bg-gradient-to-b from-[#ff3b3b] to-[#8b0000] px-5 py-2 rounded-md text-sm font-medium">
+              Claim Your Cashback
+            </button>
+          </div>
+
+          <Image
+            src={Cash2}
+            alt="Cash background"
+            className="object-contain  absolute bottom-2"
+          />
+          <Image
+            src={Cash}
+            alt="Cash background"
+            className="object-contain  absolute bottom-0"
+          />
+        </div>
+      </div>
+
       <LevelCard />
     </div>
   );

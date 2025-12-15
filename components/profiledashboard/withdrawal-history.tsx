@@ -53,19 +53,19 @@ export default function DepositHistory() {
     switch (status) {
       case "completed":
         return (
-          <span className="inline-flex px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-medium border border-emerald-500/30">
+          <span className="inline-flex px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full lg:text-xs text-[10px] font-medium border border-emerald-500/30">
             Completed
           </span>
         );
       case "in-progress":
         return (
-          <span className="inline-flex px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs font-medium border border-orange-500/30">
+          <span className="inline-flex px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full lg:text-xs text-[10px] font-medium border border-orange-500/30">
             In Progress
           </span>
         );
       case "pending":
         return (
-          <span className="inline-flex px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs font-medium border border-yellow-500/30">
+          <span className="inline-flex px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full lg:text-xs text-[10px] font-medium border border-yellow-500/30">
             Pending
           </span>
         );
@@ -104,10 +104,14 @@ export default function DepositHistory() {
                 key={index}
                 className="grid grid-cols-4 gap-4 px-6 py-4 hover:bg-slate-700/30 transition-colors"
               >
-                <div className="text-slate-300 text-sm">{item.date}</div>
-                <div className="text-slate-300 text-sm">{item.method}</div>
+                <div className="text-slate-300 lg:text-sm text-[10px] ">
+                  {item.date}
+                </div>
+                <div className="text-slate-300 lg:text-sm text-[10px]">
+                  {item.method}
+                </div>
                 <div>{getStatusBadge(item.status)}</div>
-                <div className="text-slate-300 text-sm text-right font-medium">
+                <div className="text-slate-300 lg:text-sm text-[10px] text-right font-medium">
                   {item.amount}
                 </div>
               </div>

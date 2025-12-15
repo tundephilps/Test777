@@ -38,7 +38,9 @@ export default function Verification() {
           <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
             <FaShieldAlt className="text-white text-xl" />
           </div>
-          <h1 className="text-white text-2xl font-bold ">Verification (KYC)</h1>
+          <h1 className="text-white lg:text-2xl text-base font-bold ">
+            Verification (KYC)
+          </h1>
         </div>
 
         {/* Verification Cards */}
@@ -48,26 +50,28 @@ export default function Verification() {
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl lg:p-6 p-2  border border-slate-700/50 hover:border-slate-600/50 transition-colors">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-slate-900/50 rounded-lg flex items-center justify-center">
+                    <div className="lg:w-12 lg:h-12 h-6 w-6 bg-slate-900/50 rounded-lg flex items-center justify-center">
                       {item.icon}
                     </div>
                     <div>
-                      <h3 className="text-white text-lg font-semibold mb-1">
+                      <h3 className="text-white lg:text-lg text-base font-semibold mb-1">
                         {item.title}
                       </h3>
-                      <p className="text-slate-400 text-sm">{item.subtitle}</p>
+                      <p className="text-slate-400 lg:text-sm text-[10px]">
+                        {item.subtitle}
+                      </p>
                     </div>
                   </div>
 
                   {item.status === "verified" ? (
-                    <div className="flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-400 rounded-full border border-emerald-500/30">
+                    <div className="flex items-center gap-2 lg:px-4 px-2 py-2 bg-emerald-500/20 text-emerald-400 rounded-full border border-emerald-500/30">
                       <FaCheckCircle className="text-sm" />
                       <span className="font-medium lg:text-sm text-[10px]">
                         Verified
                       </span>
                     </div>
                   ) : (
-                    <div className="flex items-center gap-2 px-4 py-2 bg-yellow-500/20 text-yellow-400 rounded-full border border-yellow-500/30">
+                    <div className="flex items-center gap-2 lg:px-4 px-2 py-2 bg-yellow-500/20 text-yellow-400 rounded-full border border-yellow-500/30">
                       <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
                       <span className="font-medium lg:text-sm text-[10px]">
                         Pending

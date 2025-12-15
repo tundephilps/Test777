@@ -3,7 +3,10 @@ import React from "react";
 
 const BalanceCard = () => {
   return (
-    <div className="w-full mx-auto bg-[#081a26] p-6 rounded-xl text-white space-y-6 shadow-lg">
+    <div
+      className="w-full mx-auto bg-[#081a26] p-6 rounded-xl text-white space-y-6 shadow-lg"
+      style={{ fontFamily: "var(--font-bounded)" }}
+    >
       {/* Message */}
       <p className="text-center text-lg leading-relaxed max-w-2xl mx-auto">
         You can't withdraw money as you have an active bonus in your account and

@@ -3,6 +3,7 @@ import WhyChooseUs from "../../../components/homepage/why-choose";
 import Sponsors from "../../../components/homepage/sponsors";
 import Image from "next/image";
 import CashbackTable from "../../../components/cashback/cashback-table";
+import Mask12 from "../../../public/Mask12.png";
 
 const CashbackPage = () => {
   return (
@@ -37,46 +38,40 @@ const CashbackPage = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      {/* Mobile Hero */}
+      <div className="relative   flex lg:hidden items-center">
+        <Image
+          src={Mask12}
+          width={1000}
+          height={500}
+          alt="Hero"
+          className="w-full h-auto"
+        />
 
-            {/* <div className="mb-2">
-              <p className="text-base opacity-80 font-bounded font-bebas max-w-md">
-                <div className="relative   lg:flex hidden items-center">
-                  <Image
-                    src={Mask6}
-                    width={1000}
-                    height={300}
-                    alt="Hero"
-                    className="w-full"
-                  />
-
-                  <div className="absolute text-white items-center   left-7">
-                    <div className="flex flex-col flex-start justify-between h-full">
-                      <div className="">
-                        <p
-                          className="text-[2vh] font-semibold tracking-wider  opacity-90 "
-                          style={{ fontFamily: "var(--font-bounded)" }}
-                        >
-                          Canada777VIP
-                        </p>
-                        <p
-                          className="text-[5vh] font-semibold   opacity-90 max-w-xl"
-                          style={{ fontFamily: "var(--font-bounded)" }}
-                        >
-                          The Ultimate Global VIP Experience
-                        </p>
-                      </div>
-
-                      <div className="mb-2">
-                        <p className="text-base opacity-80 font-bounded font-bebas max-w-md">
-                          Enjoy effortless cashback rewards on all your favorite
-                          games.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div className="absolute top-6 text-white  items-center inset-0 w-full">
+          <div className="flex flex-col text-center h-full">
+            <div className="">
+              <p
+                className="text-[3vh] font-semibold tracking-wider  opacity-90 "
+                style={{ fontFamily: "var(--font-bounded)" }}
+              >
+                Canada777VIP
               </p>
-            </div> */}
+              <p
+                className="text-[7vh] font-semibold   opacity-90 max-w-xl"
+                style={{ fontFamily: "var(--font-bounded)" }}
+              >
+                Your Cashback, Everyday
+              </p>
+              <div className="mb-2">
+                <p className="text-xs opacity-80 font-bounded font-bebas text-center mx-auto max-w-sm">
+                  Enjoy effortless cashback rewards on all your favorite games.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -22,21 +22,24 @@ export default function ResponsibleLimits() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0a1f2d] mt-6 lg:p-6 p-2 rounded-md">
+    <div
+      className="min-h-screen bg-[#0a1f2d] mt-6 lg:p-6 p-2  rounded-md"
+      style={{ fontFamily: "var(--font-bounded)" }}
+    >
       <div className=" mx-auto">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-8 mt-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
               <FaShieldAlt className="text-white text-xl" />
             </div>
-            <h1 className="text-white text-2xl font-bold">
+            <h1 className="text-white lg:text-2xl text-base font-bold">
               Responsible Limits
             </h1>
           </div>
           <button className="flex items-center gap-2 px-4 py-2 text-red-500 hover:text-red-400 transition-colors">
             <FaPencilAlt className="text-sm" />
-            <span className="font-medium">Edit Limits</span>
+            <span className="font-medium text-xs">Edit Limits</span>
           </button>
         </div>
 

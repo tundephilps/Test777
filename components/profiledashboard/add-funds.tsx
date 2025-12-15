@@ -38,7 +38,10 @@ export default function AddFunds() {
   };
 
   return (
-    <div className="min-h-screen  flex items-center justify-center">
+    <div
+      className="min-h-screen  flex items-center justify-center"
+      style={{ fontFamily: "var(--font-bounded)" }}
+    >
       <div className="w-full bg-[#081a26] rounded-2xl  lg:p-8 p-2 shadow-2xl">
         {/* Promo Code Section */}
         <div className="mb-8">

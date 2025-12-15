@@ -59,22 +59,23 @@ const Hero = () => {
           />
         </div>
       </div>
+      {/* Mobile View */}
       <div className="relative   flex lg:hidden items-center w-full">
         <Image
           src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Mask4.png"
           width={1000}
-          height={300}
+          height={1000}
           alt=""
-          className=""
+          className="h-auto min-h-[80vh]"
         />
         <div className="p-6 gap-2  space-y-2 absolute items-center w-full justify-center flex flex-col text-white">
           {/* Text */}
           <div className="mb-1">
             <h2
-              className="text-[5vh] font-semibold tracking-wider text-center  opacity-90 "
+              className="text-[5vh] font-semibold  text-center  opacity-90 "
               style={{ fontFamily: "var(--font-bounded)" }}
             >
-              Try your luck <br /> Wining Chance
+              Try your luck Wining Chance
             </h2>
           </div>
 
