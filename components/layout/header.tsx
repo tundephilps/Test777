@@ -193,19 +193,21 @@ export default function Header() {
           </div>
 
           {/* Deposit Button */}
-          <button
-            onClick={() => setIsDepositModalOpen(true)}
-            className="w-full bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 py-3 rounded-md text-white font-medium transition"
-          >
-            DEPOSIT
-          </button>
+          <Link href="/dashboard/userdashboard">
+            <button
+              // onClick={() => setIsDepositModalOpen(true)}
+              className="w-full bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 py-3 rounded-md text-white font-medium transition"
+            >
+              DEPOSIT
+            </button>
+          </Link>
         </div>
       )}
       {/* Modal */}
-      <DepositModal
+      {/* <DepositModal
         isOpen={isDepositModalOpen}
         onClose={() => setIsDepositModalOpen(false)}
-      />
+      /> */}
     </div>
   );
 }

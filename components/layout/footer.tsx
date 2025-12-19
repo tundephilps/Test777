@@ -29,22 +29,25 @@ export default function Footer() {
           <h4 className="text-white font-semibold mb-4">About Us</h4>
           <ul className="space-y-2">
             <li>
-              <Link href="#" className="hover:text-white">
+              <Link href="/dashboard/about-us" className="hover:text-white">
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-white">
+              <Link href="/dashboard/contact" className="hover:text-white">
                 Contact Us
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-white">
+              <Link href="/dashboard/faq" className="hover:text-white">
                 FAQ
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-white">
+              <Link
+                href="https://live.affiliateslots.com/"
+                className="hover:text-white"
+              >
                 Affiliates
               </Link>
             </li>
@@ -56,7 +59,7 @@ export default function Footer() {
           <h4 className="text-white font-semibold mb-4">Informations</h4>
           <ul className="space-y-2">
             <li>
-              <Link href="#" className="hover:text-white">
+              <Link href="/dashboard/terms" className="hover:text-white">
                 Terms & Conditions
               </Link>
             </li>
@@ -66,12 +69,18 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-white">
+              <Link
+                href="/dashboard/privacy-policy"
+                className="hover:text-white"
+              >
                 Privacy and Security Policy
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-white">
+              <Link
+                href="/dashboard/responsible-gambling"
+                className="hover:text-white"
+              >
                 Responsible Gambling
               </Link>
             </li>
@@ -103,7 +112,10 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-white">
+              <Link
+                href="/dashboard/aml-kyc-policy"
+                className="hover:text-white"
+              >
                 AML & KYC Policy
               </Link>
             </li>

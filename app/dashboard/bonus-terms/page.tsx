@@ -1,7 +1,7 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 
-export default function TermsAndConditions() {
+export default function BonusTerms() {
   const welcomeBonusDeposits = [
     {
       deposit: "1st Deposit",
