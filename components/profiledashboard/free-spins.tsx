@@ -1,7 +1,6 @@
 import React from "react";
 import { FaDice, FaPlay, FaClock } from "react-icons/fa";
 import { GiTwoCoins } from "react-icons/gi";
-import Spin from "../../public/Spin.png";
 import Image from "next/image";
 
 export default function FreeSpins() {
@@ -47,7 +46,7 @@ export default function FreeSpins() {
           <div className="flex items-center gap-3">
             <div className="w-10 h-10">
               <Image
-                src={Spin}
+                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Spin.png"
                 alt=""
                 width={1000}
                 height={1000}

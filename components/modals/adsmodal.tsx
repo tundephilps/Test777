@@ -1,15 +1,6 @@
 import Image from "next/image";
 import { FC } from "react";
 import { FaTimes } from "react-icons/fa";
-import Ads1 from "../../public/Ads1.png";
-
-import Ads2 from "../../public/Ads2.png";
-import Ads3 from "../../public/Ads3.png";
-import Ads4 from "../../public/Ads4.png";
-import Ads5 from "../../public/Ads5.png";
-import Ads6 from "../../public/Ads6.png";
-import Ads7 from "../../public/Ads7.png";
-import Ads8 from "../../public/Ads8.png";
 
 type AdsModalProps = {
   onClose: () => void;
@@ -31,56 +22,56 @@ const AdsModal: FC<AdsModalProps> = ({ onClose }) => {
           THIS WEEK PROMOTION
         </span>{" "}
         <Image
-          src={Ads1}
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Ads1.png"
           height={4000}
           width={4000}
           alt=""
           className="h-auto w-full my-4 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/50"
         />
         <Image
-          src={Ads2}
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Ads2.png"
           alt=""
           height={4000}
           width={4000}
           className="h-auto w-full my-4 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/50"
         />
         <Image
-          src={Ads3}
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Ads3.png"
           alt=""
           height={4000}
           width={4000}
           className="h-auto w-full my-4 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/50"
         />
         <Image
-          src={Ads4}
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Ads4.png"
           alt=""
           height={4000}
           width={4000}
           className="h-auto w-full my-4 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/50"
         />
         <Image
-          src={Ads5}
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Ads5.png"
           alt=""
           height={4000}
           width={4000}
           className="h-auto w-full my-4 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/50"
         />
         <Image
-          src={Ads6}
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Ads6.png"
           alt=""
           height={4000}
           width={4000}
           className="h-auto w-full my-4 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/50"
         />
         <Image
-          src={Ads7}
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Ads7.png"
           alt=""
           height={4000}
           width={4000}
           className="h-auto w-full my-4 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/50"
         />
         <Image
-          src={Ads8}
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Ads8.png"
           alt=""
           height={4000}
           width={4000}

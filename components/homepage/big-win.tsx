@@ -2,30 +2,64 @@
 
 import Image, { StaticImageData } from "next/image";
 import { FaTrophy } from "react-icons/fa";
-import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import { useRef, useEffect, useState } from "react";
-import Win1 from "../../public/Win1.png";
-import Win2 from "../../public/Win2.png";
-import Win3 from "../../public/Win3.png";
-import Win4 from "../../public/Win4.png";
+import { useTranslations } from "next-intl";
 
 interface WinCard {
   id: number;
   player: string;
   amount: number;
-  image: StaticImageData;
+  image: string;
 }
 
 const bigWins: WinCard[] = [
-  { id: 1, player: "Karla Teresa", amount: 17766, image: Win1 },
-  { id: 2, player: "Karla Teresa", amount: 14379, image: Win2 },
-  { id: 3, player: "Karla Teresa", amount: 5802, image: Win3 },
-  { id: 4, player: "Karla Teresa", amount: 12000, image: Win4 },
-  { id: 5, player: "Karla Teresa", amount: 17766, image: Win1 },
-  { id: 6, player: "Karla Teresa", amount: 14379, image: Win2 },
+  {
+    id: 1,
+    player: "Karla Teresa",
+    amount: 17766,
+    image:
+      "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Win1.png",
+  },
+  {
+    id: 2,
+    player: "Karla Teresa",
+    amount: 14379,
+    image:
+      "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Win2.png",
+  },
+  {
+    id: 3,
+    player: "Karla Teresa",
+    amount: 5802,
+    image:
+      "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Win3.png",
+  },
+  {
+    id: 4,
+    player: "Karla Teresa",
+    amount: 12000,
+    image:
+      "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Win4.png",
+  },
+  {
+    id: 5,
+    player: "Karla Teresa",
+    amount: 17766,
+    image:
+      "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Win1.png",
+  },
+  {
+    id: 6,
+    player: "Karla Teresa",
+    amount: 14379,
+    image:
+      "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Win2.png",
+  },
 ];
 
 export default function BigWins() {
+  const t = useTranslations("HomePage");
+
   const sliderRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -82,7 +116,7 @@ export default function BigWins() {
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2 text-white text-lg font-semibold">
           <FaTrophy className="text-yellow-400" />
-          <span>Big Wins</span>
+          <span> {t("class1")}</span>
         </div>
 
         {/* Navigation Buttons */}

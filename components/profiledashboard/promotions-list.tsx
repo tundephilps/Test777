@@ -4,7 +4,6 @@ import { FiFilter, FiChevronRight } from "react-icons/fi";
 import { FaGift } from "react-icons/fa";
 import React from "react";
 import Image from "next/image";
-import Speak from "../../public/Speak.png";
 
 interface Promo {
   title: string;
@@ -58,7 +57,11 @@ export default function PromotionsList() {
       {/* HEADER */}
       <div className="flex justify-between items-center mb-6">
         <h2 className="lg:text-xl text-base  flex items-center gap-2">
-          <Image src={Speak} className="h-auto w-auto" alt="" />
+          <Image
+            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Speak.png"
+            className="h-auto w-auto"
+            alt=""
+          />
           Available Promotions
         </h2>
 

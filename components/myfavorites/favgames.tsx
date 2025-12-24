@@ -55,7 +55,6 @@ const FavGames = () => {
     <div className="mt-0">
       {/* Header */}
       <div className="flex items-center justify-between py-4"></div>
-
       {/* Cards */}
       <div className="grid lg:grid-cols-5 grid-cols-2 gap-2">
         {games.map((game, index) => {
@@ -153,7 +152,7 @@ ${
             </div>
           );
         })}
-      </div>
+      </div>{" "}
     </div>
   );
 };

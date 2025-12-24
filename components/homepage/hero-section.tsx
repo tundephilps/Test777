@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
+  const t = useTranslations("HomePage");
+
   return (
     <div>
       <div className="relative   lg:flex hidden items-center">
@@ -20,7 +23,7 @@ const Hero = () => {
                 className="text-[4vh] font-semibold tracking-wider uppercase opacity-90 "
                 style={{ fontFamily: "var(--font-bounded)" }}
               >
-                WELCOME PACK
+                {t("welcome")}
               </p>
             </div>
 
@@ -29,18 +32,18 @@ const Hero = () => {
                 className="text-[8vh] font-bold leading-tight font-bebas "
                 style={{ fontFamily: "var(--font-bounded)" }}
               >
-                620% up to $8,000
+                {t("percentage")}
               </h1>
             </div>
 
             <div className="mb-6">
               <p className="text-sm opacity-80 font-bounded font-bebas">
-                +400 FS on first 4 deposits
+                {t("deposit")}
               </p>
             </div>
             <Link href="/login">
               <button className="cursor-pointer flex justify-start items-start bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 px-[32px] py-[6px] rounded-md text-white font-medium transition w-fit">
-                <span>Join Now</span>
+                <span> {t("button")}</span>
               </button>
             </Link>
 

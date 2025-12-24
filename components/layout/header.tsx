@@ -14,6 +14,10 @@ import { DepositModal } from "../modals/deposit-modal";
 import Link from "next/link";
 import { BiMenu } from "react-icons/bi";
 
+import { usePathname, useRouter } from "next/navigation";
+
+import setLanguageValue from "../../actions/set-language-action";
+
 import {
   FaHome,
   FaDice,
@@ -56,6 +60,28 @@ export default function Header() {
     { href: "/dashboard/cashback", label: "Cashback", icon: <FaCoins /> },
     { href: "/dashboard/contact", label: "Contact", icon: <FaHeadset /> },
   ];
+
+  const languages = [
+    { code: "en", flag: "🇬🇧" },
+    { code: "de", flag: "🇩🇪" },
+    { code: "es", flag: "🇪🇸" },
+    { code: "fr", flag: "🇫🇷" },
+    { code: "pt", flag: "🇵🇹" },
+    { code: "pl", flag: "🇵🇱" },
+    { code: "fi", flag: "🇫🇮" },
+    { code: "it", flag: "🇮🇹" },
+    { code: "no", flag: "🇳🇴" },
+  ];
+  const [showLang, setShowLang] = useState(false);
+  const [selectedLang, setSelectedLang] = useState(languages[0]); // default EN
+
+  const [selectedLanguage, setSelectedLanguage] = useState("en");
+
+  // Function to handle language change
+  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedLanguage(e.target.value);
+    setLanguageValue(e.target.value);
+  };
 
   return (
     <div className="bg-[#061621] text-white text-sm w-full">
@@ -124,20 +150,45 @@ export default function Header() {
         </div>
 
         {/* Right Section - Mobile */}
-        <div className="flex md:hidden items-center space-x-2">
-          {/* Balance - Compact */}
-          <div className="flex items-center space-x-1 bg-gradient-to-b from-[#ffffff]/20 to-[#071a26] px-2 py-1.5 rounded-md text-xs">
-            <Image src={Coin} className="h-4 w-auto" alt="Coin" />
-            <span className="text-[#757e84]">0.00027</span>
+        <div className="flex md:hidden items-center space-x-2 relative">
+          {/* Balance */}
+          <Link href="/dashboard/userdashboard">
+            <div className="flex items-center space-x-1 bg-gradient-to-b from-[#ffffff]/20 to-[#071a26] px-2 py-1.5 rounded-md text-xs">
+              <Image src={Coin} className="h-4 w-auto" alt="Coin" />
+              <span className="text-[#757e84]">0.00027</span>
+            </div>
+          </Link>
+
+          {/* 🌍 Language Selector */}
+          <div className="relative">
+            <button
+              onClick={() => setShowLang(!showLang)}
+              className="bg-white/20 rounded-lg px-2 py-1.5 text-sm flex items-center gap-1"
+            >
+              <span className="text-lg">{selectedLang.flag}</span>
+              <span className="text-xs">{selectedLang.code}</span>
+            </button>
+
+            {showLang && (
+              <div className="absolute right-0 top-10 bg-[#071a26] border border-white/10 rounded-lg shadow-lg z-50 min-w-full">
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => {
+                      setSelectedLang(lang);
+                      setShowLang(false);
+                    }}
+                    className="flex items-center gap-2  py-2 text-sm hover:bg-white/10 px-2"
+                  >
+                    <span className="text-lg">{lang.flag}</span>
+                    {lang.code}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
-          {/* User Avatar */}
-
-          <Link href="/dashboard/userdashboard">
-            <button className="w-9 h-9 flex items-center justify-center">
-              <Image src={Face} className="w-9 h-9" alt="Profile" />
-            </button>
-          </Link>
+          {/* Menu Icon */}
           <div
             onClick={() => setShowMobileMenu(!showMobileMenu)}
             className="bg-white/20 rounded-lg p-2"
@@ -203,11 +254,6 @@ export default function Header() {
           </Link>
         </div>
       )}
-      {/* Modal */}
-      {/* <DepositModal
-        isOpen={isDepositModalOpen}
-        onClose={() => setIsDepositModalOpen(false)}
-      /> */}
     </div>
   );
 }

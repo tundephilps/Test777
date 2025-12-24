@@ -60,7 +60,11 @@ export default function BonusRules() {
         {/* Header */}
         <div className="flex items-center gap-3 mb-8">
           <div className="w-10 h-10 ">
-            <Image alt="" src={Bonus} className="text-white text-xl" />
+            <Image
+              alt=""
+              src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Bonus1.png"
+              className="text-white text-xl"
+            />
           </div>
           <h1 className="text-white text-2xl ">Bonus Rules</h1>
         </div>

@@ -9,6 +9,7 @@ import Footer from "../../components/layout/footer";
 
 import { SidebarProvider } from "../../components/layout/SidebarContext";
 import LayoutContent from "../../components/layout/LayoutContent";
+import { NextIntlClientProvider } from "next-intl";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

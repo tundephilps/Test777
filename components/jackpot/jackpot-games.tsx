@@ -2,13 +2,7 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import {
-  IoChevronBack,
-  IoChevronForward,
-  IoHeart,
-  IoHeartOutline,
-  IoEllipsisHorizontal,
-} from "react-icons/io5";
+import { IoHeart, IoHeartOutline, IoEllipsisHorizontal } from "react-icons/io5";
 import { FaPlay } from "react-icons/fa";
 import { GiGamepad } from "react-icons/gi";
 

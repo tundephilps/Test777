@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { FaFilter, FaArrowDown, FaArrowUp, FaCoins } from "react-icons/fa";
 import { IoCheckmarkCircle, IoCloseCircle } from "react-icons/io5";
 import { MdPending } from "react-icons/md";
-import Trans from "../../public/Trans.png";
 
 export default function TransactionStatus() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -114,7 +113,7 @@ export default function TransactionStatus() {
           <div className="flex items-center gap-3 sm:gap-4">
             <div className="flex items-center justify-center flex-shrink-0">
               <Image
-                src={Trans}
+                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Trans.png"
                 height={1000}
                 width={1000}
                 alt=""

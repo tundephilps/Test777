@@ -1,0 +1,55 @@
+{
+  "HomePage": {
+    "welcome": "VELKOMSTPAKKE",
+    "percentage": "620 % opptil 8 000 $",
+    "deposit": "+400 gratisspinn på de første 4 innskuddene",
+    "button": "Bli med nå",
+    "view": "Se alle",
+    "class1": "Stor Gevinst",
+    "class2": "Velkomstbonus",
+    "class3": "Nye Spill",
+    "class4": "Topp Spill",
+    "class5": "Live Casino",
+    "class6": "Bonuser og Kampanjer",
+    "class7": "Populære Spill",
+    "adstext1": "Foretrukne Betalingsmetoder",
+    "adstext2": "Nyt raske og sikre betalinger med flere alternativer. Velg krypto, kort eller bankoverføringer – det som passer deg best.",
+    "why": "Hvorfor velge oss?",
+    "whysub": "Utmerket service, store bonuser og et bredt spillutvalg",
+    "whytitle1": "Flere Valutaer",
+    "whytitle2": "Vi støtter deg hele veien",
+    "whytitle3": "Stolt på av alle",
+    "why1": "Velg én av de 4 tilgjengelige valutaene å spille med. Gode nyheter for kryptospillere: kryptovalutaen din blir automatisk konvertert for spilling.",
+    "why2": "Vi er stolte av å tilby deg den beste kundestøtten døgnet rundt, hele året. Vårt supportteam er profesjonelt og kunnskapsrikt innen alt som gjelder casino.",
+    "why3": "Vi har implementert alle nødvendige tiltak for å sikre rettferdig og korrekt drift, spesielt når det gjelder gevinster og spillresultater, slik at du alltid kan stole på dem."
+  },
+  "AboutPage": {
+    "title": "Make every step user-centric",
+    "features": [
+      {
+        "title": "Support",
+        "description": "Our dedicated support team is available 24/7 to assist with any questions or issues, ensuring that you never feel alone."
+      },
+      {
+        "title": "Organise",
+        "description": "Easily manage your projects, tasks, and teams in one place, making collaboration seamless and efficient."
+      },
+      {
+        "title": "Flexibility",
+        "description": "Whether you need to scale your operations or adjust processes, our platform offers the flexibility to grow with your needs."
+      },
+      {
+        "title": "Speed",
+        "description": "With lightning-fast performance and a streamlined workflow, you can accomplish more in less time and stay ahead of the competition."
+      },
+      {
+        "title": "Quality",
+        "description": "Deliver exceptional results with our high-quality standards, ensuring that every project meets the highest level of excellence."
+      },
+      {
+        "title": "Resource",
+        "description": "Access a wealth of resources, including guides, tutorials, and expert insights, to help you maximize your potential and succeed."
+      }
+    ]
+  }
+}

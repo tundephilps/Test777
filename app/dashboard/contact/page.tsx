@@ -1,8 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import Mask10 from "../../../public/Mask10.png";
-
-import Mask11 from "../../../public/Mask11.png";
 import ContactForm from "../../../components/contact/contact-form";
 
 const ContactPage = () => {
@@ -10,7 +7,7 @@ const ContactPage = () => {
     <div>
       <div className="relative   lg:flex hidden items-center">
         <Image
-          src={Mask10}
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Mask10.png"
           width={1000}
           height={500}
           alt="Hero"
@@ -46,7 +43,7 @@ const ContactPage = () => {
       {/* Mobile Hero */}
       <div className="relative   flex lg:hidden items-center">
         <Image
-          src={Mask11}
+          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Mask11.png"
           width={1000}
           height={500}
           alt="Hero"

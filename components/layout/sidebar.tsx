@@ -14,24 +14,32 @@ import {
 import { RiLiveLine, RiTrophyLine } from "react-icons/ri";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import SideAds from "../../public/SideAds.png";
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import { useSidebar } from "./SidebarContext";
 import { PiSpinnerBallFill } from "react-icons/pi";
+import setLanguageValue from "../../actions/set-language-action"; // Import your server action
+import { useLocale } from "next-intl";
 
 export default function Sidebar() {
   const pathname = usePathname();
-  const [selectedLanguage, setSelectedLanguage] = useState("English");
+  const router = useRouter();
+  const currentLocale = useLocale();
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
   const { isCollapsed, setIsCollapsed } = useSidebar();
+  const [isPending, startTransition] = useTransition();
 
   const languages = [
     { code: "en", name: "English", flag: "🇬🇧" },
+    { code: "de", name: "Deutsch", flag: "🇩🇪" },
     { code: "es", name: "Español", flag: "🇪🇸" },
     { code: "fr", name: "Français", flag: "🇫🇷" },
-    { code: "de", name: "Deutsch", flag: "🇩🇪" },
     { code: "pt", name: "Português", flag: "🇵🇹" },
+    { code: "pl", name: "Polski", flag: "🇵🇱" },
+    { code: "fi", name: "Suomi", flag: "🇫🇮" },
+    { code: "it", name: "Italiano", flag: "🇮🇹" },
+    { code: "no", name: "Norsk", flag: "🇳🇴" },
   ];
 
   const links = [
@@ -53,7 +61,6 @@ export default function Sidebar() {
       label: "Wheel Bonus",
       icon: <PiSpinnerBallFill />,
     },
-
     { href: "/dashboard/myfavorite", label: "My Favorite", icon: <FaHeart /> },
     { href: "/dashboard/promotions", label: "Promotions", icon: <FaGift /> },
     { href: "/dashboard/vip", label: "VIP Club", icon: <FaCrown /> },
@@ -62,7 +69,18 @@ export default function Sidebar() {
   ];
 
   const currentLanguage =
-    languages.find((lang) => lang.name === selectedLanguage) || languages[0];
+    languages.find((lang) => lang.code === currentLocale) || languages[0];
+
+  const handleLanguageChange = async (langCode: string) => {
+    setShowLanguageDropdown(false);
+
+    startTransition(async () => {
+      // Set the cookie
+      await setLanguageValue(langCode);
+      // Refresh the page to apply new locale
+      router.refresh();
+    });
+  };
 
   return (
     <div
@@ -83,7 +101,6 @@ export default function Sidebar() {
         )}
       </button>
 
-      {/* Rest of your sidebar code remains the same... */}
       {!isCollapsed && (
         <div>
           <div className="relative">
@@ -127,9 +144,10 @@ export default function Sidebar() {
         <div className="relative">
           <button
             onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
+            disabled={isPending}
             className={`flex items-center px-4 py-3 rounded-lg bg-[#0a1f2d] hover:bg-[#0d2535] transition-all w-full ${
               isCollapsed ? "justify-center" : "justify-between"
-            }`}
+            } ${isPending ? "opacity-50 cursor-wait" : ""}`}
             title={isCollapsed ? currentLanguage.name : ""}
           >
             <div
@@ -153,26 +171,24 @@ export default function Sidebar() {
 
           {showLanguageDropdown && (
             <div
-              className={`absolute bottom-full mb-2 bg-[#0a1f2d] border border-gray-700 rounded-lg overflow-hidden shadow-lg ${
+              className={`absolute bottom-full mb-2 bg-[#0a1f2d] border border-gray-700 rounded-lg overflow-hidden shadow-lg z-50 ${
                 isCollapsed ? "left-full ml-2 w-48" : "left-0 right-0"
               }`}
             >
               {languages.map((lang) => (
                 <button
                   key={lang.code}
-                  onClick={() => {
-                    setSelectedLanguage(lang.name);
-                    setShowLanguageDropdown(false);
-                  }}
+                  onClick={() => handleLanguageChange(lang.code)}
+                  disabled={isPending}
                   className={`flex items-center space-x-3 px-4 py-3 w-full hover:bg-[#0d2535] transition-all ${
-                    lang.name === selectedLanguage ? "bg-[#0d2535]" : ""
-                  }`}
+                    lang.code === currentLocale ? "bg-[#0d2535]" : ""
+                  } ${isPending ? "opacity-50 cursor-wait" : ""}`}
                 >
                   <span className="text-2xl">{lang.flag}</span>
                   <span className="text-sm font-medium text-gray-300">
                     {lang.name}
                   </span>
-                  {lang.name === selectedLanguage && (
+                  {lang.code === currentLocale && (
                     <span className="ml-auto text-green-400">✓</span>
                   )}
                 </button>

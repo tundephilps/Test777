@@ -1,5 +1,10 @@
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // REMOVE the i18n config - it conflicts with next-intl
   images: {
     remotePatterns: [
       {
@@ -10,8 +15,8 @@ const nextConfig = {
         search: "",
       },
     ],
-    unoptimized: true, // Add this to avoid timeout errors
+    unoptimized: true,
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

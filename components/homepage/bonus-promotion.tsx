@@ -2,9 +2,12 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
+import { useTranslations } from "next-intl";
 
 const BonusPromotion = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
+
+  const t = useTranslations("HomePage");
 
   // Slide left
   const scrollLeft = () => {
@@ -45,13 +48,13 @@ const BonusPromotion = () => {
             alt="speaker"
             className="w-5 h-5"
           />
-          <span className="font-semibold">Bonus & Promotion</span>
+          <span className="font-semibold">{t("class6")}</span>
         </div>
 
         {/* Right Side - Buttons */}
         <div className="flex items-center gap-3">
           <button className="text-sm text-gray-300 hover:text-white transition-colors border-t hover:bg-white/10 cursor-pointer border-gray-800 bg-[#071a26] p-2 rounded-md">
-            View All
+            {t("view")}
           </button>
           <div className="flex gap-2">
             <button

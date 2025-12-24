@@ -1,5 +1,7 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 const PaymentMethod = () => {
+  const t = useTranslations("HomePage");
   return (
     <div className="my-6">
       <div className="relative lg:flex hidden  items-center">
@@ -12,10 +14,9 @@ const PaymentMethod = () => {
             alt=""
           />
           <div className="space-y-3">
-            <p className="text-xl text-white"> Preferred Payment Methods </p>
+            <p className="text-xl text-white"> {t("adstext1")} </p>
             <p className="w-[60%] text-gray-500 text-[10px]">
-              Enjoy fast and secure payments with multiple options. Choose
-              crypto, cards, or bank transfers — whatever suits you best.
+              {t("adstext2")}{" "}
             </p>
           </div>
         </div>
@@ -54,11 +55,10 @@ const PaymentMethod = () => {
           />
           {/* Text */}
           <h2 className="text-xl text-white font-semibold mb-2 text-center">
-            Preferred Payment Methods
+            {t("adstext1")}
           </h2>
           <p className="text-[12px] text-[#58656e] mb-5 text-center">
-            Enjoy fast and secure payments with multiple options. Choose crypto,
-            cards, or bank transfers — whatever suits you best.
+            {t("adstext2")}{" "}
           </p>
 
           <Image

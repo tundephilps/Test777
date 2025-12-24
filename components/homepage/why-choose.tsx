@@ -1,16 +1,14 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 export default function WhyChooseUs() {
+  const t = useTranslations("HomePage");
   return (
     <section className="text-white py-16">
       <div className="max-w-6xl mx-auto text-center">
         {/* Header */}
-        <h2 className="text-xl md:text-4xl font-semibold mb-2">
-          Why Choose Us?
-        </h2>
-        <p className="text-[#58656e] mb-12">
-          Great service, huge bonuses and a broad choice of games
-        </p>
+        <h2 className="text-xl md:text-4xl font-semibold mb-2">{t("why")}</h2>
+        <p className="text-[#58656e] mb-12">{t("whysub")}</p>
 
         {/* Cards */}
         <div className="grid gap-8 md:grid-cols-3">
@@ -29,11 +27,10 @@ export default function WhyChooseUs() {
               />
             </div>
             <h3 className="text-base font-semibold mb-3 relative z-10">
-              Multiple Currencies
+              {t("whytitle1")}{" "}
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed relative z-10">
-              Choose 1 of the 4 available currencies to play in and good news
-              for crypto players, your cryptocurrency will be converted to play.
+              {t("why1")}{" "}
             </p>
           </div>
 
@@ -51,12 +48,10 @@ export default function WhyChooseUs() {
               />
             </div>
             <h3 className="text-base font-semibold mb-3 relative z-10">
-              Supporting you along the way
+              {t("whytitle2")}{" "}
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed relative z-10">
-              We pride ourselves to offer you the best customer support no
-              matter what time, all year round. Our Support Team are
-              professional and knowledgeable about all things casino.
+              {t("why2")}{" "}
             </p>
           </div>
 
@@ -74,12 +69,10 @@ export default function WhyChooseUs() {
               />
             </div>
             <h3 className="text-base font-semibold mb-3 relative z-10">
-              Trusted by all
+              {t("whytitle3")}{" "}
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed relative z-10">
-              We have put all measures in place to operate fairly and correctly
-              when it comes to your winnings and the outcome of the games on
-              offer so that you always get results that you can trust.
+              {t("why3")}{" "}
             </p>
           </div>
         </div>

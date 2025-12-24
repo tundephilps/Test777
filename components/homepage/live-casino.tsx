@@ -12,8 +12,10 @@ import {
 import { FaPlay } from "react-icons/fa";
 import { GiGamepad } from "react-icons/gi";
 import { BsFillSuitSpadeFill } from "react-icons/bs";
+import { useTranslations } from "next-intl";
 
 const LiveCasino = () => {
+  const t = useTranslations("HomePage");
   const [favorites, setFavorites] = useState<Set<number>>(new Set());
   const [openCard, setOpenCard] = useState<number | null>(null);
 
@@ -59,12 +61,12 @@ const LiveCasino = () => {
         <div className="flex items-center gap-2 text-white">
           <BsFillSuitSpadeFill className="w-5 h-5" />
 
-          <span className="font-semibold">Live Casino</span>
+          <span className="font-semibold"> {t("class5")}</span>
         </div>
 
         <div className="flex items-center gap-3">
           <button className="text-sm text-gray-300 border-t border-gray-800 bg-[#071a26] p-2 rounded-md">
-            View All
+            {t("view")}
           </button>
           <div className="flex gap-2">
             <button className="border-t border-gray-800 bg-[#071a26] p-2 rounded">

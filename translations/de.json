@@ -1,0 +1,55 @@
+{
+  "HomePage": {
+    "welcome": "WILLKOMMENSPAKET",
+    "percentage": "620 % bis zu 8.000 $",
+    "deposit": "+400 Freispiele bei den ersten 4 Einzahlungen",
+    "button": "Jetzt beitreten",
+    "view": "Alle anzeigen",
+    "class1": "Großer Gewinn",
+    "class2": "Willkommensbonus",
+    "class3": "Neue Spiele",
+    "class4": "Top-Spiele",
+    "class5": "Live-Casino",
+    "class6": "Boni & Aktionen",
+    "class7": "Heiße Spiele",
+    "adstext1": "Bevorzugte Zahlungsmethoden",
+    "adstext2": "Genießen Sie schnelle und sichere Zahlungen mit mehreren Optionen. Wählen Sie Krypto, Karten oder Banküberweisungen – ganz nach Ihren Bedürfnissen.",
+    "why": "Warum uns wählen?",
+    "whysub": "Großartiger Service, riesige Boni und eine große Auswahl an Spielen",
+    "whytitle1": "Mehrere Währungen",
+    "whytitle2": "Unterstützung auf jedem Schritt",
+    "whytitle3": "Von allen geschätzt",
+    "why1": "Wählen Sie eine von 4 verfügbaren Währungen zum Spielen. Gute Nachrichten für Krypto-Spieler: Ihre Kryptowährung wird automatisch für das Spielen umgerechnet.",
+    "why2": "Wir sind stolz darauf, Ihnen rund um die Uhr, das ganze Jahr über, den besten Kundensupport zu bieten. Unser Support-Team ist professionell und bestens mit allen Casino-Themen vertraut.",
+    "why3": "Wir haben alle Maßnahmen getroffen, um fair und korrekt zu arbeiten – insbesondere in Bezug auf Ihre Gewinne und die Spielergebnisse – damit Sie stets Ergebnissen vertrauen können."
+  },
+  "AboutPage": {
+    "title": "Make every step user-centric",
+    "features": [
+      {
+        "title": "Support",
+        "description": "Our dedicated support team is available 24/7 to assist with any questions or issues, ensuring that you never feel alone."
+      },
+      {
+        "title": "Organise",
+        "description": "Easily manage your projects, tasks, and teams in one place, making collaboration seamless and efficient."
+      },
+      {
+        "title": "Flexibility",
+        "description": "Whether you need to scale your operations or adjust processes, our platform offers the flexibility to grow with your needs."
+      },
+      {
+        "title": "Speed",
+        "description": "With lightning-fast performance and a streamlined workflow, you can accomplish more in less time and stay ahead of the competition."
+      },
+      {
+        "title": "Quality",
+        "description": "Deliver exceptional results with our high-quality standards, ensuring that every project meets the highest level of excellence."
+      },
+      {
+        "title": "Resource",
+        "description": "Access a wealth of resources, including guides, tutorials, and expert insights, to help you maximize your potential and succeed."
+      }
+    ]
+  }
+}

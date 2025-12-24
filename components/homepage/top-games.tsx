@@ -11,7 +11,9 @@ import {
 } from "react-icons/io5";
 import { FaMedal, FaPlay } from "react-icons/fa";
 import { GiGamepad } from "react-icons/gi";
+import { useTranslations } from "next-intl";
 const TopGames = () => {
+  const t = useTranslations("HomePage");
   const [favorites, setFavorites] = useState<Set<number>>(new Set());
   const [openCard, setOpenCard] = useState<number | null>(null);
 
@@ -57,12 +59,12 @@ const TopGames = () => {
       <div className="flex items-center justify-between py-4">
         <div className="flex items-center gap-2 text-white">
           <FaMedal className="w-5 h-5" />
-          <span className="font-semibold">Top Games</span>
+          <span className="font-semibold">{t("class4")}</span>
         </div>
 
         <div className="flex items-center gap-3">
           <button className="text-sm text-gray-300 border-t border-gray-800 bg-[#071a26] p-2 rounded-md">
-            View All
+            {t("view")}
           </button>
           <div className="flex gap-2">
             <button className="border-t border-gray-800 bg-[#071a26] p-2 rounded">

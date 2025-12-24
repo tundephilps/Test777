@@ -1,11 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import {
-  IoGameController,
-  IoSearch,
-  IoChevronBack,
-  IoChevronForward,
-} from "react-icons/io5";
+import { IoGameController, IoSearch } from "react-icons/io5";
 import { BiSlider } from "react-icons/bi";
 import { GiPokerHand } from "react-icons/gi";
 import { FaDice } from "react-icons/fa";
