@@ -15,7 +15,11 @@ import Link from "next/link";
 import { BiMenu } from "react-icons/bi";
 
 import { usePathname, useRouter } from "next/navigation";
+import { useTransition } from "react";
+import { useLocale } from "next-intl";
+import { FaChevronDown } from "react-icons/fa";
 
+// You can keep or remove this one (we'll use server action + refresh)
 import setLanguageValue from "../../actions/set-language-action";
 
 import {
@@ -31,9 +35,30 @@ import { RiLiveLine, RiTrophyLine } from "react-icons/ri";
 import { PiSpinnerBallFill } from "react-icons/pi";
 
 export default function Header() {
+  const languages = [
+    { code: "en", name: "English", flag: "🇬🇧" },
+    { code: "de", name: "Deutsch", flag: "🇩🇪" },
+    { code: "es", name: "Español", flag: "🇪🇸" },
+    { code: "fr", name: "Français", flag: "🇫🇷" },
+    { code: "pt", name: "Português", flag: "🇵🇹" },
+    { code: "pl", name: "Polski", flag: "🇵🇱" },
+    { code: "fi", name: "Suomi", flag: "🇫🇮" },
+    { code: "it", name: "Italiano", flag: "🇮🇹" },
+    { code: "no", name: "Norsk", flag: "🇳🇴" },
+  ];
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const [isDepositModalOpen, setIsDepositModalOpen] = useState(false);
+
+  const [showLang, setShowLang] = useState(false);
+  const [selectedLang, setSelectedLang] = useState(languages[0]); // default EN
+
+  const [selectedLanguage, setSelectedLanguage] = useState("en");
+
+  // ── Language switcher state ──
+  const currentLocale = useLocale();
+  const [showLangDropdown, setShowLangDropdown] = useState(false);
+  const [isPending, startTransition] = useTransition();
 
   const links = [
     { href: "/dashboard", label: "Home", icon: <FaHome /> },
@@ -61,26 +86,19 @@ export default function Header() {
     { href: "/dashboard/contact", label: "Contact", icon: <FaHeadset /> },
   ];
 
-  const languages = [
-    { code: "en", flag: "🇬🇧" },
-    { code: "de", flag: "🇩🇪" },
-    { code: "es", flag: "🇪🇸" },
-    { code: "fr", flag: "🇫🇷" },
-    { code: "pt", flag: "🇵🇹" },
-    { code: "pl", flag: "🇵🇱" },
-    { code: "fi", flag: "🇫🇮" },
-    { code: "it", flag: "🇮🇹" },
-    { code: "no", flag: "🇳🇴" },
-  ];
-  const [showLang, setShowLang] = useState(false);
-  const [selectedLang, setSelectedLang] = useState(languages[0]); // default EN
+  const currentLanguage =
+    languages.find((l) => l.code === currentLocale) || languages[0];
 
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const handleLanguageChange = (langCode: string) => {
+    setShowLangDropdown(false);
 
-  // Function to handle language change
-  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedLanguage(e.target.value);
-    setLanguageValue(e.target.value);
+    startTransition(async () => {
+      await setLanguageValue(langCode);
+      // router.refresh() ← optional, usually enough with cookie + revalidation
+      // but many people keep it for reliability in Next.js App Router + i18n
+      window.location.reload(); // ← most reliable in many cases (2024-2025)
+      // or: router.refresh();
+    });
   };
 
   return (
@@ -160,28 +178,37 @@ export default function Header() {
           </Link>
 
           {/* 🌍 Language Selector */}
+          {/* ── Improved Mobile Language Switcher ── */}
           <div className="relative">
             <button
-              onClick={() => setShowLang(!showLang)}
-              className="bg-white/20 rounded-lg px-2 py-1.5 text-sm flex items-center gap-1"
+              onClick={() => setShowLangDropdown(!showLangDropdown)}
+              disabled={isPending}
+              className={`bg-[#0a1f2d] rounded-lg px-2.5 py-1.5 text-sm flex items-center gap-1.5 min-w-[68px] justify-center ${
+                isPending ? "opacity-60" : ""
+              }`}
             >
-              <span className="text-lg">{selectedLang.flag}</span>
-              <span className="text-xs">{selectedLang.code}</span>
+              <span className="text-xl">{currentLanguage.flag}</span>
+              <span className="text-xs font-medium">
+                {currentLanguage.code.toUpperCase()}
+              </span>
             </button>
 
-            {showLang && (
-              <div className="absolute right-0 top-10 bg-[#071a26] border border-white/10 rounded-lg shadow-lg z-50 min-w-full">
+            {showLangDropdown && (
+              <div className="absolute right-0 top-full mt-2 bg-[#0a1f2d] border border-gray-700 rounded-lg shadow-lg z-50 min-w-[160px]">
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
-                    onClick={() => {
-                      setSelectedLang(lang);
-                      setShowLang(false);
-                    }}
-                    className="flex items-center gap-2  py-2 text-sm hover:bg-white/10 px-2"
+                    onClick={() => handleLanguageChange(lang.code)}
+                    disabled={isPending}
+                    className={`flex items-center gap-2.5 w-full px-3 py-2.5 hover:bg-[#0d2535] text-sm ${
+                      lang.code === currentLocale ? "bg-[#0d2535]" : ""
+                    } ${isPending ? "opacity-50" : ""}`}
                   >
-                    <span className="text-lg">{lang.flag}</span>
-                    {lang.code}
+                    <span className="text-xl">{lang.flag}</span>
+                    <span>{lang.name}</span>
+                    {lang.code === currentLocale && (
+                      <span className="ml-auto text-green-400 text-xs">✓</span>
+                    )}
                   </button>
                 ))}
               </div>
