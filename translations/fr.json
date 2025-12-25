@@ -3,6 +3,23 @@
     "welcome": "PACK DE BIENVENUE",
     "percentage": "620 % jusqu’à 8 000 $",
     "deposit": "+400 tours gratuits sur les 4 premiers dépôts",
+    "deposit1_title": "1ER DÉPÔT",
+    "deposit2_title": "2ÈME DÉPÔT",
+    "deposit_bonus": "100% Bonus 100+",
+    "deposit_freespins": "Tours Gratuits",
+    "deposit_bonus2": "Boostez chaque dépôt",
+    "deposit_freespins2": "avec des récompenses",
+    "deposit_button": "Déposer et Jouer",
+    "deposit_button2": "Déposer et Gagner",
+    "cashback_title": "CHAQUE JOUR",
+    "cashback_subtitle": "CASHBACK JUSQU'À 20%",
+    "cashback_button": "Réclamer Cashback",
+    "reload_title": "Vendredi +50%",
+    "reload_subtitle": "Bonus de Rechargement",
+    "reload_button": "Réclamer Bonus",
+    "monday_title": "Lundi 100",
+    "monday_subtitle": "Tours",
+    "monday_button": "Tourner et Gagner",
     "button": "Rejoindre maintenant",
     "view": "Tout voir",
     "class1": "Gros gain",
@@ -23,33 +40,28 @@
     "why2": "Nous sommes fiers de vous offrir le meilleur service client 24h/24 et 7j/7, toute l’année. Notre équipe d’assistance est professionnelle et experte dans tous les domaines du casino.",
     "why3": "Nous avons mis en place toutes les mesures nécessaires pour garantir une expérience équitable et transparente, notamment en ce qui concerne vos gains et les résultats des jeux, afin que vous puissiez toujours leur faire confiance."
   },
-  "AboutPage": {
-    "title": "Make every step user-centric",
-    "features": [
-      {
-        "title": "Support",
-        "description": "Our dedicated support team is available 24/7 to assist with any questions or issues, ensuring that you never feel alone."
-      },
-      {
-        "title": "Organise",
-        "description": "Easily manage your projects, tasks, and teams in one place, making collaboration seamless and efficient."
-      },
-      {
-        "title": "Flexibility",
-        "description": "Whether you need to scale your operations or adjust processes, our platform offers the flexibility to grow with your needs."
-      },
-      {
-        "title": "Speed",
-        "description": "With lightning-fast performance and a streamlined workflow, you can accomplish more in less time and stay ahead of the competition."
-      },
-      {
-        "title": "Quality",
-        "description": "Deliver exceptional results with our high-quality standards, ensuring that every project meets the highest level of excellence."
-      },
-      {
-        "title": "Resource",
-        "description": "Access a wealth of resources, including guides, tutorials, and expert insights, to help you maximize your potential and succeed."
-      }
-    ]
+  "JackpotPage": {
+    "hero_title": "Tentez votre chance",
+    "hero_subtitle": "Chance de Gagner",
+    "hero_winning_chance": "Chance de gagner toutes les 12 heures",
+    "hero_bet_button": "Parier Maintenant"
+  },
+  "TournamentPage": {
+    "turbo_title": "3Oaks: Gains Turbo",
+    "drops_title": "DROPS & GAINS",
+    "evoplay_title": "Evoplay: Tournoi Grandes Aventures",
+    "live_badge": "EN DIRECT",
+    "prize_pool": "Cagnotte",
+    "players": "Joueurs",
+    "start_date": "Date de début",
+    "end_date": "Date de fin",
+    "days": "Jours",
+    "hours": "Heure",
+    "minutes": "Min",
+    "seconds": "Sec",
+    "participating_games": "Jeux Participants",
+    "view_all": "Tout Voir",
+    "play_button": "Jouer",
+    "demo_button": "Démo"
   }
 }

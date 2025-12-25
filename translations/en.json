@@ -3,6 +3,23 @@
     "welcome": "WELCOME PACK",
     "percentage": "620% up to $8,000",
     "deposit": "+400 FS on first 4 deposits",
+    "deposit1_title": "1ST DEPOSIT",
+    "deposit2_title": "2ND DEPOSIT",
+    "deposit_bonus": "100% Bonus 100+",
+    "deposit_freespins": "Free Spins",
+    "deposit_bonus2": "Boost every deposit",
+    "deposit_freespins2": "with rewards",
+    "deposit_button": "Deposit & Play",
+    "deposit_button2": "Deposit & Win",
+    "cashback_title": "EVERY DAY",
+    "cashback_subtitle": "CASHBACK UP TO 20%",
+    "cashback_button": "Claim Cashback",
+    "reload_title": "Friday +50%",
+    "reload_subtitle": "Reload Bonus",
+    "reload_button": "Claim Bonus",
+    "monday_title": "Monday 100",
+    "monday_subtitle": "Spins",
+    "monday_button": "Spin & Win",
     "button": "Join Now",
     "view": "View All",
     "class1": "Big Win",
@@ -23,33 +40,28 @@
     "why2": "We pride ourselves to offer you the best customer support no matter what time, all year round. Our Support Team are professional and knowledgeable about all things casino.",
     "why3": "We have put all measures in place to operate fairly and correctly when it comes to your winnings and the outcome of the games on offer so that you always get results that you can trust."
   },
-  "AboutPage": {
-    "title": "Make every step user-centric",
-    "features": [
-      {
-        "title": "Support",
-        "description": "Our dedicated support team is available 24/7 to assist with any questions or issues, ensuring that you never feel alone."
-      },
-      {
-        "title": "Organise",
-        "description": "Easily manage your projects, tasks, and teams in one place, making collaboration seamless and efficient."
-      },
-      {
-        "title": "Flexibility",
-        "description": "Whether you need to scale your operations or adjust processes, our platform offers the flexibility to grow with your needs."
-      },
-      {
-        "title": "Speed",
-        "description": "With lightning-fast performance and a streamlined workflow, you can accomplish more in less time and stay ahead of the competition."
-      },
-      {
-        "title": "Quality",
-        "description": "Deliver exceptional results with our high-quality standards, ensuring that every project meets the highest level of excellence."
-      },
-      {
-        "title": "Resource",
-        "description": "Access a wealth of resources, including guides, tutorials, and expert insights, to help you maximize your potential and succeed."
-      }
-    ]
+  "JackpotPage": {
+    "hero_title": "Try your luck",
+    "hero_subtitle": "Wining Chance",
+    "hero_winning_chance": "Every 12 Hours winning chance",
+    "hero_bet_button": "Bet Now"
+  },
+  "TournamentPage": {
+    "turbo_title": "3Oaks: Turbo Wins",
+    "drops_title": "DROPS & WINS",
+    "evoplay_title": "Evoplay: Big Adventures Tournament",
+    "live_badge": "LIVE",
+    "prize_pool": "Prize pool",
+    "players": "Players",
+    "start_date": "Start date",
+    "end_date": "End date",
+    "days": "Days",
+    "hours": "Hour",
+    "minutes": "Min",
+    "seconds": "Sec",
+    "participating_games": "Participating Games",
+    "view_all": "View All",
+    "play_button": "Play",
+    "demo_button": "Demo"
   }
 }

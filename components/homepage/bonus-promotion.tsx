@@ -3,6 +3,9 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import { useTranslations } from "next-intl";
+import Bonus111 from "../../public/Bonus111.png";
+import Bonus222 from "../../public/Bonus222.png";
+import Bonus333 from "../../public/Bonus111.png";
 
 const BonusPromotion = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -29,10 +32,25 @@ const BonusPromotion = () => {
     }
   };
 
-  const images = [
-    "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Bonus.png",
-    "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Bonus2.png",
-    "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Bonus.png",
+  const promotions = [
+    {
+      image: Bonus111,
+      title: t("cashback_title"),
+      subtitle: t("cashback_subtitle"),
+      button: t("cashback_button"),
+    },
+    {
+      image: Bonus222,
+      title: t("reload_title"),
+      subtitle: t("reload_subtitle"),
+      button: t("reload_button"),
+    },
+    {
+      image: Bonus333,
+      title: t("monday_title"),
+      subtitle: t("monday_subtitle"),
+      button: t("monday_button"),
+    },
   ];
 
   return (
@@ -59,7 +77,7 @@ const BonusPromotion = () => {
           <div className="flex gap-2">
             <button
               onClick={scrollLeft}
-              className="border-t hover:bg-white/10 cursor-pointer border-gray-800 bg-[#071a26]  p-2 rounded transition-all"
+              className="border-t hover:bg-white/10 cursor-pointer border-gray-800 bg-[#071a26] p-2 rounded transition-all"
             >
               <IoChevronBack className="w-4 h-4 text-gray-400" />
             </button>
@@ -78,15 +96,45 @@ const BonusPromotion = () => {
         ref={sliderRef}
         className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide"
       >
-        {images.map((img, i) => (
-          <div key={i} className="flex-shrink-0 ">
-            <Image
-              src={img}
-              width={1000}
-              height={1000}
-              alt={`Promo ${i + 1}`}
-              className="rounded-lg w-full h-72 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/50"
-            />
+        {promotions.map((promo, i) => (
+          <div
+            key={i}
+            className="flex-shrink-0 relative group"
+            style={{ fontFamily: "var(--font-bounded)" }}
+          >
+            <div className="relative rounded-lg overflow-hidden">
+              <Image
+                src={promo.image}
+                width={1000}
+                height={1000}
+                alt={`Promo ${i + 1}`}
+                className="w-full h-72 object-cover cursor-pointer transition-all duration-300 group-hover:-translate-y-2"
+              />
+
+              {/* Dark overlay for better text contrast */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
+
+              {/* Hover effect shadow */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-xl shadow-blue-500/50 pointer-events-none rounded-lg" />
+
+              {/* Overlay Content */}
+              <div className="absolute inset-0 flex flex-col items-start justify-center px-6 sm:px-8">
+                {/* Title */}
+                <h3 className="text-white text-4xl font-bold mb-1 drop-shadow-lg leading-tight">
+                  {promo.title}
+                </h3>
+
+                {/* Subtitle */}
+                <p className="text-white text-4xl font-semibold mb-4 drop-shadow-md">
+                  {promo.subtitle}
+                </p>
+
+                {/* Button */}
+                <button className="bg-red-600 mt-6 hover:bg-red-700 text-white font-bold text-xs sm:text-sm py-2 px-5 sm:py-2.5 sm:px-6 rounded transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  {promo.button}
+                </button>
+              </div>
+            </div>
           </div>
         ))}
       </div>

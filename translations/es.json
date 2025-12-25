@@ -3,6 +3,23 @@
     "welcome": "PAQUETE DE BIENVENIDA",
     "percentage": "620 % hasta 8.000 $",
     "deposit": "+400 tiradas gratis en los primeros 4 depósitos",
+    "deposit1_title": "1ER DEPÓSITO",
+    "deposit2_title": "2DO DEPÓSITO",
+    "deposit_bonus": "100% Bono 100+",
+    "deposit_freespins": "Giros Gratis",
+    "deposit_bonus2": "Aumenta cada depósito",
+    "deposit_freespins2": "con recompensas",
+    "deposit_button": "Depositar y Jugar",
+    "deposit_button2": "Depositar y Ganar",
+    "cashback_title": "CADA DÍA",
+    "cashback_subtitle": "CASHBACK HASTA 20%",
+    "cashback_button": "Reclamar Cashback",
+    "reload_title": "Viernes +50%",
+    "reload_subtitle": "Bono de Recarga",
+    "reload_button": "Reclamar Bono",
+    "monday_title": "Lunes 100",
+    "monday_subtitle": "Giros",
+    "monday_button": "Girar y Ganar",
     "button": "Únete ahora",
     "view": "Ver todo",
     "class1": "Gran Ganancia",
@@ -23,33 +40,11 @@
     "why2": "Estamos orgullosos de ofrecerte el mejor soporte al cliente las 24 horas del día, durante todo el año. Nuestro equipo de soporte es profesional y tiene amplios conocimientos sobre todo lo relacionado con el casino.",
     "why3": "Hemos implementado todas las medidas necesarias para operar de manera justa y correcta, especialmente en lo que respecta a tus ganancias y a los resultados de los juegos, para que siempre puedas confiar en ellos."
   },
-  "AboutPage": {
-    "title": "Make every step user-centric",
-    "features": [
-      {
-        "title": "Support",
-        "description": "Our dedicated support team is available 24/7 to assist with any questions or issues, ensuring that you never feel alone."
-      },
-      {
-        "title": "Organise",
-        "description": "Easily manage your projects, tasks, and teams in one place, making collaboration seamless and efficient."
-      },
-      {
-        "title": "Flexibility",
-        "description": "Whether you need to scale your operations or adjust processes, our platform offers the flexibility to grow with your needs."
-      },
-      {
-        "title": "Speed",
-        "description": "With lightning-fast performance and a streamlined workflow, you can accomplish more in less time and stay ahead of the competition."
-      },
-      {
-        "title": "Quality",
-        "description": "Deliver exceptional results with our high-quality standards, ensuring that every project meets the highest level of excellence."
-      },
-      {
-        "title": "Resource",
-        "description": "Access a wealth of resources, including guides, tutorials, and expert insights, to help you maximize your potential and succeed."
-      }
-    ]
+
+  "JackpotPage": {
+    "hero_title": "Prueba tu suerte",
+    "hero_subtitle": "Oportunidad de Ganar",
+    "hero_winning_chance": "Oportunidad de ganar cada 12 horas",
+    "hero_bet_button": "Apostar Ahora"
   }
 }

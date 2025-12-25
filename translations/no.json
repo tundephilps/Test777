@@ -3,6 +3,23 @@
     "welcome": "VELKOMSTPAKKE",
     "percentage": "620 % opptil 8 000 $",
     "deposit": "+400 gratisspinn på de første 4 innskuddene",
+    "deposit1_title": "1. INNSKUDD",
+    "deposit2_title": "2. INNSKUDD",
+    "deposit_bonus": "100% Bonus 100+",
+    "deposit_freespins": "Gratisspinn",
+    "deposit_bonus2": "Boost hvert innskudd",
+    "deposit_freespins2": "med belønninger",
+    "deposit_button": "Sett inn og Spill",
+    "deposit_button2": "Sett inn og Vinn",
+    "cashback_title": "HVER DAG",
+    "cashback_subtitle": "CASHBACK OPP TIL 20%",
+    "cashback_button": "Krev Cashback",
+    "reload_title": "Fredag +50%",
+    "reload_subtitle": "Reload Bonus",
+    "reload_button": "Krev Bonus",
+    "monday_title": "Mandag 100",
+    "monday_subtitle": "Spinn",
+    "monday_button": "Spinn og Vinn",
     "button": "Bli med nå",
     "view": "Se alle",
     "class1": "Stor Gevinst",
@@ -23,33 +40,28 @@
     "why2": "Vi er stolte av å tilby deg den beste kundestøtten døgnet rundt, hele året. Vårt supportteam er profesjonelt og kunnskapsrikt innen alt som gjelder casino.",
     "why3": "Vi har implementert alle nødvendige tiltak for å sikre rettferdig og korrekt drift, spesielt når det gjelder gevinster og spillresultater, slik at du alltid kan stole på dem."
   },
-  "AboutPage": {
-    "title": "Make every step user-centric",
-    "features": [
-      {
-        "title": "Support",
-        "description": "Our dedicated support team is available 24/7 to assist with any questions or issues, ensuring that you never feel alone."
-      },
-      {
-        "title": "Organise",
-        "description": "Easily manage your projects, tasks, and teams in one place, making collaboration seamless and efficient."
-      },
-      {
-        "title": "Flexibility",
-        "description": "Whether you need to scale your operations or adjust processes, our platform offers the flexibility to grow with your needs."
-      },
-      {
-        "title": "Speed",
-        "description": "With lightning-fast performance and a streamlined workflow, you can accomplish more in less time and stay ahead of the competition."
-      },
-      {
-        "title": "Quality",
-        "description": "Deliver exceptional results with our high-quality standards, ensuring that every project meets the highest level of excellence."
-      },
-      {
-        "title": "Resource",
-        "description": "Access a wealth of resources, including guides, tutorials, and expert insights, to help you maximize your potential and succeed."
-      }
-    ]
+  "JackpotPage": {
+    "hero_title": "Prøv lykken",
+    "hero_subtitle": "Vinningsmulighet",
+    "hero_winning_chance": "Vinningsmulighet hver 12. time",
+    "hero_bet_button": "Spill Nå"
+  },
+  "TournamentPage": {
+    "turbo_title": "3Oaks: Turbo Gevinster",
+    "drops_title": "DROPS & GEVINSTER",
+    "evoplay_title": "Evoplay: Store Eventyr Turnering",
+    "live_badge": "DIREKTE",
+    "prize_pool": "Premiepott",
+    "players": "Spillere",
+    "start_date": "Startdato",
+    "end_date": "Sluttdato",
+    "days": "Dager",
+    "hours": "Time",
+    "minutes": "Min",
+    "seconds": "Sek",
+    "participating_games": "Deltakende Spill",
+    "view_all": "Se Alle",
+    "play_button": "Spill",
+    "demo_button": "Demo"
   }
 }

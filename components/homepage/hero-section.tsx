@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import HeroMobile2 from "../../public/HeroMobile2.png";
+import Visa from "../../public/Visa2.png";
 
 const Hero = () => {
   const t = useTranslations("HomePage");
@@ -60,17 +62,47 @@ const Hero = () => {
         </div>
       </div>
       <div className="w-full max-w-full lg:hidden">
-        <div className="relative w-full overflow-hidden">
+        <div
+          className="relative w-full overflow-hidden"
+          style={{ fontFamily: "var(--font-bounded)" }}
+        >
           <Image
-            // src={HeroMobile}
-
-            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/HeroMobile.png"
+            src={HeroMobile2}
             alt=""
             width={1000}
             height={300}
             className="w-full h-auto"
             sizes="100vw"
           />
+
+          {/* Overlay Content */}
+          <div className="absolute inset-0 flex flex-col items-center  top-4 text-center ">
+            {/* Welcome Pack Text */}
+            <p className="text-white text-xl  font-semibold tracking-wider mb-2">
+              {t("welcome")}
+            </p>
+
+            {/* Percentage */}
+            <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-1">
+              {t("percentage")}
+            </h2>
+
+            {/* Free Spins Text */}
+            <p className="text-white text-base mb-4">{t("deposit")}</p>
+
+            {/* Join Now Button */}
+            <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 sm:py-3 sm:px-8 rounded-md transition-all duration-300 transform hover:scale-105 shadow-lg">
+              {t("button")}
+            </button>
+
+            <Image
+              src={Visa}
+              alt=""
+              width={1000}
+              height={300}
+              className="w-full h-auto mt-6 mx-4 px-4"
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -1,8 +1,11 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 const TurboWin = () => {
+  const t = useTranslations("TournamentPage");
+
   const [timeLeft, setTimeLeft] = useState({
     days: 77,
     hours: 12,
@@ -39,21 +42,21 @@ const TurboWin = () => {
   }, []);
 
   return (
-    <div className="w-full  mx-auto bg-[#081a26] rounded-xl overflow-hidden shadow-2xl">
+    <div className="w-full mx-auto bg-[#081a26] rounded-xl overflow-hidden shadow-2xl">
       {/* Header */}
       <div className="flex items-center justify-between lg:px-6 px-2 py-4 border-slate-700">
         <h1
           className="text-white text-2xl font-bold"
           style={{ fontFamily: "var(--font-bounded)" }}
         >
-          3Oaks: Turbo Wins
+          {t("turbo_title")}
         </h1>
         <span className="bg-green-500 text-white px-3 py-1 rounded text-sm font-semibold">
-          LIVE
+          {t("live_badge")}
         </span>
       </div>
 
-      <div className="grid lg:grid-cols-2  lg:px-6 px-2">
+      <div className="grid lg:grid-cols-2 lg:px-6 px-2">
         {/* Left Side - Banner Image */}
         <div className="relative rounded-lg overflow-hidden shadow-lg">
           <Image
@@ -69,33 +72,33 @@ const TurboWin = () => {
         <div className="grid lg:grid-cols-2 lg:gap-4 gap-2 bg-[#0a1f2d] lg:p-4 p-2">
           {/* Prize Pool Card */}
           <div className="bg-[#1b2c3a] rounded-lg lg:p-5 p-2 border border-[#cd0304]/40 shadow-lg">
-            <p className="text-slate-400 text-sm mb-2">Prize pool</p>
+            <p className="text-slate-400 text-sm mb-2">{t("prize_pool")}</p>
             <p className="text-yellow-400 text-3xl font-bold">$4,0000</p>
           </div>
 
           {/* Players Card */}
           <div className="bg-[#1b2c3a] rounded-lg lg:p-5 p-2 border border-[#cd0304]/40 shadow-lg">
-            <p className="text-slate-400 text-sm mb-2">Players</p>
+            <p className="text-slate-400 text-sm mb-2">{t("players")}</p>
             <p className="text-white text-3xl font-bold">∞</p>
           </div>
 
           {/* Start Date Card */}
           <div className="bg-[#1b2c3a] rounded-lg lg:p-5 p-2 border border-[#cd0304]/40 shadow-lg">
-            <p className="text-slate-400 text-sm mb-2">Prize Pool</p>
+            <p className="text-slate-400 text-sm mb-2">{t("start_date")}</p>
             <p className="text-white text-lg font-semibold">01.02.2025</p>
             <p className="text-slate-500 text-sm mt-1">00:00</p>
           </div>
 
           {/* End Date Card */}
           <div className="bg-[#1b2c3a] rounded-lg lg:p-5 p-2 border border-[#cd0304]/40 shadow-lg">
-            <p className="text-slate-400 text-sm mb-2">End date</p>
+            <p className="text-slate-400 text-sm mb-2">{t("end_date")}</p>
             <p className="text-white text-lg font-semibold">31.01.2026</p>
             <p className="text-slate-500 text-sm mt-1">00:00</p>
           </div>
 
           {/* Countdown Timer */}
           <div
-            className="col-span-2  rounded-lg lg:p-5 p-2 flex items-center justify-center  shadow-lg"
+            className="col-span-2 rounded-lg lg:p-5 p-2 flex items-center justify-center shadow-lg"
             style={{ fontFamily: "var(--font-bounded)" }}
           >
             <div className="flex items-center justify-between gap-2">
@@ -104,7 +107,7 @@ const TurboWin = () => {
                 <span className="text-[#f80507] lg:text-4xl text-xl font-bold">
                   {String(timeLeft.days).padStart(2, "0")}
                 </span>
-                <span className="text-slate-400 text-xs mt-1">Days</span>
+                <span className="text-slate-400 text-xs mt-1">{t("days")}</span>
               </div>
 
               <span className="text-slate-600 text-3xl font-bold">:</span>
@@ -114,7 +117,9 @@ const TurboWin = () => {
                 <span className="text-[#f80507] lg:text-4xl text-xl font-bold">
                   {String(timeLeft.hours).padStart(2, "0")}
                 </span>
-                <span className="text-slate-400 text-xs mt-1">Hour</span>
+                <span className="text-slate-400 text-xs mt-1">
+                  {t("hours")}
+                </span>
               </div>
 
               <span className="text-slate-600 text-3xl font-bold">:</span>
@@ -124,7 +129,9 @@ const TurboWin = () => {
                 <span className="text-[#f80507] lg:text-4xl text-xl font-bold">
                   {String(timeLeft.minutes).padStart(2, "0")}
                 </span>
-                <span className="text-slate-400 text-xs mt-1">Min</span>
+                <span className="text-slate-400 text-xs mt-1">
+                  {t("minutes")}
+                </span>
               </div>
 
               <span className="text-slate-600 text-3xl font-bold">:</span>
@@ -134,7 +141,9 @@ const TurboWin = () => {
                 <span className="text-[#f80507] lg:text-4xl text-xl font-bold">
                   {String(timeLeft.seconds).padStart(2, "0")}
                 </span>
-                <span className="text-slate-400 text-xs mt-1">Sec</span>
+                <span className="text-slate-400 text-xs mt-1">
+                  {t("seconds")}
+                </span>
               </div>
             </div>
           </div>

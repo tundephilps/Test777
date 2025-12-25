@@ -3,6 +3,23 @@
     "welcome": "TERVETULOPAKETTI",
     "percentage": "620 % jopa 8 000 $",
     "deposit": "+400 ilmaiskierrosta ensimmäisillä 4 talletuksella",
+    "deposit1_title": "1. TALLETUS",
+    "deposit2_title": "2. TALLETUS",
+    "deposit_bonus": "100% Bonus 100+",
+    "deposit_freespins": "Ilmaiskierrokset",
+    "deposit_bonus2": "Tehosta jokainen talletus",
+    "deposit_freespins2": "palkinnoilla",
+    "deposit_button": "Talleta ja Pelaa",
+    "deposit_button2": "Talleta ja Voita",
+    "cashback_title": "JOKA PÄIVÄ",
+    "cashback_subtitle": "CASHBACK JOPA 20%",
+    "cashback_button": "Lunasta Cashback",
+    "reload_title": "Perjantai +50%",
+    "reload_subtitle": "Latausbonus",
+    "reload_button": "Lunasta Bonus",
+    "monday_title": "Maanantai 100",
+    "monday_subtitle": "Kierrokset",
+    "monday_button": "Pyöritä ja Voita",
     "button": "Liity nyt",
     "view": "Näytä kaikki",
     "class1": "Suuri voitto",
@@ -23,33 +40,28 @@
     "why2": "Olemme ylpeitä voidessamme tarjota parasta asiakastukea ympäri vuorokauden, vuoden jokaisena päivänä. Tukitiimimme on ammattitaitoinen ja hyvin perehtynyt kaikkiin kasinoon liittyviin asioihin.",
     "why3": "Olemme toteuttaneet kaikki tarvittavat toimenpiteet toimiaksemme reilusti ja luotettavasti, erityisesti voittojesi ja pelitulosten osalta, jotta voit aina luottaa saamiisi tuloksiin."
   },
-  "AboutPage": {
-    "title": "Make every step user-centric",
-    "features": [
-      {
-        "title": "Support",
-        "description": "Our dedicated support team is available 24/7 to assist with any questions or issues, ensuring that you never feel alone."
-      },
-      {
-        "title": "Organise",
-        "description": "Easily manage your projects, tasks, and teams in one place, making collaboration seamless and efficient."
-      },
-      {
-        "title": "Flexibility",
-        "description": "Whether you need to scale your operations or adjust processes, our platform offers the flexibility to grow with your needs."
-      },
-      {
-        "title": "Speed",
-        "description": "With lightning-fast performance and a streamlined workflow, you can accomplish more in less time and stay ahead of the competition."
-      },
-      {
-        "title": "Quality",
-        "description": "Deliver exceptional results with our high-quality standards, ensuring that every project meets the highest level of excellence."
-      },
-      {
-        "title": "Resource",
-        "description": "Access a wealth of resources, including guides, tutorials, and expert insights, to help you maximize your potential and succeed."
-      }
-    ]
+  "JackpotPage": {
+    "hero_title": "Kokeile onneasi",
+    "hero_subtitle": "Voittomahdollisuus",
+    "hero_winning_chance": "Voittomahdollisuus joka 12. tunti",
+    "hero_bet_button": "Lyö Vetoa Nyt"
+  },
+  "TournamentPage": {
+    "turbo_title": "3Oaks: Turbo Voitot",
+    "drops_title": "DROPS & VOITOT",
+    "evoplay_title": "Evoplay: Suurten Seikkailujen Turnaus",
+    "live_badge": "LIVE",
+    "prize_pool": "Palkintopotti",
+    "players": "Pelaajat",
+    "start_date": "Alkamispäivä",
+    "end_date": "Päättymispäivä",
+    "days": "Päivää",
+    "hours": "Tunti",
+    "minutes": "Min",
+    "seconds": "Sek",
+    "participating_games": "Osallistuvat Pelit",
+    "view_all": "Näytä Kaikki",
+    "play_button": "Pelaa",
+    "demo_button": "Demo"
   }
 }
