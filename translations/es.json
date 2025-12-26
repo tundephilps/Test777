@@ -46,5 +46,38 @@
     "hero_subtitle": "Oportunidad de Ganar",
     "hero_winning_chance": "Oportunidad de ganar cada 12 horas",
     "hero_bet_button": "Apostar Ahora"
+  },
+  "FavoritePage": {
+    "hero_title": "Tu lista seleccionada de los juegos más queridos.",
+    "hero_subtitle": "Accede a tus tragamonedas y juegos en vivo favoritos al instante con tu lista personalizada.",
+    "hero_button": "Jugar Ahora"
+  },
+  "VipPage": {
+    "hero_brand": "Canada777VIP",
+    "hero_title": "La Experiencia VIP Global Definitiva",
+    "hero_subtitle": "¡Conviértete en VIP de Canada777 y reclama cashback diario todos los días!",
+    "mobile_hero_title": "Tu Cashback, Todos los Días",
+    "mobile_hero_subtitle": "Disfruta de recompensas de cashback sin esfuerzo en todos tus juegos favoritos.",
+    "exchange_title": "Canjea tus puntos VIP",
+    "exchange_subtitle": "Por giros gratis o dinero de bonificación",
+    "exchange_button": "Canjear Puntos",
+    "audi_title": "GANA UN AUDI A3 2026",
+    "audi_tickets": "TIENES 0 BOLETOS",
+    "audi_points": "1000 Puntos VIP = 1 Boleto",
+    "terms_apply": "Aplican T&Cs",
+    "cashback_title": "Cashback Diario",
+    "cashback_percent": "Hasta 30%",
+    "cashback_button": "Reclamar Tu Cashback",
+    "level_label": "NIVEL",
+    "comp_points": "PUNTOS COMP",
+    "daily_cashback": "CASHBACK DIARIO",
+    "wager": "APUESTA",
+    "special_event": "EVENTO ESPECIAL",
+    "personal_manager": "GERENTE PERSONAL"
+  },
+  "CashbackPage": {
+    "hero_brand": "Canada777VIP",
+    "hero_title": "Tu Cashback, Todos los Días",
+    "hero_subtitle": "Disfruta de recompensas de cashback sin esfuerzo en todos tus juegos favoritos."
   }
 }

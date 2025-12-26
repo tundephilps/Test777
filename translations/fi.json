@@ -63,5 +63,38 @@
     "view_all": "Näytä Kaikki",
     "play_button": "Pelaa",
     "demo_button": "Demo"
+  },
+  "FavoritePage": {
+    "hero_title": "Kuratoitu lista rakastetuimmista peleistä.",
+    "hero_subtitle": "Pääset välittömästi suosikki-slotteihin ja live-peleihin henkilökohtaisen listasi avulla.",
+    "hero_button": "Pelaa Nyt"
+  },
+  "VipPage": {
+    "hero_brand": "Canada777VIP",
+    "hero_title": "Paras Globaali VIP-Kokemus",
+    "hero_subtitle": "Liity Canada777 VIP:ksi ja lunasta päivittäinen cashback joka päivä!",
+    "mobile_hero_title": "Sinun Cashbackisi, Joka Päivä",
+    "mobile_hero_subtitle": "Nauti vaivattomista cashback-palkinnoista kaikissa suosikkipeleissäsi.",
+    "exchange_title": "Vaihda VIP-pisteesi",
+    "exchange_subtitle": "Ilmaiskierroksiin tai bonusrahaan",
+    "exchange_button": "Vaihda Pisteet",
+    "audi_title": "VOITA AUDI A3 2026",
+    "audi_tickets": "SINULLA ON 0 LIPPUA",
+    "audi_points": "1000 VIP-Pistettä = 1 Lippu",
+    "terms_apply": "Ehdot Pätevät",
+    "cashback_title": "Päivittäinen Cashback",
+    "cashback_percent": "Jopa 30%",
+    "cashback_button": "Lunasta Cashbackisi",
+    "level_label": "TASO",
+    "comp_points": "COMP-PISTEET",
+    "daily_cashback": "PÄIVITTÄINEN CASHBACK",
+    "wager": "PANOS",
+    "special_event": "ERIKOISTAPAHTUMA",
+    "personal_manager": "HENKILÖKOHTAINEN MANAGERI"
+  },
+  "CashbackPage": {
+    "hero_brand": "Canada777VIP",
+    "hero_title": "Sinun Cashbackisi, Joka Päivä",
+    "hero_subtitle": "Nauti vaivattomista cashback-palkinnoista kaikissa suosikkipeleissäsi."
   }
 }

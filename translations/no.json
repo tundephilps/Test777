@@ -63,5 +63,38 @@
     "view_all": "Se Alle",
     "play_button": "Spill",
     "demo_button": "Demo"
+  },
+  "FavoritePage": {
+    "hero_title": "Din kuraterte liste over de mest elskede spillene.",
+    "hero_subtitle": "Få tilgang til dine favoritt slots og live-spill øyeblikkelig med din personlige liste.",
+    "hero_button": "Spill Nå"
+  },
+  "VipPage": {
+    "hero_brand": "Canada777VIP",
+    "hero_title": "Den Ultimate Globale VIP-Opplevelsen",
+    "hero_subtitle": "Bli Canada777 VIP og krev daglig cashback hver dag!",
+    "mobile_hero_title": "Din Cashback, Hver Dag",
+    "mobile_hero_subtitle": "Nyt enkel cashback-belønninger på alle dine favorittspill.",
+    "exchange_title": "Bytt dine VIP-poeng",
+    "exchange_subtitle": "For gratisspinn eller bonuspenger",
+    "exchange_button": "Bytt Poeng",
+    "audi_title": "VINN EN AUDI A3 2026",
+    "audi_tickets": "DU HAR 0 BILLETTER",
+    "audi_points": "1000 VIP-Poeng = 1 Billett",
+    "terms_apply": "Vilkår Gjelder",
+    "cashback_title": "Daglig Cashback",
+    "cashback_percent": "Opp til 30%",
+    "cashback_button": "Krev Din Cashback",
+    "level_label": "NIVÅ",
+    "comp_points": "COMP-POENG",
+    "daily_cashback": "DAGLIG CASHBACK",
+    "wager": "INNSATS",
+    "special_event": "Continue8:52 PMSPESIELT ARRANGEMENT",
+    "personal_manager": "PERSONLIG LEDER"
+  },
+  "CashbackPage": {
+    "hero_brand": "Canada777VIP",
+    "hero_title": "Din Cashback, Hver Dag",
+    "hero_subtitle": "Nyt enkel cashback-belønninger på alle dine favorittspill."
   }
 }

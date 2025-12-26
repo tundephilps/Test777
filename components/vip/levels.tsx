@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { IoCloseCircleSharp } from "react-icons/io5";
 import { FaCheckCircle } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 interface LevelData {
   level: number;
@@ -80,6 +82,8 @@ const levelsData: LevelData[] = [
 ];
 
 const LevelCard: React.FC = () => {
+  const t = useTranslations("VipPage");
+
   return (
     <div className="space-y-6 mt-6">
       {levelsData.map((levelData) => (
@@ -99,12 +103,12 @@ const LevelCard: React.FC = () => {
           </div>
 
           {/* Center Stats */}
-          <div className="items-center flex flex-col gap-4 ">
+          <div className="items-center flex flex-col gap-4">
             <p
               className="text-3xl font-bold"
               style={{ fontFamily: "var(--font-bounded)" }}
             >
-              LEVEL {levelData.level}
+              {t("level_label")} {levelData.level}
             </p>
             <div
               style={{ fontFamily: "var(--font-bounded)" }}
@@ -112,28 +116,28 @@ const LevelCard: React.FC = () => {
             >
               <div className="flex flex-col text-center">
                 <p className="text-4xl font-bold">{levelData.compPoints}</p>
-                <p className="text-xs opacity-60">COMP POINTS</p>
+                <p className="text-xs opacity-60">{t("comp_points")}</p>
               </div>
 
               <div className="w-px h-10 bg-white/20 hidden md:block"></div>
 
               <div className="flex flex-col text-center">
                 <p className="text-4xl font-bold">{levelData.cashback}</p>
-                <p className="text-xs opacity-60">DAILY CASHBACK</p>
+                <p className="text-xs opacity-60">{t("daily_cashback")}</p>
               </div>
 
               <div className="w-px h-10 bg-white/20 hidden md:block"></div>
 
               <div className="flex flex-col text-center">
                 <p className="text-4xl font-bold">{levelData.wager}</p>
-                <p className="text-xs opacity-60">WAGER</p>
+                <p className="text-xs opacity-60">{t("wager")}</p>
               </div>
             </div>
 
             {/* Right Perks */}
             <div className="flex flex-row items-center gap-3">
               <div className="flex items-center gap-2">
-                <p className="text-base font-semibold">SPECIAL EVENT</p>
+                <p className="text-base font-semibold">{t("special_event")}</p>
                 {levelData.specialEvent ? (
                   <FaCheckCircle className="text-green-500 text-xl" />
                 ) : (
@@ -144,7 +148,9 @@ const LevelCard: React.FC = () => {
               <div className="w-px h-4 bg-white/20 hidden md:block"></div>
 
               <div className="flex items-center gap-2">
-                <p className="text-base font-semibold">PERSONAL MANAGER</p>
+                <p className="text-base font-semibold">
+                  {t("personal_manager")}
+                </p>
                 {levelData.personalManager ? (
                   <FaCheckCircle className="text-green-500 text-xl" />
                 ) : (
