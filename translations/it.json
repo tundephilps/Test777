@@ -96,5 +96,23 @@
     "hero_brand": "Canada777VIP",
     "hero_title": "Il Tuo Cashback, Ogni Giorno",
     "hero_subtitle": "Goditi premi cashback senza sforzo su tutti i tuoi giochi preferiti."
+  },
+  "PromotionalCards": {
+    "welcome_title": "Pacchetto di Benvenuto",
+    "welcome_subtitle": "620% +400 FS",
+    "welcome_description": "Sui tuoi primi 4 depositi",
+    "welcome_button": "Scopri di Più",
+    "cashback_title": "Cashback Giornaliero",
+    "cashback_subtitle": "fino al 30%!",
+    "cashback_description": "Vieni ricompensato ogni giorno sulle tue scommesse—più giochi, più guadagni!",
+    "cashback_button": "Richiedi Cashback",
+    "freespins_title": "Richiedi Giri Gratuiti",
+    "freespins_subtitle": "e Denaro Bonus",
+    "freespins_description": "Scambia i tuoi punti comp per Giri, Scommesse e Denaro Bonus!",
+    "freespins_button": "Scambia Punti",
+    "audi_title": "Vinci una nuovissima",
+    "audi_subtitle": "Audi A3 2026!",
+    "audi_description": "Gioca, accumula punti, guadagna biglietti e parti con stile nella macchina dei tuoi sogni!",
+    "audi_button": "Scopri di Più"
   }
 }

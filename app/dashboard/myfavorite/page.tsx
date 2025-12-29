@@ -4,6 +4,8 @@ import WhyChooseUs from "../../../components/homepage/why-choose";
 import Sponsors from "../../../components/homepage/sponsors";
 import FavGames from "../../../components/myfavorites/favgames";
 import FavHero2 from "../../../public/FavHero2.png";
+
+import FavHero3 from "../../../public/FavHero3.png";
 import { useTranslations } from "next-intl";
 
 const MyFavorite = () => {
@@ -11,14 +13,14 @@ const MyFavorite = () => {
   return (
     <div>
       <div
-        className="relative w-full overflow-hidden rounded-lg"
+        className="relative w-full overflow-hidden lg:flex hidden rounded-lg"
         style={{ fontFamily: "var(--font-bounded)" }}
       >
         <Image
           src={FavHero2}
           height={1000}
           width={1000}
-          className="w-full"
+          className="w-full h-[50vh]"
           alt={t("hero_title")}
         />
 
@@ -28,7 +30,7 @@ const MyFavorite = () => {
         {/* Content Overlay */}
         <div className="absolute inset-0 flex flex-col items-start justify-center px-6 sm:px-8 md:px-12">
           {/* Title */}
-          <h2 className="text-white text-2xl lg:text-[6vh] font-bold mb-3 leading-tight max-w-md drop-shadow-lg">
+          <h2 className="text-white text-2xl lg:text-[6vh] font-bold mb-3 leading-tight max-w-3xl drop-shadow-lg">
             {t("hero_title")}
           </h2>
 
@@ -41,6 +43,39 @@ const MyFavorite = () => {
           <button className="cursor-pointer flex justify-start items-start bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 px-[32px] py-[6px] rounded-md text-white font-medium transition w-fit">
             <span> {t("hero_button")}</span>
           </button>
+        </div>
+      </div>
+      <div className="relative   flex lg:hidden items-center">
+        <Image
+          src={FavHero3}
+          width={1000}
+          height={500}
+          alt="Hero"
+          className="w-full h-auto"
+        />
+
+        <div className="absolute top-12 text-white  items-center inset-0 w-full">
+          <div className="flex flex-col text-center h-full">
+            <div className="">
+              <p
+                className="text-[4vh] font-semibold tracking-wider  opacity-90 "
+                style={{ fontFamily: "var(--font-bounded)" }}
+              >
+                {t("hero_title")}
+              </p>
+              <p
+                className="text-[3vh] font-normal   opacity-90 max-w-xl"
+                style={{ fontFamily: "var(--font-bounded)" }}
+              >
+                {t("hero_subtitle")}
+              </p>
+              <div className="mb-2 mx-auto flex items-center justify-center mt-6">
+                <button className="cursor-pointer flex justify-start items-start bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 px-[32px] py-[6px] rounded-md text-white font-medium transition w-fit">
+                  <span> {t("hero_button")}</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <FavGames />

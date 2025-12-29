@@ -96,5 +96,23 @@
     "hero_brand": "Canada777VIP",
     "hero_title": "Sinun Cashbackisi, Joka Päivä",
     "hero_subtitle": "Nauti vaivattomista cashback-palkinnoista kaikissa suosikkipeleissäsi."
+  },
+  "PromotionalCards": {
+    "welcome_title": "Tervetuliaispaketti",
+    "welcome_subtitle": "620% +400 FS",
+    "welcome_description": "Ensimmäisillä 4 talletuksella",
+    "welcome_button": "Lue Lisää",
+    "cashback_title": "Päivittäinen Cashback",
+    "cashback_subtitle": "jopa 30%!",
+    "cashback_description": "Saat päivittäisiä palkintoja vedoistasi—mitä enemmän pelaat, sitä enemmän ansaitset!",
+    "cashback_button": "Lunasta Cashback",
+    "freespins_title": "Lunasta Ilmaiskierroksia",
+    "freespins_subtitle": "ja Bonusrahaa",
+    "freespins_description": "Vaihda comp-pisteesi Kierroksiin, Panoksiin ja Bonusrahaan!",
+    "freespins_button": "Vaihda Pisteet",
+    "audi_title": "Voita upouusi",
+    "audi_subtitle": "Audi A3 2026!",
+    "audi_description": "Pelaa, kerää pisteitä, ansaitse lippuja ja aja tyylillä unelmiesi autolla!",
+    "audi_button": "Lue Lisää"
   }
 }

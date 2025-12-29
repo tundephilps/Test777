@@ -96,5 +96,23 @@
     "hero_brand": "Canada777VIP",
     "hero_title": "Din Cashback, Hver Dag",
     "hero_subtitle": "Nyt enkel cashback-belønninger på alle dine favorittspill."
+  },
+  "PromotionalCards": {
+    "welcome_title": "Velkomstpakke",
+    "welcome_subtitle": "620% +400 FS",
+    "welcome_description": "På dine første 4 innskudd",
+    "welcome_button": "Lær Mer",
+    "cashback_title": "Daglig Cashback",
+    "cashback_subtitle": "opp til 30%!",
+    "cashback_description": "Bli belønnet daglig på dine innsatser—jo mer du spiller, jo mer tjener du!",
+    "cashback_button": "Krev Cashback",
+    "freespins_title": "Krev Gratisspinn",
+    "freespins_subtitle": "og Bonuspenger",
+    "freespins_description": "Bytt dine comp-poeng mot Spinn, Innsats og Bonuspenger!",
+    "freespins_button": "Bytt Poeng",
+    "audi_title": "Vinn en splitter ny",
+    "audi_subtitle": "Audi A3 2026!",
+    "audi_description": "Spill, samle poeng, tjen billetter og kjør avgårde med stil i drømmebilen din!",
+    "audi_button": "Lær Mer"
   }
 }
