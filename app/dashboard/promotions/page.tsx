@@ -116,7 +116,7 @@ export default function PromotionsPage() {
             <Image
               src={card.image}
               alt={card.title}
-              className="w-full h-60 absolute bottom-12  object-contain  "
+              className="w-full h-auto absolute bottom-12  lg:object-contain  object-cover"
             />
 
             {/* Top Title - No blur background */}
