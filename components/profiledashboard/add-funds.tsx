@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-export default function AddFunds() {
+const AddFunds = () => {
   const [promoCode, setPromoCode] = useState("");
   const [selectedPayment, setSelectedPayment] = useState("");
 
@@ -214,4 +214,6 @@ export default function AddFunds() {
       </div>
     </div>
   );
-}
+};
+
+export default AddFunds;

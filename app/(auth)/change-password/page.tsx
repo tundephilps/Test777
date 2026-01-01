@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-export default function ChangepasswordPage() {
+const ChangepasswordPage = () => {
   const [showOld, setShowOld] = useState(false);
   const [showNew, setShowNew] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
@@ -114,4 +114,6 @@ export default function ChangepasswordPage() {
       </div>
     </div>
   );
-}
+};
+
+export default ChangepasswordPage;

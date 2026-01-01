@@ -1,7 +1,8 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { IMAGES } from "@/lib/assets";
 
-export default function WhyChooseUs() {
+const WhyChooseUs = () => {
   const t = useTranslations("HomePage");
   return (
     <section className="text-white py-16">
@@ -19,7 +20,7 @@ export default function WhyChooseUs() {
 
             <div className="flex justify-center mb-6 relative z-10">
               <Image
-                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/US1.png"
+                src={IMAGES.US1}
                 width={1000}
                 height={300}
                 className="h-auto w-auto"
@@ -40,7 +41,7 @@ export default function WhyChooseUs() {
 
             <div className="flex justify-center mb-6 relative z-10">
               <Image
-                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/US2.png"
+                src={IMAGES.US2}
                 width={1000}
                 height={300}
                 className="h-auto w-auto"
@@ -61,7 +62,7 @@ export default function WhyChooseUs() {
 
             <div className="flex justify-center mb-6 relative z-10">
               <Image
-                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/US3.png"
+                src={IMAGES.US3}
                 width={1000}
                 height={300}
                 className="h-auto w-auto"
@@ -79,4 +80,6 @@ export default function WhyChooseUs() {
       </div>
     </section>
   );
-}
+};
+
+export default WhyChooseUs;

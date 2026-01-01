@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { FaQuestionCircle, FaChevronDown, FaChevronUp } from "react-icons/fa";
 
-export default function FAQPage() {
+const FAQPage = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
@@ -140,4 +140,6 @@ export default function FAQPage() {
       </div>
     </div>
   );
-}
+};
+
+export default FAQPage;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaUndo, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-export default function CashbackLog() {
+const CashbackLog = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const cashbackLog = [
@@ -85,4 +85,6 @@ export default function CashbackLog() {
       </div>
     </div>
   );
-}
+};
+
+export default CashbackLog;

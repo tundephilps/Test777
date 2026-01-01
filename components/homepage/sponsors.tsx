@@ -1,24 +1,26 @@
 import Image from "next/image";
+import { IMAGES } from "@/lib/assets";
+
 const logos = [
   {
-    src: "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Comp1.png",
+    src: IMAGES.Comp1,
     alt: "Online Casinos",
   },
   {
-    src: "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Comp2.png",
+    src: IMAGES.Comp2,
     alt: "Casinolandia",
   },
   {
-    src: "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Comp3.png",
+    src: IMAGES.Comp3,
     alt: "Casinos In Canada",
   },
   {
-    src: "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Comp4.png",
+    src: IMAGES.Comp4,
     alt: "Bonus Casino",
   },
 ];
 
-export default function Sponsors() {
+const Sponsors = () => {
   return (
     <div className="flex flex-wrap justify-center items-center gap-6  pb-6 overflow-clip">
       {logos.map((logo, index) => (
@@ -38,4 +40,6 @@ export default function Sponsors() {
       ))}
     </div>
   );
-}
+};
+
+export default Sponsors;

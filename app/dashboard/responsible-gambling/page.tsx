@@ -1,4 +1,4 @@
-export default function ResponsibleGamingPage() {
+const ResponsibleGamingPage = () => {
   return (
     <main className="bg-[#081A26] mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-gray-100 mb-6">
@@ -93,4 +93,6 @@ export default function ResponsibleGamingPage() {
       </div>
     </main>
   );
-}
+};
+
+export default ResponsibleGamingPage;

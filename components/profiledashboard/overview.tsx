@@ -2,7 +2,7 @@ import React from "react";
 import { BiTrendingUp } from "react-icons/bi";
 import { FaUser } from "react-icons/fa";
 
-export default function ProfileOverview() {
+const ProfileOverview = () => {
   return (
     <div
       className="min-h-screen bg-[#0a1f2d] mt-6 lg:p-6 p-2"
@@ -90,4 +90,6 @@ export default function ProfileOverview() {
       </div>
     </div>
   );
-}
+};
+
+export default ProfileOverview;

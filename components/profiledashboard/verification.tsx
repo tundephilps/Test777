@@ -8,7 +8,7 @@ import {
   FaUpload,
 } from "react-icons/fa";
 
-export default function Verification() {
+const Verification = () => {
   const verifications = [
     {
       icon: <FaEnvelope className="text-red-500 text-xl" />,
@@ -96,4 +96,6 @@ export default function Verification() {
       </div>
     </div>
   );
-}
+};
+
+export default Verification;

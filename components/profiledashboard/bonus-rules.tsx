@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import {
   FaGift,
   FaCircle,
@@ -10,9 +9,8 @@ import {
 } from "react-icons/fa";
 import { GiCardAceSpades, GiRollingDices } from "react-icons/gi";
 import { PiSpinnerFill } from "react-icons/pi";
-import Bonus from "../../public/Bonus1.png";
 
-export default function BonusRules() {
+const BonusRules = () => {
   const gameContributions = [
     {
       name: "Slots",
@@ -61,6 +59,8 @@ export default function BonusRules() {
         <div className="flex items-center gap-3 mb-8">
           <div className="w-10 h-10 ">
             <Image
+              width={1000}
+              height={1000}
               alt=""
               src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Bonus1.png"
               className="text-white text-xl"
@@ -153,4 +153,6 @@ export default function BonusRules() {
       </div>
     </div>
   );
-}
+};
+
+export default BonusRules;

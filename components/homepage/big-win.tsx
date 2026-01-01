@@ -4,6 +4,7 @@ import Image, { StaticImageData } from "next/image";
 import { FaTrophy } from "react-icons/fa";
 import { useRef, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { IMAGES } from "@/lib/assets";
 
 interface WinCard {
   id: number;
@@ -17,47 +18,41 @@ const bigWins: WinCard[] = [
     id: 1,
     player: "Karla Teresa",
     amount: 17766,
-    image:
-      "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Win1.png",
+    image: IMAGES.Win1,
   },
   {
     id: 2,
     player: "Karla Teresa",
     amount: 14379,
-    image:
-      "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Win2.png",
+    image: IMAGES.Win2,
   },
   {
     id: 3,
     player: "Karla Teresa",
     amount: 5802,
-    image:
-      "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Win3.png",
+    image: IMAGES.Win3,
   },
   {
     id: 4,
     player: "Karla Teresa",
     amount: 12000,
-    image:
-      "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Win4.png",
+    image: IMAGES.Win1,
   },
   {
     id: 5,
     player: "Karla Teresa",
     amount: 17766,
-    image:
-      "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Win1.png",
+    image: IMAGES.Win2,
   },
   {
     id: 6,
     player: "Karla Teresa",
     amount: 14379,
-    image:
-      "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Win2.png",
+    image: IMAGES.Win3,
   },
 ];
 
-export default function BigWins() {
+const BigWins = () => {
   const t = useTranslations("HomePage");
 
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -176,4 +171,6 @@ export default function BigWins() {
       `}</style>
     </div>
   );
-}
+};
+
+export default BigWins;

@@ -9,6 +9,8 @@ interface LevelData {
   level: number;
   compPoints: string;
   cashback: string;
+
+  freegifts: string;
   wager: string;
   specialEvent: boolean;
   personalManager: boolean;
@@ -19,6 +21,7 @@ const levelsData: LevelData[] = [
     level: 1,
     compPoints: "0-29999",
     cashback: "10%",
+    freegifts: "9",
     wager: "x35",
     specialEvent: false,
     personalManager: false,
@@ -27,6 +30,8 @@ const levelsData: LevelData[] = [
     level: 2,
     compPoints: "0-29999",
     cashback: "12%",
+
+    freegifts: "9",
     wager: "x30",
     specialEvent: false,
     personalManager: false,
@@ -35,6 +40,8 @@ const levelsData: LevelData[] = [
     level: 3,
     compPoints: "0-29999",
     cashback: "15%",
+
+    freegifts: "9",
     wager: "x25",
     specialEvent: false,
     personalManager: true,
@@ -43,6 +50,8 @@ const levelsData: LevelData[] = [
     level: 4,
     compPoints: "0-29999",
     cashback: "18%",
+
+    freegifts: "9",
     wager: "x20",
     specialEvent: true,
     personalManager: true,
@@ -51,6 +60,8 @@ const levelsData: LevelData[] = [
     level: 5,
     compPoints: "0-29999",
     cashback: "20%",
+
+    freegifts: "9",
     wager: "x15",
     specialEvent: true,
     personalManager: true,
@@ -59,6 +70,8 @@ const levelsData: LevelData[] = [
     level: 6,
     compPoints: "0-29999",
     cashback: "22%",
+
+    freegifts: "9",
     wager: "x10",
     specialEvent: true,
     personalManager: true,
@@ -67,6 +80,8 @@ const levelsData: LevelData[] = [
     level: 7,
     compPoints: "0-29999",
     cashback: "25%",
+
+    freegifts: "9",
     wager: "x5",
     specialEvent: true,
     personalManager: true,
@@ -75,6 +90,8 @@ const levelsData: LevelData[] = [
     level: 8,
     compPoints: "0-29999",
     cashback: "30%",
+
+    freegifts: "9",
     wager: "x3",
     specialEvent: true,
     personalManager: true,
@@ -124,6 +141,13 @@ const LevelCard: React.FC = () => {
               <div className="flex flex-col text-center">
                 <p className="text-4xl font-bold">{levelData.cashback}</p>
                 <p className="text-xs opacity-60">{t("daily_cashback")}</p>
+              </div>
+
+              <div className="w-px h-10 bg-white/20 hidden md:block"></div>
+
+              <div className="flex flex-col text-center">
+                <p className="text-4xl font-bold">{levelData.freegifts}</p>
+                <p className="text-xs opacity-60">Free Gifts/ day</p>
               </div>
 
               <div className="w-px h-10 bg-white/20 hidden md:block"></div>

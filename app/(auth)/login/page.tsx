@@ -5,7 +5,7 @@ import Image from "next/image";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Link from "next/link";
 
-export default function LoginPage() {
+const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -91,4 +91,6 @@ export default function LoginPage() {
       </div>
     </div>
   );
-}
+};
+
+export default LoginPage;

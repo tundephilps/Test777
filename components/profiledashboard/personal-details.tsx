@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaUser, FaPencilAlt, FaChevronDown, FaCalendar } from "react-icons/fa";
 
-export default function PersonalDetails() {
+const PersonalDetails = () => {
   const [selectedCountry, setSelectedCountry] = useState("Canada");
   const [isCountryOpen, setIsCountryOpen] = useState(false);
   const [dateOfBirth, setDateOfBirth] = useState("01/01/1990");
@@ -159,4 +159,6 @@ export default function PersonalDetails() {
       </div>
     </div>
   );
-}
+};
+
+export default PersonalDetails;

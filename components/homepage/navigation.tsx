@@ -6,7 +6,7 @@ import { GiPokerHand } from "react-icons/gi";
 import { FaDice } from "react-icons/fa";
 import { MdCasino } from "react-icons/md";
 
-export default function CasinoNavigation() {
+const CasinoNavigation = () => {
   const [showSearch, setShowSearch] = useState(false);
 
   const navItems = [
@@ -90,4 +90,6 @@ export default function CasinoNavigation() {
       `}</style>
     </div>
   );
-}
+};
+
+export default CasinoNavigation;

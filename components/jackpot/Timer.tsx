@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-export default function CountdownTimer() {
+const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 0,
     minutes: 0,
@@ -101,4 +101,6 @@ export default function CountdownTimer() {
       </div>
     </div>
   );
-}
+};
+
+export default CountdownTimer;

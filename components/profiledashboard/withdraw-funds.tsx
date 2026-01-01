@@ -3,7 +3,7 @@ import { useState } from "react";
 import { IoAlertCircle } from "react-icons/io5";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
-export default function WithdrawalForm() {
+const WithdrawalForm = () => {
   const [amount, setAmount] = useState(0);
   const presetAmounts = [50, 100, 250, 500];
 
@@ -75,4 +75,6 @@ export default function WithdrawalForm() {
       </button>
     </div>
   );
-}
+};
+
+export default WithdrawalForm;

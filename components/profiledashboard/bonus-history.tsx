@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaGift, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-export default function BonusHistory() {
+const BonusHistory = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const bonusHistory = [
@@ -106,4 +106,6 @@ export default function BonusHistory() {
       </div>
     </div>
   );
-}
+};
+
+export default BonusHistory;

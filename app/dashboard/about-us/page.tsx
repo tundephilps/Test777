@@ -7,7 +7,7 @@ import {
   FaAccusoft,
 } from "react-icons/fa";
 
-export default function AboutUs() {
+const AboutUs = () => {
   return (
     <div className="min-h-screen bg-[#081A26]">
       <div className=" mx-auto lg:px-6 px-2 py-16">
@@ -91,4 +91,6 @@ export default function AboutUs() {
       </div>
     </div>
   );
-}
+};
+
+export default AboutUs;

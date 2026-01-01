@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "../../app/globals.css";
 
-export default function AuthLayout({ children }) {
+const AuthLayout = ({ children }) => {
   return <section>{children}</section>;
-}
+};
+
+export default AuthLayout;

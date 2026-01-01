@@ -2,7 +2,7 @@ import React from "react";
 import { BiTrendingUp } from "react-icons/bi";
 import { FaGift, FaCheckCircle } from "react-icons/fa";
 
-export default function ActiveBonuses() {
+const ActiveBonuses = () => {
   const bonuses = [
     {
       id: 1,
@@ -129,4 +129,6 @@ export default function ActiveBonuses() {
       </div>
     </div>
   );
-}
+};
+
+export default ActiveBonuses;

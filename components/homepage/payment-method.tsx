@@ -1,5 +1,7 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { IMAGES } from "@/lib/assets";
+
 const PaymentMethod = () => {
   const t = useTranslations("HomePage");
   return (
@@ -7,7 +9,7 @@ const PaymentMethod = () => {
       <div className="relative lg:flex hidden  items-center">
         <div className="absolute inline-flex gap-4 left-4">
           <Image
-            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Give.png"
+            src={IMAGES.Give}
             width={1000}
             height={300}
             className="h-auto w-auto"
@@ -21,7 +23,7 @@ const PaymentMethod = () => {
           </div>
         </div>
         <Image
-          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Mask.png"
+          src={IMAGES.Mask}
           width={3000}
           height={300}
           className="h-auto w-full"
@@ -29,7 +31,7 @@ const PaymentMethod = () => {
         />
 
         <Image
-          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Visa.png"
+          src={IMAGES.Visa}
           width={3000}
           height={300}
           className="absolute h-auto w-auto right-4 top"
@@ -38,7 +40,7 @@ const PaymentMethod = () => {
       </div>
       <div className="relative lg:hidden flex justify-center items-center">
         <Image
-          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Mask3.png"
+          src={IMAGES.Mask3}
           width={3000}
           height={300}
           className="h-auto w-full"
@@ -47,7 +49,7 @@ const PaymentMethod = () => {
 
         <div className="p-6 gap-8  space-y-6 absolute">
           <Image
-            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Give.png"
+            src={IMAGES.Give}
             width={3000}
             height={300}
             className="mx-auto items h-28 w-34"
@@ -62,7 +64,7 @@ const PaymentMethod = () => {
           </p>
 
           <Image
-            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Visa2.png"
+            src={IMAGES.Visa}
             width={3000}
             height={300}
             className="mx-auto  h-20 w-3/4"

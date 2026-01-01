@@ -8,7 +8,7 @@ import {
   FaCheckCircle,
 } from "react-icons/fa";
 
-export default function PrivacyPolicy() {
+const PrivacyPolicy = () => {
   const sections = [
     {
       icon: <FaUserSecret className="text-2xl" />,
@@ -118,4 +118,6 @@ export default function PrivacyPolicy() {
       </div>
     </div>
   );
-}
+};
+
+export default PrivacyPolicy;

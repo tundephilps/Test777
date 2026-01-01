@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import HeroMobile2 from "../../public/HeroMobile2.png";
-import Visa from "../../public/Visa2.png";
+import { IMAGES } from "@/lib/assets";
 
 const Hero = () => {
   const t = useTranslations("HomePage");
@@ -11,11 +10,11 @@ const Hero = () => {
     <div>
       <div className="relative   lg:flex hidden items-center">
         <Image
-          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Hero.png"
+          src={IMAGES.Hero}
           width={1000}
           height={300}
           alt="Hero"
-          className="w-full "
+          className="w-full"
         />
 
         <div className="absolute text-white items-center   left-7">
@@ -50,11 +49,9 @@ const Hero = () => {
             </Link>
 
             <Image
-              src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Visa.png"
+              src={IMAGES.Visa}
               width={300}
               height={300}
-              // src={Visa}
-
               alt=""
               className="h-16 w- mt-8"
             />
@@ -67,7 +64,7 @@ const Hero = () => {
           style={{ fontFamily: "var(--font-bounded)" }}
         >
           <Image
-            src={HeroMobile2}
+            src={IMAGES.HeroMobile2}
             alt=""
             width={1000}
             height={300}
@@ -96,7 +93,7 @@ const Hero = () => {
             </button>
 
             <Image
-              src={Visa}
+              src={IMAGES.Visa2}
               alt=""
               width={1000}
               height={300}

@@ -8,7 +8,7 @@ import Promo33 from "../../../public/Promo33.png";
 
 import Promo44 from "../../../public/Promo44.png";
 
-export default function PromotionsPage() {
+const PromotionsPage = () => {
   const depositBonuses = [
     {
       image:
@@ -189,4 +189,6 @@ export default function PromotionsPage() {
       </div>
     </div>
   );
-}
+};
+
+export default PromotionsPage;

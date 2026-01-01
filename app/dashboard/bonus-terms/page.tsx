@@ -1,7 +1,7 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 
-export default function BonusTerms() {
+const BonusTerms = () => {
   const welcomeBonusDeposits = [
     {
       deposit: "1st Deposit",
@@ -410,4 +410,6 @@ export default function BonusTerms() {
       </div>
     </div>
   );
-}
+};
+
+export default BonusTerms;

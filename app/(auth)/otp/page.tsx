@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function OtpPage() {
+const OtpPage = () => {
   const [otp, setOtp] = useState(["", "", "", "", ""]);
   const inputsRef = useRef<(HTMLInputElement | null)[]>([]);
 
@@ -111,4 +111,6 @@ export default function OtpPage() {
       </div>
     </div>
   );
-}
+};
+
+export default OtpPage;

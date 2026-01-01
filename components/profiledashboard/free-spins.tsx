@@ -3,7 +3,7 @@ import { FaDice, FaPlay, FaClock } from "react-icons/fa";
 import { GiTwoCoins } from "react-icons/gi";
 import Image from "next/image";
 
-export default function FreeSpins() {
+const FreeSpins = () => {
   const spins = [
     {
       id: 1,
@@ -142,4 +142,6 @@ export default function FreeSpins() {
       </div>
     </div>
   );
-}
+};
+
+export default FreeSpins;

@@ -6,7 +6,7 @@ import { FaEnvelope } from "react-icons/fa";
 import { FaVolumeUp } from "react-icons/fa";
 import Image from "next/image";
 
-export default function Preferences() {
+const Preferences = () => {
   return (
     <div className="w-full mx-auto py-6 bg-[#0A1F2D] px-2 rounded-md mt-6  text-white">
       <div className="inline-flex items-center gap-2 mb-6">
@@ -14,6 +14,7 @@ export default function Preferences() {
           src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Pref.png"
           alt=""
           width={1000}
+          height={1000}
           className="h-auto w-auto"
         />
         <h2 className="text-lg font-semibold ">Preferences</h2>
@@ -70,7 +71,9 @@ export default function Preferences() {
       </div>
     </div>
   );
-}
+};
+
+export default Preferences;
 
 function ToggleItem({ icon, label, defaultOn }) {
   return (

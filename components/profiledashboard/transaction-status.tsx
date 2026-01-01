@@ -4,7 +4,7 @@ import { FaFilter, FaArrowDown, FaArrowUp, FaCoins } from "react-icons/fa";
 import { IoCheckmarkCircle, IoCloseCircle } from "react-icons/io5";
 import { MdPending } from "react-icons/md";
 
-export default function TransactionStatus() {
+const TransactionStatus = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const transactions = [
@@ -278,4 +278,6 @@ export default function TransactionStatus() {
       </div>
     </div>
   );
-}
+};
+
+export default TransactionStatus;

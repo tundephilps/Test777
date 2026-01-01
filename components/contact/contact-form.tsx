@@ -9,8 +9,11 @@ import {
   FaTelegram,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { useTranslations } from "next-intl";
 
-export default function ContactForm() {
+const ContactForm = () => {
+  const t = useTranslations("ContactPage");
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -32,10 +35,10 @@ export default function ContactForm() {
             <div className="bg-gradient-to-br from-[#480001] to-red-950 rounded-xl lg:p-8 p-2 border border-red-800/50 h-full flex flex-col justify-between">
               <div>
                 <h2 className="text-white text-3xl font-bold mb-3">
-                  Contact Information
+                  {t("contact_info_title")}
                 </h2>
                 <p className="text-red-200 text-sm mb-8">
-                  If you have any questions, feel free to get in touch with us.
+                  {t("contact_info_subtitle")}
                 </p>
 
                 {/* Contact Details */}
@@ -50,7 +53,7 @@ export default function ContactForm() {
                     <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
                       <FaEnvelope className="text-white text-sm" />
                     </div>
-                    <span className="text-white">support At Canada277.com</span>
+                    <span className="text-white">support@Canada777.com</span>
                   </div>
                 </div>
               </div>
@@ -84,7 +87,7 @@ export default function ContactForm() {
                 <div className="grid lg:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-slate-400 text-sm mb-2">
-                      Fast Name
+                      {t("first_name")}
                     </label>
                     <input
                       type="text"
@@ -97,7 +100,7 @@ export default function ContactForm() {
                   </div>
                   <div>
                     <label className="block text-slate-400 text-sm mb-2">
-                      Last Name
+                      {t("last_name")}
                     </label>
                     <input
                       type="text"
@@ -113,7 +116,7 @@ export default function ContactForm() {
                 {/* Email */}
                 <div>
                   <label className="block text-slate-400 text-sm mb-2">
-                    Email
+                    {t("email")}
                   </label>
                   <input
                     type="email"
@@ -128,7 +131,7 @@ export default function ContactForm() {
                 {/* Phone */}
                 <div>
                   <label className="block text-slate-400 text-sm mb-2">
-                    Phone number
+                    {t("phone")}
                   </label>
                   <input
                     type="tel"
@@ -143,7 +146,7 @@ export default function ContactForm() {
                 {/* Message */}
                 <div>
                   <label className="block text-slate-400 text-sm mb-2">
-                    Message
+                    {t("message")}
                   </label>
                   <textarea
                     value={formData.message}
@@ -161,7 +164,7 @@ export default function ContactForm() {
                     onClick={handleSubmit}
                     className="px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors"
                   >
-                    Send message
+                    {t("submit_button")}
                   </button>
                 </div>
               </div>
@@ -171,4 +174,6 @@ export default function ContactForm() {
       </div>
     </div>
   );
-}
+};
+
+export default ContactForm;

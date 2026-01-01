@@ -13,13 +13,10 @@ import Face from "../../public/Face.png";
 import { DepositModal } from "../modals/deposit-modal";
 import Link from "next/link";
 import { BiMenu } from "react-icons/bi";
-
 import { usePathname, useRouter } from "next/navigation";
 import { useTransition } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { FaChevronDown } from "react-icons/fa";
-
-// You can keep or remove this one (we'll use server action + refresh)
 import setLanguageValue from "../../actions/set-language-action";
 
 import {
@@ -34,7 +31,9 @@ import {
 import { RiLiveLine, RiTrophyLine } from "react-icons/ri";
 import { PiSpinnerBallFill } from "react-icons/pi";
 
-export default function Header() {
+const Header = () => {
+  const t = useTranslations("Navigation");
+
   const languages = [
     { code: "en", name: "English", flag: "🇬🇧" },
     { code: "de", name: "Deutsch", flag: "🇩🇪" },
@@ -46,44 +45,45 @@ export default function Header() {
     { code: "it", name: "Italiano", flag: "🇮🇹" },
     { code: "no", name: "Norsk", flag: "🇳🇴" },
   ];
+
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-
   const [isDepositModalOpen, setIsDepositModalOpen] = useState(false);
-
   const [showLang, setShowLang] = useState(false);
-  const [selectedLang, setSelectedLang] = useState(languages[0]); // default EN
-
+  const [selectedLang, setSelectedLang] = useState(languages[0]);
   const [selectedLanguage, setSelectedLanguage] = useState("en");
 
-  // ── Language switcher state ──
   const currentLocale = useLocale();
   const [showLangDropdown, setShowLangDropdown] = useState(false);
   const [isPending, startTransition] = useTransition();
 
   const links = [
-    { href: "/dashboard", label: "Home", icon: <FaHome /> },
-    { href: "/dashboard/casino", label: "Casino", icon: <FaDice /> },
+    { href: "/dashboard", label: t("home"), icon: <FaHome /> },
+    { href: "/dashboard/casino", label: t("casino"), icon: <FaDice /> },
     {
       href: "/dashboard/livecasino",
-      label: "Live Casino",
+      label: t("live_casino"),
       icon: <RiLiveLine />,
     },
-    { href: "/dashboard/jackpot", label: "Jackpot", icon: <FaGift /> },
+    { href: "/dashboard/jackpot", label: t("jackpot"), icon: <FaGift /> },
     {
       href: "/dashboard/tournaments",
-      label: "Tournaments",
+      label: t("tournaments"),
       icon: <RiTrophyLine />,
     },
     {
       href: "/dashboard/wheelbonus",
-      label: "Wheel Bonus",
+      label: t("wheel_bonus"),
       icon: <PiSpinnerBallFill />,
     },
-    { href: "/dashboard/myfavorite", label: "My Favorite", icon: <FaHeart /> },
-    { href: "/dashboard/promotions", label: "Promotions", icon: <FaGift /> },
-    { href: "/dashboard/vip", label: "VIP Club", icon: <FaCrown /> },
-    { href: "/dashboard/cashback", label: "Cashback", icon: <FaCoins /> },
-    { href: "/dashboard/contact", label: "Contact", icon: <FaHeadset /> },
+    {
+      href: "/dashboard/myfavorite",
+      label: t("my_favorite"),
+      icon: <FaHeart />,
+    },
+    { href: "/dashboard/promotions", label: t("promotions"), icon: <FaGift /> },
+    { href: "/dashboard/vip", label: t("vip_club"), icon: <FaCrown /> },
+    { href: "/dashboard/cashback", label: t("cashback"), icon: <FaCoins /> },
+    { href: "/dashboard/contact", label: t("contact"), icon: <FaHeadset /> },
   ];
 
   const currentLanguage =
@@ -94,10 +94,7 @@ export default function Header() {
 
     startTransition(async () => {
       await setLanguageValue(langCode);
-      // router.refresh() ← optional, usually enough with cookie + revalidation
-      // but many people keep it for reliability in Next.js App Router + i18n
-      window.location.reload(); // ← most reliable in many cases (2024-2025)
-      // or: router.refresh();
+      window.location.reload();
     });
   };
 
@@ -138,20 +135,11 @@ export default function Header() {
 
             {/* Deposit Button */}
             <Link href="/dashboard/userdashboard">
-              <button
-                // onClick={() => setIsDepositModalOpen(true)}
-
-                className="flex items-center space-x-1 bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 px-3 py-1.5 rounded-md text-white font-medium transition"
-              >
-                <span>DEPOSIT</span>
+              <button className="flex items-center space-x-1 bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 px-3 py-1.5 rounded-md text-white font-medium transition">
+                <span>{t("deposit")}</span>
               </button>
             </Link>
           </div>
-          {/* Modal */}
-          {/* <DepositModal
-            isOpen={isDepositModalOpen}
-            onClose={() => setIsDepositModalOpen(false)}
-          /> */}
 
           {/* User Profile */}
           <Link href="/dashboard/userdashboard">
@@ -160,7 +148,7 @@ export default function Header() {
               <div className="flex flex-col leading-tight">
                 <span className="text-base font-semibold">Mitchell</span>
                 <span className="text-[10px] bg-[#1e141e] whitespace-nowrap border-[#ea0000] text-[#f80507] w-10 border rounded-sm p-1 text-center">
-                  LVL 27
+                  {t("level")} 27
                 </span>
               </div>
             </div>
@@ -177,8 +165,7 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* 🌍 Language Selector */}
-          {/* ── Improved Mobile Language Switcher ── */}
+          {/* Language Selector */}
           <div className="relative">
             <button
               onClick={() => setShowLangDropdown(!showLangDropdown)}
@@ -229,24 +216,24 @@ export default function Header() {
       {showMobileMenu && (
         <div className="md:hidden bg-[#0a1f2e] border-t border-gray-800 px-3 py-4 space-y-3">
           {/* User Info */}
-
           <Link href="/dashboard/userdashboard">
             <div className="flex items-center space-x-3 pb-3 border-b border-gray-800">
               <Image src={Face} className="w-12 h-12" alt="Profile" />
               <div className="flex flex-col">
                 <span className="text-base font-semibold">Mitchell</span>
                 <span className="text-xs bg-[#1e141e] border-[#ea0000] text-[#f80507] w-12 border rounded-sm p-1 text-center mt-1">
-                  LVL 27
+                  {t("level")} 27
                 </span>
               </div>
             </div>
           </Link>
+
           {/* Balance Display */}
           <div className="flex items-center justify-between bg-gradient-to-b from-[#ffffff]/20 to-[#071a26] p-3 rounded-md">
             <div className="flex items-center space-x-2">
               <Image src={Coin} className="h-6 w-auto" alt="Coin" />
               <div className="flex flex-col">
-                <span className="text-xs text-gray-400">Balance</span>
+                <span className="text-xs text-gray-400">{t("balance")}</span>
                 <span className="text-white font-semibold">0.0002745</span>
               </div>
             </div>
@@ -259,7 +246,7 @@ export default function Header() {
           </div>
 
           {/* Navigation Links */}
-          <div className="space-y-1 py-2 border-b border-gray-800 ">
+          <div className="space-y-1 py-2 border-b border-gray-800">
             {links.map((link) => (
               <a key={link.href} href={link.href}>
                 <div className="flex items-center space-x-3 px-3 py-2.5 hover:bg-white/5 rounded-md transition-colors cursor-pointer">
@@ -272,15 +259,14 @@ export default function Header() {
 
           {/* Deposit Button */}
           <Link href="/dashboard/userdashboard">
-            <button
-              // onClick={() => setIsDepositModalOpen(true)}
-              className="w-full bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 py-3 rounded-md text-white font-medium transition"
-            >
-              DEPOSIT
+            <button className="w-full bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 py-3 rounded-md text-white font-medium transition">
+              {t("deposit")}
             </button>
           </Link>
         </div>
       )}
     </div>
   );
-}
+};
+
+export default Header;

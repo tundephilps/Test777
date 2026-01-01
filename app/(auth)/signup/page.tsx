@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Link from "next/link";
 
-export default function SignupPage() {
+const SignupPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -191,4 +191,6 @@ export default function SignupPage() {
       </div>
     </div>
   );
-}
+};
+
+export default SignupPage;

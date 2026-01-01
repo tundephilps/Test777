@@ -48,7 +48,7 @@ const promotions: Promo[] = [
   },
 ];
 
-export default function PromotionsList() {
+const PromotionsList = () => {
   return (
     <div
       className="bg-[#0a1f2d] mt-6 lg:p-6 p-2 rounded-xl text-white"
@@ -58,6 +58,8 @@ export default function PromotionsList() {
       <div className="flex justify-between items-center mb-6">
         <h2 className="lg:text-xl text-base  flex items-center gap-2">
           <Image
+            width={3000}
+            height={1000}
             src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Speak.png"
             className="h-auto w-auto"
             alt=""
@@ -114,4 +116,6 @@ export default function PromotionsList() {
       </div>
     </div>
   );
-}
+};
+
+export default PromotionsList;

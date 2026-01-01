@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-export default function GameLog() {
+const GameLog = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = 10;
 
@@ -135,4 +135,6 @@ export default function GameLog() {
       </button>
     </div>
   );
-}
+};
+
+export default GameLog;

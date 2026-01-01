@@ -7,7 +7,7 @@ import { PiWalletBold } from "react-icons/pi";
 import { SiBitcoinsv } from "react-icons/si";
 import { IoChevronForward } from "react-icons/io5";
 
-export default function PaymentSelector() {
+const PaymentSelector = () => {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(100);
   const [customAmount, setCustomAmount] = useState<string>("");
   const [selectedMethod, setSelectedMethod] = useState("card");
@@ -109,4 +109,6 @@ export default function PaymentSelector() {
       </button> */}
     </div>
   );
-}
+};
+
+export default PaymentSelector;

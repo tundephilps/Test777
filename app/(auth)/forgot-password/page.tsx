@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ForgotPasswordPage() {
+const ForgotPasswordPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -60,4 +60,6 @@ export default function ForgotPasswordPage() {
       </div>
     </div>
   );
-}
+};
+
+export default ForgotPasswordPage;

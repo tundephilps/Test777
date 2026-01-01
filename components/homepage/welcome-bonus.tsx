@@ -2,8 +2,7 @@ import { BsGiftFill } from "react-icons/bs";
 import Image from "next/image";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import { useTranslations } from "next-intl";
-import Depo3 from "../../public/Depo3.png";
-import Depo4 from "../../public/Depo4.png";
+import { IMAGES } from "@/lib/assets";
 
 const WelcomeBonus = () => {
   const t = useTranslations("HomePage");
@@ -37,7 +36,7 @@ const WelcomeBonus = () => {
         {/* First Deposit Card */}
         <div className="relative cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/50 rounded-lg overflow-hidden group">
           <Image
-            src={Depo3}
+            src={IMAGES.Depo3}
             width={2000}
             height={2000}
             alt={t("deposit1_title")}
@@ -69,7 +68,7 @@ const WelcomeBonus = () => {
         {/* Second Deposit Card */}
         <div className="relative cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/50 rounded-lg overflow-hidden group">
           <Image
-            src={Depo4}
+            src={IMAGES.Depo4}
             width={2000}
             height={2000}
             alt={t("deposit2_title")}

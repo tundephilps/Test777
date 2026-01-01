@@ -1,15 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import Logo from "../../public/Logo.png";
-
 import Signs from "../../public/Signs.png";
 
-export default function Footer() {
+const Footer = () => {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="bg-[#081826] text-gray-400 text-sm w-full">
       {/* Top Section */}
       <div className="lg:px-12 mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 border-b border-gray-800 w-full">
-        {/* Logo and Description */}
+        {/* Logo + Description */}
         <div className="space-y-4">
           <Image
             src={Logo}
@@ -19,28 +21,27 @@ export default function Footer() {
             className="object-contain"
           />
           <p className="text-xs leading-relaxed text-gray-500">
-            Canada777 operated by TriMat Gaming, licensed Curaçao, payments via
-            TKD.
+            {t("description")}
           </p>
         </div>
 
         {/* About Us */}
         <div>
-          <h4 className="text-white font-semibold mb-4">About Us</h4>
+          <h4 className="text-white font-semibold mb-4">{t("about_us")}</h4>
           <ul className="space-y-2">
             <li>
               <Link href="/dashboard/about-us" className="hover:text-white">
-                About Us
+                {t("about_us")}
               </Link>
             </li>
             <li>
               <Link href="/dashboard/contact" className="hover:text-white">
-                Contact Us
+                {t("contact_us")}
               </Link>
             </li>
             <li>
               <Link href="/dashboard/faq" className="hover:text-white">
-                FAQ
+                {t("faq")}
               </Link>
             </li>
             <li>
@@ -48,7 +49,7 @@ export default function Footer() {
                 href="https://live.affiliateslots.com/"
                 className="hover:text-white"
               >
-                Affiliates
+                {t("affiliates")}
               </Link>
             </li>
           </ul>
@@ -56,16 +57,16 @@ export default function Footer() {
 
         {/* Informations */}
         <div>
-          <h4 className="text-white font-semibold mb-4">Informations</h4>
+          <h4 className="text-white font-semibold mb-4">{t("information")}</h4>
           <ul className="space-y-2">
             <li>
               <Link href="/dashboard/terms" className="hover:text-white">
-                Terms & Conditions
+                {t("terms")}
               </Link>
             </li>
             <li>
               <Link href="#" className="hover:text-white">
-                Bonus Terms
+                {t("bonus_terms")}
               </Link>
             </li>
             <li>
@@ -73,7 +74,7 @@ export default function Footer() {
                 href="/dashboard/privacy-policy"
                 className="hover:text-white"
               >
-                Privacy and Security Policy
+                {t("privacy")}
               </Link>
             </li>
             <li>
@@ -81,7 +82,7 @@ export default function Footer() {
                 href="/dashboard/responsible-gambling"
                 className="hover:text-white"
               >
-                Responsible Gambling
+                {t("responsible")}
               </Link>
             </li>
           </ul>
@@ -89,26 +90,26 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+          <h4 className="text-white font-semibold mb-4">{t("quick_links")}</h4>
           <ul className="space-y-2">
             <li>
               <Link href="#" className="hover:text-white">
-                Registration
+                {t("registration")}
               </Link>
             </li>
             <li>
               <Link href="#" className="hover:text-white">
-                Deposit
+                {t("deposit")}
               </Link>
             </li>
             <li>
               <Link href="#" className="hover:text-white">
-                Withdraw
+                {t("withdraw")}
               </Link>
             </li>
             <li>
               <Link href="#" className="hover:text-white">
-                Banking
+                {t("banking")}
               </Link>
             </li>
             <li>
@@ -116,7 +117,7 @@ export default function Footer() {
                 href="/dashboard/aml-kyc-policy"
                 className="hover:text-white"
               >
-                AML & KYC Policy
+                {t("aml_kyc")}
               </Link>
             </li>
           </ul>
@@ -125,7 +126,7 @@ export default function Footer() {
 
       {/* Bottom Section */}
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-6 py-6 gap-4">
-        <p className="text-xs text-gray-500">© 2025 Canada777 (Kinguin)</p>
+        <p className="text-xs text-gray-500">{t("copyright")}</p>
 
         <div className="flex items-center gap-4">
           <Image src={Signs} alt="Curacao" />
@@ -133,4 +134,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

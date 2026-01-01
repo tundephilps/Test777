@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import { GiRollingDices, GiCardAceSpades } from "react-icons/gi";
 
-export default function GameHistory() {
+const GameHistory = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const gameHistory = [
@@ -150,4 +150,6 @@ export default function GameHistory() {
       </div>
     </div>
   );
-}
+};
+
+export default GameHistory;

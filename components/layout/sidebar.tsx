@@ -19,10 +19,11 @@ import SideAds from "../../public/SideAds.png";
 import { useState, useTransition } from "react";
 import { useSidebar } from "./SidebarContext";
 import { PiSpinnerBallFill } from "react-icons/pi";
-import setLanguageValue from "../../actions/set-language-action"; // Import your server action
-import { useLocale } from "next-intl";
+import setLanguageValue from "../../actions/set-language-action";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Sidebar() {
+  const t = useTranslations("Navigation");
   const pathname = usePathname();
   const router = useRouter();
   const currentLocale = useLocale();
@@ -43,29 +44,33 @@ export default function Sidebar() {
   ];
 
   const links = [
-    { href: "/dashboard", label: "Home", icon: <FaHome /> },
-    { href: "/dashboard/casino", label: "Casino", icon: <FaDice /> },
+    { href: "/dashboard", label: t("home"), icon: <FaHome /> },
+    { href: "/dashboard/casino", label: t("casino"), icon: <FaDice /> },
     {
       href: "/dashboard/livecasino",
-      label: "Live Casino",
+      label: t("live_casino"),
       icon: <RiLiveLine />,
     },
-    { href: "/dashboard/jackpot", label: "Jackpot", icon: <FaGift /> },
+    { href: "/dashboard/jackpot", label: t("jackpot"), icon: <FaGift /> },
     {
       href: "/dashboard/tournaments",
-      label: "Tournaments",
+      label: t("tournaments"),
       icon: <RiTrophyLine />,
     },
     {
       href: "/dashboard/wheelbonus",
-      label: "Wheel Bonus",
+      label: t("wheel_bonus"),
       icon: <PiSpinnerBallFill />,
     },
-    { href: "/dashboard/myfavorite", label: "My Favorite", icon: <FaHeart /> },
-    { href: "/dashboard/promotions", label: "Promotions", icon: <FaGift /> },
-    { href: "/dashboard/vip", label: "VIP Club", icon: <FaCrown /> },
-    { href: "/dashboard/cashback", label: "Cashback", icon: <FaCoins /> },
-    { href: "/dashboard/contact", label: "Contact", icon: <FaHeadset /> },
+    {
+      href: "/dashboard/myfavorite",
+      label: t("my_favorite"),
+      icon: <FaHeart />,
+    },
+    { href: "/dashboard/promotions", label: t("promotions"), icon: <FaGift /> },
+    { href: "/dashboard/vip", label: t("vip_club"), icon: <FaCrown /> },
+    { href: "/dashboard/cashback", label: t("cashback"), icon: <FaCoins /> },
+    { href: "/dashboard/contact", label: t("contact"), icon: <FaHeadset /> },
   ];
 
   const currentLanguage =
@@ -75,9 +80,7 @@ export default function Sidebar() {
     setShowLanguageDropdown(false);
 
     startTransition(async () => {
-      // Set the cookie
       await setLanguageValue(langCode);
-      // Refresh the page to apply new locale
       router.refresh();
     });
   };
@@ -92,7 +95,7 @@ export default function Sidebar() {
       <button
         onClick={() => setIsCollapsed(!isCollapsed)}
         className="self-end p-2 rounded-lg bg-[#0a1f2d] hover:bg-[#0d2535] transition-all"
-        title={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+        title={isCollapsed ? t("expand_sidebar") : t("collapse_sidebar")}
       >
         {isCollapsed ? (
           <FaChevronRight className="text-gray-400" />
@@ -131,12 +134,12 @@ export default function Sidebar() {
           className={`flex items-center px-4 py-3 rounded-lg bg-[#0a1f2d] hover:bg-[#0d2535] transition-all w-full ${
             isCollapsed ? "justify-center" : "space-x-3 text-left"
           }`}
-          title={isCollapsed ? "Live support" : ""}
+          title={isCollapsed ? t("live_support") : ""}
         >
           <FaHeadset className="text-green-400 text-lg" />
           {!isCollapsed && (
             <span className="text-sm font-medium text-[#58656e]">
-              Live support
+              {t("live_support")}
             </span>
           )}
         </button>

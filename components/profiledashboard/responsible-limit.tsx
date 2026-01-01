@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaShieldAlt, FaPencilAlt, FaBan } from "react-icons/fa";
 
-export default function ResponsibleLimits() {
+const ResponsibleLimits = () => {
   const [selfExclusion, setSelfExclusion] = useState(false);
 
   const limits = [
@@ -132,4 +132,6 @@ export default function ResponsibleLimits() {
       </div>
     </div>
   );
-}
+};
+
+export default ResponsibleLimits;

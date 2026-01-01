@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaWallet, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-export default function DepositHistory() {
+const DepositHistory = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const depositHistory = [
@@ -150,4 +150,6 @@ export default function DepositHistory() {
       </div>
     </div>
   );
-}
+};
+
+export default DepositHistory;

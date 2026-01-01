@@ -3,9 +3,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import { useTranslations } from "next-intl";
-import Bonus111 from "../../public/Bonus111.png";
-import Bonus222 from "../../public/Bonus222.png";
-import Bonus333 from "../../public/Bonus111.png";
+import { IMAGES } from "@/lib/assets";
 
 const BonusPromotion = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -34,19 +32,19 @@ const BonusPromotion = () => {
 
   const promotions = [
     {
-      image: Bonus111,
+      image: IMAGES.Bonus111,
       title: t("cashback_title"),
       subtitle: t("cashback_subtitle"),
       button: t("cashback_button"),
     },
     {
-      image: Bonus222,
+      image: IMAGES.Bonus222,
       title: t("reload_title"),
       subtitle: t("reload_subtitle"),
       button: t("reload_button"),
     },
     {
-      image: Bonus333,
+      image: IMAGES.Bonus333,
       title: t("monday_title"),
       subtitle: t("monday_subtitle"),
       button: t("monday_button"),
@@ -60,7 +58,7 @@ const BonusPromotion = () => {
         {/* Left Side */}
         <div className="flex items-center gap-2">
           <Image
-            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Speaker.png"
+            src={IMAGES.Speaker}
             width={1000}
             height={300}
             alt="speaker"
