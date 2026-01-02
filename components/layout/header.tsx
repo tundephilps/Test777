@@ -6,10 +6,10 @@ import {
   MdMenu,
 } from "react-icons/md";
 import Image from "next/image";
-import Logo from "../../public/Logo.png";
-import Reward from "../../public/Rewards.png";
-import Coin from "../../public/Coin.png";
-import Face from "../../public/Face.png";
+import Logo from "@/public/Logo.png";
+import Reward from "@/public/Rewards.png";
+import Coin from "@/public/Coin.png";
+import Face from "@/public/Face.png";
 import { DepositModal } from "../modals/deposit-modal";
 import Link from "next/link";
 import { BiMenu } from "react-icons/bi";
@@ -17,7 +17,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useTransition } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { FaChevronDown } from "react-icons/fa";
-import setLanguageValue from "../../actions/set-language-action";
+import setLanguageValue from "@/actions/set-language-action";
 
 import {
   FaHome,

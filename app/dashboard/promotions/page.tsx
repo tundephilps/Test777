@@ -1,12 +1,12 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Promo11 from "../../../public/Promo11.png";
+import Promo11 from "@/public/Promo11.png";
 
-import Promo22 from "../../../public/Promo22.png";
+import Promo22 from "@/public/Promo22.png";
 
-import Promo33 from "../../../public/Promo33.png";
+import Promo33 from "@/public/Promo33.png";
 
-import Promo44 from "../../../public/Promo44.png";
+import Promo44 from "@/public/Promo44.png";
 
 const PromotionsPage = () => {
   const depositBonuses = [

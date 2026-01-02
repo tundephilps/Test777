@@ -1,12 +1,3 @@
-import React from "react";
-import {
-  FaDice,
-  FaGamepad,
-  FaGlobe,
-  FaComments,
-  FaAccusoft,
-} from "react-icons/fa";
-
 const AboutUs = () => {
   return (
     <div className="min-h-screen bg-[#081A26]">

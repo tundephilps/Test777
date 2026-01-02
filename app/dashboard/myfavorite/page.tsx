@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
-import WhyChooseUs from "../../../components/homepage/why-choose";
-import Sponsors from "../../../components/homepage/sponsors";
-import FavGames from "../../../components/myfavorites/favgames";
-import FavHero2 from "../../../public/FavHero2.png";
+import WhyChooseUs from "@/components/homepage/why-choose";
+import Sponsors from "@/components/homepage/sponsors";
+import FavGames from "@/components/myfavorites/favgames";
+import FavHero2 from "@/public/FavHero2.png";
 
-import FavHero3 from "../../../public/FavHero3.png";
+import FavHero3 from "@/public/FavHero3.png";
 import { useTranslations } from "next-intl";
 
 const MyFavorite = () => {

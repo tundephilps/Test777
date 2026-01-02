@@ -15,11 +15,11 @@ import { RiLiveLine, RiTrophyLine } from "react-icons/ri";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import SideAds from "../../public/SideAds.png";
+import SideAds from "@/public/SideAds.png";
 import { useState, useTransition } from "react";
 import { useSidebar } from "./SidebarContext";
 import { PiSpinnerBallFill } from "react-icons/pi";
-import setLanguageValue from "../../actions/set-language-action";
+import setLanguageValue from "@/actions/set-language-action";
 import { useLocale, useTranslations } from "next-intl";
 
 export default function Sidebar() {

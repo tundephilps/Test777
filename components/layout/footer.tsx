@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import Logo from "../../public/Logo.png";
-import Signs from "../../public/Signs.png";
+import Logo from "@/public/Logo.png";
+import Signs from "@/public/Signs.png";
 
 const Footer = () => {
   const t = useTranslations("Footer");

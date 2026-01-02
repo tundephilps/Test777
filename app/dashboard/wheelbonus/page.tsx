@@ -1,8 +1,7 @@
 import Image from "next/image";
-import React from "react";
-import WhyChooseUs from "../../../components/homepage/why-choose";
-import Sponsors from "../../../components/homepage/sponsors";
-import Wheel from "../../../public/Wheel.png";
+import WhyChooseUs from "@/components/homepage/why-choose";
+import Sponsors from "@/components/homepage/sponsors";
+import Wheel from "@/public/Wheel.png";
 
 const WheelBonus = () => {
   return (

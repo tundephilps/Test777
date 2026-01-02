@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import ContactForm from "../../../components/contact/contact-form";
+import ContactForm from "@/components/contact/contact-form";
 import { getTranslations } from "next-intl/server";
 
 const ContactPage = async () => {

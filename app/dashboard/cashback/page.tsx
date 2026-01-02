@@ -1,9 +1,9 @@
 import React from "react";
-import WhyChooseUs from "../../../components/homepage/why-choose";
-import Sponsors from "../../../components/homepage/sponsors";
+import WhyChooseUs from "@/components/homepage/why-choose";
+import Sponsors from "@/components/homepage/sponsors";
 import Image from "next/image";
-import CashbackTable from "../../../components/cashback/cashback-table";
-import Mask12 from "../../../public/Mask12.png";
+import CashbackTable from "@/components/cashback/cashback-table";
+import Mask12 from "@/public/Mask12.png";
 import { useTranslations } from "next-intl";
 
 const CashbackPage = () => {

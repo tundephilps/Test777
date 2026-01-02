@@ -2,14 +2,14 @@
 import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
-import Car from "../../../public/Car.png";
-import Mask6 from "../../../public/Mask6.png";
-import Cash2 from "../../../public/Cash2.png";
-import Cash from "../../../public/Cash.png";
-import Dragon from "../../../public/Dragon.png";
-import ProgressLevel from "../../../components/vip/progress-level";
-import LevelCard from "../../../components/vip/levels";
-import Mask13 from "../../../public/Mask13.png";
+import Car from "@/public/Car.png";
+import Mask6 from "@/public/Mask6.png";
+import Cash2 from "@/public/Cash2.png";
+import Cash from "@/public/Cash.png";
+import Dragon from "@/public/Dragon.png";
+import ProgressLevel from "@/components/vip/progress-level";
+import LevelCard from "@/components/vip/levels";
+import Mask13 from "@/public/Mask13.png";
 
 const VipPage = () => {
   const t = useTranslations("VipPage");
