@@ -5,6 +5,8 @@ import Image from "next/image";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Link from "next/link";
 
+import { IMAGES } from "@/lib/assets";
+
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -15,7 +17,7 @@ const LoginPage = () => {
     >
       {/* BACKGROUND IMAGE */}
       <Image
-        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Auth.png"
+        src={IMAGES.Auth}
         alt="background"
         fill
         className="object-cover"
@@ -29,7 +31,7 @@ const LoginPage = () => {
             {/* Logo */}
             <div className="flex items-center gap-2 mb-6">
               <Image
-                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Logo.png"
+                src={IMAGES.Logo}
                 alt="Canada777"
                 width={300}
                 height={300}

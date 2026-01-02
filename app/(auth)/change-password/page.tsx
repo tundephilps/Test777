@@ -1,9 +1,8 @@
 "use client";
-
 import React, { useState } from "react";
 import Image from "next/image";
-
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { IMAGES } from "@/lib/assets";
 
 const ChangepasswordPage = () => {
   const [showOld, setShowOld] = useState(false);
@@ -17,7 +16,7 @@ const ChangepasswordPage = () => {
     >
       {/* Background */}
       <Image
-        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Auth.png"
+        src={IMAGES.Auth}
         alt="background"
         fill
         className="object-cover"
@@ -31,7 +30,7 @@ const ChangepasswordPage = () => {
             {/* Logo */}
             <div className="flex justify-center mb-6">
               <Image
-                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Logo.png"
+                src={IMAGES.Logo}
                 alt="Canada777"
                 width={200}
                 height={200}

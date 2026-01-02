@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { IMAGES } from "@/lib/assets";
 
 const PromotionPage = () => {
   return (
@@ -6,7 +7,7 @@ const PromotionPage = () => {
       <div>
         <div className="relative   lg:flex hidden items-center">
           <Image
-            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Mask5.png"
+            src={IMAGES.Mask5}
             width={1000}
             height={300}
             alt="Hero"
@@ -37,7 +38,7 @@ const PromotionPage = () => {
       </div>
       <Image
         alt=""
-        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/FirstDeposit.png"
+        src={IMAGES.FirstDeposit}
         width={1000}
         height={300}
         className="w-full h-auto mt-6"
@@ -45,28 +46,28 @@ const PromotionPage = () => {
 
       <Image
         alt=""
-        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/FirstDeposit2.png"
+        src={IMAGES.FirstDeposit2}
         width={1000}
         height={300}
         className="w-full h-auto mt-6"
       />
       <Image
         alt=""
-        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/FirstDeposit3.png"
+        src={IMAGES.FirstDeposit3}
         width={1000}
         height={300}
         className="w-full h-auto mt-6"
       />
       <Image
         alt=""
-        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/FirstDeposit4.png"
+        src={IMAGES.FirstDeposit4}
         width={1000}
         height={300}
         className="w-full h-auto mt-6"
       />
       <Image
         alt=""
-        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/FirstDeposit5.png"
+        src={IMAGES.FirstDeposit5}
         width={1000}
         height={300}
         className="w-full h-auto mt-6"

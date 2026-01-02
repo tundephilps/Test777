@@ -11,6 +11,7 @@ import {
 } from "react-icons/io5";
 import { FaPlay } from "react-icons/fa";
 import { GiGamepad } from "react-icons/gi";
+import { IMAGES } from "@/lib/assets";
 
 const FavGames = () => {
   const [favorites, setFavorites] = useState<Set<number>>(new Set());
@@ -18,32 +19,27 @@ const FavGames = () => {
 
   const games = [
     {
-      image:
-        "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Game1.png",
+      image: IMAGES.Game1,
       name: "PLINKO 1000",
     },
     {
-      image:
-        "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Game2.png",
+      image: IMAGES.Game2,
+
       name: "AZTEC SLOTS",
     },
     {
-      image:
-        "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Game3.png",
+      image: IMAGES.Game3,
       name: "MEGA FORTUNE",
     },
     {
-      image:
-        "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Game4.png",
+      image: IMAGES.Game4,
       name: "LUCKY SPINS",
     },
     {
-      image:
-        "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Game5.png",
+      image: IMAGES.Game5,
       name: "DIAMOND RUSH",
     },
   ];
-
   const toggleFavorite = (index: number) => {
     setFavorites((prev) => {
       const next = new Set(prev);

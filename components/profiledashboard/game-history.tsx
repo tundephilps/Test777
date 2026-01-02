@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { BiTrendingUp } from "react-icons/bi";
 import {
   FaGamepad,
   FaDice,

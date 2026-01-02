@@ -6,10 +6,6 @@ import {
   MdMenu,
 } from "react-icons/md";
 import Image from "next/image";
-import Logo from "@/public/Logo.png";
-import Reward from "@/public/Rewards.png";
-import Coin from "@/public/Coin.png";
-import Face from "@/public/Face.png";
 import { DepositModal } from "../modals/deposit-modal";
 import Link from "next/link";
 import { BiMenu } from "react-icons/bi";
@@ -30,6 +26,7 @@ import {
 } from "react-icons/fa";
 import { RiLiveLine, RiTrophyLine } from "react-icons/ri";
 import { PiSpinnerBallFill } from "react-icons/pi";
+import { IMAGES } from "@/lib/assets";
 
 const Header = () => {
   const t = useTranslations("Navigation");
@@ -107,7 +104,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Image
-              src={Logo}
+              src={IMAGES.Logo}
               alt="Logo"
               width={100}
               height={25}
@@ -117,7 +114,13 @@ const Header = () => {
 
           {/* Rewards - Hidden on mobile */}
           <div className="hidden md:block">
-            <Image src={Reward} className="h-6 md:h-8 w-auto" alt="Rewards" />
+            <Image
+              src={IMAGES.Rewards}
+              width={1000}
+              height={1000}
+              className="h-6 md:h-8 w-auto"
+              alt="Rewards"
+            />
           </div>
         </div>
 
@@ -126,7 +129,13 @@ const Header = () => {
           <div className="bg-gradient-to-b from-[#ffffff]/20 to-[#071a26] inline-flex p-1 rounded-md hover:opacity-90 cursor-pointer">
             {/* Balance */}
             <div className="flex items-center space-x-2 px-3 py-1 rounded-md">
-              <Image src={Coin} className="h-6 w-auto" alt="Coin" />
+              <Image
+                src={IMAGES.Coin}
+                width={1000}
+                height={1000}
+                className="h-6 w-auto"
+                alt="Coin"
+              />
               <span className="text-[#757e84]">0.0002745</span>
               <div className="bg-[#182935] p-1 rounded-full">
                 <MdKeyboardArrowDown />
@@ -144,7 +153,13 @@ const Header = () => {
           {/* User Profile */}
           <Link href="/dashboard/userdashboard">
             <div className="flex items-center space-x-2 cursor-pointer hover:opacity-80">
-              <Image src={Face} className="w-10 h-10" alt="Profile" />
+              <Image
+                src={IMAGES.Face}
+                width={1000}
+                height={1000}
+                className="w-10 h-10"
+                alt="Profile"
+              />
               <div className="flex flex-col leading-tight">
                 <span className="text-base font-semibold">Mitchell</span>
                 <span className="text-[10px] bg-[#1e141e] whitespace-nowrap border-[#ea0000] text-[#f80507] w-10 border rounded-sm p-1 text-center">
@@ -160,7 +175,13 @@ const Header = () => {
           {/* Balance */}
           <Link href="/dashboard/userdashboard">
             <div className="flex items-center space-x-1 bg-gradient-to-b from-[#ffffff]/20 to-[#071a26] px-2 py-1.5 rounded-md text-xs">
-              <Image src={Coin} className="h-4 w-auto" alt="Coin" />
+              <Image
+                src={IMAGES.Coin}
+                width={1000}
+                height={1000}
+                className="h-4 w-auto"
+                alt="Coin"
+              />
               <span className="text-[#757e84]">0.00027</span>
             </div>
           </Link>
@@ -218,7 +239,13 @@ const Header = () => {
           {/* User Info */}
           <Link href="/dashboard/userdashboard">
             <div className="flex items-center space-x-3 pb-3 border-b border-gray-800">
-              <Image src={Face} className="w-12 h-12" alt="Profile" />
+              <Image
+                src={IMAGES.Face}
+                width={1000}
+                height={1000}
+                className="w-12 h-12"
+                alt="Profile"
+              />
               <div className="flex flex-col">
                 <span className="text-base font-semibold">Mitchell</span>
                 <span className="text-xs bg-[#1e141e] border-[#ea0000] text-[#f80507] w-12 border rounded-sm p-1 text-center mt-1">
@@ -231,7 +258,13 @@ const Header = () => {
           {/* Balance Display */}
           <div className="flex items-center justify-between bg-gradient-to-b from-[#ffffff]/20 to-[#071a26] p-3 rounded-md">
             <div className="flex items-center space-x-2">
-              <Image src={Coin} className="h-6 w-auto" alt="Coin" />
+              <Image
+                src={IMAGES.Coin}
+                width={1000}
+                height={1000}
+                className="h-6 w-auto"
+                alt="Coin"
+              />
               <div className="flex flex-col">
                 <span className="text-xs text-gray-400">{t("balance")}</span>
                 <span className="text-white font-semibold">0.0002745</span>
@@ -242,7 +275,13 @@ const Header = () => {
 
           {/* Rewards */}
           <div className="flex items-center justify-center py-2">
-            <Image src={Reward} className="h-8 w-auto" alt="Rewards" />
+            <Image
+              src={IMAGES.Rewards}
+              width={1000}
+              height={1000}
+              className="h-8 w-auto"
+              alt="Rewards"
+            />
           </div>
 
           {/* Navigation Links */}

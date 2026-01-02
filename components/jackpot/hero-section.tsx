@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Countdown from "./Countdown";
 import { getTranslations } from "next-intl/server";
+import { IMAGES } from "@/lib/assets";
 
 const Hero = async () => {
   const t = await getTranslations("JackpotPage");
@@ -9,7 +10,7 @@ const Hero = async () => {
     <>
       <div className="relative lg:flex hidden items-center">
         <Image
-          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Mask2.png"
+          src={IMAGES.Mask2}
           width={1000}
           height={300}
           alt=""
@@ -46,14 +47,14 @@ const Hero = async () => {
         </div>
         <div className="absolute right-4">
           <Image
-            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Jackpot.png"
+            src={IMAGES.Jackpot}
             width={1000}
             height={300}
             alt=""
             className="w-full"
           />
           <Image
-            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Number.png"
+            src={IMAGES.Number}
             width={1000}
             height={300}
             alt=""
@@ -65,7 +66,7 @@ const Hero = async () => {
       {/* Mobile View */}
       <div className="relative flex lg:hidden items-center w-full">
         <Image
-          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Mask4.png"
+          src={IMAGES.Mask4}
           width={1000}
           height={1000}
           alt=""
@@ -95,7 +96,7 @@ const Hero = async () => {
             <span>{t("hero_bet_button")}</span>
           </button>
           <Image
-            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Jackpot2.png"
+            src={IMAGES.Jackpot2}
             width={3000}
             height={300}
             className="mx-auto h-auto w-auto"

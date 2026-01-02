@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Link from "next/link";
+import { IMAGES } from "@/lib/assets";
 
 const SignupPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -11,7 +12,7 @@ const SignupPage = () => {
     <div className="w-full h-screen relative overflow-y-auto lg:py-0 py-12">
       {/* Background */}
       <Image
-        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Auth.png"
+        src={IMAGES.Auth}
         alt="background"
         fill
         priority
@@ -25,7 +26,7 @@ const SignupPage = () => {
             {/* Logo */}
             <div className="flex justify-center mb-4">
               <Image
-                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Logo.png"
+                src={IMAGES.Logo}
                 alt="Canada777"
                 width={180}
                 height={60}

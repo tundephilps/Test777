@@ -1,7 +1,7 @@
 import Image from "next/image";
-import React from "react";
 import ContactForm from "@/components/contact/contact-form";
 import { getTranslations } from "next-intl/server";
+import { IMAGES } from "@/lib/assets";
 
 const ContactPage = async () => {
   const t = await getTranslations("ContactPage");
@@ -11,7 +11,7 @@ const ContactPage = async () => {
       {/* Desktop Hero */}
       <div className="relative lg:flex hidden items-center">
         <Image
-          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Mask10.png"
+          src={IMAGES.Mask10}
           width={1000}
           height={500}
           alt="Hero"
@@ -46,7 +46,7 @@ const ContactPage = async () => {
       {/* Mobile Hero */}
       <div className="relative flex lg:hidden items-center">
         <Image
-          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Mask11.png"
+          src={IMAGES.Mask11}
           width={1000}
           height={500}
           alt="Hero"

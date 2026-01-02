@@ -1,12 +1,10 @@
 import Image from "next/image";
-import React from "react";
 import WhyChooseUs from "@/components/homepage/why-choose";
 import Sponsors from "@/components/homepage/sponsors";
 import FavGames from "@/components/myfavorites/favgames";
-import FavHero2 from "@/public/FavHero2.png";
 
-import FavHero3 from "@/public/FavHero3.png";
 import { useTranslations } from "next-intl";
+import { IMAGES } from "@/lib/assets";
 
 const MyFavorite = () => {
   const t = useTranslations("FavoritePage");
@@ -17,7 +15,7 @@ const MyFavorite = () => {
         style={{ fontFamily: "var(--font-bounded)" }}
       >
         <Image
-          src={FavHero2}
+          src={IMAGES.FavHero2}
           height={1000}
           width={1000}
           className="w-full h-[50vh]"
@@ -47,7 +45,7 @@ const MyFavorite = () => {
       </div>
       <div className="relative   flex lg:hidden items-center">
         <Image
-          src={FavHero3}
+          src={IMAGES.FavHero3}
           width={1000}
           height={500}
           alt="Hero"

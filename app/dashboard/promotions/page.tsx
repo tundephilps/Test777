@@ -1,60 +1,47 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Promo11 from "@/public/Promo11.png";
-
-import Promo22 from "@/public/Promo22.png";
-
-import Promo33 from "@/public/Promo33.png";
-
-import Promo44 from "@/public/Promo44.png";
+import { IMAGES } from "@/lib/assets";
 
 const PromotionsPage = () => {
   const depositBonuses = [
     {
-      image:
-        "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Bonus11.png",
+      image: IMAGES.Bonus11,
       title: "1st bonus - 200% up to 1,000.00 and 100 Free Spins",
       description:
         "Start strong with a 200% welcome match + 100 FREE SPINS on your first deposit. Wager x35",
     },
     {
-      image:
-        "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Bonus22.png",
+      image: IMAGES.Bonus22,
       title: "2nd bonus - 100% up to 1,500.00 and 100 Free Spins",
       description:
         "Take your next step with a 100% match bonus + 100 FREE SPINS on your second deposit. Wager x35",
     },
     {
-      image:
-        "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Bonus33.png",
+      image: IMAGES.Bonus33,
       title: "3rd bonus - 100% up to 1,500.00 and 100 Free Spins",
       description:
         "Boost your play with a 100% match bonus + 100 FREE SPINS on your 3rd deposit. Wager x35",
     },
     {
-      image:
-        "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Bonus44.png",
+      image: IMAGES.Bonus44,
       title: "4th bonus - 150% up to 2,000.00 and 200 Free Spins",
       description:
         "Finish strong with a huge 150% bonus + 200 FREE SPINS. Wager x35",
     },
     {
-      image:
-        "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Bonus55.png",
+      image: IMAGES.Bonus55,
       title: "4th bonus - 150% up to 2,000.00 and 200 Free Spins",
       description:
         "Finish strong with a huge 150% bonus + 200 FREE SPINS. Wager x35",
     },
     {
-      image:
-        "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Bonus66.png",
+      image: IMAGES.Bonus66,
       title: "4th bonus - 150% up to 2,000.00 and 200 Free Spins",
       description:
         "Finish strong with a huge 150% bonus + 200 FREE SPINS. Wager x35",
     },
     {
-      image:
-        "https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Bonus77.png",
+      image: IMAGES.Bonus77,
       title: "4th bonus - 150% up to 2,000.00 and 200 Free Spins",
       description:
         "Finish strong with a huge 150% bonus + 200 FREE SPINS. Wager x35",
@@ -69,7 +56,7 @@ const PromotionsPage = () => {
       subtitle: t("welcome_subtitle"),
       description: t("welcome_description"),
       buttonText: t("welcome_button"),
-      image: Promo11,
+      image: IMAGES.Promo11,
       bgColor: "bg-[#480001]",
     },
     {
@@ -77,7 +64,7 @@ const PromotionsPage = () => {
       subtitle: t("cashback_subtitle"),
       description: t("cashback_description"),
       buttonText: t("cashback_button"),
-      image: Promo22,
+      image: IMAGES.Promo22,
       bgColor: "bg-[#480001]",
     },
     {
@@ -85,7 +72,7 @@ const PromotionsPage = () => {
       subtitle: t("freespins_subtitle"),
       description: t("freespins_description"),
       buttonText: t("freespins_button"),
-      image: Promo33,
+      image: IMAGES.Promo33,
       bgColor: "bg-[#480001]",
     },
     {
@@ -93,7 +80,7 @@ const PromotionsPage = () => {
       subtitle: t("audi_subtitle"),
       description: t("audi_description"),
       buttonText: t("audi_button"),
-      image: Promo44,
+      image: IMAGES.Promo44,
       bgColor: "bg-[#480001]",
     },
   ];

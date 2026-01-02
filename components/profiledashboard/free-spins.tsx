@@ -2,6 +2,7 @@ import React from "react";
 import { FaDice, FaPlay, FaClock } from "react-icons/fa";
 import { GiTwoCoins } from "react-icons/gi";
 import Image from "next/image";
+import { IMAGES } from "@/lib/assets";
 
 const FreeSpins = () => {
   const spins = [
@@ -46,7 +47,7 @@ const FreeSpins = () => {
           <div className="flex items-center gap-3">
             <div className="w-10 h-10">
               <Image
-                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Spin.png"
+                src={IMAGES.Spin}
                 alt=""
                 width={1000}
                 height={1000}

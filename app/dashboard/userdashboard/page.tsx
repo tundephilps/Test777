@@ -75,16 +75,6 @@ const UserDashboard = () => {
 
   return (
     <div>
-      {/* <DashboardSummary /> */}
-      {/* <Profile /> */}
-      {/* <Deposit /> */}
-      {/* <BonusTable /> */}
-      {/* <FreeSpins /> */}
-      {/* <Withdraw /> */}
-      {/* <VipCashback /> */}
-      {/* <GameLog /> */}
-      {/* <AddFunds /> */}
-      {/* <WithdrawFunds /> */}
       <div className="lg:p-6 p-2 bg-[#081a26]">
         <TopTabs active={activeTop} onChange={setActiveTop} />
 

@@ -2,14 +2,10 @@
 import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
-import Car from "@/public/Car.png";
-import Mask6 from "@/public/Mask6.png";
-import Cash2 from "@/public/Cash2.png";
-import Cash from "@/public/Cash.png";
-import Dragon from "@/public/Dragon.png";
 import ProgressLevel from "@/components/vip/progress-level";
 import LevelCard from "@/components/vip/levels";
-import Mask13 from "@/public/Mask13.png";
+
+import { IMAGES } from "@/lib/assets";
 
 const VipPage = () => {
   const t = useTranslations("VipPage");
@@ -19,7 +15,7 @@ const VipPage = () => {
       {/* Desktop Hero */}
       <div className="relative lg:flex hidden items-center">
         <Image
-          src={Mask6}
+          src={IMAGES.Mask6}
           width={1000}
           height={300}
           alt="Hero"
@@ -55,7 +51,7 @@ const VipPage = () => {
       {/* Mobile Hero */}
       <div className="relative flex lg:hidden items-center">
         <Image
-          src={Mask13}
+          src={IMAGES.Mask13}
           width={1000}
           height={500}
           alt="Hero"
@@ -113,7 +109,7 @@ const VipPage = () => {
             </div>
           </div>
           <Image
-            src={Dragon}
+            src={IMAGES.Dragon}
             width={300}
             height={300}
             alt=""
@@ -154,7 +150,7 @@ const VipPage = () => {
             </div>
           </div>
           <Image
-            src={Car}
+            src={IMAGES.Car}
             width={300}
             height={300}
             alt=""
@@ -186,14 +182,14 @@ const VipPage = () => {
             </div>
           </div>
           <Image
-            src={Cash}
+            src={IMAGES.Cash}
             width={300}
             height={300}
             alt=""
             className="h-full right-0 absolute bottom-0 w-2/3"
           />
           <Image
-            src={Cash2}
+            src={IMAGES.Cash2}
             width={300}
             height={300}
             alt=""
@@ -218,7 +214,12 @@ const VipPage = () => {
           </div>
 
           <div className="relative h-40">
-            <Image src={Dragon} alt="Dragon" fill className="object-contain" />
+            <Image
+              src={IMAGES.Dragon}
+              alt="Dragon"
+              fill
+              className="object-contain"
+            />
           </div>
         </div>
 
@@ -237,7 +238,12 @@ const VipPage = () => {
           </div>
 
           <div className="relative h-36">
-            <Image src={Car} alt="Audi" fill className="object-contain" />
+            <Image
+              src={IMAGES.Car}
+              alt="Audi"
+              fill
+              className="object-contain"
+            />
           </div>
         </div>
 
@@ -255,12 +261,12 @@ const VipPage = () => {
           </div>
 
           <Image
-            src={Cash2}
+            src={IMAGES.Cash2}
             alt="Cash background"
             className="object-contain absolute bottom-2"
           />
           <Image
-            src={Cash}
+            src={IMAGES.Cash}
             alt="Cash background"
             className="object-contain absolute bottom-0"
           />

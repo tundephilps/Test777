@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { GiCardAceSpades, GiRollingDices } from "react-icons/gi";
 import { PiSpinnerFill } from "react-icons/pi";
+import { IMAGES } from "@/lib/assets";
 
 const BonusRules = () => {
   const gameContributions = [
@@ -62,7 +63,7 @@ const BonusRules = () => {
               width={1000}
               height={1000}
               alt=""
-              src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Bonus1.png"
+              src={IMAGES.Bonus1}
               className="text-white text-xl"
             />
           </div>

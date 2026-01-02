@@ -2,6 +2,7 @@
 import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { IMAGES } from "@/lib/assets";
 
 const OtpPage = () => {
   const [otp, setOtp] = useState(["", "", "", "", ""]);
@@ -36,7 +37,7 @@ const OtpPage = () => {
     >
       {/* BACKGROUND IMAGE */}
       <Image
-        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Auth.png"
+        src={IMAGES.Auth}
         alt="background"
         fill
         className="object-cover"
@@ -50,7 +51,7 @@ const OtpPage = () => {
             {/* Logo */}
             <div className="flex items-center justify-center mb-6">
               <Image
-                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Logo.png"
+                src={IMAGES.Logo}
                 alt="Canada777"
                 width={200}
                 height={200}

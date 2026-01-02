@@ -1,8 +1,8 @@
 "use client";
-
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { IMAGES } from "@/lib/assets";
 
 const ForgotPasswordPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -14,7 +14,7 @@ const ForgotPasswordPage = () => {
     >
       {/* BACKGROUND IMAGE */}
       <Image
-        src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Auth.png"
+        src={IMAGES.Auth}
         alt="background"
         fill
         className="object-cover"
@@ -28,7 +28,7 @@ const ForgotPasswordPage = () => {
             {/* Logo */}
             <div className="flex items-center gap-2 mb-6">
               <Image
-                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Logo.png"
+                src={IMAGES.Logo}
                 alt="Canada777"
                 width={300}
                 height={300}

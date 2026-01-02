@@ -1,3 +1,4 @@
+import { IMAGES } from "@/lib/assets";
 import Image from "next/image";
 import React, { useState } from "react";
 import { FaFilter, FaArrowDown, FaArrowUp, FaCoins } from "react-icons/fa";
@@ -113,7 +114,7 @@ const TransactionStatus = () => {
           <div className="flex items-center gap-3 sm:gap-4">
             <div className="flex items-center justify-center flex-shrink-0">
               <Image
-                src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Trans.png"
+                src={IMAGES.Trans}
                 height={1000}
                 width={1000}
                 alt=""

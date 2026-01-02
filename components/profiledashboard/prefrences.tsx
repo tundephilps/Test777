@@ -5,13 +5,14 @@ import { FaBell } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { FaVolumeUp } from "react-icons/fa";
 import Image from "next/image";
+import { IMAGES } from "@/lib/assets";
 
 const Preferences = () => {
   return (
     <div className="w-full mx-auto py-6 bg-[#0A1F2D] px-2 rounded-md mt-6  text-white">
       <div className="inline-flex items-center gap-2 mb-6">
         <Image
-          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Pref.png"
+          src={IMAGES.Pref}
           alt=""
           width={1000}
           height={1000}

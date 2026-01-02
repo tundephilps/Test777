@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "@/components/homepage/hero-section";
 import CasinoNavigation from "@/components/casino/navigation";
 import CasinoGames from "@/components/casino/casino-games";

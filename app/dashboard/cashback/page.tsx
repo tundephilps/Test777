@@ -1,10 +1,9 @@
-import React from "react";
 import WhyChooseUs from "@/components/homepage/why-choose";
 import Sponsors from "@/components/homepage/sponsors";
 import Image from "next/image";
 import CashbackTable from "@/components/cashback/cashback-table";
-import Mask12 from "@/public/Mask12.png";
 import { useTranslations } from "next-intl";
+import { IMAGES } from "@/lib/assets";
 
 const CashbackPage = () => {
   const t = useTranslations("CashbackPage");
@@ -12,7 +11,7 @@ const CashbackPage = () => {
     <div>
       <div className="relative lg:flex hidden items-center">
         <Image
-          src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Mask9.png"
+          src={IMAGES.Mask9}
           width={1000}
           height={500}
           alt="Hero"
@@ -47,7 +46,7 @@ const CashbackPage = () => {
       {/* Mobile Hero */}
       <div className="relative flex lg:hidden items-center">
         <Image
-          src={Mask12}
+          src={IMAGES.Mask12}
           width={1000}
           height={500}
           alt="Hero"

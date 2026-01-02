@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaShieldAlt,
   FaLock,
@@ -97,24 +96,6 @@ const PrivacyPolicy = () => {
             </div>
           ))}
         </div>
-
-        {/* Footer CTA */}
-        {/* <div className="mt-12">
-          <div className="bg-gradient-to-r from-red-900 to-red-950 rounded-xl p-8 border border-red-800/50 text-center">
-            <FaLock className="text-yellow-400 text-4xl mx-auto mb-4" />
-            <h2 className="text-white text-2xl font-bold mb-3">
-              Your Privacy is Our Priority
-            </h2>
-            <p className="text-red-200 mb-6 max-w-2xl mx-auto">
-              We are committed to protecting your personal information with the
-              highest security standards. If you have any questions about our
-              privacy policy, please contact our support team.
-            </p>
-            <button className="px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors">
-              Contact Support
-            </button>
-          </div>
-        </div> */}
       </div>
     </div>
   );

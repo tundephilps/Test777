@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import Logo from "@/public/Logo.png";
-import Signs from "@/public/Signs.png";
+import { IMAGES } from "@/lib/assets";
 
 const Footer = () => {
   const t = useTranslations("Footer");
@@ -14,7 +13,7 @@ const Footer = () => {
         {/* Logo + Description */}
         <div className="space-y-4">
           <Image
-            src={Logo}
+            src={IMAGES.Logo}
             alt="Canada777 Logo"
             width={150}
             height={50}
@@ -129,7 +128,13 @@ const Footer = () => {
         <p className="text-xs text-gray-500">{t("copyright")}</p>
 
         <div className="flex items-center gap-4">
-          <Image src={Signs} alt="Curacao" />
+          <Image
+            src={IMAGES.Signs}
+            width={1000}
+            height={1000}
+            className="h-auto w-auto"
+            alt="Curacao"
+          />
         </div>
       </div>
     </footer>

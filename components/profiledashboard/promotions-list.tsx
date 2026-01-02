@@ -4,6 +4,7 @@ import { FiFilter, FiChevronRight } from "react-icons/fi";
 import { FaGift } from "react-icons/fa";
 import React from "react";
 import Image from "next/image";
+import { IMAGES } from "@/lib/assets";
 
 interface Promo {
   title: string;
@@ -60,7 +61,7 @@ const PromotionsList = () => {
           <Image
             width={3000}
             height={1000}
-            src="https://raw.githubusercontent.com/affiliateslots/frontend-cdn/main/images/Speak.png"
+            src={IMAGES.Speak}
             className="h-auto w-auto"
             alt=""
           />
