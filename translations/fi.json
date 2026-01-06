@@ -165,5 +165,223 @@
     "banking": "Pankkiasiat",
     "aml_kyc": "AML- ja KYC-käytäntö",
     "copyright": "© 2025 Canada777 (Kinguin)"
+  },
+  "AboutPage": {
+    "title": "Tietoa Meistä",
+    "welcome": "Tervetuloa onnekkaimpaan kasinoon Amerikan pohjoispuolella!",
+    "paragraph1": "Canada777 on paras vetosi saada monipuolinen pelikokemus, jossa onni on pelin nimi.",
+    "paragraph2": "Yhtenä parhaista online-kasinoista olemme tehneet tehtävämme luoda pelisivusto, joka tarjoaa sinulle täydellisen alustan kokeilla onneasi.",
+    "paragraph3": "Onnenamulettiemme pussi on täynnä parhaita online-pelejä, itse asiassa on uskomaton määrä yli 8000 peliä, joilla on potentiaalia johtaa sinut onnekkaaseen voittosarjaan. Lisäksi on yli 75 pelintarjoajaa, jotka tarjoavat nämä pelit viihteeksesi.",
+    "paragraph4": "Joten onnistu ja tutustu valtavaan pelivalikoimaan, joka palvelee laajaa valikoimaa pelimakuja. Heitä onnekas noppa ja enemmän pöytäpeleissä, pyöritä tiesi kultapyttöön kolikkopeleissä ja muuta pöydät käteiseksi live-jakajapeleissä.",
+    "paragraph5": "Emme ole vain paras online-kasino kanadalaisille pelaajille, Canada777 sallii pelaajien ympäri maailmaa kokeilla onneaan täällä myös ja on saatavilla 10 eri kielellä.",
+    "paragraph6": "Palvellaksemme maailman pelaajia, olemme tehneet useita maksutapoja saataville, jotta voit muuttaa onnesi rahaksi hetkessä.",
+    "paragraph7": "Meillä on onni saada paras tukitiimi, joka on sinua varten 24/7 Live Chatin tai sähköpostin kautta.",
+    "paragraph8": "Joten mene eteenpäin ja selaa sivustoa saadaksesi lisätietoja. Käy UKK-osiossa aloittaaksesi ja saa sitten onnekas tauko ja rekisteröidy muutamassa nopeassa vaiheessa ja tule pelaajaksi ei vain onnekkaimmassa, vaan parhaassa online-kasinossa!"
+  },
+  "FAQPage": {
+    "title": "UKK",
+    "subtitle": "Usein Kysytyt Kysymykset",
+    "q1": "Mikä on Canada777?",
+    "a1": "Olemme nettikasino, jonka pelit tulevat alan tunnetuimmilta tarjoajilta. Valikoimassamme on yli 3100 peliä.",
+    "q2": "Mitä valuuttoja Canada777 hyväksyy?",
+    "a2": "Hyväksymme CAD, USD, GBP ja EUR. Voit myös tallettaa kryptovaluutoilla. Katso maksusivu.",
+    "q3": "Kuka voi pelata Canada777-kasinolla?",
+    "a3": "Pelaajat useimmista maista ovat tervetulleita, mutta tietyt maat (kuten Ranska, Venäjä, UK) on estetty.",
+    "q4": "Onko bonuksilla rajoituksia?",
+    "a4": "Bonuksillamme on omat säännöt ja ehdot. Lue ne huolellisesti ennen hyväksymistä.",
+    "q5": "Miten lunastan bonuksen?",
+    "a5": "1) Mene ohjauspaneeliin, 2) Valitse Talletus, 3) Valitse bonuspaketti, 4) Tee talletus.",
+    "q6": "Mitä ovat kierrätysvaatimukset?",
+    "a6": "Määrittävät, kuinka monta kertaa bonusraha on pelattava läpi ennen kotiutusta. Katso lisätiedot kampanjasivulta.",
+    "q7": "Mikä on tervetuliaisbonus?",
+    "a7": "Bonus, joka annetaan uusille pelaajille heidän ensimmäisen talletuksensa yhteydessä.",
+    "q8": "Mitä jos minulla on ongelma?",
+    "a8": "Tukitiimimme auttaa 24/7 chatin tai sähköpostin (support@Canada777.com) välityksellä.",
+    "q9": "Onko talletuksilla tai kotiutuksilla rajoja?",
+    "a9": "Minimitalletus 15 USD, minimikotiutus 50 USD. Päivittäinen maksimi 4 000 USD.",
+    "q10": "Voinko voittaa oikeaa rahaa?",
+    "a10": "Kyllä, kaikissa peleissä voi voittaa oikeaa rahaa. Voit myös harjoitella demo-tilassa.",
+    "q11": "Miten voin tallettaa tai kotiuttaa?",
+    "a11": "Käytettävissä: Interac, Visa, MasterCard ja kryptovaluutat."
+  },
+  "PrivacyPage": {
+    "title": "Tietosuojakäytäntö",
+    "intro": "Tämä sivu on tarkoitettu yksityisyydestään huolehtiville pelaajille ja tarjoaa varmuuden siitä, että yksityisyytesi säilytetään sekä täydellisen läpinäkyvyyden siitä, mitä tietoja keräämme ja miten niitä käytetään tai ei käytetä. Käsittelemme pelaajiemme tietoja kuin omiamme ja huolehdimme siitä, että korkein mahdollinen yksityisyyden suoja säilyy aina.",
+    "section1": {
+      "title": "1) Kerättävät tiedot",
+      "content": "Rekisteröitymisen yhteydessä sinua pyydetään antamaan tietoja, kuten nimesi, osoitteesi, puhelinnumerosi ja sähköpostiosoitteesi. Nämä tiedot tallennetaan yksinomaan turvallisille palvelimillemme eikä niitä koskaan jaeta kolmansille osapuolille.\n\nRekisteröitymällä palveluihimme vahvistat, että olet lukenut, ymmärtänyt ja hyväksynyt Canada777:n käyttöehdot."
+    },
+    "section2": {
+      "title": "2) Tietojen suojaaminen",
+      "content": "Canada777.com tarkistetaan säännöllisesti haavoittuvuuksien varalta varmistaaksemme, että tietosi ovat mahdollisimman turvassa.\n\nKaikki henkilötiedot säilytetään suojatussa verkossa, ja vain rajattu määrä valtuutettuja henkilöitä voi käyttää tai muokata niitä.\n\nKaikkia annettuja tietoja käsitellään aina täysin luottamuksellisesti.\n\nMaksutiedot salataan uusimmalla SSL-tekniikalla suojataksemme sinua vilpilliseltä tai haitalliselta verkkotoiminnalta.\n\nMaksutietoja ei säilytetä palvelimillamme, vaan ne välitetään turvallisen maksupalveluntarjoajan kautta."
+    },
+    "section3": {
+      "title": "3) Tietojen käyttö",
+      "content": "Käytämme henkilötietojasi ainoastaan vastataksemme tiedusteluihin tai tarjotaksemme tietoja tilistäsi, kuten käytettävissä olevista nostoista tai bonuksista.\n\nSaatamme myös lähettää sinulle säännöllisesti sähköposteja kausittaisista kampanjoista tai tarjouksista."
+    },
+    "section4": {
+      "title": "4) Evästeet",
+      "content": "Käytämme evästeitä (jos sallit ne selaimessasi) parantaaksemme käyttökokemustasi sivustolla. Tämä mahdollistaa mieltymystesi tunnistamisen aiemman toimintasi perusteella ja auttaa meitä kehittämään sivustoa."
+    },
+    "section5": {
+      "title": "5) CAN-SPAM-laki",
+      "content": "CAN-SPAM-laki määrittelee kaupallista sähköpostia koskevat säännöt ja antaa vastaanottajille oikeuden lopettaa viestien vastaanottamisen.\n\nCAN-SPAM-lain noudattamiseksi sitoudumme seuraavaan:\n\n• Mahdollistamme uutiskirjeen peruutuksen jokaisessa sähköpostissa.\n• Sisällytämme yrityksemme fyysisen osoitteen.\n• Valvomme kolmansien osapuolten sähköpostipalveluita.\n• Emme käytä harhaanjohtavia aiheita.\n• Tunnistamme viestit mainoksiksi.\n• Käsittelemme peruutuspyynnöt nopeasti."
+    },
+    "section6": {
+      "title": "6) Turvallisuuskäytäntö",
+      "content": "Canada777 varmistaa pelaajiensa tietojen turvallisuuden käyttämällä uusinta saatavilla olevaa ohjelmistoa. Meillä on asiantunteva tukitiimi valmiina auttamaan kaikissa tilanteissa.\n\nKaikki pelimme tarkastetaan riippumattomasti reiluuden takaamiseksi, ja voitot maksetaan nopeasti.\n\nKäytämme 128-bittistä SSL-salausta varmistaaksemme täysin turvalliset maksut.\n\nAsiakastukemme on käytettävissä 24/7 varmistaakseen miellyttävän pelikokemuksen."
+    }
+  },
+  "ResponsibleGaming": {
+    "title": "Vastuullinen Pelaaminen",
+    "intro1": "Canada777 on sitoutunut vastuulliseen pelaamiseen ja ryhtyy aina tarvittaviin toimenpiteisiin varmistaakseen, että kaikkia pelaajiaan tuetaan tässä asiassa täysimääräisesti.",
+    "intro2": "Varmistamme, että tarjoamamme pelit tuottavat nautintoa kaikille, jotka päättävät pelata, mutta olemme myös tietoisia vastuustamme kaikkia pelaajia kohtaan.",
+    "intro3": "Vaikka ymmärrämme, että monille ihmisille verkossa pelaaminen on harrastus ja viihteen muoto, rahapelaaminen voi myös johtaa joidenkin pelaajien riippuvuuteen ja siihen, että he käyttävät palveluitamme riippuvuuden ylläpitämiseen.",
+    "guidelinesTitle": "Vastuullisen pelaamisen varmistamiseksi suosittelemme seuraavia ohjeita:",
+    "guidelines": {
+      "item1": "Älä pelaa, jos toivut riippuvuudesta tai olet alkoholin tai muiden päihteiden vaikutuksen alaisena.",
+      "item2": "Määritä itsellesi tietty peliaika ja pidä siitä kiinni, voitosta tai tappiosta riippumatta.",
+      "item3": "Älä luota rahapelaamiseen tulonlähteenä tai tappioiden jahtaamisessa.",
+      "item4": "Älä anna rahapelaamisen häiritä muita päivittäisen elämäsi osa-alueita.",
+      "item5": "Aseta itsellesi taloudelliset rajat omien mahdollisuuksiesi mukaan sekä talletuksille että tappioille ennen pelaamisen aloittamista."
+    },
+    "assistanceIntro": "Jos koet jossain vaiheessa pelaamisesi muuttuvan vastuuttomaksi, kasinon isännillämme on useita keinoja auttaa sinua. Voit pyytää seuraavia vaihtoehtoja:",
+    "options": {
+      "a": {
+        "title": "a) Talletusrajat",
+        "description": "Voimme auttaa asettamalla päivittäisiä, viikoittaisia tai kuukausittaisia rajoja, jotta pysyt kulutuksesi hallinnassa. Näitä rajoja voidaan tarkistaa halutessasi."
+      },
+      "b": {
+        "title": "b) Tauko",
+        "description": "Pidä tarvittaessa tauko tililtäsi. Voit pyytää tilisi sulkemista määräajaksi."
+      },
+      "c": {
+        "title": "c) Itse-estäminen",
+        "description": "Jos muut vaihtoehdot eivät ole auttaneet ja tunnet menettäneesi hallinnan, itse-estäminen voi olla paras ratkaisu. Ota yhteyttä yhteen kasinon isännistämme."
+      }
+    }
+  },
+  "AMLKYC": {
+    "title": "AML- ja KYC-käytäntö",
+
+    "section1": {
+      "title": "1) Tarkoitus ja soveltamisala",
+      "p1": "Tässä AML- ja KYC-käytännössä kuvataan toimenpiteet ja valvontakeinot, jotka Canada777 on ottanut käyttöön estääkseen ja havaitakseen rahanpesun (ML), terrorismin rahoituksen (TF) sekä muut taloudelliset rikokset.",
+      "p2": "Käytäntö koskee kaikkia pelaajia, työntekijöitä, edustajia ja kolmansia osapuolia, jotka osallistuvat verkkokasinotoimintaamme.",
+      "list": {
+        "item1": "Rahanpesun vastaisen toimintaryhmän (FATF) suositukset",
+        "item2": "EU:n 5. ja 6. rahanpesudirektiivi (soveltuvin osin)",
+        "item3": "Rahanpesun ja terrorismin rahoituksen estämistä koskeva lainsäädäntö toiminta-alueillamme"
+      }
+    },
+
+    "section2": {
+      "title": "2) Tavoitteet",
+      "list": {
+        "item1": "Varmistaa kaikkien asiakkaiden henkilöllisyys ennen rekisteröitymistä",
+        "item2": "Valvoa tapahtumia epäilyttävän toiminnan havaitsemiseksi",
+        "item3": "Ylläpitää tarkkoja asiakas- ja tapahtumatietoja",
+        "item4": "Kouluttaa henkilöstö tunnistamaan epäilyttävä käyttäytyminen",
+        "item5": "Tehdä yhteistyötä sääntely- ja lainvalvontaviranomaisten kanssa"
+      }
+    },
+
+    "section3": {
+      "title": "3) Asiakkaan tunteminen (KYC)",
+      "sub1": {
+        "title": "3.1 Henkilöllisyyden todentaminen",
+        "list": {
+          "item1": "Virallinen henkilöllisyystodistus valokuvalla",
+          "item2": "Sähkö-, vesi- tai muu lasku tai pankkitiliote (viimeisen kolmen kuukauden ajalta)",
+          "item3": "Todiste maksutavan omistajuudesta"
+        }
+      },
+      "sub2": {
+        "title": "3.2 Tehostettu tuntemisvelvollisuus (EDD)",
+        "list": {
+          "item1": "Yli 2 000 euron (tai vastaavan summan) tapahtumat",
+          "item2": "Korkean riskin lainkäyttöalueet",
+          "item3": "Epäilyttävä tai ristiriitainen käyttäytyminen"
+        },
+        "note": "Tehostetut toimenpiteet voivat sisältää videovarmennuksen, varojen alkuperän tarkastuksia sekä jatkuvaa seurantaa."
+      }
+    },
+
+    "section4": {
+      "title": "4) Riskien arviointi",
+      "content": "Riskien arvioinnissa huomioidaan muun muassa maantieteellinen sijainti, tapahtumien määrä ja tiheys, käytetyt maksutavat sekä käyttäytymismallit."
+    },
+
+    "section5": {
+      "title": "5) Jatkuva seuranta",
+      "content": "Talletuksia ja nostoja seurataan automaattisesti. Merkittyjä tilejä tarkastellaan manuaalisesti, ja ne voidaan jäädyttää tutkinnan ajaksi."
+    },
+
+    "section6": {
+      "title": "6) Epäilyttävän toiminnan raportointi",
+      "content": "Epäilyttävä toiminta raportoidaan rahanpesun raportointivastaavalle (MLRO), joka toimittaa epäilyttävää toimintaa koskevat raportit asianomaiselle rahoitustiedusteluyksikölle. Asiakkaan varoittaminen (tipping-off) on ehdottomasti kielletty."
+    },
+
+    "section7": {
+      "title": "7) Tietojen säilyttäminen",
+      "content": "Kaikki tiedot säilytetään turvallisesti vähintään viiden (5) vuoden ajan, ja ne ovat vain valtuutetun vaatimustenmukaisuushenkilöstön saatavilla."
+    },
+
+    "section8": {
+      "title": "8) PEP-henkilöt ja pakotelistat",
+      "content": "Pelaajat tarkistetaan poliittisesti vaikutusvaltaisten henkilöiden (PEP) ja pakotelistojen perusteella. Korkean riskin henkilöt edellyttävät johdon hyväksyntää ja tehostettua tuntemisvelvollisuutta."
+    },
+
+    "section9": {
+      "title": "9) Koulutus ja tietoisuuden lisääminen",
+      "content": "Kaikki asiaankuuluva henkilöstö saa alku- ja vuosittaisen AML/KYC-koulutuksen."
+    },
+
+    "section10": {
+      "title": "10) Sisäiset valvontakeinot ja auditointi",
+      "content": "MLRO vastaa tämän käytännön noudattamisesta. Sisäiset auditoinnit suoritetaan vuosittain, ja käytäntö tarkistetaan vähintään kerran vuodessa."
+    },
+
+    "section11": {
+      "title": "11) Kurinpitotoimet",
+      "content": "Tämän käytännön noudattamatta jättäminen voi johtaa kurinpitotoimiin, sääntelyseuraamuksiin tai rikosoikeudellisiin toimenpiteisiin."
+    },
+
+    "section12": {
+      "title": "12) Käytännön hyväksyntä",
+      "approvedBy": "Hyväksynyt: Mark Martin, Compliance Officer / MLRO",
+      "effectiveDate": "Voimaantulopäivä: 17.08.2025",
+      "reviewDate": "Seuraava tarkistuspäivä: 17.08.2026"
+    }
+  },
+  "BonusesPage": {
+    "active_bonuses": "Aktiiviset Bonukset",
+    "bonuses_button": "Bonukset",
+    "welcome_bonus": "Tervetuliaisbonus",
+    "weekend_booster": "Viikonlopputehostin",
+    "expires_in_days": "Vanhenee {days} päivässä",
+    "deposit_before": "Talleta ennen",
+    "receive_bonus": "Vastaanota bonus",
+    "bonus_value": "Bonuksen arvo",
+    "wagering_progress": "Kierrätysedistyminen",
+    "wagered": "kierrätetty",
+    "required": "vaaditaan",
+    "potential_win": "Mahdollinen Voitto",
+    "play_now": "Pelaa Nyt"
+  },
+  "AddFunds": {
+    "promoHeader": "Onko sinulla promokoodi?",
+    "promoPlaceholder": "Promokoodi (valinnainen)",
+    "promoButton": "Lisää",
+    "promoInfo": "Etsitkö promokoodia?",
+    "promoLink": "Klikkaa tästä"
+  },
+  "BonusHistory": {
+    "header": "Bonushistoria",
+    "bonusName": "Bonuksen nimi",
+    "status": "Tila",
+    "value": "Arvo",
+    "active": "Aktiivinen",
+    "used": "Käytetty"
   }
 }

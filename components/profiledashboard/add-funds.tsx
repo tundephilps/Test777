@@ -1,9 +1,13 @@
 "use client";
 import React, { useState } from "react";
 
+import { useTranslations } from "next-intl";
+
 const AddFunds = () => {
   const [promoCode, setPromoCode] = useState("");
   const [selectedPayment, setSelectedPayment] = useState("");
+
+  const t = useTranslations("AddFunds");
 
   const paymentMethods = [
     { id: "card", name: "Card", logo: "💳", min: "5 CAD" },
@@ -44,34 +48,34 @@ const AddFunds = () => {
     >
       <div className="w-full bg-[#081a26] rounded-2xl  lg:p-8 p-2 shadow-2xl">
         {/* Promo Code Section */}
-        <div className="mb-8 item-center flex flex-col">
+        <div className="mb-8 flex flex-col items-center">
           <h2 className="text-white text-center mb-4 text-lg">
-            Do you have Promo Code?
+            {t("promoHeader")}
           </h2>
 
-          <div className="flex  mb-2 lg:max-w-lg  px-0 mx-auto">
+          <div className="flex mb-2 lg:max-w-lg px-0 mx-auto">
             <input
               type="text"
-              placeholder="Promo Code (Optional)"
+              placeholder={t("promoPlaceholder")}
               value={promoCode}
               onChange={(e) => setPromoCode(e.target.value)}
-              className="flex-1 bg-slate-800/50 border lg:w-full w-56  border-slate-700 rounded-l-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-red-500 transition-colors"
+              className="flex-1 bg-slate-800/50 border lg:w-full w-56 border-slate-700 rounded-l-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-red-500 transition-colors"
             />
             <button
               onClick={handleAddPromo}
-              className=" bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 lg:text-base text-xs cursor-pointer text-white font-semibold lg:px-8 px-2 py-3 rounded-r-lg transition-colors"
+              className="bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 lg:text-base text-xs cursor-pointer text-white font-semibold lg:px-8 px-2 py-3 rounded-r-lg transition-colors"
             >
-              Add
+              {t("promoButton")}
             </button>
           </div>
 
           <p className="text-slate-400 text-sm text-center">
-            Looking for promo code?{" "}
+            {t("promoInfo")}{" "}
             <a
               href="#"
               className="text-red-500 hover:text-red-400 transition-colors"
             >
-              Click here
+              {t("promoLink")}
             </a>
           </p>
         </div>
@@ -79,7 +83,7 @@ const AddFunds = () => {
         {/* Payment Methods Section */}
         <div>
           <h2 className="text-white text-center mb-6 text-lg">
-            Choose payment method
+            {t("promoHeader")}
           </h2>
 
           <div className="grid lg:grid-cols-4 grid-cols-2 lg:gap-4 gap-2">

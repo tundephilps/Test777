@@ -1,30 +1,34 @@
+"use client";
 import React from "react";
 import { BiTrendingUp } from "react-icons/bi";
 import { FaGift, FaCheckCircle } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 const ActiveBonuses = () => {
+  const t = useTranslations("BonusesPage");
+
   const bonuses = [
     {
       id: 1,
-      name: "Welcome Bonus",
-      status: "Expires in 4 days",
+      name: t("welcome_bonus"),
+      status: t("expires_in_days", { days: 4 }),
       bonusValue: 150,
       wagered: 12,
       wageringProgress: 40,
       potentialWin: 150,
       required: 30,
-      statusBadge: "Deposit before",
+      statusBadge: t("deposit_before"),
     },
     {
       id: 2,
-      name: "Weekend Booster",
-      status: "Expires in 4 days",
+      name: t("weekend_booster"),
+      status: t("expires_in_days", { days: 4 }),
       bonusValue: 150,
       wagered: 75,
       wageringProgress: 75,
       potentialWin: 150,
       required: 30,
-      statusBadge: "Receive bonus",
+      statusBadge: t("receive_bonus"),
     },
   ];
 
@@ -40,10 +44,12 @@ const ActiveBonuses = () => {
             <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
               <FaGift className="text-white text-xl" />
             </div>
-            <h1 className="text-white text-2xl font-bold">Active Bonuses</h1>
+            <h1 className="text-white text-2xl font-bold">
+              {t("active_bonuses")}
+            </h1>
           </div>
           <button className="px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-medium hover:bg-red-700 transition-colors">
-            Bonuses
+            {t("bonuses_button")}
           </button>
         </div>
 
@@ -74,7 +80,9 @@ const ActiveBonuses = () => {
                   <div className="text-3xl font-bold text-white">
                     ${bonus.bonusValue}
                   </div>
-                  <div className="text-slate-400 text-sm mt-1">Bonus value</div>
+                  <div className="text-slate-400 text-sm mt-1">
+                    {t("bonus_value")}
+                  </div>
                 </div>
               </div>
 
@@ -83,7 +91,9 @@ const ActiveBonuses = () => {
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center gap-2 text-slate-300 text-sm">
                     <BiTrendingUp className="text-emerald-500" />
-                    <span className="font-medium">Wagering Progress</span>
+                    <span className="font-medium">
+                      {t("wagering_progress")}
+                    </span>
                   </div>
                   <span className="text-red-500 font-semibold text-sm">
                     {bonus.wageringProgress}%
@@ -100,10 +110,10 @@ const ActiveBonuses = () => {
 
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-slate-400">
-                    ${bonus.wagered}x wagered
+                    ${bonus.wagered}x {t("wagered")}
                   </span>
                   <span className="text-slate-400">
-                    ${bonus.required}x required
+                    ${bonus.required}x {t("required")}
                   </span>
                 </div>
               </div>
@@ -113,14 +123,14 @@ const ActiveBonuses = () => {
                 <div className="flex items-center gap-2">
                   <BiTrendingUp className="text-emerald-500 text-sm" />
                   <span className="text-slate-300 text-sm">
-                    Potential Win:{" "}
+                    {t("potential_win")}:{" "}
                     <span className="text-emerald-400 font-semibold">
                       ${bonus.potentialWin}
                     </span>
                   </span>
                 </div>
                 <button className="px-6 py-2 bg-red-600 text-white rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors shadow-lg shadow-red-600/30">
-                  Play Now
+                  {t("play_now")}
                 </button>
               </div>
             </div>

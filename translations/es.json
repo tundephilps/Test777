@@ -148,5 +148,223 @@
     "banking": "Banca",
     "aml_kyc": "Política AML y KYC",
     "copyright": "© 2025 Canada777 (Kinguin)"
+  },
+  "AboutPage": {
+    "title": "Sobre Nosotros",
+    "welcome": "¡Bienvenido al casino más afortunado al norte de América!",
+    "paragraph1": "Canada777 es tu mejor apuesta para obtener una experiencia de juego completa donde la suerte es el nombre del juego.",
+    "paragraph2": "Como uno de los mejores casinos en línea, hemos hecho nuestra misión crear un sitio de juegos que te ofrezca la plataforma perfecta para probar tu suerte.",
+    "paragraph3": "Nuestra bolsa de amuletos de la suerte está repleta de los mejores juegos en línea, de hecho hay un número increíble de más de 8000 juegos que tienen el potencial de llevarte a una racha ganadora afortunada. Lo que es más, hay más de 75 proveedores de juegos que proporcionan estos juegos para tu entretenimiento.",
+    "paragraph4": "Así que ten suerte y explora la enorme variedad de juegos que atienden a una amplia gama de gustos de juego. Tira los dados de la suerte y más en juegos de mesa, gira tu camino hacia la olla de oro en las tragamonedas y convierte las mesas en efectivo en juegos de dealer en vivo.",
+    "paragraph5": "No solo somos el mejor casino en línea para jugadores canadienses, Canada777 permite a jugadores de todo el mundo probar su suerte aquí también y está disponible en 10 idiomas diferentes.",
+    "paragraph6": "Para atender a un mundo de jugadores, hemos hecho disponibles múltiples métodos de pago para que puedas convertir tu suerte en dinero en poco tiempo.",
+    "paragraph7": "Tenemos la suerte de contar con el mejor equipo de soporte que está ahí para ti las 24 horas del día, los 7 días de la semana a través de Live Chat o correo electrónico.",
+    "paragraph8": "Así que adelante y navega por el sitio para obtener más información. Visita la sección de Preguntas Frecuentes para comenzar y luego obtén un descanso afortunado y regístrate en unos pocos pasos rápidos y conviértete en un jugador en el casino en línea no solo más afortunado, sino también el mejor!"
+  },
+  "FAQPage": {
+    "title": "FAQ",
+    "subtitle": "Preguntas frecuentes",
+    "q1": "¿Qué es Canada777?",
+    "a1": "Somos un casino en línea donde las actividades de juego son organizadas por numerosos proveedores de renombre con más de 3100 juegos. Haz clic aquí para saber más.",
+    "q2": "¿Qué monedas acepta Canada777?",
+    "a2": "Aceptamos CAD, USD, GBP y EUR. Puede depositar en criptomonedas que se convertirán a la moneda de su elección. Consulte la página de pagos.",
+    "q3": "¿Quién puede jugar en Canada777?",
+    "a3": "Disponible para la mayoría de los países, excepto restricciones como Afganistán, Francia, Rusia, Corea del Norte y el Reino Unido.",
+    "q4": "¿Hay restricciones de bonos?",
+    "a4": "Nuestros bonos tienen diferentes términos y condiciones. Léalos detenidamente antes de aceptar o contacte a nuestro equipo de soporte.",
+    "q5": "¿Cómo reclamo un bono?",
+    "a5": "1) Vaya al Panel, 2) Seleccione Depósito, 3) Elija el Paquete de Bonos, 4) Realice su depósito y el bono se agregará automáticamente.",
+    "q6": "¿Qué son los requisitos de apuesta?",
+    "a6": "Especifican cuántas veces deben apostarse los fondos del bono antes de retirar. Verá los requisitos debajo de cada bono en la página de Promociones.",
+    "q7": "¿Qué es un bono de bienvenida?",
+    "a7": "Proporcionan a los nuevos jugadores dinero de bonificación igual a un porcentaje de su depósito inicial para darles una idea de lo que ofrecemos.",
+    "q8": "¿Qué pasa si tengo un problema?",
+    "a8": "Nuestro equipo de soporte está disponible 24/7 a través del chat en vivo o correo electrónico en support@Canada777.com.",
+    "q9": "¿Hay límites de depósito o retiro?",
+    "a9": "Depósito mínimo: US$ 15. Retiro mínimo: US$ 50 con un límite máximo diario de $4,000.",
+    "q10": "¿Puedo ganar dinero real?",
+    "a10": "Absolutamente, todos los juegos permiten ganar premios en efectivo. Puede practicar primero en el modo Demo.",
+    "q11": "¿Cómo puedo depositar o retirar?",
+    "a11": "Métodos disponibles: Interac, Visa, MasterCard y Criptomonedas (BTC, LTC, ETH, TRX, BNB, BUSB)."
+  },
+  "PrivacyPage": {
+    "title": "Política de Privacidad",
+    "intro": "Esta página está dirigida a los jugadores más preocupados por su privacidad y tiene como objetivo garantizar que su información personal sea protegida, proporcionando una divulgación completa de los datos que recopilamos y de cómo se utilizan o no. Tratamos los datos de nuestros jugadores como si fueran propios y tomamos todas las medidas necesarias para mantener el más alto nivel de privacidad en todo momento.",
+    "section1": {
+      "title": "1) Información recopilada",
+      "content": "Al registrarse, se le solicitará información como su nombre, dirección, número de teléfono y correo electrónico. Esta información se almacena únicamente en nuestros servidores seguros y nunca se comparte con terceros.\n\nAl registrarse para utilizar nuestros servicios, usted reconoce que ha leído, comprendido y aceptado los Términos y Condiciones de Canada777."
+    },
+    "section2": {
+      "title": "2) Protección de la información",
+      "content": "Canada777.com se analiza periódicamente en busca de vulnerabilidades para garantizar que su información esté lo más segura posible.\n\nToda la información personal se almacena en una red segura y solo un número limitado de personas autorizadas puede acceder a ella.\n\nToda la información proporcionada se mantiene estrictamente confidencial.\n\nLos datos de pago se cifran mediante tecnología SSL de última generación.\n\nNo se almacena ninguna información de pago en nuestros servidores; se transmite a través de un proveedor de pago seguro."
+    },
+    "section3": {
+      "title": "3) Uso de la información",
+      "content": "Utilizamos su información personal únicamente para responder a consultas o proporcionarle información relacionada con su cuenta, como retiros disponibles o bonos.\n\nTambién podemos enviarle correos electrónicos periódicos sobre promociones u ofertas especiales."
+    },
+    "section4": {
+      "title": "4) Cookies",
+      "content": "Utilizamos cookies (si lo permite en su navegador) para maximizar su experiencia en el sitio. Esto nos permite reconocer preferencias basadas en su actividad previa y mejorar continuamente la funcionalidad del sitio."
+    },
+    "section5": {
+      "title": "5) Ley CAN-SPAM",
+      "content": "La Ley CAN-SPAM establece normas para el correo electrónico comercial y otorga a los destinatarios el derecho a dejar de recibir mensajes.\n\nPara cumplir con la Ley CAN-SPAM, nos comprometemos a:\n\n• Permitir la cancelación de suscripción.\n• Incluir una dirección física válida.\n• Supervisar servicios de marketing por correo electrónico.\n• No utilizar información engañosa.\n• Identificar los mensajes como publicidad.\n• Respetar rápidamente las solicitudes de baja."
+    },
+    "section6": {
+      "title": "6) Política de Seguridad",
+      "content": "Canada777 garantiza la seguridad de la información de sus jugadores mediante el uso de la tecnología más avanzada. Nuestro equipo profesional está disponible para asistirle en todo momento.\n\nTodos nuestros juegos son auditados de forma independiente para garantizar la equidad. Las ganancias se pagan rápidamente gracias a nuestro equipo de cajeros.\n\nUtilizamos cifrado SSL de 128 bits para proteger todas las transacciones.\n\nNuestro servicio de atención al cliente está disponible las 24 horas del día, los 7 días de la semana."
+    }
+  },
+  "ResponsibleGaming": {
+    "title": "Juego Responsable",
+    "intro1": "Canada777 está comprometida con el juego responsable y siempre tomará las medidas necesarias para garantizar un apoyo total a todos sus jugadores en este aspecto.",
+    "intro2": "Nos aseguramos de que los juegos que ofrecemos brinden disfrute a todos los que eligen jugar; sin embargo, también somos conscientes de nuestra responsabilidad hacia todos nuestros jugadores.",
+    "intro3": "Si bien entendemos que para muchas personas el juego en línea es un pasatiempo y una forma de gran entretenimiento, el juego de azar también puede llevar a que algunos jugadores desarrollen una adicción y utilicen nuestros servicios para alimentar dicha adicción.",
+    "guidelinesTitle": "Para garantizar que juegue de manera responsable, sugerimos las siguientes pautas:",
+    "guidelines": {
+      "item1": "No juegue si se está recuperando de una dependencia o si se encuentra bajo la influencia del alcohol u otras sustancias.",
+      "item2": "Establézcase un tiempo de juego determinado y limítese a este, gane o pierda.",
+      "item3": "No dependa del juego como fuente de ingresos ni para recuperar pérdidas.",
+      "item4": "No permita que el juego interfiera con otros aspectos de su vida diaria.",
+      "item5": "Establezca límites dentro de sus posibilidades, tanto para los depósitos como para las pérdidas, antes de comenzar."
+    },
+    "assistanceIntro": "Si en algún momento siente que su forma de jugar se está volviendo irresponsable, nuestros anfitriones del casino tienen varias opciones disponibles para ayudarle. Puede solicitar lo siguiente:",
+    "options": {
+      "a": {
+        "title": "a) Límites de Depósito",
+        "description": "Podemos ayudarle estableciendo límites diarios, semanales o mensuales para garantizar que mantenga el control de sus gastos. Estos límites pueden revisarse si así lo desea."
+      },
+      "b": {
+        "title": "b) Período de Descanso",
+        "description": "Tómese un descanso de su cuenta si lo necesita. Puede solicitar que su cuenta sea suspendida por un período de tiempo específico."
+      },
+      "c": {
+        "title": "c) Autoexclusión",
+        "description": "Si otras alternativas no han ayudado y siente que ha perdido el control, la autoexclusión puede ser la mejor opción. Por favor, hable con uno de nuestros anfitriones."
+      }
+    }
+  },
+  "AMLKYC": {
+    "title": "Política AML y KYC",
+
+    "section1": {
+      "title": "1) Propósito y Alcance",
+      "p1": "Esta Política AML y KYC describe las medidas y controles implementados por Canada777 para prevenir y detectar el blanqueo de capitales (ML), la financiación del terrorismo (FT) y otros delitos financieros.",
+      "p2": "Se aplica a todos los jugadores, empleados, agentes y proveedores de servicios externos que participan en nuestras operaciones de casino en línea.",
+      "list": {
+        "item1": "Recomendaciones del Grupo de Acción Financiera Internacional (GAFI)",
+        "item2": "Directivas AML 5ª y 6ª de la Unión Europea (cuando corresponda)",
+        "item3": "Leyes de prevención del blanqueo de capitales y financiación del terrorismo en nuestras jurisdicciones operativas"
+      }
+    },
+
+    "section2": {
+      "title": "2) Objetivos",
+      "list": {
+        "item1": "Verificar la identidad de todos los clientes antes del registro",
+        "item2": "Supervisar las transacciones para detectar actividades sospechosas",
+        "item3": "Mantener registros precisos de clientes y transacciones",
+        "item4": "Formar al personal para reconocer comportamientos sospechosos",
+        "item5": "Cooperar con las autoridades reguladoras y de aplicación de la ley"
+      }
+    },
+
+    "section3": {
+      "title": "3) Diligencia Debida del Cliente (KYC)",
+      "sub1": {
+        "title": "3.1 Verificación de Identidad",
+        "list": {
+          "item1": "Documento de identidad oficial con fotografía",
+          "item2": "Factura de servicios públicos o extracto bancario (últimos tres meses)",
+          "item3": "Prueba de titularidad del método de pago utilizado"
+        }
+      },
+      "sub2": {
+        "title": "3.2 Diligencia Debida Reforzada (EDD)",
+        "list": {
+          "item1": "Transacciones superiores a 2.000 € o su equivalente",
+          "item2": "Jurisdicciones de alto riesgo",
+          "item3": "Comportamiento sospechoso o inconsistente"
+        },
+        "note": "Las medidas de EDD pueden incluir verificación por vídeo, comprobaciones del origen de los fondos y supervisión continua."
+      }
+    },
+
+    "section4": {
+      "title": "4) Evaluación de Riesgos",
+      "content": "La evaluación de riesgos tiene en cuenta factores como la ubicación geográfica, el volumen y la frecuencia de las transacciones, los métodos de pago utilizados y los patrones de comportamiento."
+    },
+
+    "section5": {
+      "title": "5) Supervisión Continua",
+      "content": "Los depósitos y retiros se supervisan de forma automatizada. Las cuentas marcadas están sujetas a revisiones manuales y pueden ser suspendidas durante las investigaciones."
+    },
+
+    "section6": {
+      "title": "6) Reporte de Actividades Sospechosas",
+      "content": "Las actividades sospechosas se reportan al Responsable de Reportes de Blanqueo de Capitales (MLRO), quien presenta los Reportes de Actividad Sospechosa ante la Unidad de Inteligencia Financiera correspondiente. El aviso al cliente (tipping-off) está estrictamente prohibido."
+    },
+
+    "section7": {
+      "title": "7) Conservación de Registros",
+      "content": "Todos los registros se conservan de forma segura durante al menos cinco (5) años y solo son accesibles para el personal de cumplimiento autorizado."
+    },
+
+    "section8": {
+      "title": "8) PEPs y Listas de Sanciones",
+      "content": "Los jugadores son verificados contra listas de Personas Políticamente Expuestas (PEP) y listas de sanciones. Las personas de alto riesgo requieren aprobación de la alta dirección y diligencia debida reforzada."
+    },
+
+    "section9": {
+      "title": "9) Formación y Concienciación",
+      "content": "Todo el personal relevante recibe formación inicial y anual sobre AML y KYC."
+    },
+
+    "section10": {
+      "title": "10) Controles Internos y Auditoría",
+      "content": "El MLRO es responsable de hacer cumplir esta política. Se realizan auditorías internas anuales y la política se revisa al menos una vez al año."
+    },
+
+    "section11": {
+      "title": "11) Medidas Disciplinarias",
+      "content": "El incumplimiento de esta política puede dar lugar a medidas disciplinarias, sanciones regulatorias o acciones penales."
+    },
+
+    "section12": {
+      "title": "12) Aprobación de la Política",
+      "approvedBy": "Aprobado por: Mark Martin, Responsable de Cumplimiento / MLRO",
+      "effectiveDate": "Fecha de entrada en vigor: 17/08/2025",
+      "reviewDate": "Próxima revisión: 17/08/2026"
+    }
+  },
+  "BonusesPage": {
+    "active_bonuses": "Bonos Activos",
+    "bonuses_button": "Bonos",
+    "welcome_bonus": "Bono de Bienvenida",
+    "weekend_booster": "Impulso de Fin de Semana",
+    "expires_in_days": "Expira en {days} días",
+    "deposit_before": "Depositar antes",
+    "receive_bonus": "Recibir bono",
+    "bonus_value": "Valor del bono",
+    "wagering_progress": "Progreso de Apuesta",
+    "wagered": "apostado",
+    "required": "requerido",
+    "potential_win": "Ganancia Potencial",
+    "play_now": "Jugar Ahora"
+  },
+  "AddFunds": {
+    "promoHeader": "¿Tienes un código promocional?",
+    "promoPlaceholder": "Código promocional (opcional)",
+    "promoButton": "Agregar",
+    "promoInfo": "¿Buscas un código promocional?",
+    "promoLink": "Haz clic aquí"
+  },
+  "BonusHistory": {
+    "header": "Historial de Bonos",
+    "bonusName": "Nombre del Bono",
+    "status": "Estado",
+    "value": "Valor",
+    "active": "Activo",
+    "used": "Usado"
   }
 }

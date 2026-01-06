@@ -165,5 +165,223 @@
     "banking": "Bankowość",
     "aml_kyc": "Polityka AML i KYC",
     "copyright": "© 2025 Canada777 (Kinguin)"
+  },
+  "AboutPage": {
+    "title": "O Nas",
+    "welcome": "Witaj w najszczęśliwszym kasynie na północ od Ameryki!",
+    "paragraph1": "Canada777 to Twój najlepszy zakład na uzyskanie wszechstronnego doświadczenia w grze, gdzie szczęście jest nazwą gry.",
+    "paragraph2": "Jako jedno z najlepszych kasyn online, uczyniliśmy naszą misją stworzenie strony z grami, która oferuje Ci idealną platformę do sprawdzenia szczęścia.",
+    "paragraph3": "Nasza torba szczęśliwych amuletów jest wypełniona najlepszymi grami online, w rzeczywistości jest niewiarygodna liczba ponad 8000 gier, które mają potencjał prowadzenia Cię do szczęśliwej serii wygranych. Co więcej, jest ponad 75 dostawców gier, którzy dostarczają te gry dla Twojej rozrywki.",
+    "paragraph4": "Więc bądź szczęśliwy i odkryj ogromną różnorodność gier, które zaspokajają szeroki zakres gustów graczy. Rzuć szczęśliwymi kośćmi i więcej w grach stołowych, kręć swoją drogę do garnka ze złotem na automatach i zamień stoły na gotówkę w grach z krupierem na żywo.",
+    "paragraph5": "Nie tylko jesteśmy najlepszym kasynem online dla kanadyjskich graczy, Canada777 pozwala graczom z całego świata spróbować szczęścia tutaj również i jest dostępne w 10 różnych językach.",
+    "paragraph6": "Aby zaspokoić świat graczy, udostępniliśmy wiele metod płatności, abyś mógł zamienić swoje szczęście w pieniądze w mgnieniu oka.",
+    "paragraph7": "Mamy szczęście mieć najlepszy zespół wsparcia, który jest dla Ciebie 24/7 przez Live Chat lub email.",
+    "paragraph8": "Więc śmiało przeglądaj stronę po więcej informacji. Odwiedź sekcję FAQ, aby zacząć, a następnie weź szczęśliwą przerwę i zarejestruj się w kilku szybkich krokach i zostań graczem w nie tylko najszczęśliwszym, ale najlepszym kasynie online!"
+  },
+  "FAQPage": {
+    "title": "FAQ",
+    "subtitle": "Najczęściej zadawane pytania",
+    "q1": "Co to jest Canada777?",
+    "a1": "Jesteśmy kasynem online z ponad 3100 grami od renomowanych dostawców. Kliknij tutaj, aby dowiedzieć się więcej.",
+    "q2": "Jakie waluty akceptuje Canada777?",
+    "a2": "Akceptujemy CAD, USD, GBP i EUR. Możesz także wpłacać w kryptowalutach.",
+    "q3": "Kto może grać w Canada777?",
+    "a3": "Dostępne dla większości graczy, z wyłączeniem m.in. Francji, Rosji, Wielkiej Brytanii.",
+    "q4": "Czy są ograniczenia bonusów?",
+    "a4": "Bonusy mają różne regulaminy. Przeczytaj je uważnie przed akceptacją.",
+    "q5": "Jak odebrać bonus?",
+    "a5": "1) Panel, 2) Depozyt, 3) Wybierz pakiet, 4) Dokonaj wpłaty, a bonus zostanie dodany automatycznie.",
+    "q6": "Co to są wymagania obrotu?",
+    "a6": "Określają, ile razy środki bonusowe muszą zostać postawione przed wypłatą.",
+    "q7": "Co to jest bonus powitalny?",
+    "a7": "Procentowa dopłata do pierwszego depozytu dla nowych graczy.",
+    "q8": "Co jeśli mam problem?",
+    "a8": "Nasz zespół wsparcia jest dostępny 24/7 przez czat lub e-mail: support@Canada777.com.",
+    "q9": "Jakie są limity wpłat i wypłat?",
+    "a9": "Min. depozyt: 15 US$. Min. wypłata: 50 US$. Limit dzienny: 4 000 US$.",
+    "q10": "Czy mogę wygrać prawdziwe pieniądze?",
+    "a10": "Tak, wszystkie gry oferują nagrody pieniężne. Dostępny jest też tryb Demo.",
+    "q11": "Jak wpłacić lub wypłacić?",
+    "a11": "Metody: Interac, Visa, MasterCard, Krypto (BTC, LTC, ETH itp.)."
+  },
+  "PrivacyPage": {
+    "title": "Política de Privacidade",
+    "intro": "Esta página destina-se aos jogadores mais preocupados com a sua privacidade e tem como objetivo garantir que a sua informação pessoal será protegida, bem como fornecer total transparência sobre os dados que recolhemos e como estes serão ou não utilizados. Tratamos os dados dos nossos jogadores como se fossem nossos e tomamos todas as medidas necessárias para garantir o mais elevado nível de privacidade pessoal em todos os momentos.",
+    "section1": {
+      "title": "1) Informações recolhidas",
+      "content": "No momento do registo, ser-lhe-á solicitado que forneça informações como nome, morada, número de telefone e endereço de e-mail. Estas informações são armazenadas exclusivamente nos nossos servidores seguros e nunca serão partilhadas com terceiros.\n\nAo registar-se para utilizar os nossos serviços, reconhece que leu, compreendeu e aceitou os Termos e Condições da Canada777."
+    },
+    "section2": {
+      "title": "2) Proteção das informações",
+      "content": "O site Canada777.com é regularmente analisado para detetar vulnerabilidades, garantindo que a sua informação permanece o mais segura possível.\n\nTodas as informações pessoais são armazenadas numa rede segura, à qual apenas um número limitado de pessoas autorizadas tem acesso.\n\nTodas as informações fornecidas são mantidas estritamente confidenciais.\n\nOs dados de pagamento introduzidos são encriptados utilizando a mais recente tecnologia SSL para proteção contra atividades fraudulentas.\n\nNenhuma informação de pagamento é armazenada nos nossos servidores; em vez disso, é transmitida através de um fornecedor de gateway seguro."
+    },
+    "section3": {
+      "title": "3) Utilização das informações",
+      "content": "Utilizamos as suas informações pessoais apenas para responder a pedidos ou fornecer informações relacionadas com a sua conta, como levantamentos disponíveis ou bónus.\n\nPoderemos também enviar-lhe e-mails regularmente sobre promoções sazonais ou ofertas que possam ser do seu interesse."
+    },
+    "section4": {
+      "title": "4) Cookies",
+      "content": "Utilizamos cookies (se permitir no seu navegador) para maximizar a sua experiência ao navegar no site. Isto permite reconhecer preferências com base na sua atividade anterior e melhorar continuamente o desempenho do site."
+    },
+    "section5": {
+      "title": "5) Lei CAN-SPAM",
+      "content": "A Lei CAN-SPAM define normas para e-mails comerciais e concede aos destinatários o direito de interromper o seu envio.\n\nPara cumprir a Lei CAN-SPAM, concordamos em:\n\n• Permitir o cancelamento da subscrição através do link em cada e-mail.\n• Incluir o endereço físico da empresa.\n• Monitorizar serviços de marketing por e-mail de terceiros.\n• Não utilizar assuntos ou endereços enganosos.\n• Identificar mensagens como publicidade.\n• Respeitar rapidamente os pedidos de cancelamento."
+    },
+    "section6": {
+      "title": "6) Política de Segurança",
+      "content": "A Canada777 garante que as informações dos jogadores são mantidas seguras utilizando o software mais atualizado disponível. Contamos com uma equipa de Casino Hosts altamente qualificados para apoiar os jogadores em qualquer situação.\n\nNum mercado online em constante crescimento, confiar num casino online pode ser um desafio. Os nossos valores fundamentais são a honestidade e a integridade, e todos os nossos jogos são auditados de forma independente para garantir oportunidades justas. Os ganhos são pagos rapidamente graças à nossa equipa especializada.\n\nUtilizamos tecnologia de encriptação SSL de 128 bits para garantir transações 100% seguras.\n\nO nosso suporte ao cliente está disponível 24 horas por dia, 7 dias por semana, para garantir a melhor experiência possível."
+    }
+  },
+  "ResponsibleGaming": {
+    "title": "Odpowiedzialna Gra",
+    "intro1": "Canada777 angażuje się w promowanie odpowiedzialnej gry i zawsze podejmuje niezbędne kroki, aby w pełni wspierać wszystkich swoich graczy w tym zakresie.",
+    "intro2": "Dbamy o to, aby oferowane przez nas gry dostarczały rozrywki wszystkim, którzy decydują się na grę, jednocześnie mając świadomość naszej odpowiedzialności wobec wszystkich graczy.",
+    "intro3": "Chociaż rozumiemy, że dla wielu osób gra online jest hobby i formą świetnej rozrywki, hazard może również prowadzić do uzależnienia u niektórych graczy, którzy mogą korzystać z naszych usług w celu podtrzymywania tej zależności.",
+    "guidelinesTitle": "Aby zapewnić odpowiedzialną grę, zalecamy przestrzeganie następujących zasad:",
+    "guidelines": {
+      "item1": "Nie graj, jeśli jesteś w trakcie leczenia lub wychodzisz z uzależnienia albo jeśli znajdujesz się pod wpływem alkoholu lub innych substancji.",
+      "item2": "Ustal określony czas gry i trzymaj się go, niezależnie od tego, czy wygrywasz, czy przegrywasz.",
+      "item3": "Nie traktuj hazardu jako źródła dochodu ani sposobu na odzyskanie poniesionych strat.",
+      "item4": "Nie pozwól, aby hazard zakłócał inne aspekty Twojego codziennego życia.",
+      "item5": "Ustal limity finansowe zgodne z Twoimi możliwościami — zarówno dla wpłat, jak i strat — zanim rozpoczniesz grę."
+    },
+    "assistanceIntro": "Jeżeli w dowolnym momencie uznasz, że Twoje granie staje się nieodpowiedzialne, nasi gospodarze kasyna dysponują kilkoma opcjami, aby Ci pomóc. Możesz poprosić o:",
+    "options": {
+      "a": {
+        "title": "a) Limity wpłat",
+        "description": "Możemy pomóc, ustalając dzienne, tygodniowe lub miesięczne limity, abyś zachował kontrolę nad swoimi wydatkami. Limity te mogą zostać zmienione na Twoje życzenie."
+      },
+      "b": {
+        "title": "b) Okres przerwy",
+        "description": "W razie potrzeby możesz zrobić przerwę od swojego konta. Istnieje możliwość czasowego zawieszenia konta na określony okres."
+      },
+      "c": {
+        "title": "c) Samowykluczenie",
+        "description": "Jeśli inne rozwiązania nie przyniosły efektu i czujesz, że tracisz kontrolę, samowykluczenie może być najlepszą opcją. Skontaktuj się z jednym z naszych gospodarzy."
+      }
+    }
+  },
+  "AMLKYC": {
+    "title": "Polityka AML i KYC",
+
+    "section1": {
+      "title": "1) Cel i zakres",
+      "p1": "Niniejsza polityka AML i KYC opisuje środki i kontrole wdrożone przez Canada777 w celu zapobiegania i wykrywania prania pieniędzy (ML), finansowania terroryzmu (TF) oraz innych przestępstw finansowych.",
+      "p2": "Polityka dotyczy wszystkich graczy, pracowników, agentów oraz zewnętrznych dostawców usług zaangażowanych w działalność naszego kasyna online.",
+      "list": {
+        "item1": "Rekomendacje Financial Action Task Force (FATF)",
+        "item2": "5. i 6. dyrektywy AML UE (jeśli mają zastosowanie)",
+        "item3": "Ustawy o pochodzeniu przestępczym i finansowaniu terroryzmu w naszych jurysdykcjach operacyjnych"
+      }
+    },
+
+    "section2": {
+      "title": "2) Cele",
+      "list": {
+        "item1": "Weryfikacja tożsamości wszystkich klientów przed rozpoczęciem korzystania z usług",
+        "item2": "Monitorowanie transakcji w celu wykrycia podejrzanej aktywności",
+        "item3": "Utrzymywanie dokładnych rejestrów klientów i transakcji",
+        "item4": "Szkolenie personelu w rozpoznawaniu podejrzanych zachowań",
+        "item5": "Współpraca z organami regulacyjnymi i organami ścigania"
+      }
+    },
+
+    "section3": {
+      "title": "3) Poznaj swojego klienta (KYC)",
+      "sub1": {
+        "title": "3.1 Weryfikacja tożsamości",
+        "list": {
+          "item1": "Oficjalny dokument tożsamości ze zdjęciem",
+          "item2": "Rachunek za media lub wyciąg bankowy (ostatnie 3 miesiące)",
+          "item3": "Dowód posiadania metody płatności"
+        }
+      },
+      "sub2": {
+        "title": "3.2 Zwiększona należyta staranność (EDD)",
+        "list": {
+          "item1": "Transakcje powyżej 2 000 € lub równowartość",
+          "item2": "Jurysdykcje wysokiego ryzyka",
+          "item3": "Podejrzane lub niespójne zachowanie"
+        },
+        "note": "Środki EDD mogą obejmować weryfikację wideo, sprawdzanie źródła środków oraz ciągłe monitorowanie."
+      }
+    },
+
+    "section4": {
+      "title": "4) Ocena ryzyka",
+      "content": "Ocena ryzyka uwzględnia lokalizację geograficzną, wolumen i częstotliwość transakcji, używane metody płatności oraz wzorce zachowań."
+    },
+
+    "section5": {
+      "title": "5) Ciągłe monitorowanie",
+      "content": "Wpłaty i wypłaty są monitorowane automatycznie. Oznaczone konta są sprawdzane ręcznie i mogą być zawieszone w trakcie dochodzenia."
+    },
+
+    "section6": {
+      "title": "6) Zgłaszanie podejrzanej aktywności",
+      "content": "Podejrzana aktywność jest zgłaszana do Money Laundering Reporting Officer (MLRO), który przesyła raporty o podejrzanej aktywności (SAR) do właściwej jednostki Financial Intelligence. Informowanie klienta (tipping-off) jest surowo zabronione."
+    },
+
+    "section7": {
+      "title": "7) Przechowywanie dokumentacji",
+      "content": "Wszystkie dokumenty są przechowywane bezpiecznie przez co najmniej pięć (5) lat i dostępne tylko dla upoważnionego personelu ds. zgodności."
+    },
+
+    "section8": {
+      "title": "8) PEP i sankcje",
+      "content": "Gracze są weryfikowani pod kątem list osób politycznie eksponowanych (PEP) oraz list sankcyjnych. Osoby wysokiego ryzyka wymagają zatwierdzenia przez kierownictwo oraz zastosowania EDD."
+    },
+
+    "section9": {
+      "title": "9) Szkolenia i świadomość",
+      "content": "Wszyscy odpowiedni pracownicy otrzymują szkolenia wstępne i roczne w zakresie AML/KYC."
+    },
+
+    "section10": {
+      "title": "10) Kontrole wewnętrzne i audyt",
+      "content": "MLRO nadzoruje przestrzeganie polityki. Audyty wewnętrzne przeprowadzane są corocznie, a polityka jest przeglądana co najmniej raz w roku."
+    },
+
+    "section11": {
+      "title": "11) Środki dyscyplinarne",
+      "content": "Nieprzestrzeganie polityki może skutkować działaniami dyscyplinarnymi, sankcjami regulacyjnymi lub postępowaniem karnym."
+    },
+
+    "section12": {
+      "title": "12) Zatwierdzenie polityki",
+      "approvedBy": "Zatwierdzone przez: Mark Martin, Compliance Officer / MLRO",
+      "effectiveDate": "Data wejścia w życie: 17/08/2025",
+      "reviewDate": "Data następnego przeglądu: 17/08/2026"
+    }
+  },
+  "BonusesPage": {
+    "active_bonuses": "Aktywne Bonusy",
+    "bonuses_button": "Bonusy",
+    "welcome_bonus": "Bonus Powitalny",
+    "weekend_booster": "Wzmacniacz Weekendowy",
+    "expires_in_days": "Wygasa za {days} dni",
+    "deposit_before": "Wpłać przed",
+    "receive_bonus": "Otrzymaj bonus",
+    "bonus_value": "Wartość bonusu",
+    "wagering_progress": "Postęp Obrotu",
+    "wagered": "obrócone",
+    "required": "wymagane",
+    "potential_win": "Potencjalna Wygrana",
+    "play_now": "Graj Teraz"
+  },
+  "AddFunds": {
+    "promoHeader": "Masz kod promocyjny?",
+    "promoPlaceholder": "Kod promocyjny (opcjonalnie)",
+    "promoButton": "Dodaj",
+    "promoInfo": "Szukasz kodu promocyjnego?",
+    "promoLink": "Kliknij tutaj"
+  },
+  "BonusHistory": {
+    "header": "Historia Bonusów",
+    "bonusName": "Nazwa Bonusu",
+    "status": "Status",
+    "value": "Wartość",
+    "active": "Aktywny",
+    "used": "Wykorzystany"
   }
 }

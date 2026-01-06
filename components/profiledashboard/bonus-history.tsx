@@ -1,7 +1,10 @@
+"use client";
 import React, { useState } from "react";
 import { FaGift, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 const BonusHistory = () => {
+  const t = useTranslations("BonusHistory");
   const [currentPage, setCurrentPage] = useState(1);
 
   const bonusHistory = [
@@ -14,18 +17,18 @@ const BonusHistory = () => {
     { name: "Free Spins Pack", status: "used", value: "20 Spins" },
   ];
 
-  const getStatusBadge = (status) => {
+  const getStatusBadge = (status: string) => {
     switch (status) {
       case "active":
         return (
           <span className="inline-flex px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs font-medium border border-yellow-500/30">
-            Active
+            {t("active")}
           </span>
         );
       case "used":
         return (
           <span className="inline-flex px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-medium border border-emerald-500/30">
-            Used
+            {t("used")}
           </span>
         );
       default:
@@ -38,23 +41,27 @@ const BonusHistory = () => {
       className="min-h-screen mt-6 bg-[#0a1f2d] lg:p-6 p-2"
       style={{ fontFamily: "var(--font-bounded)" }}
     >
-      <div className="lg:px-12 px-4 mx-auto">
+      <div className="px-2 mx-auto">
         {/* Header */}
         <div className="flex items-center gap-3 mb-8">
           <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
             <FaGift className="text-white text-xl" />
           </div>
-          <h1 className="text-white text-2xl font-bold">Bonus History</h1>
+          <h1 className="text-white text-2xl font-bold">{t("header")}</h1>
         </div>
 
         {/* Table */}
         <div className="bg-[#0B2231] backdrop-blur-sm rounded-xl border border-slate-700/50 overflow-hidden">
           {/* Table Header */}
           <div className="grid grid-cols-3 gap-4 px-6 py-4 border-b border-slate-700/50">
-            <div className="text-slate-400 text-sm font-medium">Bonus Name</div>
-            <div className="text-slate-400 text-sm font-medium">Status</div>
+            <div className="text-slate-400 text-sm font-medium">
+              {t("bonusName")}
+            </div>
+            <div className="text-slate-400 text-sm font-medium">
+              {t("status")}
+            </div>
             <div className="text-slate-400 text-sm font-medium text-right">
-              Value
+              {t("value")}
             </div>
           </div>
 

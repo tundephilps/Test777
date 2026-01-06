@@ -1,13 +1,13 @@
 const TermsAndConditions = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12 text-gray-700">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">
+    <div className="max-w-6xl mx-auto px-4 py-12 text-gray-300">
+      <h1 className="text-3xl font-bold text-gray-100 mb-8">
         Terms and Conditions
       </h1>
 
       {/* 1 */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-gray-900 mb-3">1. General</h2>
+        <h2 className="text-xl font-semibold text-gray-200 mb-3">1. General</h2>
         <p className="mb-3">
           Before using our website, please read these Terms and Conditions
           carefully. By registering a Player Account with Canada777, you confirm
@@ -26,7 +26,7 @@ const TermsAndConditions = () => {
 
       {/* 2 */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+        <h2 className="text-xl font-semibold text-gray-100 mb-3">
           2. Changes to Terms and Conditions
         </h2>
         <p className="mb-2">
@@ -41,7 +41,7 @@ const TermsAndConditions = () => {
 
       {/* 3 */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+        <h2 className="text-xl font-semibold text-gray-100 mb-3">
           3. Accepted Players
         </h2>
         <p className="mb-3">
@@ -61,7 +61,7 @@ const TermsAndConditions = () => {
 
       {/* 4 */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+        <h2 className="text-xl font-semibold text-gray-100 mb-3">
           4. Accepted Currencies
         </h2>
         <ul className="list-disc list-inside space-y-1">
@@ -74,7 +74,7 @@ const TermsAndConditions = () => {
 
       {/* 5 */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+        <h2 className="text-xl font-semibold text-gray-100 mb-3">
           5. Fees and Taxes
         </h2>
         <p>
@@ -85,7 +85,7 @@ const TermsAndConditions = () => {
 
       {/* 6 */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+        <h2 className="text-xl font-semibold text-gray-100 mb-3">
           6. Availability of Games
         </h2>
         <p className="mb-2">
@@ -97,7 +97,7 @@ const TermsAndConditions = () => {
 
       {/* 7 */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+        <h2 className="text-xl font-semibold text-gray-100 mb-3">
           7. Game Rules
         </h2>
         <p>
@@ -108,7 +108,7 @@ const TermsAndConditions = () => {
 
       {/* 8 */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+        <h2 className="text-xl font-semibold text-gray-100 mb-3">
           8. Disclaimer of Liabilities
         </h2>
         <p className="mb-2">
@@ -123,7 +123,7 @@ const TermsAndConditions = () => {
 
       {/* 9 */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+        <h2 className="text-xl font-semibold text-gray-100 mb-3">
           9. Use of Player Account
         </h2>
         <p className="mb-2">
@@ -138,7 +138,7 @@ const TermsAndConditions = () => {
 
       {/* 10 */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+        <h2 className="text-xl font-semibold text-gray-100 mb-3">
           10. Anti-Fraud Policy
         </h2>
         <p className="mb-2">
@@ -153,7 +153,7 @@ const TermsAndConditions = () => {
 
       {/* 11 */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+        <h2 className="text-xl font-semibold text-gray-100 mb-3">
           11. Depositing
         </h2>
         <p className="mb-2">
@@ -169,7 +169,7 @@ const TermsAndConditions = () => {
 
       {/* 12 */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+        <h2 className="text-xl font-semibold text-gray-100 mb-3">
           12. Withdrawal Policy
         </h2>
         <p className="mb-2">
@@ -184,7 +184,7 @@ const TermsAndConditions = () => {
 
       {/* 13 */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+        <h2 className="text-xl font-semibold text-gray-100 mb-3">
           13. Dormant Accounts
         </h2>
         <p>
@@ -195,7 +195,7 @@ const TermsAndConditions = () => {
 
       {/* 14 */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+        <h2 className="text-xl font-semibold text-gray-100 mb-3">
           14. Refund Policy
         </h2>
         <p>

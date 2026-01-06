@@ -165,5 +165,223 @@
     "banking": "Bank",
     "aml_kyc": "AML- og KYC-policy",
     "copyright": "© 2025 Canada777 (Kinguin)"
+  },
+  "AboutPage": {
+    "title": "Om Oss",
+    "welcome": "Velkommen til det heldigste kasinoet nord for Amerika!",
+    "paragraph1": "Canada777 er ditt beste veddemål for å få en allsidig spillopplevelse hvor flaks er navnet på spillet.",
+    "paragraph2": "Som et av de beste nettkasinoene har vi gjort det til vår misjon å skape et spillnettsted som tilbyr deg den perfekte plattformen for å prøve lykken din.",
+    "paragraph3": "Vår pose med lykkeamuletter er fylt med de beste nettspillene, faktisk er det et utrolig antall på over 8000 spill som har potensial til å lede deg til en heldig vinnerrekke. Dessuten er det over 75 spilleverandører som leverer disse spillene for din underholdning.",
+    "paragraph4": "Så vær heldig og utforsk det enorme utvalget av spill som imøtekommer et bredt spekter av spillsmak. Kast de heldige terningene og mer på bordspill, spinn deg til gullgryta på spilleautomater og forvandl bordene til kontanter i live dealer-spill.",
+    "paragraph5": "Vi er ikke bare det beste nettkasinoet for kanadiske spillere, Canada777 lar spillere fra hele verden prøve lykken sin her også og er tilgjengelig på 10 forskjellige språk.",
+    "paragraph6": "For å imøtekomme en verden av spillere har vi gjort flere betalingsmetoder tilgjengelige slik at du kan forvandle lykken din til penger på kort tid.",
+    "paragraph7": "Vi er heldige nok til å ha det beste støtteteamet som er der for deg 24/7 via Live Chat eller e-post.",
+    "paragraph8": "Så gå videre og bla gjennom nettstedet for mer informasjon. Besøk FAQ-seksjonen for å komme i gang og få deretter en heldig pause og registrer deg i noen få raske trinn og bli en spiller på ikke bare det heldigste, men beste nettkasinoet rundt!"
+  },
+  "FAQPage": {
+    "title": "FAQ",
+    "subtitle": "Ofte stilte spørsmål",
+    "q1": "Hva er Canada777?",
+    "a1": "Vi er et nettkasino med over 3100 spill fra anerkjente leverandører. Klikk her for å lese mer om oss.",
+    "q2": "Hvilke valutaer godtar Canada777?",
+    "a2": "Vi godtar CAD, USD, GBP og EUR, samt innskudd i kryptovaluta. Se betalingssiden.",
+    "q3": "Hvem kan spille hos Canada777?",
+    "a3": "Canada777 er tilgjengelig for de fleste, men spillere fra enkelte land som Frankrike, Russland og Storbritannia er ekskludert.",
+    "q4": "Finnes det bonusrestriksjoner?",
+    "a4": "Våre bonuser har ulike vilkår. Les dem nøye eller kontakt vårt supportteam.",
+    "q5": "Hvordan krever jeg en bonus?",
+    "a5": "1) Gå til dashbordet, 2) Velg innskudd, 3) Velg bonuspakke, 4) Gjør innskudd for automatisk aktivering.",
+    "q6": "Hva er omsetningskrav?",
+    "a6": "Dette spesifiserer hvor mange ganger bonusen må spilles gjennom før uttak er mulig.",
+    "q7": "Hva er en velkomstbonus?",
+    "a7": "Bonuspenger gitt til nye spillere basert på en prosentandel av deres første innskudd.",
+    "q8": "Hva om jeg har en klage?",
+    "a8": "Vårt supportteam er tilgjengelig 24/7 via live chat eller e-post på support@Canada777.com.",
+    "q9": "Finnes det grenser for innskudd og uttak?",
+    "a9": "Minimumsinnskudd er 15 US$. Minimumsuttak er 50 US$ med en daglig grense på 4 000 US$.",
+    "q10": "Kan jeg vinne ekte penger?",
+    "a10": "Ja, alle spill gir mulighet for ekte gevinster. Du kan også øve i demo-modus.",
+    "q11": "Hvordan setter jeg inn penger?",
+    "a11": "Vi tilbyr Interac, Visa, MasterCard og krypto (BTC, LTC, ETH, etc.)."
+  },
+  "PrivacyPage": {
+    "title": "Personvernerklæring",
+    "intro": "Denne siden er ment for den mer personvernbevisste spilleren og skal gi deg trygghet for at ditt personvern blir ivaretatt, samt full åpenhet om hvilken informasjon vi samler inn og hvordan den vil og ikke vil bli brukt. Vi behandler våre spilleres data som om det var våre egne, og vi tar stor forsiktighet for å sikre at høyest mulig nivå av personlig personvern alltid opprettholdes.",
+    "section1": {
+      "title": "1) Innsamlet informasjon",
+      "content": "Når du registrerer deg, vil du bli bedt om å oppgi informasjon som navn, adresse, telefonnummer og e-postadresse. Denne informasjonen lagres utelukkende på våre sikre servere og vil aldri bli delt med tredjeparter.\n\nVed å registrere deg for å bruke våre tjenester, bekrefter du at du har lest, forstått og akseptert Canada777 sine vilkår og betingelser."
+    },
+    "section2": {
+      "title": "2) Beskyttelse av informasjon",
+      "content": "Canada777.com blir jevnlig skannet for sårbarheter for å sikre at informasjonen din er så trygg som mulig.\n\nAll personlig informasjon lagres på et sikkert nettverk, og kun et begrenset antall personer med riktig sikkerhetsklarering har tilgang til eller kan endre denne informasjonen.\n\nAll informasjon som gis, behandles til enhver tid strengt konfidensielt.\n\nAll betalingsinformasjon du oppgir, krypteres ved hjelp av den nyeste SSL-teknologien for å beskytte deg mot ondsinnet eller svindelrelatert internettrafikk.\n\nIngen betalingsinformasjon lagres på våre servere; i stedet sendes den via en sikker betalingsleverandør for maksimal sikkerhet."
+    },
+    "section3": {
+      "title": "3) Bruk av informasjon",
+      "content": "Vi bruker kun din personlige informasjon for å besvare henvendelser eller gi deg informasjon om kontoen din, for eksempel tilgjengelige uttak eller bonuser.\n\nVi kan også sende deg e-poster regelmessig for å informere deg om sesongbaserte kampanjer eller tilbud som du kan ha rett til eller være interessert i."
+    },
+    "section4": {
+      "title": "4) Informasjonskapsler",
+      "content": "Vi bruker informasjonskapsler (dersom du tillater dette i nettleseren din) for å maksimere opplevelsen din når du navigerer på nettstedet. Dette gjør det mulig for nettstedet å gjenkjenne preferanser basert på din tidligere aktivitet mens du spiller hos oss. Dette hjelper oss med å identifisere hva som fungerer godt og hva som ikke gjør det, slik at vi kan forbedre den totale opplevelsen for våre spillere når vi oppdaterer ulike deler av nettstedet."
+    },
+    "section5": {
+      "title": "5) CAN-SPAM-loven",
+      "content": "CAN-SPAM-loven definerer standarder for kommersiell e-post, fastsetter krav til kommersiell kommunikasjon, gir mottakere mulighet til å stoppe e-poster som sendes til dem, og beskriver strenge konsekvenser for brudd.\n\nFor å være i samsvar med CAN-SPAM, forplikter vi oss til følgende:\n\n• Gi brukere mulighet til å melde seg av via lenken nederst i hver e-post.\n• Inkludere den fysiske adressen til vår virksomhet eller hovedkontor.\n• Overvåke tredjeparts e-postmarkedsføringstjenester for samsvar, dersom slike benyttes.\n• Ikke bruke falske eller villedende emnelinjer eller e-postadresser.\n• Identifisere meldingen som reklame på en rimelig måte.\n• Respektere avmeldingsforespørsler raskt."
+    },
+    "section6": {
+      "title": "6) Sikkerhetspolicy",
+      "content": "Canada777 forsikrer at våre spilleres informasjon til enhver tid holdes trygg og sikker ved bruk av den nyeste tilgjengelige programvaren. Vi har et team av høyt kvalifiserte Casino Hosts som står klare til å hjelpe deg og håndtere selv de mest krevende problemene.\n\nI et stadig voksende internettmarked kan det være utfordrende å stole på et nettcasino. Våre grunnverdier hos Canada777 er ærlighet og integritet, og alle våre spill blir uavhengig revidert for å sikre at alle spillere har en rettferdig sjanse til å vinne jackpotter. Takket være vårt profesjonelle kassateam kan vi sikre at gevinster utbetales direkte til kontoen din så raskt som mulig.\n\nVed å implementere den nyeste 128-bit Secure Socket Layer (SSL)-krypteringsteknologien kan Canada777 sikre at alle transaksjoner alltid er 100 % sikre. Sensitiv informasjon overføres trygt over internett til våre sikre servere, beskyttet av den nyeste brannmurteknologien.\n\nVår kundestøtte er noe vi er stolte av, og våre Casino Hosts er tilgjengelige 24/7 for å gjøre opplevelsen din så hyggelig som mulig. Våre verter er opplært innen alle aspekter av casinoet og kan håndtere enhver henvendelse fra start til slutt, og sikrer at du alltid blir behandlet effektivt og profesjonelt."
+    }
+  },
+  "ResponsibleGaming": {
+    "title": "Ansvarlig spilling",
+    "intro1": "Canada777 er dedikert til ansvarlig spilling, og vi vil alltid ta nødvendige tiltak for å sikre full støtte til alle våre spillere.",
+    "intro2": "Vi sørger for at spillene vi tilbyr gir glede til alle som velger å spille, samtidig som vi erkjenner vårt ansvar overfor alle spillere.",
+    "intro3": "Selv om vi forstår at nettkasino er en hobby og en form for underholdning for mange, kan gambling også føre til avhengighet hos enkelte spillere.",
+    "guidelinesTitle": "For å sikre at du spiller ansvarlig, anbefaler vi følgende retningslinjer:",
+    "guidelines": {
+      "item1": "Ikke spill hvis du er i bedring fra en avhengighet eller er påvirket av alkohol eller andre rusmidler.",
+      "item2": "Sett av en bestemt spilletid og hold deg til denne, uansett om du vinner eller taper.",
+      "item3": "Ikke bruk gambling som en inntektskilde eller for å vinne tilbake tap.",
+      "item4": "Ikke la gambling påvirke andre deler av hverdagen din.",
+      "item5": "Sett grenser innenfor dine økonomiske rammer for både innskudd og tap før du begynner."
+    },
+    "assistanceIntro": "Hvis du føler at spillingen din blir uansvarlig, har våre kasinoverter flere alternativer for å hjelpe deg. Du kan be om følgende:",
+    "options": {
+      "a": {
+        "title": "a) Innskuddsgrenser",
+        "description": "Vi kan sette daglige, ukentlige eller månedlige grenser for å sikre at du beholder kontrollen over forbruket ditt."
+      },
+      "b": {
+        "title": "b) Avkjølingsperiode",
+        "description": "Ta en pause fra kontoen din ved behov. Du kan be om midlertidig suspensjon."
+      },
+      "c": {
+        "title": "c) Selvekskludering",
+        "description": "Hvis andre alternativer ikke har fungert, kan selvekskludering være det beste valget. Kontakt en av våre verter."
+      }
+    }
+  },
+  "AMLKYC": {
+    "title": "AML- og KYC-policy",
+
+    "section1": {
+      "title": "1) Formål og omfang",
+      "p1": "Denne AML- og KYC-policyen beskriver tiltak og kontroller som Canada777 har implementert for å forhindre og oppdage hvitvasking av penger (ML), terrorfinansiering (TF) og andre økonomiske lovbrudd.",
+      "p2": "Den gjelder for alle spillere, ansatte, agenter og tredjepartsleverandører som er involvert i våre nettcasinovirksomheter.",
+      "list": {
+        "item1": "Financial Action Task Force (FATF) anbefalinger",
+        "item2": "EU 5. og 6. AML-direktiver (der det er aktuelt)",
+        "item3": "Lover om kriminalitetsproveny og terrorfinansiering i våre driftsjurisdiksjoner"
+      }
+    },
+
+    "section2": {
+      "title": "2) Mål",
+      "list": {
+        "item1": "Verifisere identiteten til alle kunder før onboarding",
+        "item2": "Overvåke transaksjoner for å oppdage mistenkelig aktivitet",
+        "item3": "Opprettholde nøyaktige kunde- og transaksjonsregistre",
+        "item4": "Trene ansatte til å gjenkjenne mistenkelig oppførsel",
+        "item5": "Samarbeide med regulerende myndigheter og politi"
+      }
+    },
+
+    "section3": {
+      "title": "3) Kunn din kunde (KYC)",
+      "sub1": {
+        "title": "3.1 Identitetsverifisering",
+        "list": {
+          "item1": "Offentlig utstedt ID med bilde",
+          "item2": "Faktura fra offentlig tjeneste eller kontoutskrift (siste 3 måneder)",
+          "item3": "Bevis på eierskap av betalingsmetoden"
+        }
+      },
+      "sub2": {
+        "title": "3.2 Forsterket aktsomhet (EDD)",
+        "list": {
+          "item1": "Transaksjoner over €2 000 (eller tilsvarende)",
+          "item2": "Høyrisiko-jurisdiksjoner",
+          "item3": "Mistenkelig eller inkonsekvent oppførsel"
+        },
+        "note": "EDD-tiltak kan inkludere videoverifisering, kontroller av pengenes opprinnelse og kontinuerlig overvåkning."
+      }
+    },
+
+    "section4": {
+      "title": "4) Risikovurdering",
+      "content": "Risikovurdering tar hensyn til geografisk plassering, transaksjonsvolum og frekvens, brukte betalingsmetoder og atferdsmønstre."
+    },
+
+    "section5": {
+      "title": "5) Kontinuerlig overvåkning",
+      "content": "Innskudd og uttak overvåkes automatisk. Merket kontoer gjennomgås manuelt og kan suspenderes under etterforskning."
+    },
+
+    "section6": {
+      "title": "6) Rapportering av mistenkelig aktivitet",
+      "content": "Mistenkelig aktivitet rapporteres til Money Laundering Reporting Officer (MLRO), som sender Suspicious Activity Reports (SARs) til relevant Financial Intelligence Unit. Tipping-off er strengt forbudt."
+    },
+
+    "section7": {
+      "title": "7) Arkivering av opplysninger",
+      "content": "Alle opplysninger oppbevares sikkert i minst fem (5) år og er kun tilgjengelige for autorisert compliance-personell."
+    },
+
+    "section8": {
+      "title": "8) PEP-er og sanksjoner",
+      "content": "Spillere sjekkes mot PEP-lister og sanksjonslister. Høyrisikopersoner krever godkjenning fra ledelsen og forsterket aktsomhet."
+    },
+
+    "section9": {
+      "title": "9) Opplæring og bevisstgjøring",
+      "content": "Alt relevant personale får innledende og årlig AML/KYC-opplæring."
+    },
+
+    "section10": {
+      "title": "10) Internkontroller og revisjon",
+      "content": "MLRO håndhever denne policyen. Internrevisjoner utføres årlig, og policyen gjennomgås minst én gang per år."
+    },
+
+    "section11": {
+      "title": "11) Disiplinære tiltak",
+      "content": "Manglende overholdelse kan føre til disiplinære tiltak, regulatoriske sanksjoner eller strafferettslige prosesser."
+    },
+
+    "section12": {
+      "title": "12) Godkjenning av policy",
+      "approvedBy": "Godkjent av: Mark Martin, Compliance Officer / MLRO",
+      "effectiveDate": "Ikrafttredelsesdato: 17/08/2025",
+      "reviewDate": "Neste gjennomgang: 17/08/2026"
+    }
+  },
+  "BonusesPage": {
+    "active_bonuses": "Aktive Bonuser",
+    "bonuses_button": "Bonuser",
+    "welcome_bonus": "Velkomstbonus",
+    "weekend_booster": "Helgebooster",
+    "expires_in_days": "Utløper om {days} dager",
+    "deposit_before": "Sett inn før",
+    "receive_bonus": "Motta bonus",
+    "bonus_value": "Bonusverdi",
+    "wagering_progress": "Omsetningsfremgang",
+    "wagered": "omsatt",
+    "required": "påkrevd",
+    "potential_win": "Potensiell Gevinst",
+    "play_now": "Spill Nå"
+  },
+  "AddFunds": {
+    "promoHeader": "Har du en kampanjkode?",
+    "promoPlaceholder": "Kampanjkode (valgfritt)",
+    "promoButton": "Legg til",
+    "promoInfo": "Leter du etter kampanjekode?",
+    "promoLink": "Klikk her"
+  },
+  "BonusHistory": {
+    "header": "Bonus Historikk",
+    "bonusName": "Bonusnavn",
+    "status": "Status",
+    "value": "Verdi",
+    "active": "Aktiv",
+    "used": "Brukt"
   }
 }

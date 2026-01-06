@@ -59,7 +59,10 @@ const Footer = () => {
           <h4 className="text-white font-semibold mb-4">{t("information")}</h4>
           <ul className="space-y-2">
             <li>
-              <Link href="/dashboard/terms" className="hover:text-white">
+              <Link
+                href="/dashboard/terms-and-conditions"
+                className="hover:text-white"
+              >
                 {t("terms")}
               </Link>
             </li>
