@@ -1,44 +1,41 @@
+"use client";
 import Image from "next/image";
-import {
-  FaGift,
-  FaCircle,
-  FaDiceFive,
-  FaSkullCrossbones,
-  FaDiceD6,
-  FaGamepad,
-} from "react-icons/fa";
+import { FaCircle, FaGamepad } from "react-icons/fa";
 import { GiCardAceSpades, GiRollingDices } from "react-icons/gi";
 import { PiSpinnerFill } from "react-icons/pi";
 import { IMAGES } from "@/lib/assets";
+import { useTranslations } from "next-intl";
 
 const BonusRules = () => {
+  const t = useTranslations("BonusRules");
+
   const gameContributions = [
     {
-      name: "Slots",
+      name: t("slots"),
       icon: <GiRollingDices />,
       contribution: 100,
       color: "text-red-500",
     },
     {
-      name: "Crash",
-      icon: <FaSkullCrossbones />,
+      name: t("crash"),
+      icon: <FaCircle />,
       contribution: 100,
       color: "text-red-500",
     },
     {
-      name: "Dice",
-      icon: <FaDiceD6 />,
+      name: t("dice"),
+      icon: <GiCardAceSpades />,
       contribution: 100,
       color: "text-red-500",
     },
     {
-      name: "Blackjack",
+      name: t("blackjack"),
       icon: <GiCardAceSpades />,
       contribution: 50,
       color: "text-yellow-500",
     },
     {
-      name: "Roulette",
+      name: t("roulette"),
       icon: <PiSpinnerFill />,
       contribution: 25,
       color: "text-slate-500",
@@ -46,11 +43,11 @@ const BonusRules = () => {
   ];
 
   const termsConditions = [
-    "Minimum deposit of $20 required to activate bonus",
-    "Wagering must be completed within 30 days",
-    "Maximum bet while wagering: $5 per spin",
-    "Bonus winnings capped at $5,000",
-    "One active bonus at a time",
+    t("term1"),
+    t("term2"),
+    t("term3"),
+    t("term4"),
+    t("term5"),
   ];
 
   return (
@@ -67,7 +64,7 @@ const BonusRules = () => {
               className="text-white text-xl"
             />
           </div>
-          <h1 className="text-white text-2xl ">Bonus Rules</h1>
+          <h1 className="text-white text-2xl ">{t("header")}</h1>
         </div>
 
         {/* General Requirements Section */}
@@ -76,19 +73,19 @@ const BonusRules = () => {
             <div className="flex items-center gap-2 mb-4">
               <FaCircle className="text-red-700 text-xs" />
               <h2 className="text-white text-lg font-semibold">
-                General Requirements
+                {t("generalRequirements")}
               </h2>
             </div>
             <div className="flex items-center justify-between">
               <div>
                 <div className="text-slate-400 text-sm mb-1">
-                  Total Multiplier
+                  {t("totalMultiplier")}
                 </div>
-                <div className="text-white text-3xl font-bold">x30</div>
+                <div className="text-white text-3xl font-bold">{t("x30")}</div>
               </div>
               <div className="text-right">
                 <div className="text-slate-400 text-sm mb-1">
-                  Current Progress
+                  {t("currentProgress")}
                 </div>
                 <div className="text-2xl font-bold">
                   <span className="text-red-500">12</span>
@@ -105,11 +102,11 @@ const BonusRules = () => {
           <div className="flex items-center gap-2 mb-4">
             <FaGamepad className="text-red-700" size={28} />
             <h2 className="text-white text-lg font-semibold">
-              Game Contributions
+              {t("gameContributions")}
             </h2>
           </div>
 
-          <div className="  divide-slate-700/50">
+          <div className="divide-slate-700/50">
             {gameContributions.map((game, index) => (
               <div
                 key={index}
@@ -134,7 +131,7 @@ const BonusRules = () => {
           <div className="flex items-center gap-2 mb-4">
             <FaCircle className="text-red-500 text-xs" />
             <h2 className="text-white text-lg font-semibold">
-              Terms & Conditions
+              {t("termsConditions")}
             </h2>
           </div>
 

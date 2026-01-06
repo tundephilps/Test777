@@ -383,5 +383,77 @@
     "value": "Wartość",
     "active": "Aktywny",
     "used": "Wykorzystany"
+  },
+  "BonusRules": {
+    "header": "Zasady bonusu",
+    "generalRequirements": "Wymagania ogólne",
+    "totalMultiplier": "Łączny mnożnik",
+    "x30": "x30",
+    "currentProgress": "Aktualny postęp",
+    "gameContributions": "Wkład gier",
+    "termsConditions": "Warunki i zasady",
+
+    "slots": "Automaty",
+    "crash": "Crash",
+    "dice": "Kości",
+    "blackjack": "Blackjack",
+    "roulette": "Ruletka",
+
+    "term1": "Minimalna wpłata w wysokości 20 USD jest wymagana do aktywacji bonusu",
+    "term2": "Obrót musi zostać ukończony w ciągu 30 dni",
+    "term3": "Maksymalna stawka podczas obrotu: 5 USD za spin",
+    "term4": "Wygrane z bonusu są ograniczone do 5 000 USD",
+    "term5": "Jednocześnie może być aktywny tylko jeden bonus"
+  },
+  "BottomTabs": {
+    "addFunds": "Dodaj środki",
+    "withdrawFunds": "Wypłać środki",
+    "paymentMethods": "Metody płatności",
+    "transactionStatus": "Status transakcji",
+
+    "promotions": "Promocje",
+    "freeSpins": "Darmowe spiny",
+    "activeBonuses": "Aktywne bonusy",
+    "bonusRules": "Zasady bonusu",
+
+    "overview": "Przegląd",
+    "personalDetails": "Dane osobowe",
+    "verification": "Weryfikacja",
+    "responsibleLimits": "Odpowiedzialne limity",
+    "preference": "Preferencje",
+
+    "gameHistory": "Historia gier",
+    "depositHistory": "Historia wpłat",
+    "withdrawalHistory": "Historia wypłat",
+    "bonusHistory": "Historia bonusów",
+    "cashbackLog": "Rejestr cashbacku"
+  },
+  "CashbackLog": {
+    "header": "Historia Cashback",
+    "date": "Data",
+    "percent": "Procent",
+    "amount": "Kwota"
+  },
+  "DepositHistory": {
+    "header": "Historia Depozytów",
+    "date": "Data",
+    "method": "Metoda",
+    "status": "Status",
+    "amount": "Kwota",
+    "status": {
+      "completed": "Zakończono",
+      "inProgress": "W trakcie",
+      "pending": "Oczekuje"
+    }
+  },
+  "FreeSpins": {
+    "header": "Darmowe Obroty",
+    "available": "Dostępne",
+    "total": "Razem",
+    "used": "Użyte",
+    "remaining": "Pozostałe",
+    "play": "Graj",
+    "completed": "Zakończone",
+    "days": "dni"
   }
 }

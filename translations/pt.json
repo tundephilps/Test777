@@ -384,5 +384,77 @@
     "value": "Valor",
     "active": "Ativo",
     "used": "Usado"
+  },
+  "BonusRules": {
+    "header": "Regras do Bónus",
+    "generalRequirements": "Requisitos Gerais",
+    "totalMultiplier": "Multiplicador Total",
+    "x30": "x30",
+    "currentProgress": "Progresso Atual",
+    "gameContributions": "Contribuição dos Jogos",
+    "termsConditions": "Termos e Condições",
+
+    "slots": "Slots",
+    "crash": "Crash",
+    "dice": "Dados",
+    "blackjack": "Blackjack",
+    "roulette": "Roleta",
+
+    "term1": "Depósito mínimo de 20$ necessário para ativar o bónus",
+    "term2": "O rollover deve ser concluído dentro de 30 dias",
+    "term3": "Aposta máxima durante o rollover: 5$ por rodada",
+    "term4": "Os ganhos do bónus são limitados a 5.000$",
+    "term5": "Apenas um bónus ativo é permitido de cada vez"
+  },
+  "BottomTabs": {
+    "addFunds": "Adicionar fundos",
+    "withdrawFunds": "Retirar fundos",
+    "paymentMethods": "Métodos de pagamento",
+    "transactionStatus": "Estado da transação",
+
+    "promotions": "Promoções",
+    "freeSpins": "Rodadas grátis",
+    "activeBonuses": "Bónus ativos",
+    "bonusRules": "Regras do bónus",
+
+    "overview": "Visão geral",
+    "personalDetails": "Detalhes pessoais",
+    "verification": "Verificação",
+    "responsibleLimits": "Limites responsáveis",
+    "preference": "Preferências",
+
+    "gameHistory": "Histórico de jogos",
+    "depositHistory": "Histórico de depósitos",
+    "withdrawalHistory": "Histórico de levantamentos",
+    "bonusHistory": "Histórico de bónus",
+    "cashbackLog": "Registo de cashback"
+  },
+  "CashbackLog": {
+    "header": "Registo de Cashback",
+    "date": "Data",
+    "percent": "Percentagem",
+    "amount": "Montante"
+  },
+  "DepositHistory": {
+    "header": "Histórico de Depósitos",
+    "date": "Data",
+    "method": "Método",
+    "status": "Status",
+    "amount": "Montante",
+    "status": {
+      "completed": "Concluído",
+      "inProgress": "Em Progresso",
+      "pending": "Pendente"
+    }
+  },
+  "FreeSpins": {
+    "header": "Giros Grátis",
+    "available": "Disponíveis",
+    "total": "Total",
+    "used": "Usados",
+    "remaining": "Restantes",
+    "play": "Jogar",
+    "completed": "Concluído",
+    "days": "dias"
   }
 }

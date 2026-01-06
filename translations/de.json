@@ -383,5 +383,77 @@
     "value": "Wert",
     "active": "Aktiv",
     "used": "Verwendet"
+  },
+  "BonusRules": {
+    "header": "Bonusregeln",
+    "generalRequirements": "Allgemeine Anforderungen",
+    "totalMultiplier": "Gesamtmultiplikator",
+    "x30": "x30",
+    "currentProgress": "Aktueller Fortschritt",
+    "gameContributions": "Spielbeiträge",
+    "termsConditions": "Allgemeine Geschäftsbedingungen",
+
+    "slots": "Slots",
+    "crash": "Crash",
+    "dice": "Würfel",
+    "blackjack": "Blackjack",
+    "roulette": "Roulette",
+
+    "term1": "Mindesteinzahlung von 20 $ erforderlich, um den Bonus zu aktivieren",
+    "term2": "Der Umsatz muss innerhalb von 30 Tagen abgeschlossen werden",
+    "term3": "Maximaler Einsatz während des Umsatzes: 5 $ pro Dreh",
+    "term4": "Bonusgewinne sind auf 5.000 $ begrenzt",
+    "term5": "Nur ein aktiver Bonus gleichzeitig"
+  },
+  "BottomTabs": {
+    "addFunds": "Geld einzahlen",
+    "withdrawFunds": "Geld auszahlen",
+    "paymentMethods": "Zahlungsmethoden",
+    "transactionStatus": "Transaktionsstatus",
+
+    "promotions": "Aktionen",
+    "freeSpins": "Freispiele",
+    "activeBonuses": "Aktive Boni",
+    "bonusRules": "Bonusregeln",
+
+    "overview": "Übersicht",
+    "personalDetails": "Persönliche Daten",
+    "verification": "Verifizierung",
+    "responsibleLimits": "Verantwortungsvolle Limits",
+    "preference": "Einstellungen",
+
+    "gameHistory": "Spielverlauf",
+    "depositHistory": "Einzahlungsverlauf",
+    "withdrawalHistory": "Auszahlungsverlauf",
+    "bonusHistory": "Bonusverlauf",
+    "cashbackLog": "Cashback-Protokoll"
+  },
+  "CashbackLog": {
+    "header": "Cashback-Verlauf",
+    "date": "Datum",
+    "percent": "Prozent",
+    "amount": "Betrag"
+  },
+  "DepositHistory": {
+    "header": "Einzahlungsverlauf",
+    "date": "Datum",
+    "method": "Methode",
+    "status": "Status",
+    "amount": "Betrag",
+    "status": {
+      "completed": "Abgeschlossen",
+      "inProgress": "In Bearbeitung",
+      "pending": "Ausstehend"
+    }
+  },
+  "FreeSpins": {
+    "header": "Gratisdrehungen",
+    "available": "Verfügbar",
+    "total": "Gesamt",
+    "used": "Verwendet",
+    "remaining": "Verbleibend",
+    "play": "Spielen",
+    "completed": "Abgeschlossen",
+    "days": "Tage"
   }
 }

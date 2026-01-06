@@ -1,7 +1,9 @@
+import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { FaWallet, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const DepositHistory = () => {
+  const t = useTranslations("DepositHistory");
   const [currentPage, setCurrentPage] = useState(1);
 
   const depositHistory = [
@@ -49,24 +51,24 @@ const DepositHistory = () => {
     },
   ];
 
-  const getStatusBadge = (status) => {
+  const getStatusBadge = (status: string) => {
     switch (status) {
       case "completed":
         return (
           <span className="inline-flex px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full lg:text-xs text-[10px] font-medium border border-emerald-500/30">
-            Completed
+            {t("status.completed")}
           </span>
         );
       case "in-progress":
         return (
           <span className="inline-flex px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full lg:text-xs text-[10px] font-medium border border-orange-500/30">
-            In Progress
+            {t("status.inProgress")}
           </span>
         );
       case "pending":
         return (
           <span className="inline-flex px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full lg:text-xs text-[10px] font-medium border border-yellow-500/30">
-            Pending
+            {t("status.pending")}
           </span>
         );
       default:
@@ -82,18 +84,24 @@ const DepositHistory = () => {
           <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
             <FaWallet className="text-white text-xl" />
           </div>
-          <h1 className="text-white text-2xl font-bold">Deposit History</h1>
+          <h1 className="text-white text-2xl font-bold">{t("header")}</h1>
         </div>
 
         {/* Table */}
         <div className="bg-[#0b2231] backdrop-blur-sm rounded-xl border border-slate-700/50 overflow-hidden">
           {/* Table Header */}
           <div className="grid grid-cols-4 gap-4 px-6 py-4 border-b border-slate-700/50">
-            <div className="text-slate-400 text-sm font-medium">Date</div>
-            <div className="text-slate-400 text-sm font-medium">Method</div>
-            <div className="text-slate-400 text-sm font-medium">Status</div>
+            <div className="text-slate-400 text-sm font-medium">
+              {t("date")}
+            </div>
+            <div className="text-slate-400 text-sm font-medium">
+              {t("method")}
+            </div>
+            <div className="text-slate-400 text-sm font-medium">
+              {t("status")}
+            </div>
             <div className="text-slate-400 text-sm font-medium text-right">
-              Amount
+              {t("amount")}
             </div>
           </div>
 

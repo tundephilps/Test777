@@ -383,5 +383,77 @@
     "value": "Valore",
     "active": "Attivo",
     "used": "Usato"
+  },
+  "BonusRules": {
+    "header": "Regole del bonus",
+    "generalRequirements": "Requisiti generali",
+    "totalMultiplier": "Moltiplicatore totale",
+    "x30": "x30",
+    "currentProgress": "Progresso attuale",
+    "gameContributions": "Contributi dei giochi",
+    "termsConditions": "Termini e condizioni",
+
+    "slots": "Slot",
+    "crash": "Crash",
+    "dice": "Dadi",
+    "blackjack": "Blackjack",
+    "roulette": "Roulette",
+
+    "term1": "È richiesto un deposito minimo di $20 per attivare il bonus",
+    "term2": "I requisiti di puntata devono essere completati entro 30 giorni",
+    "term3": "Puntata massima durante il wagering: $5 per giro",
+    "term4": "Le vincite del bonus sono limitate a $5.000",
+    "term5": "È consentito un solo bonus attivo alla volta"
+  },
+  "BottomTabs": {
+    "addFunds": "Aggiungi fondi",
+    "withdrawFunds": "Preleva fondi",
+    "paymentMethods": "Metodi di pagamento",
+    "transactionStatus": "Stato della transazione",
+
+    "promotions": "Promozioni",
+    "freeSpins": "Giri gratuiti",
+    "activeBonuses": "Bonus attivi",
+    "bonusRules": "Regole del bonus",
+
+    "overview": "Panoramica",
+    "personalDetails": "Dettagli personali",
+    "verification": "Verifica",
+    "responsibleLimits": "Limiti responsabili",
+    "preference": "Preferenze",
+
+    "gameHistory": "Storico giochi",
+    "depositHistory": "Storico depositi",
+    "withdrawalHistory": "Storico prelievi",
+    "bonusHistory": "Storico bonus",
+    "cashbackLog": "Registro cashback"
+  },
+  "CashbackLog": {
+    "header": "Registro Cashback",
+    "date": "Data",
+    "percent": "Percentuale",
+    "amount": "Importo"
+  },
+  "DepositHistory": {
+    "header": "Storico Depositi",
+    "date": "Data",
+    "method": "Metodo",
+    "status": "Stato",
+    "amount": "Importo",
+    "status": {
+      "completed": "Completato",
+      "inProgress": "In Corso",
+      "pending": "In Attesa"
+    }
+  },
+  "FreeSpins": {
+    "header": "Giri Gratuiti",
+    "available": "Disponibili",
+    "total": "Totale",
+    "used": "Usati",
+    "remaining": "Rimanenti",
+    "play": "Gioca",
+    "completed": "Completato",
+    "days": "giorni"
   }
 }

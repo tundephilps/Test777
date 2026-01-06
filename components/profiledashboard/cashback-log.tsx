@@ -1,7 +1,10 @@
+"use client";
 import React, { useState } from "react";
 import { FaUndo, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 const CashbackLog = () => {
+  const t = useTranslations("CashbackLog");
   const [currentPage, setCurrentPage] = useState(1);
 
   const cashbackLog = [
@@ -17,23 +20,27 @@ const CashbackLog = () => {
 
   return (
     <div className="min-h-screen bg-[#0a1f2d] lg:p-6 p-2 mt-6 rounded-md">
-      <div className=" mx-auto">
+      <div className="mx-auto">
         {/* Header */}
         <div className="flex items-center gap-3 mb-8">
           <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
             <FaUndo className="text-white text-xl" />
           </div>
-          <h1 className="text-white text-2xl font-bold">Cashback Log</h1>
+          <h1 className="text-white text-2xl font-bold">{t("header")}</h1>
         </div>
 
         {/* Table */}
         <div className="bg-[#0B2231] backdrop-blur-sm rounded-xl border border-slate-700/50 overflow-hidden">
           {/* Table Header */}
           <div className="grid grid-cols-3 gap-4 px-6 py-4 border-b border-slate-700/50">
-            <div className="text-slate-400 text-sm font-medium">Date</div>
-            <div className="text-slate-400 text-sm font-medium">Percent</div>
+            <div className="text-slate-400 text-sm font-medium">
+              {t("date")}
+            </div>
+            <div className="text-slate-400 text-sm font-medium">
+              {t("percent")}
+            </div>
             <div className="text-slate-400 text-sm font-medium text-right">
-              Amount
+              {t("amount")}
             </div>
           </div>
 

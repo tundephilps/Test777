@@ -383,5 +383,77 @@
     "value": "Verdi",
     "active": "Aktiv",
     "used": "Brukt"
+  },
+  "BonusRules": {
+    "header": "Bonusregler",
+    "generalRequirements": "Generelle krav",
+    "totalMultiplier": "Total multiplikator",
+    "x30": "x30",
+    "currentProgress": "Nåværende fremdrift",
+    "gameContributions": "Spillbidrag",
+    "termsConditions": "Vilkår og betingelser",
+
+    "slots": "Spilleautomater",
+    "crash": "Crash",
+    "dice": "Terninger",
+    "blackjack": "Blackjack",
+    "roulette": "Rulett",
+
+    "term1": "Minimumsinnskudd på $20 kreves for å aktivere bonusen",
+    "term2": "Omsetningskrav må fullføres innen 30 dager",
+    "term3": "Maksimal innsats under omsetning: $5 per spinn",
+    "term4": "Bonusgevinster er begrenset til $5 000",
+    "term5": "Kun én aktiv bonus om gangen"
+  },
+  "BottomTabs": {
+    "addFunds": "Legg til midler",
+    "withdrawFunds": "Ta ut midler",
+    "paymentMethods": "Betalingsmetoder",
+    "transactionStatus": "Transaksjonsstatus",
+
+    "promotions": "Kampanjer",
+    "freeSpins": "Gratis spinn",
+    "activeBonuses": "Aktive bonuser",
+    "bonusRules": "Bonusregler",
+
+    "overview": "Oversikt",
+    "personalDetails": "Personlige detaljer",
+    "verification": "Verifisering",
+    "responsibleLimits": "Ansvarlige grenser",
+    "preference": "Preferanser",
+
+    "gameHistory": "Spillhistorikk",
+    "depositHistory": "Innskuddshistorikk",
+    "withdrawalHistory": "Uttakshistorikk",
+    "bonusHistory": "Bonushistorikk",
+    "cashbackLog": "Cashback-logg"
+  },
+  "CashbackLog": {
+    "header": "Cashback-logg",
+    "date": "Dato",
+    "percent": "Prosent",
+    "amount": "Beløp"
+  },
+  "DepositHistory": {
+    "header": "Innskuddshistorikk",
+    "date": "Dato",
+    "method": "Metode",
+    "status": "Status",
+    "amount": "Beløp",
+    "status": {
+      "completed": "Fullført",
+      "inProgress": "Pågår",
+      "pending": "Venter"
+    }
+  },
+  "FreeSpins": {
+    "header": "Gratis Spinn",
+    "available": "Tilgjengelig",
+    "total": "Totalt",
+    "used": "Brukt",
+    "remaining": "Gjenstående",
+    "play": "Spill",
+    "completed": "Fullført",
+    "days": "dager"
   }
 }

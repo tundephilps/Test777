@@ -1,10 +1,14 @@
+"use client";
 import React from "react";
-import { FaDice, FaPlay, FaClock } from "react-icons/fa";
+import { FaPlay, FaClock } from "react-icons/fa";
 import { GiTwoCoins } from "react-icons/gi";
 import Image from "next/image";
 import { IMAGES } from "@/lib/assets";
+import { useTranslations } from "next-intl";
 
 const FreeSpins = () => {
+  const t = useTranslations("FreeSpins");
+
   const spins = [
     {
       id: 1,
@@ -54,26 +58,26 @@ const FreeSpins = () => {
                 className="text-white text-xl"
               />
             </div>
-            <h1 className="text-white text-2xl font-bold">Free Spins</h1>
+            <h1 className="text-white text-2xl font-bold">{t("header")}</h1>
           </div>
           <button className="px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-medium hover:bg-red-700 transition-colors">
-            36 Avaliable
+            {remainingSpins} {t("available")}
           </button>
         </div>
 
         {/* Header Summary */}
-        <div className="bg-[#ffffff]/10 backdrop-blur-3xl rounded-2xl max-w-md mx-auto mb-8 lg:p-6 p-2 flex justify-around text-center shadow-lg   ">
+        <div className="bg-[#ffffff]/10 backdrop-blur-3xl rounded-2xl max-w-md mx-auto mb-8 lg:p-6 p-2 flex justify-around text-center shadow-lg">
           <div>
-            <p className="text-4xl font-bold text-white">53</p>
-            <p className="text-sm text-gray-400">Total</p>
+            <p className="text-4xl font-bold text-white">{totalSpins}</p>
+            <p className="text-sm text-gray-400">{t("total")}</p>
           </div>
           <div>
-            <p className="text-4xl font-bold text-yellow-400">17</p>
-            <p className="text-sm text-gray-400">Used</p>
+            <p className="text-4xl font-bold text-yellow-400">{usedSpins}</p>
+            <p className="text-sm text-gray-400">{t("used")}</p>
           </div>
           <div>
-            <p className="text-4xl font-bold text-red-700">36</p>
-            <p className="text-sm text-gray-400">Remaining</p>
+            <p className="text-4xl font-bold text-red-700">{remainingSpins}</p>
+            <p className="text-sm text-gray-400">{t("remaining")}</p>
           </div>
         </div>
 
@@ -103,24 +107,27 @@ const FreeSpins = () => {
                 {spin.status === "active" ? (
                   <button className="flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-medium hover:bg-red-700 transition-colors">
                     <FaPlay className="text-xs" />
-                    Play
+                    {t("play")}
                   </button>
                 ) : (
                   <span className="px-4 py-2 bg-slate-700 text-slate-400 rounded-lg text-sm font-medium">
-                    Completed
+                    {t("completed")}
                   </span>
                 )}
               </div>
 
               <div className="flex items-center justify-between mb-3">
                 <div className="text-slate-300 text-sm">
-                  Used: <span className="font-semibold">{spin.used}</span>{" "}
-                  Remaining:{" "}
+                  {t("used")}:{" "}
+                  <span className="font-semibold">{spin.used}</span>{" "}
+                  {t("remaining")}:{" "}
                   <span className="font-semibold">{spin.remaining}</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-400 text-xs">
                   <FaClock className="text-xs" />
-                  <span>{spin.daysLeft} days</span>
+                  <span>
+                    {spin.daysLeft} {t("days")}
+                  </span>
                 </div>
               </div>
 

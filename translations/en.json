@@ -383,5 +383,75 @@
     "value": "Value",
     "active": "Active",
     "used": "Used"
+  },
+  "BonusRules": {
+    "header": "Bonus Rules",
+    "generalRequirements": "General Requirements",
+    "totalMultiplier": "Total Multiplier",
+    "x30": "x30",
+    "currentProgress": "Current Progress",
+    "gameContributions": "Game Contributions",
+    "termsConditions": "Terms & Conditions",
+    "slots": "Slots",
+    "crash": "Crash",
+    "dice": "Dice",
+    "blackjack": "Blackjack",
+    "roulette": "Roulette",
+    "term1": "Minimum deposit of $20 required to activate bonus",
+    "term2": "Wagering must be completed within 30 days",
+    "term3": "Maximum bet while wagering: $5 per spin",
+    "term4": "Bonus winnings capped at $5,000",
+    "term5": "One active bonus at a time"
+  },
+  "BottomTabs": {
+    "addFunds": "Add Funds",
+    "withdrawFunds": "Withdraw Funds",
+    "paymentMethods": "Payment Methods",
+    "transactionStatus": "Transaction Status",
+
+    "promotions": "Promotions",
+    "freeSpins": "Free Spins",
+    "activeBonuses": "Active Bonuses",
+    "bonusRules": "Bonus Rules",
+
+    "overview": "Overview",
+    "personalDetails": "Personal Details",
+    "verification": "Verification",
+    "responsibleLimits": "Responsible Limits",
+    "preference": "Preference",
+
+    "gameHistory": "Game History",
+    "depositHistory": "Deposit History",
+    "withdrawalHistory": "Withdrawal History",
+    "bonusHistory": "Bonus History",
+    "cashbackLog": "Cashback Log"
+  },
+  "CashbackLog": {
+    "header": "Cashback Log",
+    "date": "Date",
+    "percent": "Percent",
+    "amount": "Amount"
+  },
+  "DepositHistory": {
+    "header": "Deposit History",
+    "date": "Date",
+    "method": "Method",
+    "status": "Status",
+    "amount": "Amount",
+    "status": {
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "pending": "Pending"
+    }
+  },
+  "FreeSpins": {
+    "header": "Free Spins",
+    "available": "Available",
+    "total": "Total",
+    "used": "Used",
+    "remaining": "Remaining",
+    "play": "Play",
+    "completed": "Completed",
+    "days": "days"
   }
 }

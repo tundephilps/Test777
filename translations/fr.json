@@ -383,5 +383,77 @@
     "value": "Valeur",
     "active": "Actif",
     "used": "Utilisé"
+  },
+  "BonusRules": {
+    "header": "Règles du bonus",
+    "generalRequirements": "Exigences générales",
+    "totalMultiplier": "Multiplicateur total",
+    "x30": "x30",
+    "currentProgress": "Progression actuelle",
+    "gameContributions": "Contributions des jeux",
+    "termsConditions": "Conditions générales",
+
+    "slots": "Machines à sous",
+    "crash": "Crash",
+    "dice": "Dés",
+    "blackjack": "Blackjack",
+    "roulette": "Roulette",
+
+    "term1": "Un dépôt minimum de 20 $ est requis pour activer le bonus",
+    "term2": "Les exigences de mise doivent être remplies dans un délai de 30 jours",
+    "term3": "Mise maximale pendant le wagering : 5 $ par tour",
+    "term4": "Les gains issus du bonus sont plafonnés à 5 000 $",
+    "term5": "Un seul bonus actif à la fois"
+  },
+  "BottomTabs": {
+    "addFunds": "Ajouter des fonds",
+    "withdrawFunds": "Retirer des fonds",
+    "paymentMethods": "Méthodes de paiement",
+    "transactionStatus": "Statut de la transaction",
+
+    "promotions": "Promotions",
+    "freeSpins": "Tours gratuits",
+    "activeBonuses": "Bonus actifs",
+    "bonusRules": "Règles du bonus",
+
+    "overview": "Aperçu",
+    "personalDetails": "Détails personnels",
+    "verification": "Vérification",
+    "responsibleLimits": "Limites responsables",
+    "preference": "Préférences",
+
+    "gameHistory": "Historique des jeux",
+    "depositHistory": "Historique des dépôts",
+    "withdrawalHistory": "Historique des retraits",
+    "bonusHistory": "Historique des bonus",
+    "cashbackLog": "Journal de cashback"
+  },
+  "CashbackLog": {
+    "header": "Journal de Cashback",
+    "date": "Date",
+    "percent": "Pourcentage",
+    "amount": "Montant"
+  },
+  "DepositHistory": {
+    "header": "Historique des Dépôts",
+    "date": "Date",
+    "method": "Méthode",
+    "status": "Statut",
+    "amount": "Montant",
+    "status": {
+      "completed": "Terminé",
+      "inProgress": "En Cours",
+      "pending": "En Attente"
+    }
+  },
+  "FreeSpins": {
+    "header": "Tours Gratuits",
+    "available": "Disponibles",
+    "total": "Total",
+    "used": "Utilisés",
+    "remaining": "Restants",
+    "play": "Jouer",
+    "completed": "Terminé",
+    "days": "jours"
   }
 }

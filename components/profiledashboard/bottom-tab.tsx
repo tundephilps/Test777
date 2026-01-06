@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 interface BottomTabItem {
   key: string;
@@ -8,30 +8,30 @@ interface BottomTabItem {
 
 const tabMap: Record<string, BottomTabItem[]> = {
   cashier: [
-    { key: "add-funds", label: "Add Funds" },
-    { key: "withdraw", label: "Withdraw Funds" },
-    { key: "payment-methods", label: "Payment Methods" },
-    { key: "transaction-status", label: "Transaction Status" },
+    { key: "add-funds", label: "addFunds" },
+    { key: "withdraw", label: "withdrawFunds" },
+    { key: "payment-methods", label: "paymentMethods" },
+    { key: "transaction-status", label: "transactionStatus" },
   ],
   bonuses: [
-    { key: "promotions", label: "Promotions" },
-    { key: "free-spins", label: "Free Spins" },
-    { key: "active-bonuses", label: "Active Bonuses" },
-    { key: "bonus-rules", label: "Bonus-Rules" },
+    { key: "promotions", label: "promotions" },
+    { key: "free-spins", label: "freeSpins" },
+    { key: "active-bonuses", label: "activeBonuses" },
+    { key: "bonus-rules", label: "bonusRules" },
   ],
   account: [
-    { key: "overview", label: "OverView" },
-    { key: "personal-details", label: "Personal Details" },
-    { key: "verification", label: "Verification" },
-    { key: "responsible-limits", label: "Responsible Limits" },
-    { key: "preference", label: "Preference" },
+    { key: "overview", label: "overview" },
+    { key: "personal-details", label: "personalDetails" },
+    { key: "verification", label: "verification" },
+    { key: "responsible-limits", label: "responsibleLimits" },
+    { key: "preference", label: "preference" },
   ],
   activity: [
-    { key: "game-history", label: "Game History" },
-    { key: "deposit", label: "Deposit History" },
-    { key: "withdrawal-history", label: "Withdrawal History" },
-    { key: "bonus-history", label: "Bonus History" },
-    { key: "cashback-log", label: "Cashback Log" },
+    { key: "game-history", label: "gameHistory" },
+    { key: "deposit", label: "depositHistory" },
+    { key: "withdrawal-history", label: "withdrawalHistory" },
+    { key: "bonus-history", label: "bonusHistory" },
+    { key: "cashback-log", label: "cashbackLog" },
   ],
 };
 
@@ -44,6 +44,7 @@ export default function BottomTabs({
   activeBottom: string;
   onChange: (tab: string) => void;
 }) {
+  const t = useTranslations("BottomTabs");
   const bottomTabs = tabMap[activeTop] || [];
 
   return (
@@ -60,7 +61,7 @@ export default function BottomTabs({
             }
           `}
         >
-          {tab.label}
+          {t(tab.label)}
         </button>
       ))}
     </div>

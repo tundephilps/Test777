@@ -383,5 +383,77 @@
     "value": "Arvo",
     "active": "Aktiivinen",
     "used": "Käytetty"
+  },
+  "BonusRules": {
+    "header": "Bonussäännöt",
+    "generalRequirements": "Yleiset Vaatimukset",
+    "totalMultiplier": "Kokonaiskerroin",
+    "x30": "x30",
+    "currentProgress": "Nykyinen Edistyminen",
+    "gameContributions": "Pelin Osuudet",
+    "termsConditions": "Ehdot",
+
+    "slots": "Kolikkopelit",
+    "crash": "Crash",
+    "dice": "Nopat",
+    "blackjack": "Blackjack",
+    "roulette": "Ruletti",
+
+    "term1": "Vähintään 20 $ talletus vaaditaan bonuksen aktivoimiseksi",
+    "term2": "Kierrätysvaatimus on täytettävä 30 päivän kuluessa",
+    "term3": "Suurin panos kierrätyksen aikana: 5 $ per kierros",
+    "term4": "Bonuksesta saadut voitot on rajoitettu 5 000 dollariin",
+    "term5": "Vain yksi aktiivinen bonus kerrallaan"
+  },
+  "BottomTabs": {
+    "addFunds": "Lisää varoja",
+    "withdrawFunds": "Nosta varoja",
+    "paymentMethods": "Maksutavat",
+    "transactionStatus": "Tapahtuman tila",
+
+    "promotions": "Tarjoukset",
+    "freeSpins": "Ilmaiskierrokset",
+    "activeBonuses": "Aktiiviset bonukset",
+    "bonusRules": "Bonussäännöt",
+
+    "overview": "Yleiskatsaus",
+    "personalDetails": "Henkilötiedot",
+    "verification": "Vahvistus",
+    "responsibleLimits": "Vastuulliset rajat",
+    "preference": "Asetukset",
+
+    "gameHistory": "Pelihistoria",
+    "depositHistory": "Talletushistoria",
+    "withdrawalHistory": "Nostohistoria",
+    "bonusHistory": "Bonushistoria",
+    "cashbackLog": "Cashback-loki"
+  },
+  "CashbackLog": {
+    "header": "Cashback-loki",
+    "date": "Päivämäärä",
+    "percent": "Prosentti",
+    "amount": "Määrä"
+  },
+  "DepositHistory": {
+    "header": "Talletushistoria",
+    "date": "Päivämäärä",
+    "method": "Maksutapa",
+    "status": "Tila",
+    "amount": "Summa",
+    "status": {
+      "completed": "Suoritettu",
+      "inProgress": "Käsittelyssä",
+      "pending": "Odottaa"
+    }
+  },
+  "FreeSpins": {
+    "header": "Ilmaispyöräytykset",
+    "available": "Saatavilla",
+    "total": "Yhteensä",
+    "used": "Käytetyt",
+    "remaining": "Jäljellä",
+    "play": "Pelaa",
+    "completed": "Valmis",
+    "days": "päivää"
   }
 }
