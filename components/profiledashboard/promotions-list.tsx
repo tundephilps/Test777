@@ -5,6 +5,7 @@ import { FaGift } from "react-icons/fa";
 import React from "react";
 import Image from "next/image";
 import { IMAGES } from "@/lib/assets";
+import { useTranslations } from "next-intl";
 
 interface Promo {
   title: string;
@@ -50,6 +51,7 @@ const promotions: Promo[] = [
 ];
 
 const PromotionsList = () => {
+  const t = useTranslations("promotions");
   return (
     <div
       className="bg-[#0a1f2d] mt-6 lg:p-6 p-2 rounded-xl text-white"
@@ -65,11 +67,11 @@ const PromotionsList = () => {
             className="h-auto w-auto"
             alt=""
           />
-          Available Promotions
+          {t("title")}
         </h2>
 
         <button className="flex items-center text-xs gap-2 border border-white/20 px-4 py-2 rounded-lg text-gray-300 hover:bg-white/10 transition">
-          <FiFilter size={18} /> Filter
+          <FiFilter size={18} /> {t("filter")}
         </button>
       </div>
 

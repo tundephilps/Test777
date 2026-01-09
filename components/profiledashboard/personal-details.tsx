@@ -1,7 +1,11 @@
+"use client";
 import React, { useState } from "react";
 import { FaUser, FaPencilAlt, FaChevronDown, FaCalendar } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 const PersonalDetails = () => {
+  const t = useTranslations("PersonalDetailsPage");
+
   const [selectedCountry, setSelectedCountry] = useState("Canada");
   const [isCountryOpen, setIsCountryOpen] = useState(false);
   const [dateOfBirth, setDateOfBirth] = useState("01/01/1990");
@@ -21,10 +25,10 @@ const PersonalDetails = () => {
 
   return (
     <div
-      className=" bg-[#0a1f2d] lg:p-6 p-2 mt-6"
+      className="bg-[#0a1f2d] lg:p-6 p-2 mt-6"
       style={{ fontFamily: "var(--font-bounded)" }}
     >
-      <div className=" mx-auto">
+      <div className="mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-8 mt-6">
           <div className="flex items-center gap-3">
@@ -32,12 +36,12 @@ const PersonalDetails = () => {
               <FaUser className="text-white text-xl" />
             </div>
             <h1 className="text-white lg:text-2xl text-base font-bold">
-              Personal Details
+              {t("title")}
             </h1>
           </div>
           <button className="flex items-center gap-2 px-4 py-2 text-red-500 hover:text-red-400 transition-colors">
             <FaPencilAlt className="text-sm" />
-            <span className="font-medium">Edit</span>
+            <span className="font-medium">{t("edit_button")}</span>
           </button>
         </div>
 
@@ -47,12 +51,13 @@ const PersonalDetails = () => {
             {/* First Name */}
             <div>
               <label className="block text-slate-400 text-sm mb-2">
-                Fast Name
+                {t("first_name")}
               </label>
-              <div className="bg-slate-900/50 rounded-lg px-4 py-3 ">
+              <div className="bg-slate-900/50 rounded-lg px-4 py-3">
                 <input
                   type="text"
                   className="w-full bg-transparent text-white outline-none"
+                  placeholder={t("first_name_placeholder")}
                 />
               </div>
             </div>
@@ -60,34 +65,41 @@ const PersonalDetails = () => {
             {/* Last Name */}
             <div>
               <label className="block text-slate-400 text-sm mb-2">
-                Last Name
+                {t("last_name")}
               </label>
-              <div className="bg-slate-900/50 rounded-lg px-4 py-3 ">
+              <div className="bg-slate-900/50 rounded-lg px-4 py-3">
                 <input
                   type="text"
                   className="w-full bg-transparent text-white outline-none"
+                  placeholder={t("last_name_placeholder")}
                 />
               </div>
             </div>
 
             {/* Email */}
             <div>
-              <label className="block text-slate-400 text-sm mb-2">Email</label>
-              <div className="bg-slate-900/50 rounded-lg px-4 py-3 ">
+              <label className="block text-slate-400 text-sm mb-2">
+                {t("email")}
+              </label>
+              <div className="bg-slate-900/50 rounded-lg px-4 py-3">
                 <input
                   type="email"
                   className="w-full bg-transparent text-white outline-none"
+                  placeholder={t("email_placeholder")}
                 />
               </div>
             </div>
 
             {/* Phone */}
             <div>
-              <label className="block text-slate-400 text-sm mb-2">Phone</label>
-              <div className="bg-slate-900/50 rounded-lg px-4 py-3 ">
+              <label className="block text-slate-400 text-sm mb-2">
+                {t("phone")}
+              </label>
+              <div className="bg-slate-900/50 rounded-lg px-4 py-3">
                 <input
                   type="tel"
                   className="w-full bg-transparent text-white outline-none"
+                  placeholder={t("phone_placeholder")}
                 />
               </div>
             </div>
@@ -95,10 +107,10 @@ const PersonalDetails = () => {
             {/* Country */}
             <div className="relative">
               <label className="block text-slate-400 text-sm mb-2">
-                Country
+                {t("country")}
               </label>
               <div
-                className="bg-slate-900/50 rounded-lg px-4 py-2  flex items-center justify-between cursor-pointer hover:border-slate-600/50 transition-colors"
+                className="bg-slate-900/50 rounded-lg px-4 py-2 flex items-center justify-between cursor-pointer hover:border-slate-600/50 transition-colors"
                 onClick={() => setIsCountryOpen(!isCountryOpen)}
               >
                 <div className="flex items-center gap-3">
@@ -114,7 +126,7 @@ const PersonalDetails = () => {
 
               {/* Dropdown Menu */}
               {isCountryOpen && (
-                <div className="absolute top-full left-0 right-0 mt-2 bg-slate-900 rounded-lg  shadow-xl z-10 max-h-60 overflow-y-auto">
+                <div className="absolute top-full left-0 right-0 mt-2 bg-slate-900 rounded-lg shadow-xl z-10 max-h-60 overflow-y-auto">
                   {countries.map((country) => (
                     <div
                       key={country.name}
@@ -135,9 +147,9 @@ const PersonalDetails = () => {
             {/* Date of Birth */}
             <div>
               <label className="block text-slate-400 text-sm mb-2">
-                Date of Birth
+                {t("date_of_birth")}
               </label>
-              <div className="bg-slate-900/50 rounded-lg px-4 py-3  flex items-center justify-between">
+              <div className="bg-slate-900/50 rounded-lg px-4 py-3 flex items-center justify-between">
                 <input
                   type="date"
                   value=""

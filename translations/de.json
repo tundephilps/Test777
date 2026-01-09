@@ -455,5 +455,116 @@
     "play": "Spielen",
     "completed": "Abgeschlossen",
     "days": "Tage"
+  },
+  "GameHistory": {
+    "title": "Spielverlauf",
+    "date": "Datum",
+    "method": "Methode",
+    "status": "Status",
+    "amount": "Betrag",
+    "win": "Gewinn",
+    "loss": "Verlust"
+  },
+  "ProfileOverview": {
+    "title": "Profilübersicht",
+    "silverMember": "Silbermitglied",
+    "balance": "Guthaben",
+    "level": "Level",
+    "joined": "Beitritt",
+    "wageringProgress": "Wettfortschritt",
+    "wager": "Setze",
+    "moreToReach": "mehr um zu erreichen",
+    "goldTier": "Goldstufe"
+  },
+  "payment": {
+    "header": "Zahlungsmethoden",
+    "savedMethods": " gespeicherte Methoden",
+    "addNew": "Neu hinzufügen"
+  },
+  "PersonalDetailsPage": {
+    "title": "Persönliche Daten",
+    "edit_button": "Bearbeiten",
+    "first_name": "Vorname",
+    "first_name_placeholder": "Geben Sie Ihren Vornamen ein",
+    "last_name": "Nachname",
+    "last_name_placeholder": "Geben Sie Ihren Nachnamen ein",
+    "email": "E-Mail",
+    "email_placeholder": "Geben Sie Ihre E-Mail ein",
+    "phone": "Telefon",
+    "phone_placeholder": "Geben Sie Ihre Telefonnummer ein",
+    "country": "Land",
+    "date_of_birth": "Geburtsdatum"
+  },
+  "preferences": {
+    "title": "Einstellungen",
+    "currency": "Währung",
+    "push": "Push-Benachrichtigungen",
+    "email": "E-Mail-Benachrichtigungen",
+    "sound": "Toneffekte"
+  },
+  "promotions": {
+    "title": "Verfügbare Aktionen",
+    "filter": "Filter"
+  },
+  "ResponsibleLimits": {
+    "title": "Verantwortungsvolle Limits",
+    "dailyDepositLimit": "Tägliches Einzahlungslimit",
+    "editLimits": "Limits bearbeiten",
+    "max": "max",
+    "used": "Verwendet",
+    "remaining": "Verbleibend",
+    "selfExclusion": "Selbstsperre",
+    "takeBreak": "Mach eine Pause vom Spielen",
+    "on": "Ein",
+    "off": "Aus",
+    "infoMessage": "Das Festlegen von Limits hilft Ihnen, die Kontrolle zu behalten. Änderungen an Limits können bis zu 24 Stunden dauern."
+  },
+  "TopTabs": {
+    "cashier": "Kasse",
+    "bonuses": "Boni",
+    "account": "Konto",
+    "activity": "Aktivität"
+  },
+  "TransactionStatus": {
+    "title": "Transaktionsstatus",
+    "subtitle": "Ihre letzten Ein- und Auszahlungen",
+    "filter": "Filtern",
+    "table": {
+      "date": "Datum",
+      "type": "Art",
+      "method": "Methode",
+      "amount": "Betrag",
+      "status": "Status",
+      "reference": "Referenz"
+    }
+  },
+  "Verification": {
+    "mainTitle": "Verifizierung (KYC)",
+    "emailTitle": "E-Mail Verifizierung",
+    "phoneTitle": "Telefon Verifizierung",
+    "idTitle": "Identitätsprüfung",
+    "statusVerified": "Verifiziert",
+    "statusPending": "Ausstehend",
+    "uploadBtn": "Dokument hochladen"
+  },
+  "WithdrawDenial": {
+    "denialMessage": "Sie können kein Geld abheben, da Sie einen aktiven Bonus auf Ihrem Konto haben und die Umsatzbedingungen noch nicht erfüllt haben.",
+    "wagerRequired": "Umsatz erforderlich",
+    "cashBalance": "Echtgeld-Guthaben",
+    "bonusBalance": "Bonus-Guthaben",
+    "totalBalance": "Gesamtguthaben",
+    "statusLabel": "Status",
+    "statusWagering": "Umsatz läuft",
+    "cancelBtn": "Abbrechen"
+  },
+  "History": {
+    "withdrawalTitle": "Auszahlungshistorie",
+    "colDate": "Datum",
+    "colMethod": "Methode",
+    "colStatus": "Status",
+    "colAmount": "Betrag",
+    "statusCompleted": "Abgeschlossen",
+    "statusInProgress": "In Bearbeitung",
+    "statusPending": "Ausstehend"
   }
 }

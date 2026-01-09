@@ -456,5 +456,116 @@
     "play": "Jogar",
     "completed": "Concluído",
     "days": "dias"
+  },
+  "GameHistory": {
+    "title": "Histórico de Jogo",
+    "date": "Data",
+    "method": "Método",
+    "status": "Status",
+    "amount": "Valor",
+    "win": "Vitória",
+    "loss": "Derrota"
+  },
+  "ProfileOverview": {
+    "title": "Visão Geral do Perfil",
+    "silverMember": "Membro Prata",
+    "balance": "Saldo",
+    "level": "Nível",
+    "joined": "Entrou",
+    "wageringProgress": "Progresso de aposta",
+    "wager": "Aposte",
+    "moreToReach": "restantes para alcançar",
+    "goldTier": "Nível Ouro"
+  },
+  "payment": {
+    "header": "Métodos de pagamento",
+    "savedMethods": "métodos guardados",
+    "addNew": "Adicionar novo"
+  },
+  "PersonalDetailsPage": {
+    "title": "Detalhes Pessoais",
+    "edit_button": "Editar",
+    "first_name": "Nome",
+    "first_name_placeholder": "Digite seu nome",
+    "last_name": "Sobrenome",
+    "last_name_placeholder": "Digite seu sobrenome",
+    "email": "E-mail",
+    "email_placeholder": "Digite seu e-mail",
+    "phone": "Telefone",
+    "phone_placeholder": "Digite seu número de telefone",
+    "country": "País",
+    "date_of_birth": "Data de Nascimento"
+  },
+  "preferences": {
+    "title": "Preferências",
+    "currency": "Moeda",
+    "push": "Notificações Push",
+    "email": "Notificações por e-mail",
+    "sound": "Efeitos sonoros"
+  },
+  "promotions": {
+    "title": "Promoções disponíveis",
+    "filter": "Filtro"
+  },
+  "ResponsibleLimits": {
+    "title": "Ograniczenia odpowiedzialnej gry",
+    "dailyDepositLimit": "Dzienne ograniczenie depozytów",
+    "editLimits": "Edytuj limity",
+    "max": "maks",
+    "used": "Wykorzystano",
+    "remaining": "Pozostało",
+    "selfExclusion": "Samowykluczenie",
+    "takeBreak": "Zrób przerwę od gry",
+    "on": "Włączone",
+    "off": "Wyłączone",
+    "infoMessage": "Ustalanie limitów pomaga zachować kontrolę. Zmiany limitów mogą wymagać do 24 godzin na aktywację."
+  },
+  "TopTabs": {
+    "cashier": "Caixa",
+    "bonuses": "Bónus",
+    "account": "Conta",
+    "activity": "Atividade"
+  },
+  "TransactionStatus": {
+    "title": "Status da Transação",
+    "subtitle": "Seus depósitos e saques recentes",
+    "filter": "Filtrar",
+    "table": {
+      "date": "Data",
+      "type": "Tipo",
+      "method": "Método",
+      "amount": "Valor",
+      "status": "Status",
+      "reference": "Referência"
+    }
+  },
+  "Verification": {
+    "mainTitle": "Verificação (KYC)",
+    "emailTitle": "Verificação de E-mail",
+    "phoneTitle": "Verificação de Telefone",
+    "idTitle": "Verificação de Identidade",
+    "statusVerified": "Verificado",
+    "statusPending": "Pendente",
+    "uploadBtn": "Carregar Documento"
+  },
+  "WithdrawDenial": {
+    "denialMessage": "Não pode levantar dinheiro pois tem um bónus ativo na sua conta e não cumpriu o requisito de apostas.",
+    "wagerRequired": "Aposta necessária",
+    "cashBalance": "Saldo em dinheiro",
+    "bonusBalance": "Saldo de bónus",
+    "totalBalance": "Saldo total",
+    "statusLabel": "Estado",
+    "statusWagering": "Apostando",
+    "cancelBtn": "Cancelar"
+  },
+  "History": {
+    "withdrawalTitle": "Histórico de Levantamentos",
+    "colDate": "Data",
+    "colMethod": "Método",
+    "colStatus": "Estado",
+    "colAmount": "Valor",
+    "statusCompleted": "Concluído",
+    "statusInProgress": "Em progresso",
+    "statusPending": "Pendente"
   }
 }

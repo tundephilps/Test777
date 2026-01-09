@@ -455,5 +455,116 @@
     "play": "Spill",
     "completed": "Fullført",
     "days": "dager"
+  },
+  "GameHistory": {
+    "title": "Spillhistorikk",
+    "date": "Dato",
+    "method": "Metode",
+    "status": "Status",
+    "amount": "Beløp",
+    "win": "Vinn",
+    "loss": "Tap"
+  },
+  "ProfileOverview": {
+    "title": "Profiloversikt",
+    "silverMember": "Sølvmedlem",
+    "balance": "Saldo",
+    "level": "Nivå",
+    "joined": "Ble med",
+    "wageringProgress": "Spillfremdrift",
+    "wager": "Spill",
+    "moreToReach": "mer for å nå",
+    "goldTier": "Gullnivå"
+  },
+  "payment": {
+    "header": "Betalingsmetoder",
+    "savedMethods": "lagrede metoder",
+    "addNew": "Legg til ny"
+  },
+  "PersonalDetailsPage": {
+    "title": "Personlige Detaljer",
+    "edit_button": "Rediger",
+    "first_name": "Fornavn",
+    "first_name_placeholder": "Skriv inn fornavnet ditt",
+    "last_name": "Etternavn",
+    "last_name_placeholder": "Skriv inn etternavnet ditt",
+    "email": "E-post",
+    "email_placeholder": "Skriv inn e-postadressen din",
+    "phone": "Telefon",
+    "phone_placeholder": "Skriv inn telefonnummeret ditt",
+    "country": "Land",
+    "date_of_birth": "Fødselsdato"
+  },
+  "preferences": {
+    "title": "Innstillinger",
+    "currency": "Valuta",
+    "push": "Push-varsler",
+    "email": "E-postvarsler",
+    "sound": "Lydeffekter"
+  },
+  "promotions": {
+    "title": "Tilgjengelige kampanjer",
+    "filter": "Filter"
+  },
+  "ResponsibleLimits": {
+    "title": "Limiti Responsabili",
+    "dailyDepositLimit": "Limite di deposito giornaliero",
+    "editLimits": "Modifica limiti",
+    "max": "max",
+    "used": "Utilizzato",
+    "remaining": "Rimanente",
+    "selfExclusion": "Autoesclusione",
+    "takeBreak": "Prenditi una pausa dal gioco",
+    "on": "Attivo",
+    "off": "Disattivo",
+    "infoMessage": "Impostare limiti ti aiuta a mantenere il controllo. Le modifiche ai limiti possono richiedere fino a 24 ore per avere effetto."
+  },
+  "TopTabs": {
+    "cashier": "Kasse",
+    "bonuses": "Bonuser",
+    "account": "Konto",
+    "activity": "Aktivitet"
+  },
+  "TransactionStatus": {
+    "title": "Transaksjonsstatus",
+    "subtitle": "Dine siste innskudd og uttak",
+    "filter": "Filtrer",
+    "table": {
+      "date": "Dato",
+      "type": "Type",
+      "method": "Metode",
+      "amount": "Beløp",
+      "status": "Status",
+      "reference": "Referanse"
+    }
+  },
+  "Verification": {
+    "mainTitle": "Verifisering (KYC)",
+    "emailTitle": "E-postverifisering",
+    "phoneTitle": "Telefonverifisering",
+    "idTitle": "ID-verifisering",
+    "statusVerified": "Verifisert",
+    "statusPending": "Venter",
+    "uploadBtn": "Last opp dokument"
+  },
+  "WithdrawDenial": {
+    "denialMessage": "Du kan ikke ta ut penger ettersom du har en aktiv bonus på kontoen din og du ikke har oppfylt omsetningskravet.",
+    "wagerRequired": "Omsetningskrav",
+    "cashBalance": "Kontantbeholdning",
+    "bonusBalance": "Bonussaldo",
+    "totalBalance": "Total saldo",
+    "statusLabel": "Status",
+    "statusWagering": "Omsetning pågår",
+    "cancelBtn": "Avbryt"
+  },
+  "History": {
+    "withdrawalTitle": "Uttakshistorikk",
+    "colDate": "Dato",
+    "colMethod": "Metode",
+    "colStatus": "Status",
+    "colAmount": "Beløp",
+    "statusCompleted": "Fullført",
+    "statusInProgress": "Under behandling",
+    "statusPending": "Venter"
   }
 }

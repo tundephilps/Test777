@@ -1,4 +1,5 @@
 import { IMAGES } from "@/lib/assets";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React, { useState } from "react";
 import { FaFilter, FaArrowDown, FaArrowUp, FaCoins } from "react-icons/fa";
@@ -7,6 +8,8 @@ import { MdPending } from "react-icons/md";
 
 const TransactionStatus = () => {
   const [currentPage, setCurrentPage] = useState(1);
+
+  const t = useTranslations("TransactionStatus");
 
   const transactions = [
     {
@@ -123,17 +126,17 @@ const TransactionStatus = () => {
             </div>
             <div>
               <h1 className="text-lg sm:text-xl font-bold text-white">
-                Transaction Status
+                {t("title")}
               </h1>
               <p className="text-gray-400 text-xs sm:text-sm mt-1">
-                Your recent deposits and withdrawals
+                {t("subtitle")}
               </p>
             </div>
           </div>
 
           <button className="flex items-center gap-2 px-3 sm:px-4 py-2 border border-gray-700 text-xs rounded-lg hover:bg-[#1a3244] transition-colors self-end sm:self-auto">
             <FaFilter className="text-gray-400" />
-            <span className="text-gray-300">Filter</span>
+            <span className="text-gray-300"> {t("filter")}</span>
           </button>
         </div>
 
@@ -141,12 +144,24 @@ const TransactionStatus = () => {
         <div className="hidden lg:block bg-[#0d1f2d] rounded-xl text-xs border border-gray-800 overflow-hidden">
           {/* Table Header */}
           <div className="grid grid-cols-6 gap-4 px-6 py-4 bg-[#0a1929] border-b border-gray-800">
-            <div className="text-gray-400 text-sm font-medium">Date</div>
-            <div className="text-gray-400 text-sm font-medium">Type</div>
-            <div className="text-gray-400 text-sm font-medium">Method</div>
-            <div className="text-gray-400 text-sm font-medium">Amount</div>
-            <div className="text-gray-400 text-sm font-medium">Status</div>
-            <div className="text-gray-400 text-sm font-medium">Reference</div>
+            <div className="text-gray-400 text-sm font-medium">
+              {t("table.date")}
+            </div>
+            <div className="text-gray-400 text-sm font-medium">
+              {t("table.type")}
+            </div>
+            <div className="text-gray-400 text-sm font-medium">
+              {t("table.method")}
+            </div>
+            <div className="text-gray-400 text-sm font-medium">
+              {t("table.amount")}
+            </div>
+            <div className="text-gray-400 text-sm font-medium">
+              {t("table.status")}
+            </div>
+            <div className="text-gray-400 text-sm font-medium">
+              {t("table.reference")}
+            </div>
           </div>
 
           {/* Table Body */}

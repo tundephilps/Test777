@@ -4,27 +4,13 @@ import { useState } from "react";
 import { FaGift, FaUser } from "react-icons/fa";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { MdOutlineLocalActivity } from "react-icons/md";
+import { useTranslations } from "next-intl";
 
 interface TabItem {
   key: string;
   label: string;
   icon: React.ReactNode;
 }
-
-const topTabs: TabItem[] = [
-  {
-    key: "cashier",
-    label: "Cashier",
-    icon: <RiMoneyDollarCircleFill size={16} />,
-  },
-  { key: "bonuses", label: "Bonuses", icon: <FaGift size={16} /> },
-  { key: "account", label: "Account", icon: <FaUser size={16} /> },
-  {
-    key: "activity",
-    label: "Activity",
-    icon: <MdOutlineLocalActivity size={16} />,
-  },
-];
 
 export default function TopTabs({
   active,
@@ -33,6 +19,23 @@ export default function TopTabs({
   active: string;
   onChange: (tab: string) => void;
 }) {
+  const t = useTranslations("TopTabs");
+
+  const topTabs: TabItem[] = [
+    {
+      key: "cashier",
+      label: t("cashier"),
+      icon: <RiMoneyDollarCircleFill size={16} />,
+    },
+    { key: "bonuses", label: t("bonuses"), icon: <FaGift size={16} /> },
+    { key: "account", label: t("account"), icon: <FaUser size={16} /> },
+    {
+      key: "activity",
+      label: t("activity"),
+      icon: <MdOutlineLocalActivity size={16} />,
+    },
+  ];
+
   return (
     <div className="flex lg:gap-3 gap-1 py-4 rounded-xl">
       {topTabs.map((tab) => (

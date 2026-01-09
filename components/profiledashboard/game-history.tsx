@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import {
   FaGamepad,
   FaDice,
@@ -8,57 +8,44 @@ import {
   FaRocket,
 } from "react-icons/fa";
 import { GiRollingDices, GiCardAceSpades } from "react-icons/gi";
+import { useTranslations } from "next-intl";
 
 const GameHistory = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const t = useTranslations("GameHistory");
 
   const gameHistory = [
     {
       date: "Dec 1, 2025",
-      method: "Slot",
+      method: t("slot"),
       icon: <GiCardAceSpades />,
       status: "win",
       amount: "+$32.55",
     },
     {
       date: "Dec 1, 2025",
-      method: "Slot",
+      method: t("slot"),
       icon: <GiCardAceSpades />,
       status: "loss",
       amount: "+$32.55",
     },
     {
       date: "Dec 1, 2025",
-      method: "Dice",
+      method: t("dice"),
       icon: <FaDice />,
       status: "win",
       amount: "+$32.55",
     },
     {
       date: "Dec 1, 2025",
-      method: "Slot",
+      method: t("slot"),
       icon: <GiCardAceSpades />,
       status: "win",
       amount: "+$32.55",
     },
     {
       date: "Dec 1, 2025",
-      method: "Crash",
+      method: t("crash"),
       icon: <FaRocket />,
-      status: "loss",
-      amount: "+$32.55",
-    },
-    {
-      date: "Dec 1, 2025",
-      method: "Slot",
-      icon: <GiCardAceSpades />,
-      status: "win",
-      amount: "+$32.55",
-    },
-    {
-      date: "Dec 1, 2025",
-      method: "Slot",
-      icon: <GiCardAceSpades />,
       status: "loss",
       amount: "+$32.55",
     },
@@ -72,18 +59,24 @@ const GameHistory = () => {
           <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
             <FaGamepad className="text-white text-xl" />
           </div>
-          <h1 className="text-white text-2xl font-bold">Game History</h1>
+          <h1 className="text-white text-2xl font-bold">{t("title")}</h1>
         </div>
 
         {/* Table */}
         <div className="bg-[#0B2231] backdrop-blur-sm rounded-xl border border-slate-700/50 overflow-hidden">
           {/* Table Header */}
           <div className="grid grid-cols-4 gap-4 px-6 py-4 border-b border-slate-700/50">
-            <div className="text-slate-400 text-sm font-medium">Date</div>
-            <div className="text-slate-400 text-sm font-medium">Method</div>
-            <div className="text-slate-400 text-sm font-medium">Status</div>
+            <div className="text-slate-400 text-sm font-medium">
+              {t("date")}
+            </div>
+            <div className="text-slate-400 text-sm font-medium">
+              {t("method")}
+            </div>
+            <div className="text-slate-400 text-sm font-medium">
+              {t("status")}
+            </div>
             <div className="text-slate-400 text-sm font-medium text-right">
-              Amount
+              {t("amount")}
             </div>
           </div>
 
@@ -95,21 +88,24 @@ const GameHistory = () => {
                 className="grid grid-cols-4 gap-4 px-6 py-4 hover:bg-slate-700/30 transition-colors"
               >
                 <div className="text-slate-300 text-sm">{item.date}</div>
+
                 <div className="flex items-center gap-2 text-slate-300 text-sm">
                   <span className="text-slate-400">{item.icon}</span>
                   <span>{item.method}</span>
                 </div>
+
                 <div>
                   {item.status === "win" ? (
                     <span className="inline-flex px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-medium border border-emerald-500/30">
-                      Win
+                      {t("win")}
                     </span>
                   ) : (
                     <span className="inline-flex px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-xs font-medium border border-red-500/30">
-                      Loss
+                      {t("loss")}
                     </span>
                   )}
                 </div>
+
                 <div className="text-slate-300 text-sm text-right font-medium">
                   {item.amount}
                 </div>

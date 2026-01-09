@@ -455,5 +455,116 @@
     "play": "Pelaa",
     "completed": "Valmis",
     "days": "päivää"
+  },
+  "GameHistory": {
+    "title": "Pelin Historia",
+    "date": "Päivä",
+    "method": "Menetelmä",
+    "status": "Tila",
+    "amount": "Summa",
+    "win": "Voitto",
+    "loss": "Häviö"
+  },
+  "ProfileOverview": {
+    "title": "Profiilin Yhteenveto",
+    "silverMember": "Hopeajäsen",
+    "balance": "Saldo",
+    "level": "Taso",
+    "joined": "Liittynyt",
+    "wageringProgress": "Panostus eteneminen",
+    "wager": "Panosta",
+    "moreToReach": "jäljellä saavuttaaksesi",
+    "goldTier": "Kultataso"
+  },
+  "payment": {
+    "header": "Maksutavat",
+    "savedMethods": "tallennettua menetelmää",
+    "addNew": "Lisää uusi"
+  },
+  "PersonalDetailsPage": {
+    "title": "Henkilötiedot",
+    "edit_button": "Muokkaa",
+    "first_name": "Etunimi",
+    "first_name_placeholder": "Syötä etunimesi",
+    "last_name": "Sukunimi",
+    "last_name_placeholder": "Syötä sukunimesi",
+    "email": "Sähköposti",
+    "email_placeholder": "Syötä sähköpostiosoitteesi",
+    "phone": "Puhelin",
+    "phone_placeholder": "Syötä puhelinnumerosi",
+    "country": "Maa",
+    "date_of_birth": "Syntymäaika"
+  },
+  "preferences": {
+    "title": "Asetukset",
+    "currency": "Valuutta",
+    "push": "Push-ilmoitukset",
+    "email": "Sähköposti-ilmoitukset",
+    "sound": "Äänitehosteet"
+  },
+  "promotions": {
+    "title": "Saatavilla olevat kampanjat",
+    "filter": "Suodata"
+  },
+  "ResponsibleLimits": {
+    "title": "Vastuulliset Rajat",
+    "dailyDepositLimit": "Päivittäinen talletusraja",
+    "editLimits": "Muokkaa rajoja",
+    "max": "maks.",
+    "used": "Käytetty",
+    "remaining": "Jäljellä",
+    "selfExclusion": "Itsesulku",
+    "takeBreak": "Pidä tauko pelaamisesta",
+    "on": "Päällä",
+    "off": "Pois",
+    "infoMessage": "Rajojen asettaminen auttaa pysymään hallinnassa. Muutosten voimaantulo voi kestää jopa 24 tuntia."
+  },
+  "TopTabs": {
+    "cashier": "Kassa",
+    "bonuses": "Bonukset",
+    "account": "Tili",
+    "activity": "Toiminta"
+  },
+  "TransactionStatus": {
+    "title": "Tapahtuman Tila",
+    "subtitle": "Viimeaikaiset talletuksesi ja nostosi",
+    "filter": "Suodata",
+    "table": {
+      "date": "Päivämäärä",
+      "type": "Tyyppi",
+      "method": "Tapa",
+      "amount": "Summa",
+      "status": "Tila",
+      "reference": "Viite"
+    }
+  },
+  "Verification": {
+    "mainTitle": "Vahvistus (KYC)",
+    "emailTitle": "Sähköpostin vahvistus",
+    "phoneTitle": "Puhelimen vahvistus",
+    "idTitle": "Henkilöllisyyden vahvistus",
+    "statusVerified": "Vahvistettu",
+    "statusPending": "Odottaa",
+    "uploadBtn": "Lataa asiakirja"
+  },
+  "WithdrawDenial": {
+    "denialMessage": "Et voi nostaa rahaa, koska tililläsi on aktiivinen bonus etkä ole täyttänyt kierrätysvaatimusta.",
+    "wagerRequired": "Vaadittu kierrätys",
+    "cashBalance": "Käteissaldo",
+    "bonusBalance": "Bonussaldo",
+    "totalBalance": "Kokonaissaldo",
+    "statusLabel": "Tila",
+    "statusWagering": "Kierrätys käynnissä",
+    "cancelBtn": "Peruuta"
+  },
+  "History": {
+    "withdrawalTitle": "Nostohistoria",
+    "colDate": "Päivämäärä",
+    "colMethod": "Menetelmä",
+    "colStatus": "Tila",
+    "colAmount": "Summa",
+    "statusCompleted": "Valmis",
+    "statusInProgress": "Käsittelyssä",
+    "statusPending": "Odottaa"
   }
 }

@@ -6,8 +6,10 @@ import { FaEnvelope } from "react-icons/fa";
 import { FaVolumeUp } from "react-icons/fa";
 import Image from "next/image";
 import { IMAGES } from "@/lib/assets";
+import { useTranslations } from "next-intl";
 
 const Preferences = () => {
+  const t = useTranslations("preferences");
   return (
     <div className="w-full mx-auto py-6 bg-[#0A1F2D] px-2 rounded-md mt-6  text-white">
       <div className="inline-flex items-center gap-2 mb-6">
@@ -18,27 +20,15 @@ const Preferences = () => {
           height={1000}
           className="h-auto w-auto"
         />
-        <h2 className="text-lg font-semibold ">Preferences</h2>
+        <h2 className="text-lg font-semibold ">{t("title")}</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Language */}
-        {/* <div className="flex items-center justify-between bg-[#06111D] p-4 rounded-xl shadow-md">
-          <div className="flex items-center gap-3">
-            <FaLanguage className="text-xl" />
-            <span>Language</span>
-          </div>
-          <select className="bg-transparent outline-none">
-            <option className="text-black">English</option>
-            <option className="text-black">French</option>
-          </select>
-        </div> */}
-
         {/* Currency */}
         <div className="flex items-center justify-between bg-[#081A26] p-4 rounded-xl shadow-md">
           <div className="flex items-center gap-3">
             <FaDollarSign className="text-xl" />
-            <span>Currency</span>
+            <span>{t("currency")}</span>
           </div>
           <select className="bg-transparent outline-none">
             <option className="text-black">USD</option>
@@ -50,23 +40,15 @@ const Preferences = () => {
         {/* <ToggleItem icon={<FaMoon />} label="Dark Mode" defaultOn={true} /> */}
 
         {/* Push Notifications */}
-        <ToggleItem
-          icon={<FaBell />}
-          label="Push Notifications"
-          defaultOn={true}
-        />
+        <ToggleItem icon={<FaBell />} label={t("push")} defaultOn={true} />
 
         {/* Email Notifications */}
-        <ToggleItem
-          icon={<FaEnvelope />}
-          label="Email Notifications"
-          defaultOn={true}
-        />
+        <ToggleItem icon={<FaEnvelope />} label={t("email")} defaultOn={true} />
 
         {/* Sound Effects */}
         <ToggleItem
           icon={<FaVolumeUp />}
-          label="Sound Effects"
+          label={t("sound")}
           defaultOn={false}
         />
       </div>

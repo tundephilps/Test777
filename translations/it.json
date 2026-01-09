@@ -455,5 +455,116 @@
     "play": "Gioca",
     "completed": "Completato",
     "days": "giorni"
+  },
+  "GameHistory": {
+    "title": "Storico di Gioco",
+    "date": "Data",
+    "method": "Metodo",
+    "status": "Stato",
+    "amount": "Importo",
+    "win": "Vittoria",
+    "loss": "Sconfitta"
+  },
+  "ProfileOverview": {
+    "title": "Panoramica Profilo",
+    "silverMember": "Membro Argento",
+    "balance": "Saldo",
+    "level": "Livello",
+    "joined": "Iscritto",
+    "wageringProgress": "Progresso Scommesse",
+    "wager": "Scommetti",
+    "moreToReach": "per raggiungere",
+    "goldTier": "Livello Oro"
+  },
+  "payment": {
+    "header": "Metodi di pagamento",
+    "savedMethods": "metodi salvati",
+    "addNew": "Aggiungi nuovo"
+  },
+  "PersonalDetailsPage": {
+    "title": "Dettagli Personali",
+    "edit_button": "Modifica",
+    "first_name": "Nome",
+    "first_name_placeholder": "Inserisci il tuo nome",
+    "last_name": "Cognome",
+    "last_name_placeholder": "Inserisci il tuo cognome",
+    "email": "Email",
+    "email_placeholder": "Inserisci la tua email",
+    "phone": "Telefono",
+    "phone_placeholder": "Inserisci il tuo numero di telefono",
+    "country": "Paese",
+    "date_of_birth": "Data di Nascita"
+  },
+  "preferences": {
+    "title": "Preferenze",
+    "currency": "Valuta",
+    "push": "Notifiche push",
+    "email": "Notifiche email",
+    "sound": "Effetti sonori"
+  },
+  "promotions": {
+    "title": "Promozioni disponibili",
+    "filter": "Filtra"
+  },
+  "ResponsibleLimits": {
+    "title": "Limites Responsables",
+    "dailyDepositLimit": "Limite de dépôt quotidienne",
+    "editLimits": "Modifier les limites",
+    "max": "max",
+    "used": "Utilisé",
+    "remaining": "Restant",
+    "selfExclusion": "Auto-exclusion",
+    "takeBreak": "Faites une pause du jeu",
+    "on": "Activé",
+    "off": "Désactivé",
+    "infoMessage": "La définition de limites vous aide à garder le contrôle. Les modifications peuvent prendre jusqu'à 24 heures pour être appliquées."
+  },
+  "TopTabs": {
+    "cashier": "Cassa",
+    "bonuses": "Bonus",
+    "account": "Account",
+    "activity": "Attività"
+  },
+  "TransactionStatus": {
+    "title": "Stato della Transazione",
+    "subtitle": "I tuoi depositi e prelievi recenti",
+    "filter": "Filtra",
+    "table": {
+      "date": "Data",
+      "type": "Tipo",
+      "method": "Metodo",
+      "amount": "Importo",
+      "status": "Stato",
+      "reference": "Riferimento"
+    }
+  },
+  "Verification": {
+    "mainTitle": "Verifica (KYC)",
+    "emailTitle": "Verifica Email",
+    "phoneTitle": "Verifica Telefono",
+    "idTitle": "Verifica Identità",
+    "statusVerified": "Verificato",
+    "statusPending": "In attesa",
+    "uploadBtn": "Carica Documento"
+  },
+  "WithdrawDenial": {
+    "denialMessage": "Non puoi prelevare denaro poiché hai un bonus attivo sul tuo conto e non hai soddisfatto i requisiti di scommessa.",
+    "wagerRequired": "Scommessa richiesta",
+    "cashBalance": "Saldo contanti",
+    "bonusBalance": "Saldo bonus",
+    "totalBalance": "Saldo totale",
+    "statusLabel": "Stato",
+    "statusWagering": "Scommessa in corso",
+    "cancelBtn": "Annulla"
+  },
+  "History": {
+    "withdrawalTitle": "Cronologia Prelievi",
+    "colDate": "Data",
+    "colMethod": "Metodo",
+    "colStatus": "Stato",
+    "colAmount": "Importo",
+    "statusCompleted": "Completato",
+    "statusInProgress": "In corso",
+    "statusPending": "In attesa"
   }
 }

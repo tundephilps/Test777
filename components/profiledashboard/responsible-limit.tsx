@@ -1,19 +1,22 @@
+"use client";
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
 import { FaShieldAlt, FaPencilAlt, FaBan } from "react-icons/fa";
 
 const ResponsibleLimits = () => {
+  const t = useTranslations("ResponsibleLimits");
   const [selfExclusion, setSelfExclusion] = useState(false);
 
   const limits = [
     {
-      title: "Daily Deposit Limit",
+      title: t("dailyDepositLimit"),
       used: 160,
       remaining: 40,
       max: 200,
       progress: 80,
     },
     {
-      title: "Daily Deposit Limit",
+      title: t("dailyDepositLimit"),
       used: 160,
       remaining: 40,
       max: 200,
@@ -23,7 +26,7 @@ const ResponsibleLimits = () => {
 
   return (
     <div
-      className="min-h-screen bg-[#0a1f2d] mt-6 lg:p-6 p-2  rounded-md"
+      className="min-h-screen bg-[#0a1f2d] mt-6 lg:p-6 p-2 rounded-md"
       style={{ fontFamily: "var(--font-bounded)" }}
     >
       <div className=" mx-auto">
@@ -34,12 +37,12 @@ const ResponsibleLimits = () => {
               <FaShieldAlt className="text-white text-xl" />
             </div>
             <h1 className="text-white lg:text-2xl text-base font-bold">
-              Responsible Limits
+              {t("title")}
             </h1>
           </div>
           <button className="flex items-center gap-2 px-4 py-2 text-red-500 hover:text-red-400 transition-colors">
             <FaPencilAlt className="text-sm" />
-            <span className="font-medium text-xs">Edit Limits</span>
+            <span className="font-medium text-xs">{t("editLimits")}</span>
           </button>
         </div>
 
@@ -54,7 +57,9 @@ const ResponsibleLimits = () => {
                 <h3 className="text-white text-lg font-semibold">
                   {limit.title}
                 </h3>
-                <span className="text-slate-400 text-sm">${limit.max} max</span>
+                <span className="text-slate-400 text-sm">
+                  ${limit.max} {t("max")}
+                </span>
               </div>
 
               {/* Progress Bar */}
@@ -67,10 +72,11 @@ const ResponsibleLimits = () => {
 
               <div className="flex items-center justify-between text-sm">
                 <span className="text-slate-400">
-                  Used: <span className="text-slate-300">${limit.used}</span>
+                  {t("used")}:{" "}
+                  <span className="text-slate-300">${limit.used}</span>
                 </span>
                 <span className="text-slate-400">
-                  Remaining:{" "}
+                  {t("remaining")}:{" "}
                   <span className="text-slate-300">${limit.remaining}</span>
                 </span>
               </div>
@@ -78,7 +84,7 @@ const ResponsibleLimits = () => {
           ))}
         </div>
 
-        {/* Self-Exclusion Section */}
+        {/* Self-Exclusion */}
         <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 mb-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
@@ -87,15 +93,13 @@ const ResponsibleLimits = () => {
               </div>
               <div>
                 <h3 className="text-white text-lg font-semibold mb-1">
-                  Self-Exclusion
+                  {t("selfExclusion")}
                 </h3>
-                <p className="text-slate-400 text-sm">
-                  Take a break from gaming
-                </p>
+                <p className="text-slate-400 text-sm">{t("takeBreak")}</p>
               </div>
             </div>
 
-            {/* Toggle Switch */}
+            {/* Toggle */}
             <button
               onClick={() => setSelfExclusion(!selfExclusion)}
               className={`relative w-14 h-7 rounded-full transition-colors ${
@@ -110,14 +114,13 @@ const ResponsibleLimits = () => {
             </button>
           </div>
 
-          {/* Status Text */}
           <div className="mt-4 text-right">
             <span
               className={`text-sm font-medium ${
                 selfExclusion ? "text-red-400" : "text-slate-500"
               }`}
             >
-              {selfExclusion ? "On" : "Off"}
+              {selfExclusion ? t("on") : t("off")}
             </span>
           </div>
         </div>
@@ -125,8 +128,7 @@ const ResponsibleLimits = () => {
         {/* Info Message */}
         <div className="bg-slate-700/30 backdrop-blur-sm rounded-xl p-4 border border-slate-700/50">
           <p className="text-slate-400 text-sm text-center">
-            Setting limits helps you stay in control. Changes to limits may take
-            24 hours to take effect.
+            {t("infoMessage")}
           </p>
         </div>
       </div>

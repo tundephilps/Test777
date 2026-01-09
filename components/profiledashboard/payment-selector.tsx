@@ -1,6 +1,6 @@
 "use client";
-
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { FaCreditCard, FaPlus, FaTrash } from "react-icons/fa";
 import { BsBank2 } from "react-icons/bs";
 import { PiWalletBold } from "react-icons/pi";
@@ -8,6 +8,7 @@ import { SiBitcoinsv } from "react-icons/si";
 import { IoChevronForward } from "react-icons/io5";
 
 const PaymentSelector = () => {
+  const t = useTranslations("payment");
   const [selectedAmount, setSelectedAmount] = useState<number | null>(100);
   const [customAmount, setCustomAmount] = useState<string>("");
   const [selectedMethod, setSelectedMethod] = useState("card");
@@ -54,15 +55,16 @@ const PaymentSelector = () => {
         <div className="flex items-center gap-3">
           <FaCreditCard className="text-red-500 text-2xl" />
           <div>
-            <h2 className="text-xl font-semibold">Payment Methods</h2>
+            <h2 className="text-xl font-semibold">{t("header")}</h2>
             <p className="text-gray-400 text-sm">
-              {paymentMethods.length} saved Methods
+              {paymentMethods.length}
+              {t("savedMethods")}
             </p>
           </div>
         </div>
 
         <div className="inline-flex items-center gap-2 border border-gray-400 py-2 px-6 rounded-md cursor-pointer text-xs hover:bg-white/5 transition">
-          <FaPlus /> Add New
+          <FaPlus /> {t("addNew")}
         </div>
       </div>
 

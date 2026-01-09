@@ -438,5 +438,116 @@
     "play": "Jugar",
     "completed": "Completado",
     "days": "días"
+  },
+  "GameHistory": {
+    "title": "Historial de Juego",
+    "date": "Fecha",
+    "method": "Método",
+    "status": "Estado",
+    "amount": "Monto",
+    "win": "Ganado",
+    "loss": "Perdido"
+  },
+  "ProfileOverview": {
+    "title": "Resumen de Perfil",
+    "silverMember": "Miembro Plata",
+    "balance": "Saldo",
+    "level": "Nivel",
+    "joined": "Unido",
+    "wageringProgress": "Progreso de apuesta",
+    "wager": "Apuesta",
+    "moreToReach": "más para alcanzar",
+    "goldTier": "Nivel Oro"
+  },
+  "payment": {
+    "header": "Métodos de pago",
+    "savedMethods": "métodos guardados",
+    "addNew": "Agregar nuevo"
+  },
+  "PersonalDetailsPage": {
+    "title": "Datos Personales",
+    "edit_button": "Editar",
+    "first_name": "Nombre",
+    "first_name_placeholder": "Ingresa tu nombre",
+    "last_name": "Apellido",
+    "last_name_placeholder": "Ingresa tu apellido",
+    "email": "Correo Electrónico",
+    "email_placeholder": "Ingresa tu correo electrónico",
+    "phone": "Teléfono",
+    "phone_placeholder": "Ingresa tu número de teléfono",
+    "country": "País",
+    "date_of_birth": "Fecha de Nacimiento"
+  },
+  "preferences": {
+    "title": "Preferencias",
+    "currency": "Moneda",
+    "push": "Notificaciones Push",
+    "email": "Notificaciones por correo",
+    "sound": "Efectos de sonido"
+  },
+  "promotions": {
+    "title": "Promociones disponibles",
+    "filter": "Filtrar"
+  },
+  "ResponsibleLimits": {
+    "title": "Límites Responsables",
+    "dailyDepositLimit": "Límite de Depósito Diario",
+    "editLimits": "Editar Límites",
+    "max": "máx",
+    "used": "Usado",
+    "remaining": "Restante",
+    "selfExclusion": "Autoexclusión",
+    "takeBreak": "Tómate un descanso del juego",
+    "on": "Activado",
+    "off": "Desactivado",
+    "infoMessage": "Establecer límites te ayuda a mantener el control. Los cambios pueden tardar hasta 24 horas en aplicarse."
+  },
+  "TopTabs": {
+    "cashier": "Caja",
+    "bonuses": "Bonos",
+    "account": "Cuenta",
+    "activity": "Actividad"
+  },
+  "TransactionStatus": {
+    "title": "Estado de la Transacción",
+    "subtitle": "Sus depósitos y retiros recientes",
+    "filter": "Filtrar",
+    "table": {
+      "date": "Fecha",
+      "type": "Tipo",
+      "method": "Método",
+      "amount": "Monto",
+      "status": "Estado",
+      "reference": "Referencia"
+    }
+  },
+  "Verification": {
+    "mainTitle": "Verificación (KYC)",
+    "emailTitle": "Verificación de Email",
+    "phoneTitle": "Verificación de Teléfono",
+    "idTitle": "Verificación de Identidad",
+    "statusVerified": "Verificado",
+    "statusPending": "Pendiente",
+    "uploadBtn": "Subir Documento"
+  },
+  "WithdrawDenial": {
+    "denialMessage": "No puede retirar dinero ya que tiene un bono activo en su cuenta y no ha cumplido con el requisito de apuesta.",
+    "wagerRequired": "Apuesta requerida",
+    "cashBalance": "Saldo en efectivo",
+    "bonusBalance": "Saldo de bonos",
+    "totalBalance": "Saldo total",
+    "statusLabel": "Estado",
+    "statusWagering": "Apostando",
+    "cancelBtn": "Cancelar"
+  },
+  "History": {
+    "withdrawalTitle": "Historial de Retiros",
+    "colDate": "Fecha",
+    "colMethod": "Método",
+    "colStatus": "Estado",
+    "colAmount": "Monto",
+    "statusCompleted": "Completado",
+    "statusInProgress": "En progreso",
+    "statusPending": "Pendiente"
   }
 }

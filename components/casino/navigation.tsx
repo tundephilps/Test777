@@ -35,7 +35,7 @@ const CasinoNavigation = () => {
   }, [mobileDropdownOpen]);
 
   return (
-    <div className="w-full text-white  relative z-9000">
+    <div className="w-full text-white  relative z-20">
       {/* ===== MOBILE VIEW (All Game dropdown + search) ===== */}
       <div className="flex md:hidden items-center gap-3 py-4 px-3 z-50">
         {/* Mobile All Game (dropdown) */}

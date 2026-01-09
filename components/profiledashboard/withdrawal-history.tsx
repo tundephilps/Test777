@@ -1,7 +1,10 @@
+"use client";
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
 import { FaWallet, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const DepositHistory = () => {
+  const t = useTranslations("History");
   const [currentPage, setCurrentPage] = useState(1);
 
   const depositHistory = [
@@ -54,19 +57,19 @@ const DepositHistory = () => {
       case "completed":
         return (
           <span className="inline-flex px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full lg:text-xs text-[10px] font-medium border border-emerald-500/30">
-            Completed
+            {t("statusCompleted")}
           </span>
         );
       case "in-progress":
         return (
           <span className="inline-flex px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full lg:text-xs text-[10px] font-medium border border-orange-500/30">
-            In Progress
+            {t("statusInProgress")}
           </span>
         );
       case "pending":
         return (
           <span className="inline-flex px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full lg:text-xs text-[10px] font-medium border border-yellow-500/30">
-            Pending
+            {t("statusPending")}
           </span>
         );
       default:
@@ -82,18 +85,26 @@ const DepositHistory = () => {
           <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
             <FaWallet className="text-white text-xl" />
           </div>
-          <h1 className="text-white text-2xl font-bold">Withdrawal History</h1>
+          <h1 className="text-white text-2xl font-bold">
+            {t("withdrawalTitle")}
+          </h1>
         </div>
 
         {/* Table */}
         <div className="bg-[#0b2231] backdrop-blur-sm rounded-xl border border-slate-700/50 overflow-hidden">
           {/* Table Header */}
           <div className="grid grid-cols-4 gap-4 px-6 py-4 border-b border-slate-700/50">
-            <div className="text-slate-400 text-sm font-medium">Date</div>
-            <div className="text-slate-400 text-sm font-medium">Method</div>
-            <div className="text-slate-400 text-sm font-medium">Status</div>
+            <div className="text-slate-400 text-sm font-medium">
+              {t("colDate")}
+            </div>
+            <div className="text-slate-400 text-sm font-medium">
+              {t("colMethod")}
+            </div>
+            <div className="text-slate-400 text-sm font-medium">
+              {t("colStatus")}
+            </div>
             <div className="text-slate-400 text-sm font-medium text-right">
-              Amount
+              {t("colAmount")}
             </div>
           </div>
 
@@ -104,7 +115,7 @@ const DepositHistory = () => {
                 key={index}
                 className="grid grid-cols-4 gap-4 px-6 py-4 hover:bg-slate-700/30 transition-colors"
               >
-                <div className="text-slate-300 lg:text-sm text-[10px] ">
+                <div className="text-slate-300 lg:text-sm text-[10px]">
                   {item.date}
                 </div>
                 <div className="text-slate-300 lg:text-sm text-[10px]">
@@ -119,30 +130,14 @@ const DepositHistory = () => {
           </div>
         </div>
 
-        {/* Pagination */}
+        {/* Pagination Placeholder */}
         <div className="flex items-center justify-center gap-2 mt-6">
           <button className="w-8 h-8 flex items-center justify-center rounded bg-slate-800 text-slate-400 hover:bg-slate-700 transition-colors">
             <FaChevronLeft className="text-xs" />
           </button>
-
           <button className="w-8 h-8 flex items-center justify-center rounded bg-red-600 text-white font-medium text-sm">
             1
           </button>
-
-          <button className="w-8 h-8 flex items-center justify-center rounded bg-slate-800 text-slate-400 hover:bg-slate-700 transition-colors text-sm">
-            2
-          </button>
-
-          <span className="text-slate-500 px-2">...</span>
-
-          <button className="w-8 h-8 flex items-center justify-center rounded bg-slate-800 text-slate-400 hover:bg-slate-700 transition-colors text-sm">
-            9
-          </button>
-
-          <button className="w-8 h-8 flex items-center justify-center rounded bg-slate-800 text-slate-400 hover:bg-slate-700 transition-colors text-sm">
-            10
-          </button>
-
           <button className="w-8 h-8 flex items-center justify-center rounded bg-slate-800 text-slate-400 hover:bg-slate-700 transition-colors">
             <FaChevronRight className="text-xs" />
           </button>

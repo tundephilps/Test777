@@ -455,5 +455,116 @@
     "play": "Jouer",
     "completed": "Terminé",
     "days": "jours"
+  },
+  "GameHistory": {
+    "title": "Historique de Jeu",
+    "date": "Date",
+    "method": "Méthode",
+    "status": "Statut",
+    "amount": "Montant",
+    "win": "Gagné",
+    "loss": "Perdu"
+  },
+  "ProfileOverview": {
+    "title": "Aperçu du Profil",
+    "silverMember": "Membre Argent",
+    "balance": "Solde",
+    "level": "Niveau",
+    "joined": "Inscrit",
+    "wageringProgress": "Progression de mise",
+    "wager": "Miser",
+    "moreToReach": "de plus pour atteindre",
+    "goldTier": "Niveau Or"
+  },
+  "payment": {
+    "header": "Méthodes de paiement",
+    "savedMethods": "méthodes enregistrées",
+    "addNew": "Ajouter"
+  },
+  "PersonalDetailsPage": {
+    "title": "Détails Personnels",
+    "edit_button": "Modifier",
+    "first_name": "Prénom",
+    "first_name_placeholder": "Entrez votre prénom",
+    "last_name": "Nom",
+    "last_name_placeholder": "Entrez votre nom",
+    "email": "Email",
+    "email_placeholder": "Entrez votre email",
+    "phone": "Téléphone",
+    "phone_placeholder": "Entrez votre numéro de téléphone",
+    "country": "Pays",
+    "date_of_birth": "Date de Naissance"
+  },
+  "preferences": {
+    "title": "Préférences",
+    "currency": "Devise",
+    "push": "Notifications push",
+    "email": "Notifications e-mail",
+    "sound": "Effets sonores"
+  },
+  "promotions": {
+    "title": "Promotions disponibles",
+    "filter": "Filtrer"
+  },
+  "ResponsibleLimits": {
+    "title": "Vastuulliset Rajat",
+    "dailyDepositLimit": "Päivittäinen talletusraja",
+    "editLimits": "Muokkaa rajoja",
+    "max": "maks.",
+    "used": "Käytetty",
+    "remaining": "Jäljellä",
+    "selfExclusion": "Itsesulku",
+    "takeBreak": "Pidä tauko pelaamisesta",
+    "on": "Päällä",
+    "off": "Pois",
+    "infoMessage": "Rajojen asettaminen auttaa pysymään hallinnassa. Muutosten voimaantulo voi kestää jopa 24 tuntia."
+  },
+  "TopTabs": {
+    "cashier": "Caisse",
+    "bonuses": "Bonus",
+    "account": "Compte",
+    "activity": "Activité"
+  },
+  "TransactionStatus": {
+    "title": "Statut de la Transaction",
+    "subtitle": "Vos dépôts et retraits récents",
+    "filter": "Filtrer",
+    "table": {
+      "date": "Date",
+      "type": "Type",
+      "method": "Méthode",
+      "amount": "Montant",
+      "status": "Statut",
+      "reference": "Référence"
+    }
+  },
+  "Verification": {
+    "mainTitle": "Vérification (KYC)",
+    "emailTitle": "Vérification de l'e-mail",
+    "phoneTitle": "Vérification du téléphone",
+    "idTitle": "Vérification d'identité",
+    "statusVerified": "Vérifié",
+    "statusPending": "En attente",
+    "uploadBtn": "Télécharger le document"
+  },
+  "WithdrawDenial": {
+    "denialMessage": "Vous ne pouvez pas retirer d'argent car vous avez un bonus actif sur votre compte et vous n'avez pas rempli les conditions de mise.",
+    "wagerRequired": "Mise requise",
+    "cashBalance": "Solde en espèces",
+    "bonusBalance": "Solde bonus",
+    "totalBalance": "Solde total",
+    "statusLabel": "Statut",
+    "statusWagering": "Mise en cours",
+    "cancelBtn": "Annuler"
+  },
+  "History": {
+    "withdrawalTitle": "Historique des retraits",
+    "colDate": "Date",
+    "colMethod": "Méthode",
+    "colStatus": "Statut",
+    "colAmount": "Montant",
+    "statusCompleted": "Terminé",
+    "statusInProgress": "En cours",
+    "statusPending": "En attente"
   }
 }

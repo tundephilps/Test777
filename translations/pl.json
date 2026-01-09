@@ -455,5 +455,116 @@
     "play": "Graj",
     "completed": "Zakończone",
     "days": "dni"
+  },
+  "GameHistory": {
+    "title": "Historia Gier",
+    "date": "Data",
+    "method": "Metoda",
+    "status": "Status",
+    "amount": "Kwota",
+    "win": "Wygrana",
+    "loss": "Przegrana"
+  },
+  "ProfileOverview": {
+    "title": "Przegląd Profilu",
+    "silverMember": "Członek Srebrny",
+    "balance": "Saldo",
+    "level": "Poziom",
+    "joined": "Dołączył",
+    "wageringProgress": "Postęp obstawiania",
+    "wager": "Obstaw",
+    "moreToReach": "więcej aby osiągnąć",
+    "goldTier": "Poziom Złoty"
+  },
+  "payment": {
+    "header": "Metody płatności",
+    "savedMethods": "zapisanych metod",
+    "addNew": "Dodaj nową"
+  },
+  "PersonalDetailsPage": {
+    "title": "Dane Osobowe",
+    "edit_button": "Edytuj",
+    "first_name": "Imię",
+    "first_name_placeholder": "Wprowadź swoje imię",
+    "last_name": "Nazwisko",
+    "last_name_placeholder": "Wprowadź swoje nazwisko",
+    "email": "E-mail",
+    "email_placeholder": "Wprowadź swój e-mail",
+    "phone": "Telefon",
+    "phone_placeholder": "Wprowadź swój numer telefonu",
+    "country": "Kraj",
+    "date_of_birth": "Data Urodzenia"
+  },
+  "preferences": {
+    "title": "Preferencje",
+    "currency": "Waluta",
+    "push": "Powiadomienia push",
+    "email": "Powiadomienia e-mail",
+    "sound": "Efekty dźwiękowe"
+  },
+  "promotions": {
+    "title": "Dostępne promocje",
+    "filter": "Filtruj"
+  },
+  "ResponsibleLimits": {
+    "title": "Ansvarlige grenser",
+    "dailyDepositLimit": "Daglig innskuddsgrense",
+    "editLimits": "Rediger grenser",
+    "max": "maks",
+    "used": "Brukt",
+    "remaining": "Gjenstår",
+    "selfExclusion": "Selvutelukkelse",
+    "takeBreak": "Ta en pause fra spilling",
+    "on": "På",
+    "off": "Av",
+    "infoMessage": "Å sette grenser hjelper deg å holde kontroll. Endringer i grenser kan ta opptil 24 timer før de trer i kraft."
+  },
+  "TopTabs": {
+    "cashier": "Kasa",
+    "bonuses": "Bonusy",
+    "account": "Konto",
+    "activity": "Aktywność"
+  },
+  "TransactionStatus": {
+    "title": "Status Transakcji",
+    "subtitle": "Twoje ostatnie wpłaty i wypłaty",
+    "filter": "Filtruj",
+    "table": {
+      "date": "Data",
+      "type": "Typ",
+      "method": "Metoda",
+      "amount": "Kwota",
+      "status": "Status",
+      "reference": "Referencja"
+    }
+  },
+  "Verification": {
+    "mainTitle": "Weryfikacja (KYC)",
+    "emailTitle": "Weryfikacja e-mail",
+    "phoneTitle": "Weryfikacja telefonu",
+    "idTitle": "Weryfikacja tożsamości",
+    "statusVerified": "Zweryfikowano",
+    "statusPending": "Oczekiwanie",
+    "uploadBtn": "Prześlij dokument"
+  },
+  "WithdrawDenial": {
+    "denialMessage": "Nie możesz wypłacić pieniędzy, ponieważ masz aktywny bonus na koncie i nie spełniłeś wymagań dotyczących obrotu.",
+    "wagerRequired": "Wymagany obrót",
+    "cashBalance": "Saldo gotówkowe",
+    "bonusBalance": "Saldo bonusowe",
+    "totalBalance": "Całkowite saldo",
+    "statusLabel": "Status",
+    "statusWagering": "W trakcie obrotu",
+    "cancelBtn": "Anuluj"
+  },
+  "History": {
+    "withdrawalTitle": "Historia wypłat",
+    "colDate": "Data",
+    "colMethod": "Metoda",
+    "colStatus": "Status",
+    "colAmount": "Kwota",
+    "statusCompleted": "Zakończono",
+    "statusInProgress": "W toku",
+    "statusPending": "Oczekiwanie"
   }
 }

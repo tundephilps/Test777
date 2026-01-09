@@ -13,6 +13,7 @@ import WhyChooseUs from "@/components/homepage/why-choose";
 import Sponsors from "@/components/homepage/sponsors";
 import BigWins from "@/components/homepage/big-win";
 import AdsModal from "@/components/modals/adsmodal";
+import Jackpot from "@/components/homepage/Jackpot";
 
 const HomePage = () => {
   const [showAds, setShowAds] = useState<boolean>(false);
@@ -33,6 +34,7 @@ const HomePage = () => {
       <CasinoNavigation />
 
       <WelcomeBonus />
+      <Jackpot />
       <NewGames />
       <TopGames />
       <LiveCasino />

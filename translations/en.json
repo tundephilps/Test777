@@ -453,5 +453,117 @@
     "play": "Play",
     "completed": "Completed",
     "days": "days"
+  },
+  "GameHistory": {
+    "title": "Game History",
+    "date": "Date",
+    "method": "Method",
+    "status": "Status",
+    "amount": "Amount",
+    "win": "Win",
+    "loss": "Loss"
+  },
+  "ProfileOverview": {
+    "title": "Profile Overview",
+    "silverMember": "Silver Member",
+    "balance": "Balance",
+    "level": "Level",
+    "joined": "Joined",
+    "wageringProgress": "Wagering Progress",
+    "wager": "Wager",
+    "moreToReach": "more to reach",
+    "goldTier": "Gold tier"
+  },
+  "payment": {
+    "header": "Payment Methods",
+    "savedMethods": " saved Methods",
+    "addNew": "Add New"
+  },
+  "PersonalDetailsPage": {
+    "title": "Personal Details",
+    "edit_button": "Edit",
+    "first_name": "First Name",
+    "first_name_placeholder": "Enter your first name",
+    "last_name": "Last Name",
+    "last_name_placeholder": "Enter your last name",
+    "email": "Email",
+    "email_placeholder": "Enter your email",
+    "phone": "Phone",
+    "phone_placeholder": "Enter your phone number",
+    "country": "Country",
+    "date_of_birth": "Date of Birth"
+  },
+  "preferences": {
+    "title": "Preferences",
+    "currency": "Currency",
+    "push": "Push Notifications",
+    "email": "Email Notifications",
+    "sound": "Sound Effects"
+  },
+  "promotions": {
+    "title": "Available Promotions",
+    "filter": "Filter"
+  },
+  "ResponsibleLimits": {
+    "title": "Responsible Limits",
+    "dailyDepositLimit": "Daily Deposit Limit",
+    "editLimits": "Edit Limits",
+    "max": "max",
+    "used": "Used",
+    "remaining": "Remaining",
+    "selfExclusion": "Self-Exclusion",
+    "takeBreak": "Take a break from gaming",
+    "on": "On",
+    "off": "Off",
+    "infoMessage": "Setting limits helps you stay in control. Changes to limits may take 24 hours to take effect."
+  },
+  "TopTabs": {
+    "cashier": "Cashier",
+    "bonuses": "Bonuses",
+    "account": "Account",
+    "activity": "Activity"
+  },
+
+  "TransactionStatus": {
+    "title": "Transaction Status",
+    "subtitle": "Your recent deposits and withdrawals",
+    "filter": "Filter",
+    "table": {
+      "date": "Date",
+      "type": "Type",
+      "method": "Method",
+      "amount": "Amount",
+      "status": "Status",
+      "reference": "Reference"
+    }
+  },
+  "Verification": {
+    "mainTitle": "Verification (KYC)",
+    "emailTitle": "Email Verification",
+    "phoneTitle": "Phone Verification",
+    "idTitle": "ID Verification",
+    "statusVerified": "Verified",
+    "statusPending": "Pending",
+    "uploadBtn": "Upload Document"
+  },
+  "WithdrawDenial": {
+    "denialMessage": "You can't withdraw money as you have an active bonus in your account and you have not met the wagering requirement.",
+    "wagerRequired": "Wager Required",
+    "cashBalance": "Cash Balance",
+    "bonusBalance": "Bonus Balance",
+    "totalBalance": "Total Balance",
+    "statusLabel": "Status",
+    "statusWagering": "Wagering",
+    "cancelBtn": "Cancel"
+  },
+  "History": {
+    "withdrawalTitle": "Withdrawal History",
+    "colDate": "Date",
+    "colMethod": "Method",
+    "colStatus": "Status",
+    "colAmount": "Amount",
+    "statusCompleted": "Completed",
+    "statusInProgress": "In Progress",
+    "statusPending": "Pending"
   }
 }
