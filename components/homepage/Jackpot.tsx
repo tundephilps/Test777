@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import JackpotMask from "../../public/JackpotMask.png";
 import { IMAGES } from "@/lib/assets";
 import { useTranslations } from "next-intl";
 import { IoHeart, IoHeartOutline, IoEllipsisHorizontal } from "react-icons/io5";
@@ -47,8 +46,8 @@ const Jackpot = () => {
 
   return (
     <div
-      className="my-8 relative bg-cover w-full bg-top bg-no-repeat px-4 py-12"
-      style={{ backgroundImage: `url(${JackpotMask.src})` }}
+      className="my-8 min-h-[400px] relative bg-cover w-full bg-top bg-no-repeat px-4 py-12"
+      style={{ backgroundImage: `url(${IMAGES.JackpotMask})` }}
     >
       {/* Center Jackpot2 */}
       <Image
