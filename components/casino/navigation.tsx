@@ -5,12 +5,15 @@ import { BiSlider } from "react-icons/bi";
 import { GiPokerHand } from "react-icons/gi";
 import { FaDice } from "react-icons/fa";
 import { MdCasino } from "react-icons/md";
+import SearchModal from "../modals/search-modal";
 
 const CasinoNavigation = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const mobileDDRef = useRef<HTMLDivElement | null>(null);
+  const [activeModal, setActiveModal] = useState<"search" | null>(null);
+  const closeModal = () => setActiveModal(null);
 
   const navItems = [
     { icon: IoGameController, label: "All Game" },
@@ -90,7 +93,10 @@ const CasinoNavigation = () => {
         </div>
 
         {/* Mobile Search */}
-        <div className="flex-1 relative">
+        <div
+          className="flex-1 relative"
+          onClick={() => setActiveModal("search")}
+        >
           <IoSearch className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
           <input
             type="text"
@@ -125,7 +131,10 @@ const CasinoNavigation = () => {
         </div>
 
         {/* search (desktop) */}
-        <div className="relative hidden lg:block">
+        <div
+          className="relative hidden lg:block"
+          onClick={() => setActiveModal("search")}
+        >
           <IoSearch className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
           <input
             type="text"
@@ -134,6 +143,24 @@ const CasinoNavigation = () => {
           />
         </div>
       </div>
+      {/* Single Modal Overlay for ALL modals (Desktop & Mobile) */}
+      {activeModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+          <div className="bg-[#081A26] border border-slate-700 w-full max-w-2xl rounded-2xl lg:p-8 p-4 relative shadow-2xl max-h-[90vh] overflow-y-auto">
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 bg-red-500 hover:bg-red-600 rounded-full p-2 text-white transition-colors z-10"
+            >
+              ✕
+            </button>
+
+            {/* Modal Content Switcher */}
+            <div className="text-white">
+              {activeModal === "search" && <SearchModal />}
+            </div>
+          </div>
+        </div>
+      )}
 
       <style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {

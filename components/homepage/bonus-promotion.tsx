@@ -44,7 +44,7 @@ const BonusPromotion = () => {
       button: t("reload_button"),
     },
     {
-      image: IMAGES.Bonus333,
+      image: IMAGES.Bonus111,
       title: t("monday_title"),
       subtitle: t("monday_subtitle"),
       button: t("monday_button"),

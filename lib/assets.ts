@@ -33,7 +33,6 @@ export const IMAGES = {
   Mask4: `${CDN_URL}/Mask4.png`,
   Jackpot: `${CDN_URL}/Jackpot.png`,
   Jackpot2: `${CDN_URL}/Jackpot2.png`,
-
   JackpotMask: `${CDN_URL}/JackpotMask.png`,
   Number: `${CDN_URL}/Number.png`,
 
