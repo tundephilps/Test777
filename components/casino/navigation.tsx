@@ -5,7 +5,7 @@ import { BiSlider } from "react-icons/bi";
 import { GiPokerHand } from "react-icons/gi";
 import { FaDice } from "react-icons/fa";
 import { MdCasino } from "react-icons/md";
-import SearchModal from "../modals/search-modal";
+import SearchModal from "@/components//modals/search-modal";
 
 const CasinoNavigation = () => {
   const [showSearch, setShowSearch] = useState(false);

@@ -30,9 +30,7 @@ const HomePage = () => {
     <div className="overflow-x-clip">
       <Hero />
       <BigWins />
-
       <CasinoNavigation />
-
       <WelcomeBonus />
       <Jackpot />
       <NewGames />

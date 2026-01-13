@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { IMAGES } from "@/lib/assets";
 
-export default function SignupModal() {
+const SignupModal = () => {
   const [agree, setAgree] = useState(false);
 
   return (
@@ -122,4 +122,6 @@ export default function SignupModal() {
       </div>
     </div>
   );
-}
+};
+
+export default SignupModal;

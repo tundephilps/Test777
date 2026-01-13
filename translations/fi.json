@@ -113,7 +113,12 @@
     "audi_title": "Voita upouusi",
     "audi_subtitle": "Audi A3 2026!",
     "audi_description": "Pelaa, kerää pisteitä, ansaitse lippuja ja aja tyylillä unelmiesi autolla!",
-    "audi_button": "Lue Lisää"
+    "audi_button": "Lue Lisää",
+    "expired_offer": "Vanhentunut Tarjous",
+    "match_bonus_title": "100% Vastausbonus",
+    "match_bonus_amount": "jopa $200",
+    "claim_button": "Lunasta",
+    "guaranteed_match": "Taattu Vastaus"
   },
   "ContactPage": {
     "hero_brand": "Canada777VIP",

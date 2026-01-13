@@ -3,51 +3,6 @@ import Image from "next/image";
 import { IMAGES } from "@/lib/assets";
 
 const PromotionsPage = () => {
-  const depositBonuses = [
-    {
-      image: IMAGES.Bonus11,
-      title: "1st bonus - 200% up to 1,000.00 and 100 Free Spins",
-      description:
-        "Start strong with a 200% welcome match + 100 FREE SPINS on your first deposit. Wager x35",
-    },
-    {
-      image: IMAGES.Bonus22,
-      title: "2nd bonus - 100% up to 1,500.00 and 100 Free Spins",
-      description:
-        "Take your next step with a 100% match bonus + 100 FREE SPINS on your second deposit. Wager x35",
-    },
-    {
-      image: IMAGES.Bonus33,
-      title: "3rd bonus - 100% up to 1,500.00 and 100 Free Spins",
-      description:
-        "Boost your play with a 100% match bonus + 100 FREE SPINS on your 3rd deposit. Wager x35",
-    },
-    {
-      image: IMAGES.Bonus44,
-      title: "4th bonus - 150% up to 2,000.00 and 200 Free Spins",
-      description:
-        "Finish strong with a huge 150% bonus + 200 FREE SPINS. Wager x35",
-    },
-    {
-      image: IMAGES.Bonus55,
-      title: "4th bonus - 150% up to 2,000.00 and 200 Free Spins",
-      description:
-        "Finish strong with a huge 150% bonus + 200 FREE SPINS. Wager x35",
-    },
-    {
-      image: IMAGES.Bonus66,
-      title: "4th bonus - 150% up to 2,000.00 and 200 Free Spins",
-      description:
-        "Finish strong with a huge 150% bonus + 200 FREE SPINS. Wager x35",
-    },
-    {
-      image: IMAGES.Bonus77,
-      title: "4th bonus - 150% up to 2,000.00 and 200 Free Spins",
-      description:
-        "Finish strong with a huge 150% bonus + 200 FREE SPINS. Wager x35",
-    },
-  ];
-
   const t = useTranslations("PromotionalCards");
 
   const cards = [
@@ -85,6 +40,35 @@ const PromotionsPage = () => {
     },
   ];
 
+  const dates = [
+    {
+      day: 21,
+      month: "December",
+      label: t("expired_offer"),
+      type: "expired",
+    },
+    {
+      day: 22,
+      month: "Mon",
+      label: t("match_bonus_title"),
+      subtitle: t("match_bonus_amount"),
+      buttonText: t("claim_button"),
+      type: "active",
+    },
+    {
+      day: 25,
+      month: "December",
+      label: t("guaranteed_match"),
+      type: "upcoming",
+    },
+    {
+      day: 26,
+      month: "Fri",
+      label: t("guaranteed_match"),
+      type: "upcoming",
+    },
+  ];
+
   return (
     <div className="w-full text-white lg:p-6 p-2 space-y-10">
       <span className="text-[16px]  bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 items-center justify-center cursor-pointer rounded-md flex mt-6 mx-auto text-base font-bold text-[#ffffff] px-8 py-3  text-center">
@@ -103,6 +87,8 @@ const PromotionsPage = () => {
             <Image
               src={card.image}
               alt={card.title}
+              height={1000}
+              width={1000}
               className="w-full h-auto absolute bottom-12  lg:object-contain  object-cover"
             />
 
@@ -136,43 +122,91 @@ const PromotionsPage = () => {
         ))}
       </div>
 
-      {/* Deposit Bonuses */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {depositBonuses.map((bonus, i) => (
-          <div
-            key={i}
-            className="relative rounded-2xl shadow-lg overflow-hidden"
+      <div className="bg-[#0a1621] py-6 rounded-xl">
+        {/* Month Header */}
+        <div className="text-center mb-6">
+          <h2
+            className="text-red-500 text-2xl font-bold uppercase tracking-wider"
+            style={{ fontFamily: "var(--font-bounded)" }}
           >
-            <Image
-              src={bonus.image}
-              height={1000}
-              width={1000}
-              className="h-auto w-full  object-cover"
-              alt={bonus.title}
-              priority={i === 0}
-            />
+            December
+          </h2>
+        </div>
 
+        {/* Calendar Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {dates.map((date, index) => (
             <div
-              className="p-4 space-y-2.5"
-              style={{ fontFamily: "var(--font-bounded)" }}
+              key={index}
+              className={`relative rounded-xl overflow-hidden ${
+                date.type === "active"
+                  ? "bg-gradient-to-br from-red-700 to-red-900"
+                  : "bg-slate-800/50"
+              } ${
+                date.type === "expired" ? "opacity-60" : ""
+              } transition-all duration-300 hover:scale-105`}
             >
-              <p className="text-xl">{bonus.title}</p>
+              {/* Date Badge */}
+              <div
+                className={`absolute top-0 left-0 w-16 h-20 flex items-center justify-center ${
+                  date.type === "active"
+                    ? "bg-red-600"
+                    : date.type === "expired"
+                    ? "bg-slate-700"
+                    : "bg-slate-800"
+                }`}
+                style={{
+                  clipPath: "polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%)",
+                }}
+              >
+                <span
+                  className="text-white text-2xl font-bold"
+                  style={{ fontFamily: "var(--font-bounded)" }}
+                >
+                  {date.day}
+                </span>
+              </div>
 
-              <p className="text-xs font-bold text-[#58656E]">
-                {bonus.description}
-              </p>
+              {/* Content */}
+              <div className="pt-24 pb-6 px-4">
+                {/* Month/Day Label */}
+                <div className="text-slate-400 text-xs mb-2 uppercase tracking-wide">
+                  {date.month}
+                </div>
 
-              <div className="inline-flex gap-2 w-full">
-                <button className="w-full text-xs bg-[#0C2738] hover:bg-slate-500 text-white py-2 rounded-lg">
-                  Read More
-                </button>
-                <button className="w-full text-xs bg-red-600 hover:bg-red-500 py-2 rounded-lg">
-                  Claim Bonus
-                </button>
+                {/* Main Label */}
+                <h3 className="text-white text-sm font-semibold mb-2">
+                  {date.label}
+                </h3>
+
+                {/* Subtitle (for active promo) */}
+                {date.subtitle && (
+                  <p className="text-white text-xs mb-3">{date.subtitle}</p>
+                )}
+
+                {/* Action Button (for active promo) */}
+                {date.buttonText && (
+                  <button className="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-bold py-2 px-4 rounded transition-colors">
+                    {date.buttonText}
+                  </button>
+                )}
+              </div>
+
+              {/* Background Image/Icon (optional) */}
+              <div className="absolute bottom-0 right-0 opacity-10">
+                <svg
+                  width="80"
+                  height="80"
+                  viewBox="0 0 100 100"
+                  fill="currentColor"
+                  className="text-white"
+                >
+                  <circle cx="50" cy="50" r="40" />
+                </svg>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

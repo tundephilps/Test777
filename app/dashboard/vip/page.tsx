@@ -262,11 +262,15 @@ const VipPage = () => {
 
           <Image
             src={IMAGES.Cash2}
+            width={1000}
+            height={1000}
             alt="Cash background"
             className="object-contain absolute bottom-2"
           />
           <Image
             src={IMAGES.Cash}
+            width={1000}
+            height={1000}
             alt="Cash background"
             className="object-contain absolute bottom-0"
           />

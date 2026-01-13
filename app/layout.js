@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
+import BottomNav from "@/components/layout/bottom-nav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,6 +50,7 @@ export default async function RootLayout({ children }) {
       >
         <NextIntlClientProvider messages={messages}>
           {children}
+          <BottomNav />
         </NextIntlClientProvider>
       </body>
     </html>

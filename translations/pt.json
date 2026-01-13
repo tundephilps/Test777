@@ -114,7 +114,12 @@
     "audi_title": "Ganhe um",
     "audi_subtitle": "Audi A3 2026 novo!",
     "audi_description": "Jogue, acumule pontos, ganhe tickets e saia com estilo no carro dos seus sonhos!",
-    "audi_button": "Saiba Mais"
+    "audi_button": "Saiba Mais",
+    "expired_offer": "Oferta Expirada",
+    "match_bonus_title": "100% Bônus de Correspondência",
+    "match_bonus_amount": "até $200",
+    "claim_button": "Reivindicar",
+    "guaranteed_match": "Correspondência Garantida"
   },
   "ContactPage": {
     "hero_brand": "Canada777VIP",

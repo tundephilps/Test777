@@ -113,7 +113,12 @@
     "audi_title": "Vinn en splitter ny",
     "audi_subtitle": "Audi A3 2026!",
     "audi_description": "Spill, samle poeng, tjen billetter og kjør avgårde med stil i drømmebilen din!",
-    "audi_button": "Lær Mer"
+    "audi_button": "Lær Mer",
+    "expired_offer": "Utløpt Tilbud",
+    "match_bonus_title": "100% Kampanjebonus",
+    "match_bonus_amount": "opp til $200",
+    "claim_button": "Krev",
+    "guaranteed_match": "Garantert Match"
   },
   "ContactPage": {
     "hero_brand": "Canada777VIP",

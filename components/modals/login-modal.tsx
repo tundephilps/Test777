@@ -11,7 +11,7 @@ import {
   FaFacebookF,
 } from "react-icons/fa";
 
-export default function LoginModal() {
+const LoginModal = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -87,4 +87,6 @@ export default function LoginModal() {
       </div>
     </div>
   );
-}
+};
+
+export default LoginModal;

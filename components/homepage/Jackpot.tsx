@@ -140,8 +140,7 @@ const Jackpot = () => {
 
               {/* Name */}
               <div
-                className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t
-  from-black/80 to-transparent p-3 transition-all duration-300
+                className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 transition-all duration-300
   ${
     isOpen
       ? "opacity-100 translate-y-0"
