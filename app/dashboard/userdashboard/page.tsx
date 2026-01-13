@@ -20,7 +20,8 @@ import WithdrawlHistory from "@/components/profiledashboard/withdrawal-history";
 import BonusHistory from "@/components/profiledashboard/bonus-history";
 import CashbackLog from "@/components/profiledashboard/cashback-log";
 import WithdrawDenial from "@/components/profiledashboard/withdraw-denial";
-import WithdrawalForm from "@/components/profiledashboard/withdraw-funds";
+import WithdrawalForm from "@/components/profiledashboard/form";
+import WithdrawFunds from "@/components/profiledashboard/withdraw-funds";
 
 const UserDashboard = () => {
   const [activeTop, setActiveTop] = useState("cashier");
@@ -31,7 +32,7 @@ const UserDashboard = () => {
       case "add-funds":
         return <AddFunds />;
       case "withdraw":
-        return <WithdrawDenial />;
+        return <WithdrawFunds />;
       case "payment-methods":
         return <PaymentMethodSelector />;
       case "transaction-status":
