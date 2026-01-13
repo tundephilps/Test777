@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Transfer from "@/public/transfer.png";
+
+import { IMAGES } from "@/lib/assets";
 
 const BankTransferWithdrawal = () => {
   return (
@@ -10,7 +11,7 @@ const BankTransferWithdrawal = () => {
       <div className="flex flex-col md:flex-row md:items-start justify-between mb-8 gap-4">
         {/* Left: Bank Transfer Logo & Min Amount */}
         <Image
-          src={Transfer}
+          src={IMAGES.transfer}
           alt=""
           height={1000}
           width={1000}

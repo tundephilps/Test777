@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import Mastercard from "@/public/mastercard.png";
+
+import { IMAGES } from "@/lib/assets";
 
 const MastercardWithdrawalForm = () => {
   return (
@@ -10,7 +11,7 @@ const MastercardWithdrawalForm = () => {
       <div className="flex items-start justify-between mb-6">
         <div>
           <Image
-            src={Mastercard}
+            src={IMAGES.mastercard}
             alt=""
             height={1000}
             width={1000}

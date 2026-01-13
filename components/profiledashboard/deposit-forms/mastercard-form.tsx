@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import Mastercard from "@/public/mastercard.png";
+import { IMAGES } from "@/lib/assets";
 
 const MasterCardDepositForm = () => {
   const [selectedAmount, setSelectedAmount] = useState("25");
@@ -13,7 +13,7 @@ const MasterCardDepositForm = () => {
       {/* Header Section */}
       <div className="flex items-center gap-3 mb-6">
         <Image
-          src={Mastercard}
+          src={IMAGES.mastercard}
           alt=""
           height={1000}
           width={1000}

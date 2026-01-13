@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import googlepay from "@/public/googlepay.png";
+
+import { IMAGES } from "@/lib/assets";
 
 const GooglepayDepositForm = () => {
   const [selectedAmount, setSelectedAmount] = useState("25");
@@ -13,7 +14,7 @@ const GooglepayDepositForm = () => {
       {/* Header Section */}
       <div className="flex items-center gap-3 mb-6">
         <Image
-          src={googlepay}
+          src={IMAGES.googlepay}
           alt=""
           height={1000}
           width={1000}

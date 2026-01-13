@@ -96,5 +96,10 @@ export const IMAGES = {
   Pref: `${CDN_URL}/Pref.png`,
   Speak: `${CDN_URL}/Speak.png`,
   Trans: `${CDN_URL}/Trans.png`,
+
+  Applepay: `${CDN_URL}/Applepay.png`,
+  googlepay: `${CDN_URL}/googlepay.png`,
+  mastercard: `${CDN_URL}/mastercard.png`,
+  transfer: `${CDN_URL}/transfer.png`,
   // add as many as you want
 };

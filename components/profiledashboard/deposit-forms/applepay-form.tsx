@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
-import Applepay from "@/public/Applepay.png";
 
+import { IMAGES } from "@/lib/assets";
+import Image from "next/image";
 const ApplepayDepositForm = () => {
   const [selectedAmount, setSelectedAmount] = useState("25");
 
@@ -13,7 +13,7 @@ const ApplepayDepositForm = () => {
       {/* Header Section */}
       <div className="flex items-center gap-3 mb-6">
         <Image
-          src={Applepay}
+          src={IMAGES.Applepay}
           alt=""
           height={1000}
           width={1000}
