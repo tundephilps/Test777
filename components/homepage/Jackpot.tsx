@@ -155,6 +155,11 @@ const Jackpot = () => {
           );
         })}
       </div>
+      <div className="flex justify-center mt-6 mx-auto w-full">
+        <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-md font-semibold">
+          Load More
+        </button>
+      </div>
     </div>
   );
 };
