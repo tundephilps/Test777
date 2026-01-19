@@ -29,17 +29,17 @@ const Footer = () => {
           <h4 className="text-white font-semibold mb-4">{t("about_us")}</h4>
           <ul className="space-y-2">
             <li>
-              <Link href="/dashboard/about-us" className="hover:text-white">
+              <Link href="/about-us" className="hover:text-white">
                 {t("about_us")}
               </Link>
             </li>
             <li>
-              <Link href="/dashboard/contact" className="hover:text-white">
+              <Link href="/contact" className="hover:text-white">
                 {t("contact_us")}
               </Link>
             </li>
             <li>
-              <Link href="/dashboard/faq" className="hover:text-white">
+              <Link href="/faq" className="hover:text-white">
                 {t("faq")}
               </Link>
             </li>
@@ -59,10 +59,7 @@ const Footer = () => {
           <h4 className="text-white font-semibold mb-4">{t("information")}</h4>
           <ul className="space-y-2">
             <li>
-              <Link
-                href="/dashboard/terms-and-conditions"
-                className="hover:text-white"
-              >
+              <Link href="/terms-and-conditions" className="hover:text-white">
                 {t("terms")}
               </Link>
             </li>
@@ -72,18 +69,12 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link
-                href="/dashboard/privacy-policy"
-                className="hover:text-white"
-              >
+              <Link href="/privacy-policy" className="hover:text-white">
                 {t("privacy")}
               </Link>
             </li>
             <li>
-              <Link
-                href="/dashboard/responsible-gambling"
-                className="hover:text-white"
-              >
+              <Link href="/responsible-gambling" className="hover:text-white">
                 {t("responsible")}
               </Link>
             </li>
@@ -115,10 +106,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link
-                href="/dashboard/aml-kyc-policy"
-                className="hover:text-white"
-              >
+              <Link href="/aml-kyc-policy" className="hover:text-white">
                 {t("aml_kyc")}
               </Link>
             </li>

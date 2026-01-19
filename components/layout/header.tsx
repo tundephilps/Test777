@@ -63,33 +63,33 @@ const Header = () => {
   const closeModal = () => setActiveModal(null);
 
   const links = [
-    { href: "/dashboard", label: t("home"), icon: <FaHome /> },
-    { href: "/dashboard/casino", label: t("casino"), icon: <FaDice /> },
+    { href: "/", label: t("home"), icon: <FaHome /> },
+    { href: "/casino", label: t("casino"), icon: <FaDice /> },
     {
-      href: "/dashboard/livecasino",
+      href: "/livecasino",
       label: t("live_casino"),
       icon: <RiLiveLine />,
     },
-    { href: "/dashboard/jackpot", label: t("jackpot"), icon: <FaGift /> },
+    { href: "/jackpot", label: t("jackpot"), icon: <FaGift /> },
     {
-      href: "/dashboard/tournaments",
+      href: "/tournaments",
       label: t("tournaments"),
       icon: <RiTrophyLine />,
     },
     {
-      href: "/dashboard/wheelbonus",
+      href: "/wheelbonus",
       label: t("wheel_bonus"),
       icon: <PiSpinnerBallFill />,
     },
     {
-      href: "/dashboard/myfavorite",
+      href: "/myfavorite",
       label: t("my_favorite"),
       icon: <FaHeart />,
     },
-    { href: "/dashboard/promotions", label: t("promotions"), icon: <FaGift /> },
-    { href: "/dashboard/vip", label: t("vip_club"), icon: <FaCrown /> },
-    { href: "/dashboard/cashback", label: t("cashback"), icon: <FaCoins /> },
-    { href: "/dashboard/contact", label: t("contact"), icon: <FaHeadset /> },
+    { href: "/promotions", label: t("promotions"), icon: <FaGift /> },
+    { href: "/vip", label: t("vip_club"), icon: <FaCrown /> },
+    { href: "/cashback", label: t("cashback"), icon: <FaCoins /> },
+    { href: "/contact", label: t("contact"), icon: <FaHeadset /> },
   ];
 
   const currentLanguage =
@@ -182,7 +182,7 @@ const Header = () => {
               </div>
 
               {/* Deposit Button */}
-              <Link href="/dashboard/userdashboard">
+              <Link href="/userdashboard">
                 <button className="flex items-center space-x-1 bg-gradient-to-b from-[#f80507] to-[#860001] hover:opacity-90 px-3 py-1.5 rounded-md text-white font-medium transition">
                   <span>{t("deposit")}</span>
                 </button>
@@ -190,7 +190,7 @@ const Header = () => {
             </div>
 
             {/* User Profile */}
-            <Link href="/dashboard/userdashboard">
+            <Link href="/userdashboard">
               <div className="flex items-center space-x-2 cursor-pointer hover:opacity-80">
                 <Image
                   src={IMAGES.Face}
@@ -272,7 +272,7 @@ const Header = () => {
         {showMobileMenu && (
           <div className="md:hidden bg-[#0a1f2e] border-t border-gray-800 px-3 py-4 space-y-3">
             {/* User Info */}
-            <Link href="/dashboard/userdashboard">
+            <Link href="/userdashboard">
               <div className="flex items-center space-x-3 pb-3 border-b border-gray-800">
                 <Image
                   src={IMAGES.Face}

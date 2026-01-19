@@ -1,41 +1,62 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import { useTranslations } from "next-intl";
-import VisaWithdrawalForm from "./withdrawal-forms/visa-form";
-import MastercardWithdrawalForm from "./withdrawal-forms/mastercard-form";
-import BitcoinWithdrawForm from "./withdrawal-forms/bitcoin-form";
-import BankTransferWithdrawal from "./withdrawal-forms/banktransfer-form";
+import VisaWithdrawalForm from "@/components/profiledashboard/withdrawal-forms/visa-form";
+import MastercardWithdrawalForm from "@/components/profiledashboard/withdrawal-forms/mastercard-form";
+import BitcoinWithdrawForm from "@/components/profiledashboard/withdrawal-forms/bitcoin-form";
+import BankTransferWithdrawal from "@/components/profiledashboard/withdrawal-forms/banktransfer-form";
+import Image from "next/image";
+import { IMAGES } from "@/lib/assets";
+import LitecoinWithdrawForm from "./withdrawal-forms/litecoin-form";
+import BCHWithdrawForm from "./withdrawal-forms/bch-form";
+import ETHWithdrawForm from "./withdrawal-forms/eth-form";
+import BNBWithdrawForm from "./withdrawal-forms/bnb-form";
+import USDCWithdrawForm from "./withdrawal-forms/usdc-form";
+import TronWithdrawForm from "./withdrawal-forms/trx-form";
+import DogeWithdrawForm from "./withdrawal-forms/doge-form";
+import USDTWithdrawForm from "./withdrawal-forms/usdt-form";
 
 const WithdrawFunds = () => {
   const [promoCode, setPromoCode] = useState("");
   const [selectedPayment, setSelectedPayment] = useState("");
+  const formRef = useRef<HTMLDivElement>(null);
 
   const t = useTranslations("AddFunds");
+
+  // Scroll to form when payment method is selected
+  useEffect(() => {
+    if (selectedPayment && formRef.current) {
+      formRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, [selectedPayment]);
 
   const paymentMethods = [
     {
       id: "visa",
-      name: "VISA",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg",
-      min: "5 CAD",
     },
     {
       id: "mastercard",
-      name: "MASTERCARD",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg",
-      min: "5 CAD",
     },
-    { id: "bank-transfer", name: "BANK TRANSFER", logo: "🏦", min: "200 CAD" }, // Added to match screenshot
-    { id: "litecoin", name: "LTC", logo: "Ł", min: "5 CAD" },
-    { id: "bitcoin-cash", name: "BCH", logo: "₿", min: "5 CAD" },
-    { id: "bitcoin", name: "BTC", logo: "₿", min: "5 CAD" },
-    { id: "ethereum", name: "ETH", logo: "◆", min: "5 CAD" },
-    { id: "binance", name: "BNB", logo: "B", min: "0 CAD" },
-    { id: "usd-coin", name: "USDC", logo: "U", min: "0 CAD" },
-    { id: "tron", name: "TRX", logo: "▲", min: "5 CAD" },
-    { id: "doge", name: "DOGE", logo: "Ð", min: "5 CAD" },
-    { id: "tether", name: "USDT", logo: "₮", min: "5 CAD" },
+    {
+      id: "banktransfer",
+    },
+
+    { id: "litecoin" },
+    {
+      id: "bitcoin-cash",
+      name: "BCH",
+    },
+    { id: "bitcoin", name: "BTC" },
+    { id: "ethereum", name: "ETH" },
+    { id: "binance", name: "BNB" },
+    { id: "USDC", name: "USDC" },
+    { id: "tron", name: "Tron" },
+    { id: "doge", name: "DogeCoin" },
+    { id: "tether", name: "USDT" },
   ];
 
   const handleAddPromo = () => {
@@ -46,10 +67,42 @@ const WithdrawFunds = () => {
     setSelectedPayment(id);
   };
 
+  // Function to render the appropriate form based on selected payment
+  const renderSelectedForm = () => {
+    switch (selectedPayment) {
+      case "visa":
+        return <VisaWithdrawalForm />;
+      case "mastercard":
+        return <MastercardWithdrawalForm />;
+      case "banktransfer":
+        return <BankTransferWithdrawal />;
+      case "litecoin":
+        return <LitecoinWithdrawForm />;
+      case "bitcoin-cash":
+        return <BCHWithdrawForm />;
+      case "bitcoin":
+        return <BitcoinWithdrawForm />;
+      case "ethereum":
+        return <ETHWithdrawForm />;
+      case "binance":
+        return <BNBWithdrawForm />;
+      case "USDC":
+        return <USDCWithdrawForm />;
+      case "tron":
+        return <TronWithdrawForm />;
+      case "doge":
+        return <DogeWithdrawForm />;
+      case "tether":
+        return <USDTWithdrawForm />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div>
       <div
-        className="min-h-screen  flex items-center justify-center"
+        className="  flex items-center justify-center"
         style={{ fontFamily: "var(--font-bounded)" }}
       >
         <div className="w-full bg-[#081a26] rounded-2xl  lg:p-8 p-2 shadow-2xl">
@@ -105,24 +158,57 @@ const WithdrawFunds = () => {
                 >
                   {/* Logo/Icon Area */}
                   <div className="flex items-center justify-center h-12 mb-3">
-                    {method.id === "card" && <div className="text-4xl">💳</div>}
-                    {method.id === "mastercard" && (
-                      <div className="flex gap-1">
-                        <div className="w-8 h-8 bg-red-500 rounded-full opacity-80"></div>
-                        <div className="w-8 h-8 bg-yellow-500 rounded-full opacity-80 -ml-4"></div>
-                      </div>
-                    )}
                     {method.id === "visa" && (
-                      <div className="text-3xl font-bold text-blue-500">
-                        VISA
+                      <Image
+                        className="h-28 w-full"
+                        width={1000}
+                        height={1000}
+                        src={IMAGES.Visa3}
+                        alt=""
+                      />
+                    )}
+                    {method.id === "mastercard" && (
+                      <Image
+                        className="h-auto w-auto"
+                        width={500}
+                        height={500}
+                        src={IMAGES.mastercard}
+                        alt=""
+                      />
+                    )}
+                    {method.id === "banktransfer" && (
+                      <div className="flex items-center gap-1">
+                        <Image
+                          className="h-20 w-32"
+                          width={1000}
+                          height={1000}
+                          src={IMAGES.transfer}
+                          alt=""
+                        />
                       </div>
                     )}
-                    {method.id === "gpay" && (
-                      <div className="flex items-center gap-1">
-                        <span className="text-blue-500 text-2xl font-bold">
-                          G
-                        </span>
-                        <span className="text-white text-lg">Pay</span>
+                    {method.id === "litecoin" && (
+                      <div className="text-slate-300 text-3xl font-bold">
+                        <div className="text-red-500 text-2xl">
+                          <Image
+                            className="h-12 w-32"
+                            width={500}
+                            height={500}
+                            src={IMAGES.Litecoin}
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    )}
+                    {method.id === "bitcoin-cash" && (
+                      <div className="">
+                        <Image
+                          className="h-16 w-auto pb-2"
+                          width={500}
+                          height={500}
+                          src={IMAGES.BCH}
+                          alt=""
+                        />
                       </div>
                     )}
                     {method.id === "applepay" && (
@@ -133,66 +219,75 @@ const WithdrawFunds = () => {
                         </span>
                       </div>
                     )}
-                    {method.id === "visa-mastercard" && (
-                      <div className="flex items-center gap-1">
-                        <div className="text-lg font-bold text-blue-500">
-                          VISA
-                        </div>
-                        <div className="flex -space-x-2">
-                          <div className="w-4 h-4 bg-red-500 rounded-full"></div>
-                          <div className="w-4 h-4 bg-yellow-500 rounded-full"></div>
-                        </div>
-                      </div>
-                    )}
-                    {method.id === "flexepin" && (
-                      <div className="text-white">
-                        <span className="text-xl font-bold">flex</span>
-                        <span className="text-xl font-bold text-pink-500">
-                          e
-                        </span>
-                        <span className="text-xl font-bold">pin</span>
-                      </div>
-                    )}
                     {method.id === "bitcoin" && (
                       <div className="text-orange-500 text-3xl font-bold">
                         ₿
                       </div>
                     )}
                     {method.id === "ethereum" && (
-                      <div className="text-blue-400 text-3xl">◆</div>
-                    )}
-                    {method.id === "litecoin" && (
-                      <div className="text-slate-300 text-3xl font-bold">Ł</div>
-                    )}
-                    {method.id === "tron" && (
-                      <div className="text-red-500 text-2xl">▲</div>
+                      <div className="text-blue-400 text-3xl">
+                        <Image
+                          className="h-12 w-full"
+                          width={1000}
+                          height={1000}
+                          src={IMAGES.Eth}
+                          alt=""
+                        />
+                      </div>
                     )}
                     {method.id === "binance" && (
                       <div className="text-yellow-400 text-2xl font-bold">
-                        <div className="flex items-center">
-                          <span className="bg-yellow-400 text-slate-900 px-2 py-1 rounded">
-                            B
-                          </span>
-                        </div>
+                        <Image
+                          className="h-12 w-auto"
+                          width={500}
+                          height={500}
+                          src={IMAGES.BNB}
+                          alt=""
+                        />
                       </div>
                     )}
-                    {method.id === "xrp" && (
+                    {method.id === "USDC" && (
+                      <div className="text-yellow-400 text-2xl font-bold">
+                        <Image
+                          className="h-12 w-auto"
+                          width={500}
+                          height={500}
+                          src={IMAGES.USDC}
+                          alt=""
+                        />
+                      </div>
+                    )}
+                    {method.id === "tron" && (
+                      <div className="text-red-500 text-2xl">
+                        <Image
+                          className="h-12 w-16"
+                          width={500}
+                          height={500}
+                          src={IMAGES.Tron}
+                          alt=""
+                        />
+                      </div>
+                    )}
+                    {method.id === "doge" && (
                       <div className="text-slate-300 text-3xl font-bold">
-                        XRP
-                      </div>
-                    )}
-                    {method.id === "usdcoin" && (
-                      <div className="flex items-center justify-center">
-                        <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
-                          $
-                        </div>
+                        <Image
+                          className="h-12 w-full"
+                          width={1000}
+                          height={1000}
+                          src={IMAGES.Doge}
+                          alt=""
+                        />
                       </div>
                     )}
                     {method.id === "tether" && (
-                      <div className="flex items-center justify-center">
-                        <div className="w-8 h-8 bg-teal-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                          ₮
-                        </div>
+                      <div className="text-red-500 text-2xl">
+                        <Image
+                          className="h-12 w-16"
+                          width={500}
+                          height={500}
+                          src={IMAGES.Tether}
+                          alt=""
+                        />
                       </div>
                     )}
                   </div>
@@ -203,11 +298,6 @@ const WithdrawFunds = () => {
                   </div>
 
                   {/* Min Amount */}
-                  {method.min && (
-                    <div className="text-slate-400 text-xs text-center">
-                      Min: {method.min}
-                    </div>
-                  )}
 
                   {/* Selection Indicator */}
                   {selectedPayment === method.id && (
@@ -231,10 +321,13 @@ const WithdrawFunds = () => {
           </div>
         </div>
       </div>
-      {/* <VisaWithdrawalForm /> */}
-      {/* <MastercardWithdrawalForm /> */}
-      {/* <BitcoinWithdrawForm /> */}
-      <BankTransferWithdrawal />
+
+      {/* Render only the selected form */}
+      {selectedPayment && (
+        <div ref={formRef} className="">
+          {renderSelectedForm()}
+        </div>
+      )}
     </div>
   );
 };

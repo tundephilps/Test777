@@ -1,8 +1,9 @@
 "use client";
+import { IMAGES } from "@/lib/assets";
+import Image from "next/image";
 import React, { useState } from "react";
-import { FaBitcoin } from "react-icons/fa";
 
-const BitcoinWithdrawForm = () => {
+const ETHWithdrawForm = () => {
   const [network, setNetwork] = useState("BTC");
 
   return (
@@ -11,9 +12,13 @@ const BitcoinWithdrawForm = () => {
       <div className="flex flex-col md:flex-row md:items-start justify-between mb-8 gap-4">
         {/* Left: BTC Logo & Min Amount */}
         <div className="flex flex-col items-center md:items-start gap-2">
-          <div className="w-20 h-20 bg-[#F7931A] rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(247,147,26,0.3)]">
-            <FaBitcoin className="text-white text-5xl" />
-          </div>
+          <Image
+            src={IMAGES.Eth}
+            alt=""
+            className="h-12 w-auto"
+            width={1000}
+            height={1000}
+          />
           <p className="text-red-500 font-bold text-lg mt-1">Min 50.00</p>
         </div>
 
@@ -62,9 +67,7 @@ const BitcoinWithdrawForm = () => {
                 onChange={(e) => setNetwork(e.target.value)}
                 className="w-full bg-[#0a1f33] border border-[#162e44] rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors text-white font-medium appearance-none cursor-pointer"
               >
-                <option value="BTC">BTC</option>
-                <option value="BEP20">BSC (BEP20)</option>
-                <option value="TRC20">TRON (TRC20)</option>
+                <option value="BTC">ERC-20</option>
               </select>
               <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none">
                 <svg
@@ -126,4 +129,4 @@ const BitcoinWithdrawForm = () => {
   );
 };
 
-export default BitcoinWithdrawForm;
+export default ETHWithdrawForm;

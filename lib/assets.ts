@@ -102,4 +102,16 @@ export const IMAGES = {
   mastercard: `${CDN_URL}/mastercard.png`,
   transfer: `${CDN_URL}/transfer.png`,
   // add as many as you want
+
+  Visa3: `${CDN_URL}/Visa3.png`,
+  Tron: `${CDN_URL}/tron.png`,
+  Eth: `${CDN_URL}/Eth.png`,
+  Doge: `${CDN_URL}/Doge.png`,
+
+  BNB: `${CDN_URL}/BNB.png`,
+  USDC: `${CDN_URL}/USDC.png`,
+  BCH: `${CDN_URL}/BCH.png`,
+  Tether: `${CDN_URL}/Tether.png`,
+
+  Litecoin: `${CDN_URL}/Litecoin.png`,
 };

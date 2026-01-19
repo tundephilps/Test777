@@ -27,7 +27,7 @@ const BottomNav = () => {
         <button
           // onClick={() => setActiveTab("games")}
 
-          onClick={() => handleNav("games", "/dashboard")}
+          onClick={() => handleNav("games", "/")}
           className="flex flex-col items-center gap-1 relative"
         >
           <div
@@ -55,7 +55,7 @@ const BottomNav = () => {
         {/* Live */}
         <button
           // onClick={() => setActiveTab("live")}
-          onClick={() => handleNav("live", "/dashboard/livecasino")}
+          onClick={() => handleNav("live", "/livecasino")}
           className="flex flex-col items-center gap-1"
         >
           <div
@@ -82,7 +82,7 @@ const BottomNav = () => {
 
         {/* Center Deposit Button */}
         <button
-          onClick={() => handleNav("deposit", "/dashboard/userdashboard")}
+          onClick={() => handleNav("deposit", "/userdashboard")}
           className="flex flex-col items-center -mt-6"
         >
           <div className="w-16 h-16 rounded-full bg-gradient-to-b from-red-600 to-red-700 flex items-center justify-center shadow-xl shadow-red-500/50 border-4 border-[#0a1214]">

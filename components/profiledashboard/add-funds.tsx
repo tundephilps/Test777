@@ -1,69 +1,115 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import { useTranslations } from "next-intl";
-import VisaDepositForm from "./deposit-forms/visa-form";
-import MasterCardDepositForm from "./deposit-forms/mastercard-form";
-import FlexepinDepositForm from "./deposit-forms/flexpin-form";
-import ApplepayDepositForm from "./deposit-forms/applepay-form";
-import GooglepayDepositForm from "./deposit-forms/googlepay-form";
-import BitcoinDepositForm from "./deposit-forms/bitcoin-form";
+import VisaDepositForm from "@/components/profiledashboard/deposit-forms/visa-form";
+import MasterCardDepositForm from "@/components/profiledashboard/deposit-forms/mastercard-form";
+import FlexepinDepositForm from "@/components/profiledashboard/deposit-forms/flexpin-form";
+import ApplepayDepositForm from "@/components/profiledashboard/deposit-forms/applepay-form";
+import GooglepayDepositForm from "@/components/profiledashboard/deposit-forms/googlepay-form";
+import BitcoinDepositForm from "@/components/profiledashboard/deposit-forms/bitcoin-form";
+import { IMAGES } from "@/lib/assets";
+import Image from "next/image";
+import EthDepositForm from "./deposit-forms/eth-form";
+import DogeDepositForm from "./deposit-forms/doge-form";
+import BnbDepositForm from "./deposit-forms/bnb-form";
+import LTCDepositForm from "./deposit-forms/litecoin-form";
+import BchDepositForm from "./deposit-forms/bch-form";
+import USDCDepositForm from "./deposit-forms/usdc-form";
+import XRPDepositForm from "./deposit-forms/xrp-form";
+import TronDepositForm from "./deposit-forms/tron-form";
+import USDTDepositForm from "./deposit-forms/usdt-form";
 
 const AddFunds = () => {
   const [promoCode, setPromoCode] = useState("");
   const [selectedPayment, setSelectedPayment] = useState("");
+  const formRef = useRef<HTMLDivElement>(null);
 
   const t = useTranslations("AddFunds");
-  // Use the array provided in your prompt
+
+  // Scroll to form when payment method is selected
+  useEffect(() => {
+    if (selectedPayment && formRef.current) {
+      formRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, [selectedPayment]);
+
   const paymentMethods = [
     {
       id: "mastercard",
-      name: "Mastercard",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg",
-      min: "5 CAD",
     },
     {
       id: "visa",
-      name: "Visa",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg",
-      min: "5 CAD",
     },
     {
       id: "gpay",
-      name: "G Pay",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Google_Pay_Logo.svg",
-      min: "5 CAD",
     },
     {
       id: "applepay",
-      name: "Apple Pay",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Apple_Pay_logo.svg",
-      min: "5 CAD",
     },
-    { id: "bitcoin", name: "BTC", logo: "₿", color: "#F7931A", min: "5 CAD" },
-    { id: "ethereum", name: "ETH", logo: "◆", color: "#627EEA", min: "5 CAD" },
-    { id: "doge", name: "DOGE", logo: "Ð", color: "#C2A633", min: "5 CAD" },
-    { id: "binance", name: "BNB", logo: "B", color: "#F3BA2F", min: "0 CAD" },
-    { id: "litecoin", name: "LTC", logo: "Ł", color: "#345D9D", min: "5 CAD" },
+    { id: "bitcoin", name: "BTC" },
+    { id: "ethereum", name: "ETH" },
+    { id: "doge", name: "DogeCoin" },
+    { id: "binance", name: "BNB" },
+    { id: "litecoin" },
     {
       id: "bitcoin-cash",
       name: "BCH",
-      logo: "₿",
-      color: "#8DC351",
-      min: "5 CAD",
     },
-    { id: "usdcoin", name: "USDC", logo: "U", color: "#2775CA", min: "0 CAD" },
-    { id: "xrp", name: "XRP", logo: "X", color: "#23292F", min: "" },
-    { id: "tron", name: "TRX", logo: "▲", color: "#EF0027", min: "5 CAD" },
-    { id: "tether", name: "USDT", logo: "₮", color: "#26A17B", min: "" },
-    { id: "flexepin", name: "flexepin", logo: "F", min: "5 CAD" },
+    { id: "USDC", name: "USDC" },
+    { id: "xrp" },
+    { id: "tron", name: "Tron" },
+    { id: "tether", name: "USDT" },
+    { id: "flexepin" },
   ];
+
   const handleAddPromo = () => {
     console.log("Adding promo code:", promoCode);
   };
 
   const handlePaymentSelect = (id: string) => {
     setSelectedPayment(id);
+  };
+
+  // Function to render the appropriate form based on selected payment
+  const renderSelectedForm = () => {
+    switch (selectedPayment) {
+      case "mastercard":
+        return <MasterCardDepositForm />;
+      case "visa":
+        return <VisaDepositForm />;
+      case "gpay":
+        return <GooglepayDepositForm />;
+      case "applepay":
+        return <ApplepayDepositForm />;
+      case "bitcoin":
+        return <BitcoinDepositForm />;
+      case "ethereum":
+        return <EthDepositForm />;
+      case "doge":
+        return <DogeDepositForm />;
+      case "binance":
+        return <BnbDepositForm />;
+      case "litecoin":
+        return <LTCDepositForm />;
+      case "bitcoin-cash":
+        return <BchDepositForm />;
+      case "USDC":
+        return <USDCDepositForm />;
+      case "xrp":
+        return <XRPDepositForm />;
+      case "tron":
+        return <TronDepositForm />;
+      case "tether":
+        return <USDTDepositForm />;
+      case "flexepin":
+        return <FlexepinDepositForm />;
+      default:
+        return null;
+    }
   };
 
   return (
@@ -124,46 +170,151 @@ const AddFunds = () => {
                   } $"ring-2 ring-red-500/30" : ""}`}
                 >
                   {/* Logo/Icon Area */}
-                  <div className="flex items-center justify-center h-12 mb-3">
-                    {method.id === "card" && <div className="text-4xl">💳</div>}
+                  <div className="flex items-center justify-center h-12 mb-0">
                     {method.id === "mastercard" && (
-                      <div className="flex gap-1">
-                        <div className="w-8 h-8 bg-red-500 rounded-full opacity-80"></div>
-                        <div className="w-8 h-8 bg-yellow-500 rounded-full opacity-80 -ml-4"></div>
-                      </div>
+                      <Image
+                        className="h-auto w-auto"
+                        width={500}
+                        height={500}
+                        src={IMAGES.mastercard}
+                        alt=""
+                      />
                     )}
                     {method.id === "visa" && (
-                      <div className="text-3xl font-bold text-blue-500">
-                        VISA
-                      </div>
+                      <Image
+                        className="h-28 w-full"
+                        width={1000}
+                        height={1000}
+                        src={IMAGES.Visa3}
+                        alt=""
+                      />
                     )}
                     {method.id === "gpay" && (
                       <div className="flex items-center gap-1">
-                        <span className="text-blue-500 text-2xl font-bold">
-                          G
-                        </span>
-                        <span className="text-white text-lg">Pay</span>
+                        <Image
+                          className="h-full w-full"
+                          width={1000}
+                          height={1000}
+                          src={IMAGES.googlepay}
+                          alt=""
+                        />
                       </div>
                     )}
                     {method.id === "applepay" && (
                       <div className="flex items-center gap-1">
-                        <span className="text-2xl"></span>
-                        <span className="text-white text-sm font-medium">
-                          Pay
-                        </span>
+                        <Image
+                          className="h-full w-full"
+                          width={1000}
+                          height={1000}
+                          src={IMAGES.Applepay}
+                          alt=""
+                        />
                       </div>
                     )}
-                    {method.id === "visa-mastercard" && (
-                      <div className="flex items-center gap-1">
-                        <div className="text-lg font-bold text-blue-500">
-                          VISA
-                        </div>
-                        <div className="flex -space-x-2">
-                          <div className="w-4 h-4 bg-red-500 rounded-full"></div>
-                          <div className="w-4 h-4 bg-yellow-500 rounded-full"></div>
+
+                    {method.id === "bitcoin" && (
+                      <div className="text-orange-500 text-3xl font-bold">
+                        ₿
+                      </div>
+                    )}
+                    {method.id === "ethereum" && (
+                      <div className="text-blue-400 text-3xl">
+                        <Image
+                          className="h-12 w-full"
+                          width={1000}
+                          height={1000}
+                          src={IMAGES.Eth}
+                          alt=""
+                        />
+                      </div>
+                    )}
+                    {method.id === "doge" && (
+                      <div className="text-slate-300 text-3xl font-bold">
+                        <Image
+                          className="h-12 w-full"
+                          width={1000}
+                          height={1000}
+                          src={IMAGES.Doge}
+                          alt=""
+                        />
+                      </div>
+                    )}
+                    {method.id === "binance" && (
+                      <div className="text-yellow-400 text-2xl font-bold">
+                        <Image
+                          className="h-12 w-auto"
+                          width={500}
+                          height={500}
+                          src={IMAGES.BNB}
+                          alt=""
+                        />
+                      </div>
+                    )}
+                    {method.id === "litecoin" && (
+                      <div className="text-slate-300 text-3xl font-bold">
+                        <div className="text-red-500 text-2xl">
+                          <Image
+                            className="h-12 w-32"
+                            width={500}
+                            height={500}
+                            src={IMAGES.Litecoin}
+                            alt=""
+                          />
                         </div>
                       </div>
                     )}
+                    {method.id === "bitcoin-cash" && (
+                      <div className="">
+                        <Image
+                          className="h-16 w-auto pb-2"
+                          width={500}
+                          height={500}
+                          src={IMAGES.BCH}
+                          alt=""
+                        />
+                      </div>
+                    )}
+
+                    {method.id === "USDC" && (
+                      <div className="text-yellow-400 text-2xl font-bold">
+                        <Image
+                          className="h-12 w-auto"
+                          width={500}
+                          height={500}
+                          src={IMAGES.USDC}
+                          alt=""
+                        />
+                      </div>
+                    )}
+                    {method.id === "xrp" && (
+                      <div className="text-slate-300 text-3xl font-bold">
+                        XRP
+                      </div>
+                    )}
+                    {method.id === "tron" && (
+                      <div className="text-red-500 text-2xl">
+                        <Image
+                          className="h-12 w-16"
+                          width={500}
+                          height={500}
+                          src={IMAGES.Tron}
+                          alt=""
+                        />
+                      </div>
+                    )}
+
+                    {method.id === "tether" && (
+                      <div className="text-red-500 text-2xl">
+                        <Image
+                          className="h-12 w-16"
+                          width={500}
+                          height={500}
+                          src={IMAGES.Tether}
+                          alt=""
+                        />
+                      </div>
+                    )}
+
                     {method.id === "flexepin" && (
                       <div className="text-white">
                         <span className="text-xl font-bold">flex</span>
@@ -173,61 +324,12 @@ const AddFunds = () => {
                         <span className="text-xl font-bold">pin</span>
                       </div>
                     )}
-                    {method.id === "bitcoin" && (
-                      <div className="text-orange-500 text-3xl font-bold">
-                        ₿
-                      </div>
-                    )}
-                    {method.id === "ethereum" && (
-                      <div className="text-blue-400 text-3xl">◆</div>
-                    )}
-                    {method.id === "litecoin" && (
-                      <div className="text-slate-300 text-3xl font-bold">Ł</div>
-                    )}
-                    {method.id === "tron" && (
-                      <div className="text-red-500 text-2xl">▲</div>
-                    )}
-                    {method.id === "binance" && (
-                      <div className="text-yellow-400 text-2xl font-bold">
-                        <div className="flex items-center">
-                          <span className="bg-yellow-400 text-slate-900 px-2 py-1 rounded">
-                            B
-                          </span>
-                        </div>
-                      </div>
-                    )}
-                    {method.id === "xrp" && (
-                      <div className="text-slate-300 text-3xl font-bold">
-                        XRP
-                      </div>
-                    )}
-                    {method.id === "usdcoin" && (
-                      <div className="flex items-center justify-center">
-                        <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
-                          $
-                        </div>
-                      </div>
-                    )}
-                    {method.id === "tether" && (
-                      <div className="flex items-center justify-center">
-                        <div className="w-8 h-8 bg-teal-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                          ₮
-                        </div>
-                      </div>
-                    )}
                   </div>
 
                   {/* Method Name */}
                   <div className="text-white text-xs font-medium text-center mb-1">
                     {method.name}
                   </div>
-
-                  {/* Min Amount */}
-                  {method.min && (
-                    <div className="text-slate-400 text-xs text-center">
-                      Min: {method.min}
-                    </div>
-                  )}
 
                   {/* Selection Indicator */}
                   {selectedPayment === method.id && (
@@ -251,12 +353,13 @@ const AddFunds = () => {
           </div>
         </div>
       </div>
-      {/* <VisaDepositForm /> */}
-      {/* <MasterCardDepositForm /> */}
-      {/* <FlexepinDepositForm /> */}
-      {/* <ApplepayDepositForm /> */}
-      {/* <GooglepayDepositForm /> */}
-      <BitcoinDepositForm />
+
+      {/* Render only the selected form */}
+      {selectedPayment && (
+        <div ref={formRef} className="mt-8">
+          {renderSelectedForm()}
+        </div>
+      )}
     </div>
   );
 };

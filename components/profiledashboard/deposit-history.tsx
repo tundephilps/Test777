@@ -97,9 +97,7 @@ const DepositHistory = () => {
             <div className="text-slate-400 text-sm font-medium">
               {t("method")}
             </div>
-            <div className="text-slate-400 text-sm font-medium">
-              {t("status")}
-            </div>
+            <div className="text-slate-400 text-sm font-medium">status</div>
             <div className="text-slate-400 text-sm font-medium text-right">
               {t("amount")}
             </div>
