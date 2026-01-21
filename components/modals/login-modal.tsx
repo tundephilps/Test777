@@ -1,22 +1,77 @@
 "use client";
-
+import { login as loginAction } from "@/actions/auth/login";
+import { useAuth } from "@/contexts/auth-context";
+import { useFingerprint } from "@/contexts/FingerprintProvider";
+import { useAction } from "@/hooks/use-action";
+import { useToast } from "@/hooks/use-toast";
 import { IMAGES } from "@/lib/assets";
 import Image from "next/image";
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   FaEye,
   FaEyeSlash,
-  FaTelegramPlane,
-  FaGoogle,
   FaFacebookF,
+  FaGoogle,
+  FaTelegramPlane,
 } from "react-icons/fa";
+import { ErrorText } from "../ui/error-text";
 
-const LoginModal = () => {
+interface LoginModalProps {
+  onClose?: () => void;
+}
+
+const LoginModal = ({ onClose }: LoginModalProps) => {
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { login } = useAuth();
+  const toast = useToast();
+  const { fingerprint } = useFingerprint();
+
+  console.log("fingerprint", fingerprint);
+
+  const {
+    execute: executeLogin,
+    isLoading: loading,
+    fieldErrors,
+  } = useAction(loginAction, {
+    onSuccess: (data) => {
+      login(data.user);
+
+      if (typeof window !== "undefined") {
+        localStorage.setItem("auth_token", data.token);
+        localStorage.setItem("user_data", JSON.stringify(data.user));
+      }
+
+      toast.success("Login successful!");
+      // Reset form
+      setEmail("");
+      setPassword("");
+
+      // Close modal
+      if (onClose) {
+        onClose();
+      }
+    },
+    onError: (error) => {
+      toast.error(error);
+    },
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast.dismiss();
+
+    executeLogin({
+      email,
+      password,
+      fingerprint: fingerprint || "asdfaadsfaffasdf",
+    });
+  };
 
   return (
-    <div className=" flex items-center justify-center  w-full  bg-[#081A26] lg:px-4 px-0  py-8">
-      <div className="  bg-transparent text-white lg:min-w-xl min-w-5/6 w-full">
+    <div className="flex items-center justify-center w-full  bg-[#081A26] lg:px-4 px-0 py-8 ">
+      <div className=" bg-transparent text-white lg:min-w-xl min-w-5/6 w-full">
         {/* Title */}
         <Image
           src={IMAGES.Logo}
@@ -29,14 +84,20 @@ const LoginModal = () => {
           Welcome, Captain. Let’s <br /> start the Spin!
         </h1>
 
-        {/* Username */}
+        {/* Email */}
         <div className="mb-4">
-          <label className="block text-sm font-semibold mb-1">Username</label>
+          <label className="block text-sm font-semibold mb-1">Email</label>
           <input
-            type="text"
-            placeholder="Enter Username"
-            className="w-full px-4 py-3 rounded-lg bg-[#0b1f2b] placeholder-gray-500 border border-transparent focus:border-red-600 outline-none transition"
+            type="email"
+            placeholder="Enter Email"
+            className={`w-full px-4 py-3 rounded-lg bg-[#0b1f2b] placeholder-gray-500 border ${
+              fieldErrors?.email ? "border-red-500" : "border-transparent"
+            } focus:border-red-600 outline-none transition`}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            autoComplete="email"
           />
+          <ErrorText message={fieldErrors?.email?.[0]} />
         </div>
 
         {/* Password */}
@@ -46,7 +107,12 @@ const LoginModal = () => {
             <input
               type={showPassword ? "text" : "password"}
               placeholder="Password"
-              className="w-full px-4 py-3 rounded-lg bg-[#0b1f2b] placeholder-gray-500 border border-transparent focus:border-red-600 outline-none transition"
+              className={`w-full px-4 py-3 rounded-lg bg-[#0b1f2b] placeholder-gray-500 border ${
+                fieldErrors?.password ? "border-red-500" : "border-transparent"
+              } focus:border-red-600 outline-none transition`}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="current-password"
             />
             <button
               type="button"
@@ -56,11 +122,16 @@ const LoginModal = () => {
               {showPassword ? <FaEyeSlash size={18} /> : <FaEye size={18} />}
             </button>
           </div>
+          <ErrorText message={fieldErrors?.password?.[0]} />
         </div>
 
         {/* Login Button */}
-        <button className="w-full bg-gradient-to-b from-[#f80507] to-[#860001] py-3 rounded-lg font-semibold text-white mt-2 hover:opacity-90 transition">
-          Login
+        <button
+          className="w-full bg-linear-to-b from-[#f80507] to-[#860001] py-3 rounded-lg font-semibold text-white mt-2 hover:opacity-90 transition disabled:opacity-60"
+          onClick={handleSubmit}
+          disabled={loading}
+        >
+          {loading ? "Logging in..." : "Login"}
         </button>
 
         {/* Links */}

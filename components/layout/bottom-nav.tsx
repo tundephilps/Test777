@@ -1,12 +1,11 @@
 "use client";
-import React, { useState } from "react";
-import { FaDice, FaDollarSign, FaHeadset } from "react-icons/fa";
-import { RiLiveLine } from "react-icons/ri";
-import { FiSearch } from "react-icons/fi";
-import { MdKeyboardArrowDown } from "react-icons/md";
 import SearchModal from "@/components/modals/search-modal";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { FaDice, FaDollarSign, FaHeadset } from "react-icons/fa";
+import { FiSearch } from "react-icons/fi";
+import { RiLiveLine } from "react-icons/ri";
 
 const BottomNav = () => {
   const [activeTab, setActiveTab] = useState("games");
@@ -55,7 +54,7 @@ const BottomNav = () => {
         {/* Live */}
         <button
           // onClick={() => setActiveTab("live")}
-          onClick={() => handleNav("live", "/livecasino")}
+          onClick={() => handleNav("live", "/live-casino")}
           className="flex flex-col items-center gap-1"
         >
           <div

@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
-import { IoHeart, IoHeartOutline, IoEllipsisHorizontal } from "react-icons/io5";
-import { FaPlay } from "react-icons/fa";
-import { GiGamepad } from "react-icons/gi";
 import { IMAGES } from "@/lib/assets";
 import Image from "next/image";
+import { useState } from "react";
+import { FaPlay } from "react-icons/fa";
+import { GiGamepad } from "react-icons/gi";
+import { IoEllipsisHorizontal, IoHeart, IoHeartOutline } from "react-icons/io5";
 
 const SearchModal = () => {
   const [active, setActive] = useState("games");

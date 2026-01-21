@@ -1,9 +1,13 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import localFont from "next/font/local";
-import "./globals.css";
+import BottomNav from "@/components/layout/bottom-nav";
+import { AuthProvider } from "@/contexts/auth-context";
+import { FingerprintProvider } from "@/contexts/FingerprintProvider";
+import { ModalProvider } from "@/contexts/modal-context";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
-import BottomNav from "@/components/layout/bottom-nav";
+import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import { Toaster } from "react-hot-toast";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,8 +53,18 @@ export default async function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} ${bounded.variable} bg-[#061621]`}
       >
         <NextIntlClientProvider messages={messages}>
-          {children}
-          <BottomNav />
+          <AuthProvider>
+            <FingerprintProvider>
+              <ModalProvider>
+                {children}
+                <BottomNav />
+                <Toaster
+                  position="top-center"
+                  containerStyle={{ zIndex: 99999 }}
+                />
+              </ModalProvider>
+            </FingerprintProvider>
+          </AuthProvider>
         </NextIntlClientProvider>
       </body>
     </html>

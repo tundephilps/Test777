@@ -1,26 +1,28 @@
 "use client";
+import setLanguageValue from "@/actions/set-language-action";
+import { useAuth } from "@/contexts/auth-context";
+import { useModal } from "@/contexts/modal-context";
+import SideAds from "@/public/SideAds.png";
+import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { useState, useTransition } from "react";
 import {
-  FaHome,
-  FaDice,
-  FaGift,
-  FaCrown,
-  FaCoins,
-  FaHeadset,
   FaChevronDown,
   FaChevronLeft,
   FaChevronRight,
+  FaCoins,
+  FaCrown,
+  FaDice,
+  FaGift,
+  FaHeadset,
   FaHeart,
+  FaHome,
 } from "react-icons/fa";
-import { RiLiveLine, RiTrophyLine } from "react-icons/ri";
-import Link from "next/link";
-import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-import SideAds from "@/public/SideAds.png";
-import { useState, useTransition } from "react";
-import { useSidebar } from "./SidebarContext";
 import { PiSpinnerBallFill } from "react-icons/pi";
-import setLanguageValue from "@/actions/set-language-action";
-import { useLocale, useTranslations } from "next-intl";
+import { RiLiveLine, RiTrophyLine } from "react-icons/ri";
+import { useSidebar } from "./SidebarContext";
 
 export default function Sidebar() {
   const t = useTranslations("Navigation");
@@ -30,6 +32,8 @@ export default function Sidebar() {
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
   const { isCollapsed, setIsCollapsed } = useSidebar();
   const [isPending, startTransition] = useTransition();
+  const { isAuthenticated } = useAuth();
+  const { openModal } = useModal();
 
   const languages = [
     { code: "en", name: "English", flag: "🇬🇧" },
@@ -47,7 +51,7 @@ export default function Sidebar() {
     { href: "/", label: t("home"), icon: <FaHome /> },
     { href: "/casino", label: t("casino"), icon: <FaDice /> },
     {
-      href: "/livecasino",
+      href: "/live-casino",
       label: t("live_casino"),
       icon: <RiLiveLine />,
     },
@@ -63,7 +67,7 @@ export default function Sidebar() {
       icon: <PiSpinnerBallFill />,
     },
     {
-      href: "/myfavorite",
+      href: "/my-favorite",
       label: t("my_favorite"),
       icon: <FaHeart />,
     },
@@ -125,6 +129,12 @@ export default function Sidebar() {
             label={link.label}
             active={pathname === link.href}
             isCollapsed={isCollapsed}
+            onClick={(e) => {
+              if (link.href === "/my-favorite" && !isAuthenticated) {
+                e.preventDefault();
+                openModal("login");
+              }
+            }}
           />
         ))}
       </nav>
@@ -210,6 +220,7 @@ type SidebarLinkProps = {
   label: string;
   active?: boolean;
   isCollapsed?: boolean;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
 };
 
 function SidebarLink({
@@ -218,10 +229,12 @@ function SidebarLink({
   label,
   active,
   isCollapsed,
+  onClick,
 }: SidebarLinkProps) {
   return (
     <Link
       href={href}
+      onClick={onClick}
       className={`flex items-center px-4 py-3 rounded-lg relative overflow-hidden transition-all duration-300 ${
         isCollapsed ? "justify-center" : "space-x-3"
       } ${

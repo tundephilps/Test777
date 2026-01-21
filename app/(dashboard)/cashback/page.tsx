@@ -1,9 +1,9 @@
-import WhyChooseUs from "@/components/homepage/why-choose";
-import Sponsors from "@/components/homepage/sponsors";
-import Image from "next/image";
 import CashbackTable from "@/components/cashback/cashback-table";
-import { useTranslations } from "next-intl";
+import Sponsors from "@/components/home/sponsors";
+import WhyChooseUs from "@/components/home/why-choose";
 import { IMAGES } from "@/lib/assets";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const CashbackPage = () => {
   const t = useTranslations("CashbackPage");

@@ -1,7 +1,7 @@
-import Image from "next/image";
-import WhyChooseUs from "@/components/homepage/why-choose";
-import Sponsors from "@/components/homepage/sponsors";
+import Sponsors from "@/components/home/sponsors";
+import WhyChooseUs from "@/components/home/why-choose";
 import { IMAGES } from "@/lib/assets";
+import Image from "next/image";
 
 const WheelBonus = () => {
   return (

@@ -1,7 +1,7 @@
 "use client";
-import { useState } from "react";
-import Image from "next/image";
 import { IMAGES } from "@/lib/assets";
+import Image from "next/image";
+import { useState } from "react";
 
 const SignupModal = () => {
   const [agree, setAgree] = useState(false);
@@ -21,7 +21,7 @@ const SignupModal = () => {
           <h2 className="text-lg font-semibold text-[#f80507]">
             Join and Try out multiple Platform
           </h2>
-          <div className="bg-gradient-to-b from-[#FF0000] to-[#B80000] rounded-xl p-4 mt-3">
+          <div className="bg-linear-to-b from-[#FF0000] to-[#B80000] rounded-xl p-4 mt-3">
             <h3 className="font-semibold text-lg">Welcome Bonus</h3>
             <p className="text-sm opacity-80">Your promo code is BONUS!</p>
           </div>
@@ -106,7 +106,7 @@ const SignupModal = () => {
           {/* Button */}
           <button
             type="submit"
-            className="w-full bg-gradient-to-b from-[#FF0000] to-[#B80000] rounded-lg py-3 font-semibold mt-2"
+            className="w-full bg-linear-to-b from-[#FF0000] to-[#B80000] rounded-lg py-3 font-semibold mt-2"
           >
             Sign Up
           </button>
