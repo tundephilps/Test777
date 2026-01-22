@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
+import { usePathname, useRouter } from "next/navigation";
 import AddFunds from "@/components/profiledashboard/add-funds";
 import PaymentMethodSelector from "@/components/profiledashboard/payment-selector";
 import FreeSpins from "@/components/profiledashboard/free-spins";
@@ -19,13 +20,27 @@ import DepositHistory from "@/components/profiledashboard/deposit-history";
 import WithdrawlHistory from "@/components/profiledashboard/withdrawal-history";
 import BonusHistory from "@/components/profiledashboard/bonus-history";
 import CashbackLog from "@/components/profiledashboard/cashback-log";
-import WithdrawDenial from "@/components/profiledashboard/withdraw-denial";
-import WithdrawalForm from "@/components/profiledashboard/form";
 import WithdrawFunds from "@/components/profiledashboard/withdraw-funds";
 
 const UserDashboard = () => {
-  const [activeTop, setActiveTop] = useState("cashier");
-  const [activeBottom, setActiveBottom] = useState("add-funds");
+  const pathname = usePathname();
+  const router = useRouter();
+
+  // Extract active tab from URL (e.g., /cashier/add-funds)
+  const pathParts = pathname.split("/").filter(Boolean);
+  const activeTop = pathParts[0] || "cashier";
+  const activeBottom = pathParts[1] || "add-funds";
+
+  const handleTopTabChange = (tab: string) => {
+    // Navigate to first bottom tab of the selected top tab
+    const defaultBottomTabs: Record<string, string> = {
+      cashier: "add-funds",
+      bonuses: "promotions",
+      account: "overview",
+      activity: "game-history",
+    };
+    router.push(`/${tab}/${defaultBottomTabs[tab]}`);
+  };
 
   const renderComponent = () => {
     switch (activeBottom) {
@@ -77,18 +92,12 @@ const UserDashboard = () => {
   return (
     <div>
       <div className="lg:p-6 p-2 bg-[#081a26]">
-        <TopTabs active={activeTop} onChange={setActiveTop} />
+        <TopTabs active={activeTop} onChange={handleTopTabChange} />
 
-        <BottomTabs
-          activeTop={activeTop}
-          activeBottom={activeBottom}
-          onChange={setActiveBottom}
-        />
+        <BottomTabs activeTop={activeTop} />
 
         {renderComponent()}
       </div>
-
-      {/* <PaymentMethods /> */}
     </div>
   );
 };

@@ -1,5 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface BottomTabItem {
   key: string;
@@ -35,35 +37,33 @@ const tabMap: Record<string, BottomTabItem[]> = {
   ],
 };
 
-export default function BottomTabs({
-  activeTop,
-  activeBottom,
-  onChange,
-}: {
-  activeTop: string;
-  activeBottom: string;
-  onChange: (tab: string) => void;
-}) {
+export default function BottomTabs({ activeTop }: { activeTop: string }) {
   const t = useTranslations("BottomTabs");
+  const pathname = usePathname();
   const bottomTabs = tabMap[activeTop] || [];
 
   return (
     <div className="flex lg:gap-6 gap-2 mt-4 px-2">
-      {bottomTabs.map((tab) => (
-        <button
-          key={tab.key}
-          onClick={() => onChange(tab.key)}
-          className={`pb-1 transition border-b-2 lg:text-sm text-[10px]
-            ${
-              activeBottom === tab.key
-                ? "border-red-600 text-red-500"
-                : "border-transparent text-gray-400"
-            }
-          `}
-        >
-          {t(tab.label)}
-        </button>
-      ))}
+      {bottomTabs.map((tab) => {
+        const href = `/${activeTop}/${tab.key}`;
+        const isActive = pathname === href;
+
+        return (
+          <Link
+            key={tab.key}
+            href={href}
+            className={`pb-1 transition border-b-2 lg:text-sm text-[10px]
+              ${
+                isActive
+                  ? "border-red-600 text-red-500"
+                  : "border-transparent text-gray-400 hover:text-gray-300"
+              }
+            `}
+          >
+            {t(tab.label)}
+          </Link>
+        );
+      })}
     </div>
   );
 }

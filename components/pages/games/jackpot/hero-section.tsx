@@ -1,6 +1,7 @@
 import { IMAGES } from "@/lib/assets";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import AnimatedAmount from "./animated-amount";
 
 const Hero = async () => {
   const t = await getTranslations("JackpotPage");
@@ -52,13 +53,14 @@ const Hero = async () => {
             alt=""
             className="w-full"
           />
-          <Image
+          {/* <Image
             src={IMAGES.Number}
             width={1000}
             height={300}
             alt=""
             className="absolute bottom-[15%] h-auto w-auto right-[28%]"
-          />
+          /> */}
+          <AnimatedAmount />
         </div>
       </div>
 
