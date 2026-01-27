@@ -1,11 +1,11 @@
 "use client";
-import SearchModal from "@/components/modals/search-modal";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaDice, FaDollarSign, FaHeadset } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 import { RiLiveLine } from "react-icons/ri";
+import SearchModal from "../modals/search-modal";
 
 const BottomNav = () => {
   const [activeTab, setActiveTab] = useState("games");

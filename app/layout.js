@@ -1,5 +1,6 @@
 import BottomNav from "@/components/layout/bottom-nav";
 import { AuthProvider } from "@/contexts/auth-context";
+import { FavoriteProvider } from "@/contexts/favorite-context";
 import { FingerprintProvider } from "@/contexts/FingerprintProvider";
 import { ModalProvider } from "@/contexts/modal-context";
 import { NextIntlClientProvider } from "next-intl";
@@ -55,14 +56,16 @@ export default async function RootLayout({ children }) {
         <NextIntlClientProvider messages={messages}>
           <AuthProvider>
             <FingerprintProvider>
-              <ModalProvider>
-                {children}
-                <BottomNav />
-                <Toaster
-                  position="top-center"
-                  containerStyle={{ zIndex: 99999 }}
-                />
-              </ModalProvider>
+              <FavoriteProvider>
+                <ModalProvider>
+                  {children}
+                  <BottomNav />
+                  <Toaster
+                    position="top-center"
+                    containerStyle={{ zIndex: 99999 }}
+                  />
+                </ModalProvider>
+              </FavoriteProvider>
             </FingerprintProvider>
           </AuthProvider>
         </NextIntlClientProvider>

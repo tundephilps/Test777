@@ -1,127 +1,171 @@
-"use client";
 import { IMAGES } from "@/lib/assets";
 import Image from "next/image";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { useState } from "react";
+import { FcGoogle } from "react-icons/fc";
 
-const SignupModal = () => {
-  const [agree, setAgree] = useState(false);
+export default function SignupModal() {
+  const [showPassword, setShowPassword] = useState(false);
+  const [acceptTerms, setAcceptTerms] = useState(false);
 
   return (
-    <div className="min-h-auto flex items-center justify-center  lg:px-4">
-      <div className="lg:max-w-md w-full text-white space-y-6">
-        {/* Header */}
-        <div className="text-center">
-          <Image
-            src={IMAGES.Logo}
-            alt="Logo"
-            width={100}
-            height={25}
-            className="object-contain mx-auto h-8 sm:h-10 md:h-12 w-auto"
-          />
-          <h2 className="text-lg font-semibold text-[#f80507]">
-            Join and Try out multiple Platform
-          </h2>
-          <div className="bg-linear-to-b from-[#FF0000] to-[#B80000] rounded-xl p-4 mt-3">
-            <h3 className="font-semibold text-lg">Welcome Bonus</h3>
-            <p className="text-sm opacity-80">Your promo code is BONUS!</p>
-          </div>
+    <>
+      {/* Left Side - Bonus Info */}
+      <div className="hidden lg:flex lg:w-1/2 bg-[#081A26] p-4 flex-col justify-center items-center relative overflow-hidden">
+        <div className="text-center mb-8">
+          <p className="text-white/80 text-sm font-semibold mb-2">
+            WELCOME BONUS
+          </p>
+          <h2 className="text-red-700 text-5xl font-bold mb-4">UP TO $8,000</h2>
+          <p className="text-green-700 text-2xl font-bold">+ 600 Free Spins</p>
         </div>
 
-        {/* Form */}
-        <form className="space-y-3">
-          {/* Email */}
-          <div>
-            <label className="block text-sm mb-1">Email</label>
+        {/* Mascot Image Placeholder */}
+        <div className="my-1 flex items-center justify-center">
+          <Image
+            src={IMAGES.Calf}
+            alt=""
+            className="h-auto w-full"
+            width={1000}
+            height={1000}
+          />
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-4 gap-6 w-full max-w-md mt-8">
+          <div className="text-center">
+            <div className="text-white/60 mb-1">🎮</div>
+            <p className="text-white font-bold text-sm">10,000+</p>
+            <p className="text-white/60 text-xs">games</p>
+          </div>
+          <div className="text-center">
+            <div className="text-white/60 mb-1">🎁</div>
+            <p className="text-white font-bold text-sm">Daily</p>
+            <p className="text-white/60 text-xs">exclusive offers</p>
+          </div>
+          <div className="text-center">
+            <div className="text-white/60 mb-1">⚡</div>
+            <p className="text-white font-bold text-sm">Fast</p>
+            <p className="text-white/60 text-xs">withdrawals</p>
+          </div>
+          <div className="text-center">
+            <div className="text-white/60 mb-1">🎧</div>
+            <p className="text-white font-bold text-sm">24/7</p>
+            <p className="text-white/60 text-xs">Customer care</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Right Side - Signup Form */}
+      <div className="w-full lg:w-1/2 bg-slate-800/50 p-8 lg:p-12 flex flex-col justify-center overflow-y-auto">
+        <div className="max-w-md mx-auto w-full">
+          <h2 className="text-white text-3xl text-center font-bold mb-8">
+            JOIN NOW
+          </h2>
+
+          {/* Form */}
+          <div className="space-y-4">
             <input
               type="email"
-              className="w-full bg-[#0F2B3C] border border-[#1D3A50] rounded-lg px-3 py-3 placeholder-gray-400 text-sm outline-none"
-              placeholder="Enter Email"
+              placeholder="Email"
+              className="w-full bg-slate-700/50 border  border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-100 focus:outline-none focus:border-red-700"
             />
-          </div>
 
-          {/* Password */}
-          <div>
-            <label className="block text-sm mb-1">Password</label>
-            <input
-              type="password"
-              className="w-full bg-[#0F2B3C] border border-[#1D3A50] rounded-lg px-3 py-3 placeholder-gray-400 text-sm outline-none"
-              placeholder="Password"
-            />
-          </div>
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Password"
+                className="w-full bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-100 focus:outline-none focus:border-red-700"
+              />
+              <button
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-700 hover:text-white"
+              >
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
+              </button>
+            </div>
 
-          {/* Country + Currency */}
-          <div className="flex items-center gap-3">
-            <div className="w-1/2">
-              <label className="block text-sm mb-1">Country</label>
-              <div className="flex items-center bg-[#0F2B3C] border border-[#1D3A50] rounded-lg px-2 py-3">
-                {/* <Image src="/flags/ca.png" width={20} height={20} alt="Flag" /> */}
-                <select className="flex-1 bg-transparent outline-none pl-2 text-sm">
-                  <option>Canada</option>
-                  <option>USA</option>
-                  <option>UK</option>
-                </select>
+            <div className="grid grid-cols-2 gap-4">
+              <select className="bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-700">
+                <option>Singapore</option>
+                <option>Malaysia</option>
+                <option>Thailand</option>
+              </select>
+
+              <select className="bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-700">
+                <option>$ USD</option>
+                <option>€ EUR</option>
+                <option>£ GBP</option>
+              </select>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <select className="bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-700">
+                <option>SG +65</option>
+                <option>MY +60</option>
+                <option>TH +66</option>
+              </select>
+
+              <input
+                type="tel"
+                placeholder="Phone"
+                className="bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-100 focus:outline-none focus:border-red-700"
+              />
+            </div>
+
+            {/* Terms Checkbox */}
+            <div className="flex items-start gap-3">
+              <input
+                type="checkbox"
+                checked={acceptTerms}
+                onChange={(e) => setAcceptTerms(e.target.checked)}
+                className="mt-1 w-5 h-5 rounded accent-red-700"
+              />
+              <p className="text-white/80 text-sm">
+                I am 18 years old and I accept the{" "}
+                <a
+                  href="#"
+                  className="text-red-700 hover:text-red-300 underline"
+                >
+                  Privacy Policy
+                </a>{" "}
+                and and *
+              </p>
+            </div>
+
+            {/* Join Button */}
+            <button className="w-full bg-red-700 hover:bg-red-700 text-slate-100 font-bold text-lg py-4 rounded-xl transition-colors">
+              JOIN NOW
+            </button>
+
+            {/* Divider */}
+            <div className="relative my-6">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-slate-600"></div>
+              </div>
+              <div className="relative flex justify-center text-sm">
+                <span className="px-4 bg-slate-800/50 text-slate-100">
+                  or use
+                </span>
               </div>
             </div>
 
-            <div className="w-1/2">
-              <label className="block text-sm mb-1">Currency</label>
-              <select className="w-full bg-[#0F2B3C] border border-[#1D3A50] rounded-lg px-3 py-3 outline-none text-sm">
-                <option>USD</option>
-                <option>CAD</option>
-                <option>EUR</option>
-              </select>
-            </div>
+            {/* Google Sign In */}
+            <button className="w-full bg-slate-700/50 hover:bg-slate-700 border border-slate-600 text-white font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-3">
+              <FcGoogle className="text-2xl" />
+              <span>Continue with Google</span>
+            </button>
+
+            {/* Sign In Link */}
+            <p className="text-center text-white/60 text-sm mt-6">
+              Already have an account?{" "}
+              <button className="text-red-700 hover:text-red-300 font-semibold">
+                Sign in
+              </button>
+            </p>
           </div>
-
-          {/* Phone */}
-          <div>
-            <label className="block text-sm mb-1">Phone Number</label>
-            <div className="flex items-center bg-[#0F2B3C] border border-[#1D3A50] rounded-lg px-2 py-3">
-              <input
-                type="text"
-                placeholder="070 000 000 "
-                className="flex-1 bg-transparent outline-none pl-2 text-sm"
-              />
-            </div>
-          </div>
-
-          {/* Checkbox */}
-          <label className="flex items-center space-x-2 text-xs">
-            <input
-              type="checkbox"
-              checked={agree}
-              onChange={() => setAgree(!agree)}
-              className="accent-red-600"
-            />
-            <span>
-              I am 18 years old and I accept the{" "}
-              <span className="text-[#FF4242] underline">Privacy Policy</span>{" "}
-              and{" "}
-              <span className="text-[#FF4242] underline">
-                Terms & Conditions
-              </span>
-            </span>
-          </label>
-
-          {/* Button */}
-          <button
-            type="submit"
-            className="w-full bg-linear-to-b from-[#FF0000] to-[#B80000] rounded-lg py-3 font-semibold mt-2"
-          >
-            Sign Up
-          </button>
-        </form>
-
-        {/* Footer */}
-        <p className="text-center text-sm opacity-80">
-          Already have an account?{" "}
-          <span className="text-[#FF4242] underline cursor-pointer">
-            Log In
-          </span>
-        </p>
+        </div>
       </div>
-    </div>
+    </>
   );
-};
-
-export default SignupModal;
+}

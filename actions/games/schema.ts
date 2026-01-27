@@ -12,3 +12,5 @@ export const GetFreeSpinGames = GameSchema;
 export const PlayGameSchema = z.object({
   slug: z.string(),
 });
+
+export const GetTournamentsSchema = z.object({});

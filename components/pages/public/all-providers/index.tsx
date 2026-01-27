@@ -1,38 +1,28 @@
-// "use client";
-// import { HeaderTitle } from "@/components/common/header-title";
-// import { motion } from "framer-motion";
-// import { allProvidersData } from "./data";
+"use client";
+import { Provider } from "@/actions/public/providers/types";
 
-// import { ProviderCard } from "./provider-card";
+import { ProviderCard } from "./provider-card";
 
-// export const AllProviders = () => {
-//   return (
-//     <section>
-//       <motion.div
-//         className="max-w-7xl mx-auto"
-//         initial={{ opacity: 0, y: 30 }}
-//         whileInView={{ opacity: 1, y: 0 }}
-//         viewport={{ once: true }}
-//         transition={{ duration: 0.6 }}
-//       >
-//         {/* Header */}
-//         <motion.div
-//           initial={{ x: -50, opacity: 0 }}
-//           whileInView={{ x: 0, opacity: 1 }}
-//           viewport={{ once: true }}
-//           transition={{ duration: 0.5 }}
-//           className="bg-primary/10 p-5 pb-1 mb-10"
-//         >
-//           <HeaderTitle title="All Providers" className="justify-center" />
-//         </motion.div>
+interface AllProvidersProps {
+  providers: Provider[];
+}
 
-//         {/* Provider Cards */}
-//         <div className="grid grid-cols-2 tab:grid-cols-4 laptop:grid-cols-8 gap-3 tab:gap-5">
-//           {allProvidersData.map((provider, index) => (
-//             <ProviderCard key={provider.id} provider={provider} index={index} />
-//           ))}
-//         </div>
-//       </motion.div>
-//     </section>
-//   );
-// };
+export const AllProviders = ({ providers }: AllProvidersProps) => {
+  return (
+    <section>
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-white text-2xl mb-5">
+          <h2>All Providers</h2>
+        </div>
+
+        {/* Provider Cards */}
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 lg:gap-5">
+          {providers.map((provider, index) => (
+            <ProviderCard key={provider.id} provider={provider} index={index} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { IMAGES } from "@/lib/assets";
+import Image from "next/image";
 
 const logos = [
   {

@@ -1,11 +1,11 @@
 import { getJackpotGames } from "@/actions/games/jackpot";
-import { Games } from "@/components/games";
+import { Games } from "@/components/ui/games";
+import { IMAGES } from "@/lib/assets";
+import Image from "next/image";
 import { FaGem } from "react-icons/fa";
 import AnimatedAmount from "./animated-amount";
-import Image from "next/image";
-import { IMAGES } from "@/lib/assets";
 
-export const JackpotHome = async () => {
+const JackpotHome = async () => {
   const { data: gamesResponse } = await getJackpotGames({ page: 1 });
   const games = gamesResponse?.data?.slice(0, 12) || [];
 
@@ -36,3 +36,5 @@ export const JackpotHome = async () => {
     </>
   );
 };
+
+export default JackpotHome;

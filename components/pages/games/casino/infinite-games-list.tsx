@@ -1,7 +1,7 @@
 "use client";
 
 import { getGamesByType } from "@/actions/games/casino";
-import { Games } from "@/components/games";
+import { Games } from "@/components/ui/games";
 import { Game } from "@/types/api-schema/schema";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { FaTrophy } from "react-icons/fa";

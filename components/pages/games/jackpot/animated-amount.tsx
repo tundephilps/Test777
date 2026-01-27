@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export default function AnimatedAmount() {
+const AnimatedAmount = () => {
   const [value, setValue] = useState(1251444.51);
   const [displayDecimal, setDisplayDecimal] = useState("51");
   const [nextDecimal, setNextDecimal] = useState<string | null>(null);
@@ -48,4 +48,6 @@ export default function AnimatedAmount() {
       </div>
     </div>
   );
-}
+};
+
+export default AnimatedAmount;

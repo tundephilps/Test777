@@ -28,6 +28,8 @@ export const IMAGES = {
   Give: `${CDN_URL}/Give.png`,
   Mask: `${CDN_URL}/Mask.png`,
 
+  Calf: `${CDN_URL}/Calf.png`,
+
   Mask2: `${CDN_URL}/Mask2.png`,
   Mask3: `${CDN_URL}/Mask3.png`,
   Mask4: `${CDN_URL}/Mask4.png`,

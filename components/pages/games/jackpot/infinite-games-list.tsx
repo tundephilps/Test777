@@ -1,7 +1,7 @@
 "use client";
 
 import { getJackpotGames } from "@/actions/games/jackpot";
-import { Games } from "@/components/games";
+import { Games } from "@/components/ui/games";
 import { Game } from "@/types/api-schema/schema";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { FaGem } from "react-icons/fa";

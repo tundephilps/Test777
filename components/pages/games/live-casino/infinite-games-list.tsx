@@ -1,7 +1,7 @@
 "use client";
 
 import { getLiveCasinoGamesByType } from "@/actions/games/live-casino/paginated";
-import { Games } from "@/components/games";
+import { Games } from "@/components/ui/games";
 import { Game } from "@/types/api-schema/schema";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { FaDice } from "react-icons/fa";

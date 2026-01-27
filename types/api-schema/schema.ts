@@ -68,3 +68,13 @@ export interface FingerprintResponse {
   data?: any;
   row?: any;
 }
+
+// Provider types
+export interface Provider {
+  id: number;
+  name: string;
+  logo: string | null;
+  slug: string;
+}
+
+export type ProvidersResponse = Provider[];

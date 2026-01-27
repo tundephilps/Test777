@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { FaDice, FaFire, FaGamepad, FaTrophy } from "react-icons/fa";
-import { Games } from "../games";
+import { Games } from "../ui/games";
 import Hero from "./hero-section";
 
 import { getHotGames } from "@/actions/games/hot-games";
@@ -8,7 +8,9 @@ import { getLiveGames } from "@/actions/games/live-casino";
 import { getNewGames } from "@/actions/games/new-games";
 import { getTopGames } from "@/actions/games/top-games";
 // import JackpotGames from "../jackpot/jackpot-games";
-import { JackpotHome } from "../pages/games/jackpot/jackpot-home";
+import { getAllProviders } from "@/actions/public/providers";
+import JackpotHome from "../pages/games/jackpot/jackpot-home";
+import { AllProviderHome } from "../pages/public/all-providers/all-provider-home";
 import BigWins from "./big-win";
 import BonusPromotion from "./bonus-promotion";
 import PaymentMethod from "./payment-method";
@@ -23,6 +25,7 @@ export const Home = async () => {
   const { data: topGamesResponse } = await getTopGames({});
   const { data: liveGamesResponse } = await getLiveGames({});
   const { data: hotGamesResponse } = await getHotGames({});
+  const { data: providersResponse } = await getAllProviders({});
   // const { data: jackpotGames } = await getJackpotGames({});
 
   // Extract the actual game data from the Response wrapper
@@ -30,6 +33,7 @@ export const Home = async () => {
   const topGames = topGamesResponse?.data || [];
   const liveGames = liveGamesResponse?.data || [];
   const hotGames = hotGamesResponse?.data || [];
+  const providers = providersResponse?.data || [];
 
   return (
     <div className="space-y-8 pb-10">
@@ -72,6 +76,8 @@ export const Home = async () => {
       />
 
       <JackpotHome />
+
+      <AllProviderHome providers={providers} />
 
       <WhyChooseUs />
 

@@ -1,4 +1,4 @@
-import { Game } from "@/components/games/types";
+import { Game } from "@/components/ui/games/types";
 
 export interface JackpotGame {
   id: number | string;

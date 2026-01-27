@@ -1,9 +1,10 @@
 "use client";
 
 import { getFavoriteGames } from "@/actions/games/my-favorite";
-import { Games } from "@/components/games";
+import { Games } from "@/components/ui/games";
+import { useFavorite } from "@/contexts/favorite-context";
 import { Game } from "@/types/api-schema/schema";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { FaHeart } from "react-icons/fa";
 import { ImSpinner2 } from "react-icons/im";
 
@@ -17,6 +18,12 @@ export const InfiniteGamesList = ({ initialGames }: InfiniteGamesListProps) => {
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
   const observerTarget = useRef<HTMLDivElement>(null);
+  const { favorites } = useFavorite();
+
+  // Filter games to only show those that are in favorites
+  const filteredGames = useMemo(() => {
+    return games.filter((game) => favorites.has(game.id));
+  }, [games, favorites]);
 
   const loadMoreGames = useCallback(async () => {
     if (loading || !hasMore) return;
@@ -68,7 +75,12 @@ export const InfiniteGamesList = ({ initialGames }: InfiniteGamesListProps) => {
 
   return (
     <>
-      <Games games={games} icon={<FaHeart />} title={"My Favorite"} url="" />
+      <Games
+        games={filteredGames}
+        icon={<FaHeart />}
+        title={"My Favorite"}
+        url=""
+      />
 
       {/* Loading Sentinel */}
       <div ref={observerTarget} className="flex justify-center py-8">

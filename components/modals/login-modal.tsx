@@ -71,7 +71,7 @@ const LoginModal = ({ onClose }: LoginModalProps) => {
 
   return (
     <div className="flex items-center justify-center w-full  bg-[#081A26] lg:px-4 px-0 py-8 ">
-      <div className=" bg-transparent text-white lg:min-w-xl min-w-5/6 w-full">
+      <div className=" bg-transparent text-white min-w-[80vw] lg:min-w-xl ">
         {/* Title */}
         <Image
           src={IMAGES.Logo}

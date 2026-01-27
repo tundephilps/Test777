@@ -3,6 +3,7 @@
 import LoginModal from "@/components/modals/login-modal";
 import SearchModal from "@/components/modals/search-modal";
 import SignupModal from "@/components/modals/signup-modal";
+import WelcomeBonusModal from "@/components/modals/welcome-bonus-modal";
 import { createContext, ReactNode, useContext, useState } from "react";
 
 type ModalType = "search" | "login" | "signup" | null;
@@ -27,7 +28,7 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
       {/* Global Modal Overlay */}
       {activeModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
-          <div className="bg-[#081A26] border border-slate-700 w-full max-w-2xl rounded-2xl lg:p-8 p-4 relative shadow-2xl max-h-[90vh] overflow-y-auto">
+          <div className="bg-[#081A26] border border-slate-700 w-fit  rounded-2xl lg:p-8 p-4 relative shadow-2xl max-h-[90vh] overflow-y-auto">
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 bg-red-500 hover:bg-red-600 rounded-full w-10 h-10 cursor-pointer text-white transition-colors z-10"
@@ -39,7 +40,9 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
             <div className="text-white">
               {activeModal === "search" && <SearchModal />}
               {activeModal === "login" && <LoginModal onClose={closeModal} />}
-              {activeModal === "signup" && <SignupModal />}
+              {activeModal === "signup" && (
+                <WelcomeBonusModal onClose={closeModal} />
+              )}
             </div>
           </div>
         </div>
