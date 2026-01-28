@@ -7,7 +7,6 @@ import { LuCherry } from "react-icons/lu";
 
 import { FcGoogle } from "react-icons/fc";
 import Image from "next/image";
-import Calf from "@/public/Calf.png";
 import SignupModal from "./signup-modal";
 
 interface LoginModalProps {
@@ -22,7 +21,7 @@ export default function WelcomeBonusModal({ onClose }: LoginModalProps) {
 
   return (
     <div className="">
-      <div className="lg:min-w-3xl min-w-[80vw] ">
+      <div className="lg:min-w-md min-w-[80vw] ">
         {/* Title */}
         <h1 className="text-center text-3xl font-bold text-red-700 mb-8">
           CHOOSE YOUR WELCOME
